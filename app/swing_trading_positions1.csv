@@ -1,0 +1,4 @@
+symbol,sector,marketcap,signal_date,reference_date,low_volume_date,entry_date,entry_price,stop_loss,target_price,exit_date,exit_price,exit_type,pnl,pnl_pct,status,days_held,last_updated
+MASKINVEST,Financials,Smallcap,2025-09-17 19:30:00,,,,,,,,,,,,Expired,0,2025-09-21 23:44:57.219631
+INTENTECH,I.T,Smallcap,2025-09-18 19:30:00,,,,,,,,,,,,Expired,0,2025-09-22 04:45:23.911832
+ADANIPOWER,Power & Utilities,Largecap,2025-09-18 19:30:00,,,,,,,,,,,,Expired,0,2025-09-22 04:45:23.912835

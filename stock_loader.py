@@ -506,7 +506,7 @@ class StockLoader:
                     if role == Qt.BackgroundRole and index.column() == symbol_col_index:
                         symbol = str(self._data.iloc[index.row(), index.column()])
                         if symbol in self.position_symbols:
-                            return QColor("#5208A2")   # Purple color (RGB: 128, 0, 128)
+                            return QColor("#9554DB")   # Purple color (RGB: 128, 0, 128)
                             
                     return None
             

@@ -180,43 +180,32 @@ class ChartLoader:
             )
     
     def find_latest_historical_file(self, symbol):
-        """Find the latest historical data file for the given symbol in date subfolders"""
+        """Find today's historical data file for the given symbol"""
         try:
-            logger.info(f"Searching for latest historical file for symbol: {symbol}")
+            logger.info(f"Searching for today's historical file for symbol: {symbol}")
             
             historical_dir = Path("HistoricalData")
             if not historical_dir.exists():
                 logger.error("HistoricalData directory not found")
                 return None
             
-            # Find all files for this symbol across all date subfolders
-            symbol_files = []
+            # Get today's date folder
+            today_str = datetime.now().strftime("%Y-%m-%d")
+            today_folder = historical_dir / today_str
             
-            # Iterate through all date subfolders (e.g., "2025-09-08")
-            for date_folder in historical_dir.iterdir():
-                if date_folder.is_dir():
-                    # Look for symbol file in this date folder (format: SYMBOL.csv)
-                    file_path = date_folder / f"{symbol}.csv"
-                    if file_path.exists():
-                        try:
-                            # Extract date from folder name (format: YYYY-MM-DD)
-                            date_str = date_folder.name
-                            file_date = datetime.strptime(date_str, "%Y-%m-%d")
-                            symbol_files.append((file_date, file_path))
-                            logger.debug(f"Found file: {file_path} for date: {file_date}")
-                        except ValueError as e:
-                            logger.warning(f"Invalid date folder name: {date_folder.name} - {e}")
-                            continue
-            
-            if not symbol_files:
-                logger.error(f"No historical files found for symbol: {symbol}")
+            if not today_folder.exists():
+                logger.error(f"Today's folder {today_str} not found")
                 return None
             
-            # Get the latest file (most recent date)
-            latest_file = max(symbol_files, key=lambda x: x[0])[1]
-            logger.info(f"Latest file for {symbol}: {latest_file}")
-            return latest_file
-            
+            # Look for symbol file in today's folder
+            file_path = today_folder / f"{symbol}.csv"
+            if file_path.exists():
+                logger.info(f"Today's file for {symbol}: {file_path}")
+                return file_path
+            else:
+                logger.error(f"No historical file found for {symbol} in today's folder")
+                return None
+                
         except Exception as e:
             logger.error(f"Error finding historical file for {symbol}: {str(e)}")
             return None

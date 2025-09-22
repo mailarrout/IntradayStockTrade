@@ -21,6 +21,8 @@ active_trades = {}  # trade_id -> trade info
 monitor_timer = None
 stop_monitoring = False
 
+strategy_is_running = False
+
 """
 Intraday breakout strategy using low-volume candles as reference. 
 Generates both BUY and SELL signals based on green/red breakout structures. 
@@ -70,7 +72,15 @@ def check_trades_periodically(ui_reference):
 # -----------------------
 def run_strategy(ui_reference):
     """Main entry point for the strategy."""
+    global strategy_is_running
+    
+    # Prevent concurrent execution
+    if strategy_is_running:
+        logger.warning("Strategy is already running, skipping")
+        return
+        
     try:
+        strategy_is_running = True
         logger.info("Starting LowVolumeCandleBreakOut strategy")
         current_date = datetime.now().strftime('%Y-%m-%d')
         historical_data_dir = os.path.join('HistoricalData', current_date)
@@ -144,6 +154,8 @@ def run_strategy(ui_reference):
 
     except Exception as e:
         logger.exception(f"Error running strategy: {e}")
+    finally:
+        strategy_is_running = False
 
 # -----------------------
 # Strategy core

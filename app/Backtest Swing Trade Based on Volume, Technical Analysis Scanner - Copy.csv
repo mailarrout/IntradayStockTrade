@@ -1,0 +1,298 @@
+date,symbol,marketcapname,sector
+28-01-2025 6:30 pm,ANANTRAJ,Largecap,Realty
+28-01-2025 6:30 pm,SYRMA,Midcap,Consumer Discretionary
+28-01-2025 6:30 pm,SIS,Smallcap,Miscellaneous
+28-01-2025 6:30 pm,CHEMFAB,Smallcap,Chemicals
+28-01-2025 6:30 pm,ACUTAAS,Midcap,Healthcare
+29-01-2025 6:30 pm,SYRMA,Midcap,Consumer Discretionary
+29-01-2025 6:30 pm,ACI,Midcap,Chemicals
+29-01-2025 6:30 pm,POWERINDIA,Largecap,Industrials
+30-01-2025 6:30 pm,WCIL,Smallcap,Transportation
+30-01-2025 6:30 pm,WOCKPHARMA,Largecap,Healthcare
+30-01-2025 6:30 pm,GULPOLY,Smallcap,
+31-01-2025 6:30 pm,UNIECOM,Smallcap,I.T
+02-02-2025 6:30 pm,BHAGERIA,Smallcap,Chemicals
+03-02-2025 6:30 pm,MOTHERSON,Largecap,Auto
+04-02-2025 6:30 pm,MTNL,Smallcap,Telecom
+04-02-2025 6:30 pm,BLAL,Smallcap,Realty
+04-02-2025 6:30 pm,VENUSREM,Smallcap,Healthcare
+04-02-2025 6:30 pm,SCILAL,Smallcap,Services
+04-02-2025 6:30 pm,GEECEE,Smallcap,Realty
+05-02-2025 6:30 pm,KEYFINSERV,Smallcap,Financials
+05-02-2025 6:30 pm,VIMTALABS,Smallcap,Healthcare
+05-02-2025 6:30 pm,KRITI,Smallcap,Plastic products
+06-02-2025 6:30 pm,ZFCVINDIA,Largecap,Auto
+06-02-2025 6:30 pm,SAGARDEEP,Smallcap,Metals & Mining
+09-02-2025 6:30 pm,HEXATRADEX,Smallcap,Financials
+10-02-2025 6:30 pm,TRANSRAILL,Midcap,Realty
+11-02-2025 6:30 pm,ICIL,Midcap,Textiles
+12-02-2025 6:30 pm,ZENITHEXPO,Smallcap,Consumer Discretionary
+12-02-2025 6:30 pm,ICIL,Midcap,Textiles
+12-02-2025 6:30 pm,NITIRAJ,Smallcap,Consumer Discretionary
+12-02-2025 6:30 pm,CHEMCON,Smallcap,Chemicals
+13-02-2025 6:30 pm,GODFRYPHLP,Largecap,FMCG
+13-02-2025 6:30 pm,TCPLPACK,Smallcap,Industrials
+13-02-2025 6:30 pm,TEXMOPIPES,Smallcap,Plastic products
+16-02-2025 6:30 pm,GLAXO,Largecap,Healthcare
+16-02-2025 6:30 pm,SANDUMA,Midcap,Metals & Mining
+16-02-2025 6:30 pm,RETAIL,Smallcap,Consumer Discretionary
+16-02-2025 6:30 pm,NITIRAJ,Smallcap,Consumer Discretionary
+17-02-2025 6:30 pm,GOLDTECH,Smallcap,I.T
+19-02-2025 6:30 pm,AVANTEL,Smallcap,Aerospace & Defence
+20-02-2025 6:30 pm,MANORG,Smallcap,Chemicals
+20-02-2025 6:30 pm,SANDESH,Smallcap,Media
+20-02-2025 6:30 pm,RELIGARE,Midcap,Financials
+23-02-2025 6:30 pm,RAMANEWS,Smallcap,Miscellaneous
+26-02-2025 6:30 pm,RELCHEMQ,Smallcap,Textiles
+27-02-2025 6:30 pm,JINDWORLD,Smallcap,Textiles
+03-03-2025 6:30 pm,COFFEEDAY,Smallcap,Consumer Discretionary
+06-03-2025 6:30 pm,CAPTRUST,Smallcap,Financials
+09-03-2025 6:30 pm,BODALCHEM,Smallcap,Chemicals
+09-03-2025 6:30 pm,WELINV,Smallcap,Financials
+09-03-2025 6:30 pm,BANKA,Smallcap,Miscellaneous
+12-03-2025 6:30 pm,MTNL,Smallcap,Telecom
+16-03-2025 6:30 pm,NIRAJ,Smallcap,Realty
+17-03-2025 6:30 pm,SONAMLTD,Smallcap,Consumer Discretionary
+18-03-2025 6:30 pm,GRINFRA,Midcap,Realty
+19-03-2025 6:30 pm,VSTL,Smallcap,Metals & Mining
+19-03-2025 6:30 pm,KSOLVES,Smallcap,I.T
+20-03-2025 6:30 pm,ARMANFIN,Smallcap,Financials
+23-03-2025 6:30 pm,BALUFORGE,Midcap,Industrials
+23-03-2025 6:30 pm,POWERMECH,Midcap,Realty
+23-03-2025 6:30 pm,LAMBODHARA,Smallcap,Textiles
+24-03-2025 6:30 pm,KAPSTON,Smallcap,Miscellaneous
+27-03-2025 6:30 pm,BSE,Largecap,Financials
+31-03-2025 7:30 pm,ROSSELLIND,Smallcap,FMCG
+03-04-2025 7:30 pm,BALPHARMA,Smallcap,Healthcare
+03-04-2025 7:30 pm,VIPCLOTHNG,Smallcap,Textiles
+07-04-2025 7:30 pm,ONEPOINT,Smallcap,I.T
+08-04-2025 7:30 pm,TECILCHEM,Smallcap,Chemicals
+10-04-2025 7:30 pm,STEELCAS,Smallcap,Industrials
+10-04-2025 7:30 pm,GOLDIAM,Smallcap,Consumer Discretionary
+10-04-2025 7:30 pm,NORTHARC,Smallcap,Financials
+10-04-2025 7:30 pm,LTFOODS,Midcap,FMCG
+14-04-2025 7:30 pm,SRM,Smallcap,Realty
+14-04-2025 7:30 pm,SHK,Smallcap,Chemicals
+14-04-2025 7:30 pm,DIAMONDYD,Smallcap,FMCG
+14-04-2025 7:30 pm,TREJHARA,Smallcap,I.T
+15-04-2025 7:30 pm,THEINVEST,Smallcap,Financials
+16-04-2025 7:30 pm,SOMATEX,Smallcap,Services
+16-04-2025 7:30 pm,ADL,Smallcap,Building Materials
+20-04-2025 7:30 pm,NIPPOBATRY,Smallcap,Industrials
+20-04-2025 7:30 pm,BSHSL,Smallcap,FMCG
+21-04-2025 7:30 pm,XELPMOC,Smallcap,I.T
+22-04-2025 7:30 pm,RAJRATAN,Smallcap,Metals & Mining
+22-04-2025 7:30 pm,WAAREEENER,Largecap,Industrials
+22-04-2025 7:30 pm,HCLTECH,Largecap,I.T
+22-04-2025 7:30 pm,MANAKSTEEL,Smallcap,Metals & Mining
+23-04-2025 7:30 pm,MODIRUBBER,Smallcap,Miscellaneous
+23-04-2025 7:30 pm,VIMTALABS,Smallcap,Healthcare
+23-04-2025 7:30 pm,SAMHI,Smallcap,Services
+23-04-2025 7:30 pm,VSSL,Smallcap,Metals & Mining
+23-04-2025 7:30 pm,THYROCARE,Midcap,Healthcare
+23-04-2025 7:30 pm,SGIL,Smallcap,Industrials
+27-04-2025 7:30 pm,JAYNECOIND,Midcap,Metals & Mining
+27-04-2025 7:30 pm,MANORAMA,Midcap,FMCG
+01-05-2025 7:30 pm,SPORTKING,Smallcap,Textiles
+01-05-2025 7:30 pm,JMA,Smallcap,Auto
+01-05-2025 7:30 pm,RAILTEL,Midcap,Telecom
+01-05-2025 7:30 pm,JUBLINGREA,Midcap,Chemicals
+04-05-2025 7:30 pm,NETWEB,Midcap,I.T
+04-05-2025 7:30 pm,RRKABEL,Midcap,Industrials
+04-05-2025 7:30 pm,GRAVITA,Midcap,Metals & Mining
+05-05-2025 7:30 pm,CCL,Midcap,FMCG
+06-05-2025 7:30 pm,GOKEX,Midcap,Consumer Discretionary
+06-05-2025 7:30 pm,SPAL,Smallcap,Textiles
+07-05-2025 7:30 pm,NIVABUPA,Midcap,Financials
+07-05-2025 7:30 pm,SHRIPISTON,Midcap,Auto
+11-05-2025 7:30 pm,IFCI,Midcap,Financials
+11-05-2025 7:30 pm,MANINDS,Smallcap,Metals & Mining
+11-05-2025 7:30 pm,MANORG,Smallcap,Chemicals
+11-05-2025 7:30 pm,SYRMA,Midcap,Consumer Discretionary
+11-05-2025 7:30 pm,NETWEB,Midcap,I.T
+11-05-2025 7:30 pm,STANLEY,Smallcap,Consumer Discretionary
+11-05-2025 7:30 pm,GARUDA,Smallcap,Realty
+11-05-2025 7:30 pm,DATAMATICS,Midcap,I.T
+11-05-2025 7:30 pm,INSPIRISYS,Smallcap,I.T
+11-05-2025 7:30 pm,MICEL,Smallcap,Consumer Discretionary
+11-05-2025 7:30 pm,RPOWER,Midcap,Power & Utilities
+11-05-2025 7:30 pm,TRITURBINE,Midcap,Industrials
+11-05-2025 7:30 pm,SCHNEIDER,Largecap,Industrials
+11-05-2025 7:30 pm,KPEL,Smallcap,Realty
+11-05-2025 7:30 pm,IFGLEXPOR,Smallcap,Building Materials
+11-05-2025 7:30 pm,KPIGREEN,Midcap,Power & Utilities
+11-05-2025 7:30 pm,MAPMYINDIA,Midcap,I.T
+12-05-2025 7:30 pm,MANINDS,Smallcap,Metals & Mining
+12-05-2025 7:30 pm,MANORG,Smallcap,Chemicals
+12-05-2025 7:30 pm,INSPIRISYS,Smallcap,I.T
+12-05-2025 7:30 pm,CARERATING,Smallcap,Financials
+12-05-2025 7:30 pm,GINNIFILA,Smallcap,Textiles
+13-05-2025 7:30 pm,MANALIPETC,Smallcap,Energy
+13-05-2025 7:30 pm,DYCL,Smallcap,Industrials
+13-05-2025 7:30 pm,GRSE,Largecap,Aerospace & Defence
+14-05-2025 7:30 pm,FOSECOIND,Smallcap,Chemicals
+14-05-2025 7:30 pm,TI,Midcap,FMCG
+14-05-2025 7:30 pm,RATNAVEER,Smallcap,Metals & Mining
+14-05-2025 7:30 pm,VASCONEQ,Smallcap,Realty
+14-05-2025 7:30 pm,SHARDACROP,Midcap,Chemicals
+14-05-2025 7:30 pm,PRECOT,Smallcap,Textiles
+18-05-2025 7:30 pm,BANCOINDIA,Midcap,Auto
+18-05-2025 7:30 pm,PREMEXPLN,Smallcap,Chemicals
+18-05-2025 7:30 pm,PPAP,Smallcap,Auto
+18-05-2025 7:30 pm,SHARDAMOTR,Midcap,Auto
+18-05-2025 7:30 pm,PKTEA,Smallcap,FMCG
+19-05-2025 7:30 pm,BASF,Largecap,Chemicals
+19-05-2025 7:30 pm,HLEGLAS,Smallcap,Industrials
+20-05-2025 7:30 pm,HLEGLAS,Smallcap,Industrials
+20-05-2025 7:30 pm,KOTHARIPRO,Smallcap,Services
+20-05-2025 7:30 pm,WCIL,Smallcap,Transportation
+20-05-2025 7:30 pm,GROBTEA,Smallcap,FMCG
+21-05-2025 7:30 pm,TRACXN,Smallcap,I.T
+21-05-2025 7:30 pm,NTPCGREEN,Largecap,Power & Utilities
+21-05-2025 7:30 pm,RAMCOSYS,Smallcap,I.T
+21-05-2025 7:30 pm,WABAG,Midcap,Realty
+22-05-2025 7:30 pm,COSMOFIRST,Smallcap,Industrials
+22-05-2025 7:30 pm,HPL,Smallcap,Industrials
+25-05-2025 7:30 pm,SHREYANIND,Smallcap,Building Materials
+25-05-2025 7:30 pm,DIACABS,Midcap,Industrials
+25-05-2025 7:30 pm,SUNDRMBRAK,Smallcap,Auto
+25-05-2025 7:30 pm,MODTHREAD,Smallcap,Textiles
+26-05-2025 7:30 pm,DELTAMAGNT,Smallcap,Textiles
+26-05-2025 7:30 pm,BAYERCROP,Largecap,Chemicals
+26-05-2025 7:30 pm,VENUSREM,Smallcap,Healthcare
+26-05-2025 7:30 pm,IPL,Smallcap,Chemicals
+27-05-2025 7:30 pm,UNIMECH,Midcap,Aerospace & Defence
+27-05-2025 7:30 pm,TECHNOE,Midcap,Realty
+28-05-2025 7:30 pm,FMGOETZE,Smallcap,Auto
+28-05-2025 7:30 pm,VETO,Smallcap,Industrials
+29-05-2025 7:30 pm,LORDSCHLO,Smallcap,Chemicals
+29-05-2025 7:30 pm,LUMAXTECH,Midcap,Auto
+01-06-2025 7:30 pm,ASTRAZEN,Largecap,Healthcare
+01-06-2025 7:30 pm,SIGIND,Smallcap,Services
+02-06-2025 7:30 pm,NIBL,Smallcap,Industrials
+04-06-2025 7:30 pm,PKTEA,Smallcap,FMCG
+05-06-2025 7:30 pm,FOCUS,Smallcap,Industrials
+08-06-2025 7:30 pm,OCCLLTD,Smallcap,Chemicals
+08-06-2025 7:30 pm,HBSL,Smallcap,Financials
+08-06-2025 7:30 pm,RSYSTEMS,Midcap,I.T
+08-06-2025 7:30 pm,WEALTH,Smallcap,Financials
+08-06-2025 7:30 pm,FOCUS,Smallcap,Industrials
+09-06-2025 7:30 pm,OCCL,Smallcap,Financials
+09-06-2025 7:30 pm,KOKUYOCMLN,Smallcap,Miscellaneous
+09-06-2025 7:30 pm,BAJAJINDEF,Smallcap,Industrials
+09-06-2025 7:30 pm,AIROLAM,Smallcap,Building Materials
+09-06-2025 7:30 pm,LGHL,Smallcap,Consumer Discretionary
+10-06-2025 7:30 pm,ORIENTLTD,Smallcap,Industrials
+10-06-2025 7:30 pm,TOLINS,Smallcap,Auto
+11-06-2025 7:30 pm,STLTECH,Midcap,Industrials
+11-06-2025 7:30 pm,TANLA,Midcap,I.T
+11-06-2025 7:30 pm,KARMAENG,Smallcap,Power & Utilities
+15-06-2025 7:30 pm,DELPHIFX,Smallcap,Financials
+15-06-2025 7:30 pm,ARTNIRMAN,Smallcap,Realty
+23-06-2025 7:30 pm,EIEL,Smallcap,Realty
+24-06-2025 7:30 pm,ABMINTLLTD,Smallcap,Services
+25-06-2025 7:30 pm,ORBTEXP,Smallcap,Textiles
+25-06-2025 7:30 pm,THOMASCOTT,Smallcap,Consumer Discretionary
+25-06-2025 7:30 pm,ABMINTLLTD,Smallcap,Services
+26-06-2025 7:30 pm,PFOCUS,Midcap,Media
+26-06-2025 7:30 pm,THOMASCOTT,Smallcap,Consumer Discretionary
+29-06-2025 7:30 pm,ARVEE,Smallcap,Chemicals
+29-06-2025 7:30 pm,PAVNAIND,Smallcap,Auto
+30-06-2025 7:30 pm,INNOVANA,Smallcap,I.T
+02-07-2025 7:30 pm,UNIVPHOTO,Smallcap,Consumer Discretionary
+03-07-2025 7:30 pm,MAZDA,Smallcap,Industrials
+03-07-2025 7:30 pm,VASWANI,Smallcap,Metals & Mining
+06-07-2025 7:30 pm,JITFINFRA,Smallcap,Miscellaneous
+07-07-2025 7:30 pm,NDLVENTURE,Smallcap,Financials
+10-07-2025 7:30 pm,GLENMARK,Largecap,Healthcare
+15-07-2025 7:30 pm,SAMPANN,Smallcap,FMCG
+15-07-2025 7:30 pm,SMSLIFE,Smallcap,Healthcare
+16-07-2025 7:30 pm,IXIGO,Midcap,I.T
+17-07-2025 7:30 pm,INDOUS,Smallcap,FMCG
+21-07-2025 7:30 pm,SWELECTES,Smallcap,Industrials
+21-07-2025 7:30 pm,ETERNAL,Largecap,I.T
+22-07-2025 7:30 pm,INFOBEAN,Smallcap,I.T
+23-07-2025 7:30 pm,SENORES,Smallcap,Healthcare
+23-07-2025 7:30 pm,POCL,Smallcap,Metals & Mining
+23-07-2025 7:30 pm,INFOBEAN,Smallcap,I.T
+24-07-2025 7:30 pm,KELLTONTEC,Smallcap,I.T
+27-07-2025 7:30 pm,ACMESOLAR,Midcap,Realty
+28-07-2025 7:30 pm,PUNJABCHEM,Smallcap,Chemicals
+29-07-2025 7:30 pm,BLISSGVS,Smallcap,Healthcare
+29-07-2025 7:30 pm,VISHNU,Smallcap,Chemicals
+30-07-2025 7:30 pm,HPIL,Smallcap,Chemicals
+04-08-2025 7:30 pm,GODFRYPHLP,Largecap,FMCG
+04-08-2025 7:30 pm,SANOFICONR,Midcap,Healthcare
+05-08-2025 7:30 pm,AJMERA,Smallcap,Realty
+05-08-2025 7:30 pm,TRANSRAILL,Midcap,Realty
+06-08-2025 7:30 pm,RAIN,Smallcap,Miscellaneous
+07-08-2025 7:30 pm,DMCC,Smallcap,Chemicals
+10-08-2025 7:30 pm,HARIOMPIPE,Smallcap,Metals & Mining
+10-08-2025 7:30 pm,HBLENGINE,Largecap,Auto
+10-08-2025 7:30 pm,UNIPARTS,Smallcap,Industrials
+10-08-2025 7:30 pm,YATRA,Smallcap,I.T
+10-08-2025 7:30 pm,BALAXI,Smallcap,Healthcare
+11-08-2025 7:30 pm,NDLVENTURE,Smallcap,Financials
+11-08-2025 7:30 pm,GANDHITUBE,Smallcap,Metals & Mining
+11-08-2025 7:30 pm,DDEVPLSTIK,Smallcap,Chemicals
+11-08-2025 7:30 pm,YATRA,Smallcap,I.T
+11-08-2025 7:30 pm,APEX,Smallcap,FMCG
+12-08-2025 7:30 pm,NDLVENTURE,Smallcap,Financials
+12-08-2025 7:30 pm,LANDMARK,Smallcap,Consumer Discretionary
+12-08-2025 7:30 pm,NSLNISP,Midcap,Metals & Mining
+12-08-2025 7:30 pm,INDOAMIN,Smallcap,Chemicals
+12-08-2025 7:30 pm,PREMEXPLN,Smallcap,Chemicals
+12-08-2025 7:30 pm,HONASA,Midcap,Services
+12-08-2025 7:30 pm,AARVI,Smallcap,Miscellaneous
+12-08-2025 7:30 pm,NYKAA,Largecap,I.T
+13-08-2025 7:30 pm,EKC,Smallcap,Industrials
+13-08-2025 7:30 pm,ARIES,Smallcap,Chemicals
+13-08-2025 7:30 pm,MUTHOOTFIN,Largecap,Financials
+17-08-2025 7:30 pm,PENIND,Smallcap,Metals & Mining
+17-08-2025 7:30 pm,RISHABH,Smallcap,Industrials
+17-08-2025 7:30 pm,ZAGGLE,Smallcap,I.T
+17-08-2025 7:30 pm,SIGNPOST,Smallcap,Miscellaneous
+17-08-2025 7:30 pm,MARUTI,Largecap,Auto
+17-08-2025 7:30 pm,KEC,Largecap,Realty
+17-08-2025 7:30 pm,PGEL,Midcap,Consumer Discretionary
+18-08-2025 7:30 pm,HLEGLAS,Smallcap,Industrials
+19-08-2025 7:30 pm,BGRENERGY,Smallcap,Realty
+19-08-2025 7:30 pm,DYCL,Smallcap,Industrials
+19-08-2025 7:30 pm,MODTHREAD,Smallcap,Textiles
+20-08-2025 7:30 pm,ZENITHEXPO,Smallcap,Consumer Discretionary
+20-08-2025 7:30 pm,SILGO,Smallcap,Consumer Discretionary
+20-08-2025 7:30 pm,MODTHREAD,Smallcap,Textiles
+21-08-2025 7:30 pm,IZMO,Smallcap,I.T
+24-08-2025 7:30 pm,GANDHITUBE,Smallcap,Metals & Mining
+24-08-2025 7:30 pm,JKPAPER,Midcap,Building Materials
+24-08-2025 7:30 pm,EMAMIPAP,Smallcap,Building Materials
+25-08-2025 7:30 pm,PROTEAN,Smallcap,I.T
+25-08-2025 7:30 pm,RELIABLE,Smallcap,I.T
+28-08-2025 7:30 pm,RELIABLE,Smallcap,I.T
+31-08-2025 7:30 pm,PNC,Smallcap,Media
+31-08-2025 7:30 pm,JINDALPHOT,Smallcap,Financials
+31-08-2025 7:30 pm,WIPL,Smallcap,Building Materials
+01-09-2025 7:30 pm,DHAMPURSUG,Smallcap,FMCG
+01-09-2025 7:30 pm,DWARKESH,Smallcap,FMCG
+01-09-2025 7:30 pm,RENUKA,Midcap,FMCG
+01-09-2025 7:30 pm,AVADHSUGAR,Smallcap,FMCG
+02-09-2025 7:30 pm,TBOTEK,Midcap,I.T
+02-09-2025 7:30 pm,E2E,Midcap,I.T
+03-09-2025 7:30 pm,ATULAUTO,Smallcap,Auto
+03-09-2025 7:30 pm,E2E,Midcap,I.T
+03-09-2025 7:30 pm,BECTORFOOD,Midcap,FMCG
+07-09-2025 7:30 pm,PVP,Smallcap,Realty
+07-09-2025 7:30 pm,MFML,Smallcap,Textiles
+07-09-2025 7:30 pm,MOSCHIP,Midcap,I.T
+07-09-2025 7:30 pm,BVCL,Smallcap,Building Materials
+07-09-2025 7:30 pm,HPIL,Smallcap,Chemicals
+09-09-2025 7:30 pm,GRWRHITECH,Midcap,Industrials
+09-09-2025 7:30 pm,COASTCORP,Smallcap,FMCG
+09-09-2025 7:30 pm,AVANTIFEED,Midcap,FMCG
+09-09-2025 7:30 pm,OFSS,Largecap,I.T
+09-09-2025 7:30 pm,ATLANTAA,Smallcap,Realty
+09-09-2025 7:30 pm,APEX,Smallcap,FMCG
+14-09-2025 7:30 pm,VEEDOL,Smallcap,Chemicals
+17-09-2025 7:30 pm,MASKINVEST,Smallcap,Financials
+18-09-2025 7:30 pm,INTENTECH,Smallcap,I.T
+18-09-2025 7:30 pm,ADANIPOWER,Largecap,Power & Utilities

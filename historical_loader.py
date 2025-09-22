@@ -8,6 +8,10 @@ from PyQt5.QtCore import QTimer
 # from FiveMinVolumeReference import run_strategy
 from LowVolumeCandleBreakOut import run_strategy
 
+
+last_strategy_run = None
+STRATEGY_COOLDOWN_MINUTES = 2  # 2 minutes cooldown between strategy runs
+
 # Get logger for this module
 logger = logging.getLogger(__name__)
 
@@ -85,7 +89,7 @@ def stop_continuous_fetching():
 
 def fetch_historical_for_symbols(ui_reference, symbols, target_date=None, interval_minutes=5):
     """Fetch historical OHLC for given stock symbols using existing clients"""
-    logger.info("Starting historical data fetch for symbols")
+    logger.info("Starting historical data fetch for %d symbols: %s", len(symbols), symbols)
     
     if not hasattr(ui_reference, "clients") or not ui_reference.clients:
         logger.error("No logged-in clients available. Please load clients first.")
@@ -138,19 +142,21 @@ def fetch_historical_for_symbols(ui_reference, symbols, target_date=None, interv
     # Load token mapping
     try:
         token_map = load_token_map()
-        logger.debug("Successfully loaded token mapping")
+        logger.debug("Successfully loaded token mapping for %d symbols", len(token_map))
     except Exception as e:
         logger.error(f"Failed to load token mapping: {str(e)}")
         return False
 
     success_count = 0
     failed_count = 0
+    failed_symbols = []
     
     for symbol in symbols:
         sym = symbol.strip().upper()
         if sym not in token_map:
             logger.warning(f"Token not found for {sym}. Skipping.")
             failed_count += 1
+            failed_symbols.append(sym)
             continue
 
         token = token_map[sym]
@@ -184,27 +190,51 @@ def fetch_historical_for_symbols(ui_reference, symbols, target_date=None, interv
                 else:
                     logger.warning(f"No data for {sym} in this time range")
                     failed_count += 1
+                    failed_symbols.append(sym)
             else:
                 logger.warning(f"No data returned for {sym}")
                 failed_count += 1
+                failed_symbols.append(sym)
                 
         except Exception as e:
             logger.error(f"Failed fetching {sym}: {str(e)}")
             failed_count += 1
+            failed_symbols.append(sym)
 
+    # ✅ Moved outside the loop - process all symbols first
     if success_count > 0:
         logger.info(f"Completed historical fetch. Success: {success_count}, Failed: {failed_count}")
+        if failed_symbols:
+            logger.info(f"Failed symbols: {failed_symbols}")
         
-        # Run the strategy after data is loaded (only during market hours)
-        current_time = datetime.now(ist)
-        if market_open <= current_time <= market_close:
-            logger.info("Market hours detected, scheduling strategy run in 2 seconds")
-            # Wait 2 seconds to ensure all files are written, then run strategy
+        current_time_ist = datetime.now(ist)
+        current_time_only = current_time_ist.time()
+        market_open_time = time(9, 15)
+        market_close_time = time(15, 30)
+        
+        # Check if we're in market hours AND cooldown has passed
+        global last_strategy_run
+        time_since_last = None
+        if last_strategy_run:
+            time_since_last = (current_time_ist - last_strategy_run).total_seconds() / 60
+        
+        can_run_strategy = (
+            market_open_time <= current_time_only <= market_close_time and
+            (last_strategy_run is None or (time_since_last and time_since_last >= STRATEGY_COOLDOWN_MINUTES))
+        )
+        
+        if can_run_strategy:
+            logger.info(f"Scheduling strategy run in 2 seconds")
+            last_strategy_run = current_time_ist
             QTimer.singleShot(2000, lambda: run_strategy(ui_reference))
         else:
-            logger.info("Outside market hours, skipping strategy run")
+            if last_strategy_run and time_since_last < STRATEGY_COOLDOWN_MINUTES:
+                logger.info(f"Skipping strategy run (cooldown: {time_since_last:.1f}m/{STRATEGY_COOLDOWN_MINUTES}m remaining)")
+            else:
+                logger.info("Skipping strategy run (outside market hours)")
         
         return True
+    
     else:
         logger.warning("No historical data fetched for any symbols")
         return False
