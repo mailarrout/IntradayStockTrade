@@ -1,0 +1,6 @@
+symbol,sector,marketcap,signal_date,day1_volume,day2_volume,day3_volume,low_volume_date,low_volume_volume,low_volume_open,low_volume_high,low_volume_low,low_volume_close,target_candle_date,target_candle_volume,target_candle_open,target_candle_high,target_candle_low,target_candle_close,entry_date,entry_price,entry_volume,entry_open,entry_high,entry_low,entry_close,stop_loss,target_price,exit_date,exit_price,exit_volume,exit_open,exit_high,exit_low,exit_close,exit_type,pnl,pnl_pct,status,comments,days_held,last_updated
+AVANTIFEED,,,2025-09-10,19381756.0,2023394.0,687569.0,2025-09-12,687569.0,728.5,734.95,711.15,715.0,2025-09-18,296543.0,730.0,735.0,716.0,719.85,2025-09-19,733.15,830942.0,721.9,746.5,720.0,733.15,711.15,755.15,,,,,,,,,,,Take trade Next day,Ready for entry next day,0,2025-09-23
+ADANIPOWER,,,2025-09-19,86324006.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Monitoring,Waiting for first 3 days data,0,2025-09-24
+MASKINVEST,,,2025-09-19,5358.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Monitoring,Waiting for first 3 days data,0,2025-09-24
+INTENTECH,,,2025-09-19,4402930.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Monitoring,Error: No bulk data returned for INTENTECH from 2025-09-19 to 2025-09-24,0,2025-09-24
+STCINDIA,N/A,N/A,2025-09-22,2361760.0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Monitoring,Waiting for first 3 days data,0,2025-09-24

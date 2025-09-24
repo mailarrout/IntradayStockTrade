@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import QTableWidgetItem, QMessageBox, QPushButton, QHBoxLay
 from pytz import timezone
 IST = timezone('Asia/Kolkata')
 import logging
-
+import pandas as pd
 # Set up logger
 logger = logging.getLogger(__name__)
 
@@ -519,8 +519,19 @@ class PositionLoader:
                 f"MTM: {total_mtm:.2f}, PnL: {total_pnl:.2f}, Total: {current_mtm:.2f}"
             )
             
+
+            # The final part of update_positions should look like this:
+            logger.info(
+                f"{client_name}: Positions updated - Valid: {len(rows_data)}, "
+                f"MTM: {total_mtm:.2f}, PnL: {total_pnl:.2f}, Total: {current_mtm:.2f}"
+            )
+
+            # Add CSV saving here
+            self.save_positions_to_csv(rows_data)
+
             self.ui.statusBar().showMessage(f"Positions updated for {client_id} ({len(rows_data)} positions)")
-            
+
+
         except Exception as e:
             error_msg = f"Position update failed: {str(e)}"
             logger.error(error_msg)
@@ -667,3 +678,60 @@ class PositionLoader:
                 
         except Exception as e:
             logger.error(f"Error checking SL/Target conditions: {str(e)}")
+
+
+    def save_positions_to_csv(self, positions_data):
+        """Save positions to CSV file"""
+        try:
+            output_data = []
+            for pos in positions_data:
+                symbol = pos.get("symbol", "")
+                token = pos.get("token", "")  
+                net_qty = int(pos.get("net_qty", 0))
+                
+                # Get strategy - you may need to implement this method or remove if not available
+                strategy_value = ""  # Placeholder - you can implement get_strategy_for_position if needed
+                
+                output_data.append({
+                    "Timestamp": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
+                    "Symbol": symbol,
+                    "Token": str(token),
+                    "NetQty": net_qty,
+                    "IsNonZero": "Yes" if net_qty != 0 else "No",
+                    "BuyQty": int(pos.get("buy_qty", 0)),
+                    "SellQty": int(pos.get("sell_qty", 0)),
+                    "BuyPrice": float(pos.get("buy_price", 0)),
+                    "SellPrice": float(pos.get("sell_price", 0)),
+                    "Product": str(pos.get("product", "")),
+                    "Strategy": strategy_value,
+                    "LTP": float(pos.get("ltp", 0)),
+                    "MTM": float(pos.get("mtm", 0)),
+                    "PnL": float(pos.get("pnl", 0)),
+                    "RawMTM": float(pos.get("raw_mtm", 0)) if pos.get("raw_mtm") else 0.0
+                })
+
+            # Create filename and path
+            current_date = datetime.now(IST).strftime('%Y-%m-%d')
+            filename = f"{current_date}_positions.csv"
+            main_app_dir = os.path.dirname(os.path.abspath(__file__))
+            logs_dir = os.path.join(main_app_dir, "logs")
+            os.makedirs(logs_dir, exist_ok=True)
+            filepath = os.path.join(logs_dir, filename)
+
+            # Save to CSV
+            columns = [
+                "Timestamp", "Symbol", "Token", "IsNonZero", "NetQty", 
+                "BuyQty", "SellQty", "BuyPrice", "SellPrice", 
+                "Product", "Strategy", "LTP", "MTM", "PnL", "RawMTM"
+            ]   
+            output_df = pd.DataFrame(output_data, columns=columns)
+            output_df.to_csv(filepath, mode='w', header=True, index=False, float_format="%.2f")
+                        
+            log_msg = f"Saved {len(output_data)} positions to {filepath}"
+            logger.info(log_msg)
+            return True
+
+        except Exception as e:
+            error_msg = f"Failed to save positions to CSV: {str(e)}"
+            logger.error(error_msg)
+            return False            

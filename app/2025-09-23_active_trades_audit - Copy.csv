@@ -1,0 +1,4 @@
+trade_id,stock,entry_price,stop_loss,target_price,quantity,remaining_qty,entry_time,status,order_id,sl_order_id,profit_booked,original_sl,audit_timestamp,audit_action,audit_reason,total_active_trades
+BORORENEW_055540,BORORENEW,622.0,611.65,632.35,10,10,2025-09-23 05:55:40,ACTIVE,25092300218315,25092300218432,False,611.65,2025-09-23 05:55:48,new_trades,,3
+KALAMANDIR_055544,KALAMANDIR,159.38,158.41,160.35,10,10,2025-09-23 05:55:44,ACTIVE,25092300218449,25092300218564,False,158.41,2025-09-23 05:55:48,new_trades,,3
+KECL_055548,KECL,123.23,124.05,122.41000000000001,10,10,2025-09-23 05:55:48,ACTIVE,25092300218573,25092300218672,False,124.05,2025-09-23 05:55:48,new_trades,,3

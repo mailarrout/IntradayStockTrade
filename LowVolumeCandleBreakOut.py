@@ -163,6 +163,12 @@ def run_strategy(ui_reference):
 def analyze_stock_file(file_path):
     """
     Returns tuple: (result_dict or None, is_invalid(bool), is_triggered(bool))
+    Strategy:
+      - Find lowest volume among 9:15, 9:20, 9:25 candles
+      - Next GREEN (bullish) or RED (bearish) candle with lower volume is the target
+      - In next 3–5 candles:
+          SELL if candle CLOSES below GREEN’s OPEN
+          BUY  if candle CLOSES above RED’s OPEN
     """
     stock = os.path.basename(file_path).replace('.csv', '')
     try:
@@ -224,20 +230,20 @@ def analyze_stock_file(file_path):
         logger.debug(f"{stock}: No target candles found")
         return None, False, False
 
-    # Step C: scan only the next 3 candles for breakout condition (close vs target OPEN)
+    # Step C: scan only the next 3–5 candles for breakout condition (close vs target OPEN)
     start_time = min([t['Date'] for t in [target_green, target_red] if t is not None])
     target_idx = df[df['Date'] == start_time].index[0]
 
-    max_candles_after_target = 3
+    max_candles_after_target = 5   # <-- changed from 3 to 5
     end_idx = min(target_idx + max_candles_after_target + 1, len(df))
 
     for idx in range(target_idx + 1, end_idx):
         row = df.iloc[idx]
 
         if target_green is not None:
-            # SELL if later candle closes below target GREEN's Open
+            # SELL if CLOSE goes below GREEN's Open
             if float(row['Close']) < float(target_green['Open']):
-                entry_price = float(row['Close'])
+                entry_price = float(target_green['Open'])
                 stop_loss = float(target_green['High']) + 0.5
                 risk = abs(entry_price - stop_loss)
                 target_price = entry_price - risk
@@ -252,13 +258,13 @@ def analyze_stock_file(file_path):
                     'Target_Candle_Type': 'GREEN',
                     'Direction': 'SELL'
                 }
-                logger.info(f"{stock}: GREEN target OPEN broken within 3 candles. Entry {entry_price}, SL {stop_loss}, Target {target_price}")
+                logger.info(f"{stock}: SELL confirmed at {row['Date']} (close {row['Close']} < open {target_green['Open']})")
                 return res, False, True
 
         if target_red is not None:
-            # BUY if later candle closes above target RED's Open
+            # BUY if CLOSE goes above RED's Open
             if float(row['Close']) > float(target_red['Open']):
-                entry_price = float(row['Close'])
+                entry_price = float(target_red['Open'])
                 stop_loss = float(target_red['Low']) - 0.5
                 risk = abs(entry_price - stop_loss)
                 target_price = entry_price + risk
@@ -273,11 +279,10 @@ def analyze_stock_file(file_path):
                     'Target_Candle_Type': 'RED',
                     'Direction': 'BUY'
                 }
-                logger.info(f"{stock}: RED target OPEN broken within 3 candles. Entry {entry_price}, SL {stop_loss}, Target {target_price}")
+                logger.info(f"{stock}: BUY confirmed at {row['Date']} (close {row['Close']} > open {target_red['Open']})")
                 return res, False, True
 
-    # If no breakout within 3 candles → no trade
-    logger.debug(f"{stock}: No breakout within 3 candles after target")
+    # If no breakout within next 5 candles
     return None, False, False
 
 # -----------------------
@@ -413,7 +418,7 @@ def save_active_trades(current_date, action="update", trade_id=None, reason=""):
                 'entry_price': info['entry_price'],
                 'stop_loss': info['stop_loss'],
                 'target_price': info.get('target_price', ''),
-                'quantity': info['quantity'],
+                'quantity': info['quantity'],  # signed (+BUY / -SELL)
                 'remaining_qty': info.get('remaining_qty', info['quantity']),
                 'entry_time': info['entry_time'],
                 'status': info['status'],
@@ -421,12 +426,14 @@ def save_active_trades(current_date, action="update", trade_id=None, reason=""):
                 'sl_order_id': info.get('sl_order_id', ''),
                 'profit_booked': info.get('profit_booked', False),
                 'original_sl': info.get('original_sl', info['stop_loss']),
-                # NEW AUDIT FIELDS
+                'direction': info.get('direction', ''),  # NEW COLUMN
+                # AUDIT FIELDS
                 'audit_timestamp': current_time,
                 'audit_action': action,
                 'audit_reason': reason if tid == trade_id else '',
                 'total_active_trades': len(active_trades)
             }
+
             rows.append(row_data)
         
         df_new = pd.DataFrame(rows)
@@ -643,21 +650,26 @@ def execute_trades(signals, ui_reference, current_date):
                 logger.error(f"SL order failed for {stock}: {sl_order_result}")
 
             trade_id = f"{stock}_{datetime.now().strftime('%H%M%S')}"
+
+            # signed quantity (+ for BUY, - for SELL)
+            signed_qty = qty if direction == "BUY" else -qty
+
             active_trades[trade_id] = {
                 'stock': stock,
                 'entry_price': entry_price,
                 'stop_loss': stop_loss,
                 'target_price': target_price,
-                'quantity': qty,
+                'quantity': signed_qty,       # signed qty
+                'remaining_qty': signed_qty,  # signed remaining qty
                 'entry_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                 'status': 'ACTIVE',
                 'order_id': order_id,
                 'sl_order_id': sl_order_id,
                 'profit_booked': False,
-                'remaining_qty': qty,
                 'original_sl': stop_loss,
-                'direction': direction  # Added direction tracking
+                'direction': direction        # explicit BUY/SELL
             }
+
 
             executed_count += 1
             remaining_slots -= 1
@@ -784,28 +796,45 @@ def execute_exit_trade(ui_reference, trade, exit_price, reason, current_date):
             trade['exit_price'] = exit_price
             trade['exit_time'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             trade['exit_reason'] = reason
-            
+
             # Calculate PnL
             if direction == 'SELL':
                 pnl = (entry_price - exit_price) * quantity
             else:
                 pnl = (exit_price - entry_price) * quantity
-            
+
             trade['pnl'] = pnl
-            
+
             logger.info(f"{stock}: {reason} at {exit_price:.2f}. PnL: {pnl:+.2f}")
-            
+
+            # ✅ Log exit details with signed qty and direction
+            log_profit_booking(
+                stock=stock,
+                entry_price=entry_price,
+                exit_price=exit_price,
+                qty_exited=quantity,
+                remaining_qty=0,            # adjust if you implement partial exits
+                current_date=current_date,
+                reason=reason,
+                direction=direction         # <-- NEW argument
+            )
+
             # Simple audit logging
-            save_active_trades(current_date, action="exit", trade_id=None, 
-                             reason=f"{reason}_PnL_{pnl:+.2f}")
-            
+            save_active_trades(
+                current_date,
+                action="exit",
+                trade_id=None,
+                reason=f"{reason}_PnL_{pnl:+.2f}"
+            )
+
         else:
             logger.error(f"{stock}: Exit order failed: {order_result}")
+
             
     except Exception as e:
         logger.error(f"{stock}: Error placing exit order: {e}")
 
-def log_profit_booking(stock, entry_price, exit_price, qty_exited, remaining_qty, current_date, reason):
+def log_profit_booking(stock, entry_price, exit_price, qty_exited, remaining_qty, current_date, reason, direction):
     """Simple log function for all exits"""
     app_dir = 'app'
     if not os.path.exists(app_dir):
@@ -820,11 +849,13 @@ def log_profit_booking(stock, entry_price, exit_price, qty_exited, remaining_qty
         'stock': stock,
         'entry_price': entry_price,
         'exit_price': exit_price,
-        'quantity': qty_exited,
-        'remaining_qty': remaining_qty,
+        'quantity': qty_exited if direction == "BUY" else -qty_exited,   # signed
+        'remaining_qty': remaining_qty if direction == "BUY" else -remaining_qty,
         'pnl': pnl,
+        'direction': direction,   # ✅ NEW
         'exit_reason': reason
-    }
+         }
+
     
     try:
         if os.path.exists(log_file):
