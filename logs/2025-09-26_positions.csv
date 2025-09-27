@@ -1,0 +1,2 @@
+Timestamp,Symbol,Token,IsNonZero,NetQty,BuyQty,SellQty,BuyPrice,SellPrice,Product,Strategy,LTP,MTM,PnL,RawMTM
+2025-09-26 23:14:06,IITL-EQ,,No,0,25,25,189.90,189.65,I,,189.81,0.00,-6.15,0.00

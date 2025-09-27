@@ -2,16 +2,15 @@
 import os
 import glob
 import logging
-from datetime import datetime
 import pandas as pd
 import time
 from PyQt5.QtCore import QTimer
+import pytz
+from datetime import datetime, timedelta, time
 
 # -----------------------
 # Config / globals
 # -----------------------
-logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 
 MAX_TRADES_PER_DAY = 5
 TRADE_QUANTITY = 10
@@ -20,15 +19,92 @@ active_trades = {}  # trade_id -> trade info
 # Monitoring variables
 monitor_timer = None
 stop_monitoring = False
-
 strategy_is_running = False
 
-"""
-Intraday breakout strategy using low-volume candles as reference. 
-Generates both BUY and SELL signals based on green/red breakout structures. 
-Trades are executed with defined stop loss and target, 
-and monitoring exits trades fully on SL or target hit.
-"""
+# ✅ CORRECTED IST Formatter Setup
+class ISTFormatter(logging.Formatter):
+    """Custom formatter that converts timestamps to IST"""
+    def formatTime(self, record, datefmt=None):
+        dt = datetime.fromtimestamp(record.created, pytz.timezone('Asia/Kolkata'))
+        if datefmt:
+            return dt.strftime(datefmt)
+        else:
+            return dt.strftime('%Y-%m-%d %H:%M:%S IST')
+
+# Get logger for this module
+logger = logging.getLogger(__name__)
+
+# ✅ Apply IST formatting ONLY after main logging is configured
+def setup_ist_logging():
+    """Setup IST formatting for this module's logs"""
+    ist_formatter = ISTFormatter('%(asctime)s %(levelname)s %(message)s')
+    
+    # Apply to all existing handlers
+    for handler in logging.getLogger().handlers:
+        handler.setFormatter(ist_formatter)
+    
+    # Also apply to this module's logger
+    for handler in logger.handlers:
+        handler.setFormatter(ist_formatter)
+
+# Call this function when the strategy runs or after main app initialization
+setup_ist_logging()
+
+
+def validate_data_freshness(df, symbol):
+    """Validate if we have current data (not delayed) - RELAXED for current candle"""
+    try:
+        if df.empty:
+            logger.warning(f"{symbol}: Empty dataframe")
+            return False
+            
+        if 'Date' not in df.columns:
+            logger.warning(f"{symbol}: No Date column found")
+            return False
+            
+        # Sort by date and get latest
+        df_sorted = df.sort_values('Date', ascending=False)
+        latest_time = df_sorted.iloc[0]['Date']
+        
+        if pd.isna(latest_time):
+            logger.warning(f"{symbol}: Invalid latest timestamp")
+            return False
+            
+        now = datetime.now()
+        
+        # Parse the date if it's still in string format
+        if isinstance(latest_time, str):
+            try:
+                latest_time = pd.to_datetime(latest_time, format='%d-%m-%Y %H:%M:%S')
+            except:
+                latest_time = pd.to_datetime(latest_time, errors='coerce')
+        
+        if pd.isna(latest_time):
+            logger.warning(f"{symbol}: Could not parse latest timestamp")
+            return False
+            
+        # Check if latest candle is within current 5-minute slot
+        current_slot_start = now.replace(second=0, microsecond=0)
+        current_slot_start = current_slot_start.replace(minute=(now.minute // 5) * 5)
+        
+        # Allow up to 7 minutes delay (current candle + 2 minute buffer)
+        time_diff = (now - latest_time).total_seconds() / 60
+        
+        if time_diff > 7:  # More than 7 minutes delay
+            logger.error(f"STALE DATA: {symbol} delayed by {time_diff:.1f} minutes")
+            return False
+            
+        # Check if latest candle is for current or previous time slot
+        if latest_time >= (current_slot_start - timedelta(minutes=5)):
+            logger.debug(f"{symbol}: Data is fresh (latest: {latest_time}, delay: {time_diff:.1f}m)")
+            return True
+        else:
+            logger.warning(f"{symbol}: Data not current (latest: {latest_time}, expected after: {current_slot_start - timedelta(minutes=5)})")
+            return False
+            
+    except Exception as e:
+        logger.error(f"{symbol}: Error validating data freshness: {e}")
+        return False
 
 # -----------------------
 # Monitoring control functions
@@ -161,15 +237,6 @@ def run_strategy(ui_reference):
 # Strategy core
 # -----------------------
 def analyze_stock_file(file_path):
-    """
-    Returns tuple: (result_dict or None, is_invalid(bool), is_triggered(bool))
-    Strategy:
-      - Find lowest volume among 9:15, 9:20, 9:25 candles
-      - Next GREEN (bullish) or RED (bearish) candle with lower volume is the target
-      - In next 3–5 candles:
-          SELL if candle CLOSES below GREEN’s OPEN
-          BUY  if candle CLOSES above RED’s OPEN
-    """
     stock = os.path.basename(file_path).replace('.csv', '')
     try:
         df = pd.read_csv(file_path)
@@ -177,7 +244,19 @@ def analyze_stock_file(file_path):
         logger.error(f"{stock}: Failed to read file: {e}")
         return None, False, False
 
-    # normalize column names
+    # DEBUG: Log data timing information
+    if not df.empty and 'Date' in df.columns:
+        latest_time = df['Date'].max()
+        current_time = datetime.now()
+        logger.debug(f"{stock}: Latest data point: {latest_time}, Current time: {current_time}")
+        logger.debug(f"{stock}: Total candles in file: {len(df)}")
+
+    # ✅ CORRECTED DATA FRESHNESS CHECK
+    if not validate_data_freshness(df, stock):
+        logger.warning(f"{stock}: Skipping due to stale or invalid data")
+        return None, False, False
+
+    # Normalize column names
     df = df.rename(columns={
         "time": "Date",
         "into": "Open",
@@ -186,103 +265,178 @@ def analyze_stock_file(file_path):
         "intc": "Close",
         "intv": "Volume"
     })
+    
+    # ✅ CORRECTED DATE PARSING with proper error handling
     try:
-        df['Date'] = pd.to_datetime(df['Date'], format='%d-%m-%Y %H:%M:%S')
-    except Exception:
-        df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
+        # Handle the exact format from API: "26-09-2025 09:30:00"
+        df['Date'] = pd.to_datetime(df['Date'], format='%d-%m-%Y %H:%M:%S', errors='coerce')
+        # Drop rows where date parsing failed
+        df = df.dropna(subset=['Date'])
+        if df.empty:
+            logger.warning(f"{stock}: No valid dates after parsing")
+            return None, True, False
+    except Exception as e:
+        logger.error(f"{stock}: Error parsing dates: {e}")
+        return None, True, False
 
     df = df.sort_values('Date').reset_index(drop=True)
     if df.empty:
-        logger.info(f"{stock}: Empty data, skipping")
+        logger.info(f"{stock}: Empty data after processing, skipping")
         return None, True, False
 
-    # --- Step A: identify first 3 candles (9:15, 9:20, 9:25) ---
-    first_three = df[(df['Date'].dt.hour == 9) & (df['Date'].dt.minute.isin([15, 20, 25]))].sort_values('Date')
-    if len(first_three) < 3:
-        logger.info(f"{stock}: not enough first-3 candles")
+    # Log the available time range for debugging
+    logger.debug(f"{stock}: Data range: {df['Date'].min()} to {df['Date'].max()}")
+    
+    # Filter only today's data to avoid processing old data
+    today = datetime.now().date()
+    df_today = df[df['Date'].dt.date == today]
+    if df_today.empty:
+        logger.info(f"{stock}: No data for today {today}")
         return None, False, False
+        
+    logger.debug(f"{stock}: Today's candles: {len(df_today)}")
 
-    # locate the lowest-volume among those three
-    lowest_idx = first_three['Volume'].idxmin()
-    ref_row = df.loc[lowest_idx]
-    ref_volume = float(ref_row['Volume'])
-    ref_time = ref_row['Date']
-    logger.debug(f"{stock}: Lowest of first-3 at {ref_time} with vol {ref_volume}")
-
-    # Step B: find target GREEN/RED candle with lower volume after ref_time
-    target_green, target_red = None, None
-    for _, row in df.iterrows():
-        if row['Date'] <= ref_time:
-            continue
-        vol = float(row['Volume'])
-        if vol >= ref_volume:
-            continue
-        if float(row['Close']) > float(row['Open']) and target_green is None:
-            target_green = row
-            logger.debug(f"{stock}: Found Target GREEN at {row['Date']} vol {vol}")
-        if float(row['Close']) < float(row['Open']) and target_red is None:
-            target_red = row
-            logger.debug(f"{stock}: Found Target RED at {row['Date']} vol {vol}")
-        if target_green is not None and target_red is not None:
-            break
-
-    if target_green is None and target_red is None:
-        logger.debug(f"{stock}: No target candles found")
-        return None, False, False
-
-    # Step C: scan only the next 3–5 candles for breakout condition (close vs target OPEN)
-    start_time = min([t['Date'] for t in [target_green, target_red] if t is not None])
-    target_idx = df[df['Date'] == start_time].index[0]
-
-    max_candles_after_target = 5   # <-- changed from 3 to 5
-    end_idx = min(target_idx + max_candles_after_target + 1, len(df))
-
-    for idx in range(target_idx + 1, end_idx):
-        row = df.iloc[idx]
-
-        if target_green is not None:
-            # SELL if CLOSE goes below GREEN's Open
-            if float(row['Close']) < float(target_green['Open']):
-                entry_price = float(target_green['Open'])
-                stop_loss = float(target_green['High']) + 0.5
-                risk = abs(entry_price - stop_loss)
-                target_price = entry_price - risk
+    # ✅ CORRECTED: Process candles SEQUENTIALLY (like real-time)
+    df_today = df_today.sort_values('Date').reset_index(drop=True)
+    
+    # Variables to track state
+    reference_candle = None
+    reference_volume = None
+    active_target = None
+    monitoring_countdown = 0
+    target_candle_type = None
+    
+    # Process each candle in chronological order
+    for idx, row in df_today.iterrows():
+        candle_time = row['Date']
+        candle_hour = candle_time.hour
+        candle_minute = candle_time.minute
+        
+        logger.debug(f"{stock} Processing: {candle_time.strftime('%H:%M')} - O:{row['Open']} H:{row['High']} L:{row['Low']} C:{row['Close']} V:{row['Volume']:,.0f}")
+        
+        # STEP 1: Find reference candle (9:15, 9:20, 9:25)
+        if candle_hour == 9 and candle_minute in [15, 20, 25]:
+            if reference_candle is None:
+                # First candle of the three
+                reference_candle = row
+                reference_volume = float(row['Volume'])
+                logger.debug(f"{stock}: First reference candidate at {candle_time.strftime('%H:%M')} - Vol: {reference_volume:,.0f}")
+            else:
+                # Compare with existing reference to find lowest volume
+                current_volume = float(row['Volume'])
+                if current_volume < reference_volume:
+                    reference_candle = row
+                    reference_volume = current_volume
+                    logger.debug(f"{stock}: New reference at {candle_time.strftime('%H:%M')} - Vol: {current_volume:,.0f}")
+        
+        # STEP 2: After 9:25, look for target candles (but only if we have a reference)
+        elif (candle_hour > 9 or (candle_hour == 9 and candle_minute > 25)) and reference_candle is not None:
+            current_volume = float(row['Volume'])
+            
+            # If we're not currently monitoring a target, look for new ones
+            if active_target is None and current_volume < reference_volume:
+                is_green = float(row['Close']) > float(row['Open'])
+                is_red = float(row['Close']) < float(row['Open'])
+                
+                if is_green or is_red:
+                    active_target = row
+                    target_candle_type = 'GREEN' if is_green else 'RED'
+                    monitoring_countdown = 5  # Monitor next 5 candles
+                    
+                    logger.info(f"{stock}: 🎯 TARGET FOUND at {candle_time.strftime('%H:%M')} - {target_candle_type} "
+                              f"(Vol: {current_volume:,.0f} < Ref: {reference_volume:,.0f})")
+                    logger.info(f"{stock}: Target Open: {row['Open']:.2f}, Monitoring next 5 candles for breakout")
+                    
+                    # Skip to next candle (continue monitoring)
+                    continue
+        
+        # STEP 3: If we have an active target, monitor for breakout
+        if active_target is not None and monitoring_countdown > 0:
+            monitoring_countdown -= 1
+            
+            # Check breakout conditions based on target type
+            breakout_occurred = False
+            current_close = float(row['Close'])
+            target_open = float(active_target['Open'])
+            
+            if target_candle_type == 'GREEN':
+                # SELL signal: Close goes below GREEN target's Open
+                if current_close < target_open:
+                    breakout_occurred = True
+                    direction = 'SELL'
+                    logger.info(f"{stock}: ✅ BREAKOUT at {candle_time.strftime('%H:%M')} - "
+                              f"Close {current_close:.2f} < Target Open {target_open:.2f}")
+            
+            elif target_candle_type == 'RED':
+                # BUY signal: Close goes above RED target's Open  
+                if current_close > target_open:
+                    breakout_occurred = True
+                    direction = 'BUY'
+                    logger.info(f"{stock}: ✅ BREAKOUT at {candle_time.strftime('%H:%M')} - "
+                              f"Close {current_close:.2f} > Target Open {target_open:.2f}")
+            
+            if breakout_occurred:
+                # Calculate stop loss and target
+                entry_price = current_close
+                
+                # Find highest high (for SELL) or lowest low (for BUY) in the range
+                target_idx = df_today[df_today['Date'] == active_target['Date']].index[0]
+                entry_idx = idx
+                
+                if direction == 'SELL':
+                    highest_high = float(active_target['High'])
+                    for candle_idx in range(target_idx, entry_idx + 1):
+                        candle_high = float(df_today.iloc[candle_idx]['High'])
+                        if candle_high > highest_high:
+                            highest_high = candle_high
+                    stop_loss = highest_high + 0.05
+                    target_price = entry_price - (stop_loss - entry_price)  # 1:1 RR
+                else:  # BUY
+                    lowest_low = float(active_target['Low'])
+                    for candle_idx in range(target_idx, entry_idx + 1):
+                        candle_low = float(df_today.iloc[candle_idx]['Low'])
+                        if candle_low < lowest_low:
+                            lowest_low = candle_low
+                    stop_loss = lowest_low - 0.05
+                    target_price = entry_price + (entry_price - stop_loss)  # 1:1 RR
+                
+                # Prepare result
                 res = {
                     'Stock': stock,
                     'Entry_Point': row['Date'],
                     'Entry_Price': entry_price,
                     'Stop_Loss': stop_loss,
                     'Target_Price': target_price,
-                    'Target_Candle_Time': target_green['Date'],
-                    'Target_Candle_Open': float(target_green['Open']),
-                    'Target_Candle_Type': 'GREEN',
-                    'Direction': 'SELL'
+                    'Target_Candle_Time': active_target['Date'],
+                    'Target_Candle_Open': float(active_target['Open']),
+                    'Target_Candle_High': float(active_target['High']),
+                    'Target_Candle_Low': float(active_target['Low']),
+                    'Target_Candle_Close': float(active_target['Close']),
+                    'Target_Candle_Volume': float(active_target['Volume']),
+                    'Target_Candle_Type': target_candle_type,
+                    'Direction': direction,
+                    'Breakout_Candle_Time': candle_time.strftime('%H:%M'),
+                    'Breakout_Price': entry_price
                 }
-                logger.info(f"{stock}: SELL confirmed at {row['Date']} (close {row['Close']} < open {target_green['Open']})")
+                
+                logger.info(f"{stock}: 🚀 TRADE SIGNAL | {direction} at {entry_price:.2f} | "
+                          f"SL: {stop_loss:.2f} | Target: {target_price:.2f}")
+                
                 return res, False, True
+        
+        # STEP 4: If monitoring period ended without breakout, reset
+        if active_target is not None and monitoring_countdown <= 0:
+            logger.info(f"{stock}: ❌ No breakout detected for {target_candle_type} target at "
+                      f"{active_target['Date'].strftime('%H:%M')} (Open: {active_target['Open']:.2f})")
+            active_target = None
+            target_candle_type = None
 
-        if target_red is not None:
-            # BUY if CLOSE goes above RED's Open
-            if float(row['Close']) > float(target_red['Open']):
-                entry_price = float(target_red['Open'])
-                stop_loss = float(target_red['Low']) - 0.5
-                risk = abs(entry_price - stop_loss)
-                target_price = entry_price + risk
-                res = {
-                    'Stock': stock,
-                    'Entry_Point': row['Date'],
-                    'Entry_Price': entry_price,
-                    'Stop_Loss': stop_loss,
-                    'Target_Price': target_price,
-                    'Target_Candle_Time': target_red['Date'],
-                    'Target_Candle_Open': float(target_red['Open']),
-                    'Target_Candle_Type': 'RED',
-                    'Direction': 'BUY'
-                }
-                logger.info(f"{stock}: BUY confirmed at {row['Date']} (close {row['Close']} > open {target_red['Open']})")
-                return res, False, True
-
-    # If no breakout within next 5 candles
+    # If we reach here, no trade signal was generated
+    if reference_candle is None:
+        logger.info(f"{stock}: No valid reference candle found (9:15, 9:20, 9:25)")
+    elif active_target is None:
+        logger.info(f"{stock}: No target candle found with volume lower than reference")
+    
     return None, False, False
 
 # -----------------------
@@ -582,8 +736,8 @@ def execute_trades(signals, ui_reference, current_date):
                 exchange="NSE",
                 tradingsymbol=trading_symbol,
                 quantity=qty,
-                price_type="MKT", 
-                price=0,               
+                price_type="LMT",  # ✅ CHANGE: Limit order instead of Market
+                price=entry_price, # ✅ CHANGE: Use the actual entry price
                 discloseqty=0,
                 trigger_price=0,
                 retention="DAY",                

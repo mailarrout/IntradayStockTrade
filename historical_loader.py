@@ -10,7 +10,7 @@ from LowVolumeCandleBreakOut import run_strategy
 
 
 last_strategy_run = None
-STRATEGY_COOLDOWN_MINUTES = 2  # 2 minutes cooldown between strategy runs
+STRATEGY_COOLDOWN_MINUTES = 1  # 2 minutes cooldown between strategy runs
 
 # Get logger for this module
 logger = logging.getLogger(__name__)
@@ -37,46 +37,36 @@ def load_token_map(symbol_file="NSE_symbols.txt"):
         raise
 
 def start_continuous_fetching(ui_reference, symbols):
-    """Start the 5-minute interval timer with 30-second delay for strategy"""
+    """Start the 5-minute interval timer for exact candle timing"""
     global continuous_timer
     
     logger.info("Starting continuous fetching")
-    
-    # Stop existing timer if any
     stop_continuous_fetching()
     
-    # Create a new timer that triggers at XX:00:30, XX:05:30, etc.
     continuous_timer = QTimer()
     
-    def fetch_with_delay():
+    def fetch_immediately():
         logger.debug("Continuous fetch timer triggered")
-        # Fetch data first
         fetch_historical_for_symbols(ui_reference, symbols)
-        # Strategy will be automatically called after data loading completes
     
-    # Calculate time until next 5-minute interval with 30-second offset
+    # Calculate time until next exact 5-minute interval (XX:00, XX:05, etc.)
     now = datetime.now()
-    next_minute = (now.minute // 5 + 1) * 5
-    if next_minute >= 60:
-        next_minute = 0
-        # Add an hour if we wrap to the next hour
-        next_time = now.replace(hour=now.hour + 1, minute=next_minute, second=30, microsecond=0)
-    else:
-        next_time = now.replace(minute=next_minute, second=30, microsecond=0)
+    # Get the next 5-minute boundary
+    minutes_to_next = 5 - (now.minute % 5)
+    next_time = now.replace(minute=now.minute + minutes_to_next, second=0, microsecond=0)
     
+    # If we're exactly at a boundary, wait for the next one
     if next_time <= now:
         next_time = next_time + timedelta(minutes=5)
     
     delay_ms = (next_time - now).total_seconds() * 1000
     
-    # Set up the timer
-    continuous_timer.timeout.connect(fetch_with_delay)
-    continuous_timer.start(300000)  # 5 minutes in milliseconds
+    continuous_timer.timeout.connect(fetch_immediately)
+    continuous_timer.start(300000)  # 5 minutes (300 seconds)
     
-    # Trigger first fetch after calculated delay
-    QTimer.singleShot(int(delay_ms), fetch_with_delay)
-    
-    logger.info(f"Continuous 5-minute fetching started with {delay_ms/1000:.0f}s initial delay")
+    # Trigger first fetch at exact 5-minute boundary
+    QTimer.singleShot(int(delay_ms), fetch_immediately)
+    logger.info(f"First fetch scheduled at: {next_time.strftime('%H:%M:%S')}")
 
 def stop_continuous_fetching():
     """Stop the continuous timer"""
@@ -204,8 +194,6 @@ def fetch_historical_for_symbols(ui_reference, symbols, target_date=None, interv
     # ✅ Moved outside the loop - process all symbols first
     if success_count > 0:
         logger.info(f"Completed historical fetch. Success: {success_count}, Failed: {failed_count}")
-        if failed_symbols:
-            logger.info(f"Failed symbols: {failed_symbols}")
         
         current_time_ist = datetime.now(ist)
         current_time_only = current_time_ist.time()
@@ -218,17 +206,28 @@ def fetch_historical_for_symbols(ui_reference, symbols, target_date=None, interv
         if last_strategy_run:
             time_since_last = (current_time_ist - last_strategy_run).total_seconds() / 60
         
+        # Allow strategy run if:
+        # 1. We're in market hours (9:15-15:30)
+        # 2. Either no previous run OR cooldown period has passed
+        # 3. We're at a 5-minute boundary (XX:00, XX:05, etc.)
+        current_minute = current_time_ist.minute
+        at_5_min_boundary = (current_minute % 5 == 0)
+        
         can_run_strategy = (
             market_open_time <= current_time_only <= market_close_time and
+            at_5_min_boundary and
             (last_strategy_run is None or (time_since_last and time_since_last >= STRATEGY_COOLDOWN_MINUTES))
         )
         
         if can_run_strategy:
-            logger.info(f"Scheduling strategy run in 2 seconds")
+            logger.info(f"Strategy run scheduled (at 5-min boundary: {current_time_ist.strftime('%H:%M')})")
             last_strategy_run = current_time_ist
-            QTimer.singleShot(2000, lambda: run_strategy(ui_reference))
+            # Run strategy immediately
+            run_strategy(ui_reference)
         else:
-            if last_strategy_run and time_since_last < STRATEGY_COOLDOWN_MINUTES:
+            if not at_5_min_boundary:
+                logger.info(f"Skipping strategy run (not at 5-min boundary: {current_time_ist.strftime('%H:%M')})")
+            elif last_strategy_run and time_since_last < STRATEGY_COOLDOWN_MINUTES:
                 logger.info(f"Skipping strategy run (cooldown: {time_since_last:.1f}m/{STRATEGY_COOLDOWN_MINUTES}m remaining)")
             else:
                 logger.info("Skipping strategy run (outside market hours)")

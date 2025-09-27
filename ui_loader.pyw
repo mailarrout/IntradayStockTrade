@@ -7,16 +7,27 @@ from PyQt5.QtCore import QTimer
 import pytz
 
 # ===== CONFIGURATION FLAG =====
-DEBUG_MODE = False  # Set to False for normal logging, True for detailed debugging
+DEBUG_MODE = True
 # ==============================
 
-# Configure logging FIRST, before creating any instances
+# Configure logging with IST timezone FIRST
+class ISTFormatter(logging.Formatter):
+    """Custom formatter that converts timestamps to IST"""
+    def formatTime(self, record, datefmt=None):
+        dt = datetime.fromtimestamp(record.created, pytz.timezone('Asia/Kolkata'))
+        if datefmt:
+            return dt.strftime(datefmt)
+        else:
+            return dt.strftime('%Y-%m-%d %H:%M:%S IST')
+
 current_date = datetime.now().strftime('%Y-%m-%d')
 log_file = os.path.join('logs', f'{current_date}_app.log')
 os.makedirs('logs', exist_ok=True)
 
+# Create formatter with IST time
+ist_formatter = ISTFormatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
 if DEBUG_MODE:
-    # DEBUG MODE - Capture EVERYTHING
     logging.basicConfig(
         level=logging.DEBUG,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -26,7 +37,6 @@ if DEBUG_MODE:
     )
     log_level_name = "DEBUG"
 else:
-    # NORMAL MODE - Only important messages
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -36,18 +46,21 @@ else:
     )
     log_level_name = "INFO"
 
+# Apply IST formatter to all handlers
+root_logger = logging.getLogger()
+for handler in root_logger.handlers:
+    handler.setFormatter(ist_formatter)
+
 # ALWAYS keep console output for real-time monitoring
 console_handler = logging.StreamHandler()
-console_handler.setLevel(logging.INFO)  # Console shows INFO+ even in DEBUG mode
-console_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-console_handler.setFormatter(console_formatter)
+console_handler.setLevel(logging.INFO)
+console_handler.setFormatter(ist_formatter)  # Apply IST format to console too
 logging.getLogger().addHandler(console_handler)
 
 # Get logger for this module
 logger = logging.getLogger(__name__)
 logger.info(f"Application starting - Logging to {log_file} (Mode: {log_level_name})")
-if DEBUG_MODE:
-    logger.debug("DEBUG logging enabled - capturing all program activities")
+
 
 # Application modules
 from stock_loader import start_scheduled_loading, get_stock_name
@@ -62,6 +75,8 @@ class QTextEditHandler(logging.Handler):
     def __init__(self, text_edit):
         super().__init__()
         self.text_edit = text_edit
+        # ✅ USE IST FORMatter for UI logs
+        self.setFormatter(ISTFormatter('%(asctime)s - %(levelname)s - %(message)s'))
         
     def emit(self, record):
         msg = self.format(record)
@@ -124,19 +139,22 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def setup_ui_logging(self):
         """Setup logging to UI TextEdit"""
-        # Create custom handler for UI
+        # Create custom handler for UI with IST formatting
         ui_handler = QTextEditHandler(self.LogTextEdit)
-        ui_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
         
+        # ✅ Set level based on DEBUG_MODE
         if DEBUG_MODE:
             ui_handler.setLevel(logging.DEBUG)
         else:
             ui_handler.setLevel(logging.INFO)
         
+        # ✅ Use the same IST formatter as console
+        ui_handler.setFormatter(ISTFormatter('%(asctime)s - %(levelname)s - %(message)s'))
+        
         # Add to root logger
         logging.getLogger().addHandler(ui_handler)
         
-        self.logger.info("UI logging initialized successfully")
+        self.logger.info("UI logging initialized successfully with IST timezone")
 
 if __name__ == "__main__":
     try:

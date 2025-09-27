@@ -1,0 +1,5 @@
+Timestamp,Alert Name,Stocks,Trigger Prices,Scan Name,Triggered At
+
+2025-09-27 15:43:34,Test Alert,RELIANCE,2520.5,SUCCESS
+2025-09-27 15:44:33,Test Alert,RELIANCE,2520.5,SUCCESS
+2025-09-27 15:55:14,Test Alert,RELIANCE,2520.5,SUCCESS
