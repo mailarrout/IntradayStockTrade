@@ -1,0 +1,13 @@
+Timestamp,Alert Name,Stocks,Trigger Prices,Order Status,Order Message
+2025-09-29 09:56:07,Alert for RSI Cross With Yesterday High Break One Min,SATIN,145.97,FAILED,Order failed: NO_RESPONSE
+2025-09-29 09:57:07,Alert for RSI Cross With Yesterday High Break One Min,BARBEQUE,232.05,SUCCESS,Order placed for BARBEQUE-EQ - BARBEQUE-EQ
+2025-09-29 10:07:08,Alert for RSI Cross With Yesterday High Break One Min,WESTLIFE,697.75,SUCCESS,Order placed for WESTLIFE-EQ - WESTLIFE-EQ
+2025-09-29 15:44:22,Test Alert,SBIN,600.5,FAILED,Order failed: ERROR
+2025-09-29 15:44:23,Test Alert 2,RELIANCE,2500.75,FAILED,Order failed: ERROR
+2025-09-29 15:46:13,Test Alert,SBIN,600.5,FAILED,Order failed: ERROR
+2025-09-29 15:46:14,Test Alert 2,RELIANCE,2500.75,FAILED,Order failed: ERROR
+2025-09-29 15:46:17,Test Alert 3,TATASTEEL,150.25,FAILED,Order failed: ERROR
+2025-09-29 15:46:48,Test Alert 3,TATASTEEL,150.25,FAILED,Order failed: ERROR
+2025-09-29 15:47:16,Test Alert 3,TATASTEEL,150.25,SUCCESS,Order placed: TATASTEEL-EQ
+2025-09-29 15:47:40,Test Alert 2,RELIANCE,2500.75,SUCCESS,Order placed: RELIANCE-EQ
+2025-09-29 20:22:51,Test Alert,RELIANCE,2850.5,SUCCESS,Order placed: RELIANCE-EQ

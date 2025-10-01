@@ -1,0 +1,195 @@
+2025-09-29 10:41:59,343 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.219:5000
+2025-09-29 10:41:59,343 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-29 10:42:05,256 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 10:42:05] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-09-29 10:46:38,594 - TradingBot - INFO - Loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-29 10:46:38,594 - TradingBot - INFO - Starting Chartink Trading Bot...
+2025-09-29 10:46:39,698 - TradingBot - INFO - Broker login successful
+2025-09-29 10:46:39,698 - TradingBot - INFO - Alert processor started
+2025-09-29 10:46:39,698 - TradingBot - INFO - Position monitoring started
+2025-09-29 10:46:39,698 - TradingBot - INFO - Position monitoring enabled
+2025-09-29 10:46:39,698 - TradingBot - INFO - Trading bot started successfully!
+2025-09-29 10:46:39,698 - TradingBot - INFO - Webhook URL: http://localhost:5000/chartink-webhook
+2025-09-29 10:46:39,729 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.219:5000
+2025-09-29 10:46:39,729 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-29 10:46:45,291 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 10:46:45] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-09-29 10:47:41,115 - TradingBot - WARNING - Session expired, re-logging in...
+2025-09-29 10:47:41,565 - TradingBot - INFO - Broker login successful
+2025-09-29 11:04:15,880 - TradingBot - INFO - Loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-29 11:04:15,880 - TradingBot - INFO - Starting Chartink Trading Bot...
+2025-09-29 11:04:15,880 - TradingBot - INFO - Created position book file: app/2025-09-29_position_book.csv
+2025-09-29 11:04:16,353 - TradingBot - INFO - Broker login successful
+2025-09-29 11:04:16,353 - TradingBot - INFO - Alert processor started
+2025-09-29 11:04:16,353 - TradingBot - INFO - Position monitoring started
+2025-09-29 11:04:16,353 - TradingBot - INFO - Position monitoring enabled
+2025-09-29 11:04:16,353 - TradingBot - INFO - Trading bot started successfully!
+2025-09-29 11:04:16,509 - TradingBot - INFO - Current IST Time: 2025-09-29 15:34:16
+2025-09-29 11:04:16,510 - TradingBot - INFO - Webhook URL: http://localhost:5000/chartink-webhook
+2025-09-29 11:04:16,549 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.219:5000
+2025-09-29 11:04:16,549 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-29 11:04:22,204 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:04:22] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-09-29 11:05:17,277 - TradingBot - WARNING - Session expired, re-logging in...
+2025-09-29 11:05:17,738 - TradingBot - INFO - Broker login successful
+2025-09-29 11:13:20,222 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:13:20] "[31m[1mPOST /chartink-webhook HTTP/1.1[0m" 415 -
+2025-09-29 11:13:30,424 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:13:30] "[31m[1mPOST /chartink-webhook HTTP/1.1[0m" 415 -
+2025-09-29 11:13:51,986 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:13:51] "[31m[1mPOST /chartink-webhook HTTP/1.1[0m" 415 -
+2025-09-29 11:14:22,915 - TradingBot - INFO - Webhook received: SBIN
+2025-09-29 11:14:22,919 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:14:22] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-09-29 11:14:22,919 - TradingBot - INFO - Processing alert: SBIN-EQ @ 600.5
+2025-09-29 11:14:22,945 - TradingBot - INFO - Placing BUY order: SBIN-EQ @ 600.5
+2025-09-29 11:14:22,948 - TradingBot - ERROR - Order exception: NorenApi.place_order() missing 1 required positional argument: 'discloseqty'
+2025-09-29 11:14:23,268 - TradingBot - INFO - Webhook received: RELIANCE
+2025-09-29 11:14:23,269 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:14:23] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-09-29 11:14:23,270 - TradingBot - INFO - Processing alert: RELIANCE-EQ @ 2500.75
+2025-09-29 11:14:23,282 - TradingBot - INFO - Placing BUY order: RELIANCE-EQ @ 2500.75
+2025-09-29 11:14:23,285 - TradingBot - ERROR - Order exception: NorenApi.place_order() missing 1 required positional argument: 'discloseqty'
+2025-09-29 11:16:05,849 - TradingBot - INFO - Loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-29 11:16:05,858 - TradingBot - INFO - Starting Chartink Trading Bot...
+2025-09-29 11:16:06,330 - TradingBot - INFO - Broker login successful
+2025-09-29 11:16:06,333 - TradingBot - INFO - Alert processor started
+2025-09-29 11:16:06,342 - TradingBot - INFO - Position monitoring started
+2025-09-29 11:16:06,343 - TradingBot - INFO - Position monitoring enabled
+2025-09-29 11:16:06,362 - TradingBot - INFO - Trading bot started successfully!
+2025-09-29 11:16:06,618 - TradingBot - INFO - Current IST Time: 2025-09-29 15:46:06
+2025-09-29 11:16:06,618 - TradingBot - INFO - Webhook URL: http://localhost:5000/chartink-webhook
+2025-09-29 11:16:06,650 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.219:5000
+2025-09-29 11:16:06,650 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-29 11:16:10,276 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:16:10] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-09-29 11:16:13,219 - TradingBot - INFO - Webhook received: SBIN
+2025-09-29 11:16:13,220 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:16:13] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-09-29 11:16:13,220 - TradingBot - INFO - Processing alert: SBIN-EQ @ 600.5
+2025-09-29 11:16:13,228 - TradingBot - INFO - Placing BUY order: SBIN-EQ @ 600.5
+2025-09-29 11:16:13,466 - TradingBot - INFO - Webhook received: RELIANCE
+2025-09-29 11:16:13,468 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:16:13] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-09-29 11:16:13,668 - TradingBot - ERROR - Order exception: 'NoneType' object has no attribute 'get'
+2025-09-29 11:16:13,668 - TradingBot - INFO - Processing alert: RELIANCE-EQ @ 2500.75
+2025-09-29 11:16:13,668 - TradingBot - INFO - Placing BUY order: RELIANCE-EQ @ 2500.75
+2025-09-29 11:16:14,118 - TradingBot - ERROR - Order exception: 'NoneType' object has no attribute 'get'
+2025-09-29 11:16:16,701 - TradingBot - INFO - Webhook received: TATASTEEL
+2025-09-29 11:16:16,702 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:16:16] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-09-29 11:16:16,702 - TradingBot - INFO - Processing alert: TATASTEEL-EQ @ 150.25
+2025-09-29 11:16:16,711 - TradingBot - INFO - Placing BUY order: TATASTEEL-EQ @ 150.25
+2025-09-29 11:16:17,150 - TradingBot - ERROR - Order exception: 'NoneType' object has no attribute 'get'
+2025-09-29 11:16:48,035 - TradingBot - INFO - Webhook received: TATASTEEL
+2025-09-29 11:16:48,035 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:16:48] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-09-29 11:16:48,035 - TradingBot - INFO - Processing alert: TATASTEEL-EQ @ 150.25
+2025-09-29 11:16:48,035 - TradingBot - INFO - Placing BUY order: TATASTEEL-EQ @ 150.25
+2025-09-29 11:16:48,500 - TradingBot - ERROR - Order exception: 'NoneType' object has no attribute 'get'
+2025-09-29 11:17:07,223 - TradingBot - WARNING - Session expired, re-logging in...
+2025-09-29 11:17:07,662 - TradingBot - INFO - Broker login successful
+2025-09-29 11:17:15,618 - TradingBot - INFO - Webhook received: TATASTEEL
+2025-09-29 11:17:15,618 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:17:15] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-09-29 11:17:15,618 - TradingBot - INFO - Processing alert: TATASTEEL-EQ @ 150.25
+2025-09-29 11:17:15,618 - TradingBot - INFO - Placing BUY order: TATASTEEL-EQ @ 150.25
+2025-09-29 11:17:16,071 - TradingBot - INFO - Order placed: TATASTEEL-EQ - ID: 25092900509859
+2025-09-29 11:17:16,072 - TradingBot - INFO - Setting up position for TATASTEEL-EQ
+2025-09-29 11:17:16,517 - TradingBot - WARNING - Attempt 1: Position not found for TATASTEEL-EQ
+2025-09-29 11:17:18,964 - TradingBot - WARNING - Attempt 2: Position not found for TATASTEEL-EQ
+2025-09-29 11:17:21,404 - TradingBot - WARNING - Attempt 3: Position not found for TATASTEEL-EQ
+2025-09-29 11:17:23,405 - TradingBot - ERROR - Failed to setup position: TATASTEEL-EQ
+2025-09-29 11:17:23,405 - TradingBot - ERROR - Failed to setup position: TATASTEEL-EQ
+2025-09-29 11:17:39,784 - TradingBot - INFO - Webhook received: RELIANCE
+2025-09-29 11:17:39,784 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:17:39] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-09-29 11:17:39,784 - TradingBot - INFO - Processing alert: RELIANCE-EQ @ 2500.75
+2025-09-29 11:17:39,784 - TradingBot - INFO - Placing BUY order: RELIANCE-EQ @ 2500.75
+2025-09-29 11:17:40,244 - TradingBot - INFO - Order placed: RELIANCE-EQ - ID: 25092900509871
+2025-09-29 11:17:40,245 - TradingBot - INFO - Setting up position for RELIANCE-EQ
+2025-09-29 11:17:40,689 - TradingBot - WARNING - Attempt 1: Position not found for RELIANCE-EQ
+2025-09-29 11:17:43,137 - TradingBot - WARNING - Attempt 2: Position not found for RELIANCE-EQ
+2025-09-29 11:17:45,585 - TradingBot - WARNING - Attempt 3: Position not found for RELIANCE-EQ
+2025-09-29 11:17:47,586 - TradingBot - ERROR - Failed to setup position: RELIANCE-EQ
+2025-09-29 11:17:47,587 - TradingBot - ERROR - Failed to setup position: RELIANCE-EQ
+2025-09-29 11:19:05,466 - TradingBot - INFO - Loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-29 11:19:05,466 - TradingBot - INFO - Starting Chartink Trading Bot...
+2025-09-29 11:19:05,923 - TradingBot - INFO - Broker login successful
+2025-09-29 11:19:05,923 - TradingBot - INFO - Alert processor started
+2025-09-29 11:19:05,923 - TradingBot - INFO - Position monitoring started
+2025-09-29 11:19:05,923 - TradingBot - INFO - Position monitoring enabled
+2025-09-29 11:19:05,923 - TradingBot - INFO - Trading bot started successfully!
+2025-09-29 11:19:06,083 - TradingBot - INFO - Current IST Time: 2025-09-29 15:49:06
+2025-09-29 11:19:06,083 - TradingBot - INFO - Webhook URL: http://localhost:5000/chartink-webhook
+2025-09-29 11:19:06,115 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.219:5000
+2025-09-29 11:19:06,115 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-29 11:19:12,254 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 11:19:12] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-09-29 11:20:06,110 - TradingBot - INFO - 3:15 PM detected - initiating market close
+2025-09-29 11:20:06,110 - TradingBot - INFO - Starting market close procedure at 3:15 PM
+2025-09-29 11:20:06,110 - TradingBot - INFO - Cancelling all open orders...
+2025-09-29 11:20:06,890 - TradingBot - INFO - Cancelled 0 open orders
+2025-09-29 11:20:07,107 - TradingBot - WARNING - Session expired, re-logging in...
+2025-09-29 11:20:07,707 - TradingBot - INFO - Broker login successful
+2025-09-29 11:20:08,898 - TradingBot - INFO - Closing all open positions...
+2025-09-29 11:20:09,739 - TradingBot - INFO - Closed 0 positions
+2025-09-29 11:20:10,757 - TradingBot - INFO - All positions are closed
+2025-09-29 11:20:10,757 - TradingBot - INFO - All positions closed successfully
+2025-09-29 11:20:12,173 - TradingBot - INFO - Position book saved with 5 records
+2025-09-29 11:20:12,173 - TradingBot - INFO - Market close procedure completed. Shutting down...
+2025-09-29 11:21:09,361 - TradingBot - INFO - Trading bot shutdown complete
+2025-09-29 15:51:24,843 - TradingBot - INFO - Loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-29 15:51:24,848 - TradingBot - INFO - Starting Chartink Trading Bot...
+2025-09-29 15:51:24,850 - TradingBot - INFO - Created positions state file: app/2025-09-29_positions_state.csv
+2025-09-29 15:51:24,852 - TradingBot - INFO - Created position file: app/2025-09-29_position.csv
+2025-09-29 15:51:24,854 - TradingBot - INFO - Created candle analysis file: app/2025-09-29_candle_analysis.csv
+2025-09-29 15:51:25,339 - TradingBot - INFO - Broker login successful
+2025-09-29 15:51:25,457 - TradingBot - INFO - Alert processor started
+2025-09-29 15:51:25,647 - TradingBot - INFO - Position monitoring started
+2025-09-29 15:51:25,655 - TradingBot - INFO - Position monitoring enabled
+2025-09-29 15:51:25,722 - TradingBot - INFO - Trading bot started successfully!
+2025-09-29 15:51:25,735 - TradingBot - INFO - Trading Constants - Reward Ratio: 3, SL Buffer: 0.05
+2025-09-29 15:51:26,100 - TradingBot - INFO - Current IST Time: 2025-09-29 20:21:26
+2025-09-29 15:51:26,106 - TradingBot - INFO - Webhook URL: http://localhost:5000/chartink-webhook
+2025-09-29 15:51:26,155 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.219:5000
+2025-09-29 15:51:26,156 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-29 15:51:30,365 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 15:51:30] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-09-29 15:52:26,519 - TradingBot - WARNING - Session expired, re-logging in...
+2025-09-29 15:52:26,965 - TradingBot - INFO - Broker login successful
+2025-09-29 15:52:50,131 - TradingBot - INFO - Webhook received: RELIANCE
+2025-09-29 15:52:50,131 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 15:52:50] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-09-29 15:52:50,131 - TradingBot - INFO - Processing alert: RELIANCE-EQ @ 2850.5
+2025-09-29 15:52:50,131 - TradingBot - INFO - Placing BUY order: RELIANCE-EQ @ 2850.5
+2025-09-29 15:52:51,106 - TradingBot - INFO - Order placed: RELIANCE-EQ - ID: 25092900526216
+2025-09-29 15:52:51,106 - TradingBot - INFO - Setting up position for RELIANCE-EQ
+2025-09-29 15:52:51,554 - TradingBot - WARNING - Attempt 1: Position not found for RELIANCE-EQ
+2025-09-29 15:52:53,998 - TradingBot - WARNING - Attempt 2: Position not found for RELIANCE-EQ
+2025-09-29 15:52:56,444 - TradingBot - WARNING - Attempt 3: Position not found for RELIANCE-EQ
+2025-09-29 15:52:58,448 - TradingBot - ERROR - Failed to setup position: RELIANCE-EQ
+2025-09-29 15:52:58,448 - TradingBot - ERROR - Failed to setup position: RELIANCE-EQ
+2025-09-29 16:04:53,368 - TradingBot - INFO - Loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-29 16:04:53,384 - TradingBot - INFO - Starting Chartink Trading Bot...
+2025-09-29 16:04:53,845 - TradingBot - INFO - Broker login successful
+2025-09-29 16:04:53,845 - TradingBot - INFO - Alert processor started
+2025-09-29 16:04:53,845 - TradingBot - INFO - Position monitoring started
+2025-09-29 16:04:53,845 - TradingBot - INFO - Position monitoring enabled
+2025-09-29 16:04:53,845 - TradingBot - INFO - Trading bot started successfully!
+2025-09-29 16:04:53,845 - TradingBot - INFO - Trading Constants - Reward Ratio: 3, SL Buffer: 0.05
+2025-09-29 16:04:53,978 - TradingBot - INFO - Current IST Time: 2025-09-29 20:34:53
+2025-09-29 16:04:53,978 - TradingBot - INFO - Webhook URL: http://localhost:5000/chartink-webhook
+2025-09-29 16:04:54,009 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.219:5000
+2025-09-29 16:04:54,009 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-29 16:05:00,245 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 16:05:00] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-09-29 16:05:54,763 - TradingBot - WARNING - Session expired, re-logging in...
+2025-09-29 16:05:55,221 - TradingBot - INFO - Broker login successful
+2025-09-29 16:06:09,663 - TradingBot - INFO - Testing candle analysis for: RELIANCE-EQ @ 2850.5
+2025-09-29 16:06:09,663 - TradingBot - INFO - Fetching previous candle for: RELIANCE-EQ
+2025-09-29 16:06:09,663 - TradingBot - INFO - Candle time range: 29-09-2025 20:34:00 to 29-09-2025 20:35:00
+2025-09-29 16:06:10,097 - TradingBot - WARNING - No previous candle data found for RELIANCE-EQ
+2025-09-29 16:06:10,097 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 16:06:10] "[33mPOST /test-candle-analysis HTTP/1.1[0m" 404 -

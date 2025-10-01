@@ -1,0 +1,228 @@
+2025-09-30 04:46:59,158 - TradingBot - INFO - Loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-30 04:46:59,158 - TradingBot - INFO - Starting Chartink Trading Bot...
+2025-09-30 04:46:59,158 - TradingBot - INFO - Created alerts file: app/2025-09-30_alerts.csv
+2025-09-30 04:46:59,158 - TradingBot - INFO - Created positions state file: app/2025-09-30_positions_state.csv
+2025-09-30 04:46:59,173 - TradingBot - INFO - Created position file: app/2025-09-30_position.csv
+2025-09-30 04:46:59,175 - TradingBot - INFO - Created candle analysis file: app/2025-09-30_candle_analysis.csv
+2025-09-30 04:47:00,072 - TradingBot - INFO - Broker login successful
+2025-09-30 04:47:00,072 - TradingBot - INFO - Alert processor started
+2025-09-30 04:47:00,072 - TradingBot - INFO - Position monitoring started
+2025-09-30 04:47:00,072 - TradingBot - INFO - Position monitoring enabled
+2025-09-30 04:47:00,072 - TradingBot - INFO - Trading bot started successfully!
+2025-09-30 04:47:00,072 - TradingBot - INFO - Trading Constants - Reward Ratio: 3, SL Buffer: 0.05
+2025-09-30 04:47:02,348 - TradingBot - INFO - Current IST Time: 2025-09-30 09:17:02
+2025-09-30 04:47:02,348 - TradingBot - INFO - Webhook URL: http://localhost:5000/chartink-webhook
+2025-09-30 04:47:02,427 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.219:5000
+2025-09-30 04:47:02,447 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 04:48:01,450 - TradingBot - WARNING - Session expired, re-logging in...
+2025-09-30 04:48:01,886 - TradingBot - INFO - Broker login successful
+2025-09-30 05:03:34,572 - TradingBot - WARNING - Keepalive error: HTTPSConnectionPool(host='api.shoonya.com', port=443): Max retries exceeded with url: /NorenWClientTP//Limits (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EEEEF05750>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-09-30 05:04:45,688 - TradingBot - WARNING - Keepalive error: HTTPSConnectionPool(host='api.shoonya.com', port=443): Max retries exceeded with url: /NorenWClientTP//Limits (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EEEEF07ED0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-09-30 05:07:31,422 - TradingBot - WARNING - Keepalive error: HTTPSConnectionPool(host='api.shoonya.com', port=443): Max retries exceeded with url: /NorenWClientTP//Limits (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EEEEF06710>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-09-30 05:09:48,469 - TradingBot - WARNING - Keepalive error: HTTPSConnectionPool(host='api.shoonya.com', port=443): Max retries exceeded with url: /NorenWClientTP//Limits (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EEEEF076D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-09-30 05:52:08,732 - TradingBot - INFO - Webhook received: IGL
+2025-09-30 05:52:08,733 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2025 05:52:08] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-09-30 05:52:08,733 - TradingBot - INFO - Processing alert: IGL-EQ @ 208.4
+2025-09-30 05:52:08,746 - TradingBot - INFO - Placing BUY order: IGL-EQ @ 208.4
+2025-09-30 05:52:09,205 - TradingBot - INFO - Order placed: IGL-EQ - ID: 25093000167016
+2025-09-30 05:52:09,224 - TradingBot - INFO - Setting up position for IGL-EQ
+2025-09-30 05:52:09,973 - TradingBot - INFO - Fetching previous candle for: IGL-EQ
+2025-09-30 05:52:09,994 - TradingBot - INFO - Candle time range: 30-09-2025 10:20:00 to 30-09-2025 10:21:00
+2025-09-30 05:52:10,634 - TradingBot - WARNING - No previous candle data found for IGL-EQ
+2025-09-30 05:52:10,639 - TradingBot - WARNING - No previous candle for IGL-EQ, using fallback SL/Target
+2025-09-30 05:52:10,642 - TradingBot - INFO - Final levels for IGL-EQ: Buy=208.4, SL=207.36, Target=210.48
+2025-09-30 05:52:10,645 - TradingBot - INFO - Candle analysis logged to CSV: app/2025-09-30_candle_analysis.csv
+2025-09-30 05:52:10,647 - TradingBot - INFO - Position setup complete: IGL-EQ
+2025-09-30 05:52:10,648 - TradingBot - INFO - Buy: 208.4, SL: 207.36, Target: 210.48
+2025-09-30 05:52:10,649 - TradingBot - INFO - Position monitoring started: IGL-EQ
+2025-09-30 05:55:54,595 - TradingBot - ERROR - Monitoring error: HTTPSConnectionPool(host='api.shoonya.com', port=443): Max retries exceeded with url: /NorenWClientTP//PositionBook (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EEEEF07490>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-09-30 05:57:06,123 - TradingBot - WARNING - SL Hit: IGL-EQ @ 207.23 (SL: 207.36)
+2025-09-30 05:57:06,123 - TradingBot - INFO - Placing SELL order: IGL-EQ, Qty: 10
+2025-09-30 05:57:07,170 - TradingBot - INFO - Exit order placed: IGL-EQ - ID: 25093000174831
+2025-09-30 05:57:07,180 - TradingBot - INFO - Position book updated
+2025-09-30 06:59:00,497 - TradingBot - INFO - Position book saved with 1 records
+2025-09-30 07:00:00,996 - TradingBot - INFO - Position book saved with 1 records
+2025-09-30 09:05:08,130 - TradingBot - INFO - Webhook received: RUCHIRA,EXCELINDUS
+2025-09-30 09:05:08,130 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2025 09:05:08] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-09-30 09:05:08,130 - TradingBot - INFO - Processing alert: RUCHIRA-EQ @ 144.8
+2025-09-30 09:05:08,136 - TradingBot - INFO - Placing BUY order: RUCHIRA-EQ @ 144.8
+2025-09-30 09:05:08,591 - TradingBot - INFO - Order placed: RUCHIRA-EQ - ID: 25093000445402
+2025-09-30 09:05:08,591 - TradingBot - INFO - Setting up position for RUCHIRA-EQ
+2025-09-30 09:05:09,066 - TradingBot - INFO - Fetching previous candle for: RUCHIRA-EQ
+2025-09-30 09:05:09,066 - TradingBot - INFO - Candle time range: 30-09-2025 13:33:00 to 30-09-2025 13:34:00
+2025-09-30 09:05:09,510 - TradingBot - WARNING - No previous candle data found for RUCHIRA-EQ
+2025-09-30 09:05:09,510 - TradingBot - WARNING - No previous candle for RUCHIRA-EQ, using fallback SL/Target
+2025-09-30 09:05:09,510 - TradingBot - INFO - Final levels for RUCHIRA-EQ: Buy=144.91, SL=144.19, Target=146.36
+2025-09-30 09:05:09,510 - TradingBot - INFO - Candle analysis logged to CSV: app/2025-09-30_candle_analysis.csv
+2025-09-30 09:05:09,510 - TradingBot - INFO - Position setup complete: RUCHIRA-EQ
+2025-09-30 09:05:09,510 - TradingBot - INFO - Buy: 144.91, SL: 144.19, Target: 146.36
+2025-09-30 09:05:09,510 - TradingBot - INFO - Position monitoring started: RUCHIRA-EQ
+2025-09-30 09:06:07,083 - TradingBot - INFO - Webhook received: BSLGOLDETF,EXCELINDUS
+2025-09-30 09:06:07,084 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2025 09:06:07] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-09-30 09:06:07,084 - TradingBot - INFO - Processing alert: BSLGOLDETF-EQ @ 103.28
+2025-09-30 09:06:07,100 - TradingBot - INFO - Placing BUY order: BSLGOLDETF-EQ @ 103.28
+2025-09-30 09:06:07,561 - TradingBot - INFO - Order placed: BSLGOLDETF-EQ - ID: 25093000446794
+2025-09-30 09:06:07,561 - TradingBot - INFO - Setting up position for BSLGOLDETF-EQ
+2025-09-30 09:06:08,027 - TradingBot - INFO - Fetching previous candle for: BSLGOLDETF-EQ
+2025-09-30 09:06:08,027 - TradingBot - INFO - Candle time range: 30-09-2025 13:34:00 to 30-09-2025 13:35:00
+2025-09-30 09:06:08,477 - TradingBot - WARNING - No previous candle data found for BSLGOLDETF-EQ
+2025-09-30 09:06:08,477 - TradingBot - WARNING - No previous candle for BSLGOLDETF-EQ, using fallback SL/Target
+2025-09-30 09:06:08,482 - TradingBot - INFO - Final levels for BSLGOLDETF-EQ: Buy=103.28, SL=102.76, Target=104.31
+2025-09-30 09:06:08,482 - TradingBot - INFO - Candle analysis logged to CSV: app/2025-09-30_candle_analysis.csv
+2025-09-30 09:06:08,482 - TradingBot - INFO - Position setup complete: BSLGOLDETF-EQ
+2025-09-30 09:06:08,482 - TradingBot - INFO - Buy: 103.28, SL: 102.76, Target: 104.31
+2025-09-30 09:06:08,482 - TradingBot - INFO - Position monitoring started: BSLGOLDETF-EQ
+2025-09-30 09:10:49,185 - TradingBot - INFO - Loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-30 09:10:49,188 - TradingBot - INFO - Starting Chartink Trading Bot...
+2025-09-30 09:10:49,662 - TradingBot - INFO - Broker login successful
+2025-09-30 09:10:49,664 - TradingBot - INFO - Alert processor started
+2025-09-30 09:10:49,665 - TradingBot - INFO - Position monitoring started
+2025-09-30 09:10:49,665 - TradingBot - INFO - Position monitoring enabled
+2025-09-30 09:10:49,669 - TradingBot - INFO - Trading bot started successfully!
+2025-09-30 09:10:49,670 - TradingBot - INFO - Trading Constants - Reward Ratio: 3, SL Buffer: 0.05
+2025-09-30 09:10:49,843 - TradingBot - INFO - Current IST Time: 2025-09-30 13:40:49
+2025-09-30 09:10:49,843 - TradingBot - INFO - Webhook URL: http://localhost:5000/chartink-webhook
+2025-09-30 09:10:49,875 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.232:5000
+2025-09-30 09:10:49,875 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 09:10:56,313 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2025 09:10:56] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-09-30 09:11:02,972 - TradingBot - INFO - User exited: RUCHIRA-EQ @ 0
+2025-09-30 09:11:04,286 - TradingBot - INFO - User exited: BSLGOLDETF-EQ @ 0
+2025-09-30 09:11:04,286 - TradingBot - INFO - Position book updated
+2025-09-30 09:11:50,552 - TradingBot - WARNING - Session expired, re-logging in...
+2025-09-30 09:11:51,001 - TradingBot - INFO - Broker login successful
+2025-09-30 09:15:38,022 - TradingBot - INFO - Loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-30 09:15:38,025 - TradingBot - INFO - Starting Chartink Trading Bot...
+2025-09-30 09:15:38,485 - TradingBot - INFO - Broker login successful
+2025-09-30 09:15:38,485 - TradingBot - INFO - Alert processor started
+2025-09-30 09:15:38,485 - TradingBot - INFO - Position monitoring started
+2025-09-30 09:15:38,485 - TradingBot - INFO - Position monitoring enabled
+2025-09-30 09:15:38,485 - TradingBot - INFO - Trading bot started successfully!
+2025-09-30 09:15:38,485 - TradingBot - INFO - Trading Constants - Reward Ratio: 3, SL Buffer: 0.05
+2025-09-30 09:15:38,618 - TradingBot - INFO - Current IST Time: 2025-09-30 13:45:38
+2025-09-30 09:15:38,634 - TradingBot - INFO - Webhook URL: http://localhost:5000/chartink-webhook
+2025-09-30 09:15:38,688 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.232:5000
+2025-09-30 09:15:38,688 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 09:15:48,500 - TradingBot - INFO - Loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-30 09:15:48,516 - TradingBot - INFO - Starting Chartink Trading Bot...
+2025-09-30 09:15:48,967 - TradingBot - INFO - Broker login successful
+2025-09-30 09:15:48,967 - TradingBot - INFO - Alert processor started
+2025-09-30 09:15:48,967 - TradingBot - INFO - Position monitoring started
+2025-09-30 09:15:48,967 - TradingBot - INFO - Position monitoring enabled
+2025-09-30 09:15:48,967 - TradingBot - INFO - Trading bot started successfully!
+2025-09-30 09:15:48,967 - TradingBot - INFO - Trading Constants - Reward Ratio: 3, SL Buffer: 0.05
+2025-09-30 09:15:49,110 - TradingBot - INFO - Current IST Time: 2025-09-30 13:45:49
+2025-09-30 09:15:49,110 - TradingBot - INFO - Webhook URL: http://localhost:5000/chartink-webhook
+2025-09-30 09:15:49,140 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.232:5000
+2025-09-30 09:15:49,140 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 09:15:55,275 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2025 09:15:55] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-09-30 09:16:49,981 - TradingBot - WARNING - Session expired, re-logging in...
+2025-09-30 09:16:50,435 - TradingBot - INFO - Broker login successful
+2025-09-30 09:46:00,482 - TradingBot - INFO - Position book saved with 3 records
+2025-09-30 09:47:00,970 - TradingBot - INFO - Position book saved with 3 records
+2025-09-30 09:48:01,430 - TradingBot - INFO - Position book saved with 3 records
+2025-09-30 10:45:03,898 - TradingBot - INFO - 3:15 PM detected - initiating market close
+2025-09-30 10:52:29,947 - TradingBot - INFO - Loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-30 10:52:29,953 - TradingBot - INFO - Starting Chartink Trading Bot...
+2025-09-30 10:52:30,414 - TradingBot - INFO - Broker login successful
+2025-09-30 10:52:30,505 - TradingBot - INFO - Alert processor started
+2025-09-30 10:52:30,580 - TradingBot - INFO - Position monitoring started
+2025-09-30 10:52:30,580 - TradingBot - INFO - Position monitoring enabled
+2025-09-30 10:52:30,639 - TradingBot - INFO - Trading bot started successfully!
+2025-09-30 10:52:30,641 - TradingBot - INFO - Trading Constants - Reward Ratio: 3, SL Buffer: 0.05
+2025-09-30 10:52:30,994 - TradingBot - INFO - Current IST Time: 2025-09-30 15:22:30
+2025-09-30 10:52:30,996 - TradingBot - INFO - 3:15 PM detected - initiating market close
+2025-09-30 10:52:30,996 - TradingBot - INFO - Webhook URL: http://localhost:5000/chartink-webhook
+2025-09-30 10:52:30,997 - TradingBot - INFO - Starting market close procedure at 3:15 PM
+2025-09-30 10:52:31,023 - TradingBot - INFO - Cancelling all open orders...
+2025-09-30 10:52:31,091 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.232:5000
+2025-09-30 10:52:31,095 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 10:52:31,544 - TradingBot - INFO - Cancelled 0 open orders
+2025-09-30 10:52:33,548 - TradingBot - INFO - Closing all open positions...
+2025-09-30 10:52:34,037 - TradingBot - INFO - Closed 0 positions
+2025-09-30 10:52:34,483 - TradingBot - INFO - All positions are closed
+2025-09-30 10:52:34,483 - TradingBot - INFO - All positions closed successfully
+2025-09-30 10:52:35,091 - TradingBot - INFO - Position book saved with 3 records
+2025-09-30 10:52:35,091 - TradingBot - INFO - Market close procedure completed. Shutting down...
+2025-09-30 10:52:35,261 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2025 10:52:35] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-09-30 10:54:57,751 - TradingBot - INFO - Loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-30 10:54:57,751 - TradingBot - INFO - Starting Chartink Trading Bot...
+2025-09-30 10:54:58,254 - TradingBot - INFO - Broker login successful
+2025-09-30 10:54:58,259 - TradingBot - INFO - Alert processor started
+2025-09-30 10:54:58,314 - TradingBot - INFO - Position monitoring started
+2025-09-30 10:54:58,314 - TradingBot - INFO - Position monitoring enabled
+2025-09-30 10:54:58,355 - TradingBot - INFO - Trading bot started successfully!
+2025-09-30 10:54:58,377 - TradingBot - INFO - Trading Constants - Reward Ratio: 3, SL Buffer: 0.05
+2025-09-30 10:54:58,756 - TradingBot - INFO - 3:15 PM detected - initiating market close
+2025-09-30 10:54:58,757 - TradingBot - INFO - Current IST Time: 2025-09-30 15:24:58
+2025-09-30 10:54:58,758 - TradingBot - INFO - Starting market close procedure at 3:15 PM IST
+2025-09-30 10:54:58,758 - TradingBot - INFO - Webhook URL: http://localhost:5000/chartink-webhook
+2025-09-30 10:54:58,759 - TradingBot - INFO - Cancelling all open orders...
+2025-09-30 10:54:58,813 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.232:5000
+2025-09-30 10:54:58,814 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 10:54:59,221 - TradingBot - INFO - Cancelled 0 open orders
+2025-09-30 10:55:01,222 - TradingBot - INFO - Closing all open positions...
+2025-09-30 10:55:01,665 - TradingBot - INFO - Closed 0 positions
+2025-09-30 10:55:02,109 - TradingBot - INFO - All positions are closed
+2025-09-30 10:55:02,109 - TradingBot - INFO - All positions closed successfully
+2025-09-30 10:55:02,573 - TradingBot - INFO - Position book saved with 3 records
+2025-09-30 10:55:02,574 - TradingBot - INFO - Market close procedure completed. Shutting down application...
+2025-09-30 14:41:43,917 - TradingBot - INFO - Loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-30 14:41:43,920 - TradingBot - INFO - Starting Chartink Trading Bot...
+2025-09-30 14:41:44,405 - TradingBot - INFO - Broker login successful
+2025-09-30 14:41:44,406 - TradingBot - INFO - Alert processor started
+2025-09-30 14:41:44,407 - TradingBot - INFO - Position monitoring started
+2025-09-30 14:41:44,408 - TradingBot - INFO - Position monitoring enabled
+2025-09-30 14:41:44,410 - TradingBot - INFO - Trading bot started successfully!
+2025-09-30 14:41:44,410 - TradingBot - INFO - Trading Constants - Reward Ratio: 3, SL Buffer: 0.05
+2025-09-30 14:41:48,911 - TradingBot - INFO - Current IST Time: 2025-09-30 19:11:48
+2025-09-30 14:41:48,912 - TradingBot - INFO - Webhook URL: http://localhost:5000/chartink-webhook
+2025-09-30 14:41:48,962 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.232:5000
+2025-09-30 14:41:48,963 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 14:41:49,275 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2025 14:41:49] "[33mGET /health HTTP/1.1[0m" 404 -
+2025-09-30 17:30:54,390 - TradingBot - INFO - Starting symbol token mapping load
+2025-09-30 17:30:54,391 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-09-30 17:30:54,412 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-09-30 17:30:55,098 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-09-30 17:30:55,100 - TradingBot - INFO - Application starting from main entry point
+2025-09-30 17:30:55,100 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-09-30 17:30:55,265 - TradingBot - INFO - Start time: 2025-09-30 22:00:55
+2025-09-30 17:30:55,266 - TradingBot - INFO - Attempting broker login...
+2025-09-30 17:30:55,266 - TradingBot - INFO - Starting broker login process
+2025-09-30 17:30:55,266 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-09-30 17:30:55,268 - TradingBot - INFO - Generating 2FA token
+2025-09-30 17:30:55,269 - TradingBot - INFO - Attempting broker login...
+2025-09-30 17:30:55,739 - TradingBot - INFO - Broker login successful
+2025-09-30 17:30:55,739 - TradingBot - INFO - Starting alert processor thread...
+2025-09-30 17:30:55,740 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-09-30 17:30:55,740 - TradingBot - INFO - Alert processor thread started
+2025-09-30 17:30:55,741 - TradingBot - INFO - Starting position monitor thread...
+2025-09-30 17:30:55,741 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-09-30 17:30:55,741 - TradingBot - INFO - Position monitor thread started
+2025-09-30 17:30:55,742 - TradingBot - INFO - Starting Flask web server...
+2025-09-30 17:30:55,786 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.232:5000
+2025-09-30 17:30:55,787 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 17:31:01,300 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2025 17:31:01] "GET /health HTTP/1.1" 200 -

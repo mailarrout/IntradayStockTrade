@@ -1,0 +1,554 @@
+2025-10-01 04:49:49,779 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-01 04:49:49,780 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-01 04:49:49,826 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-01 04:49:51,053 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-01 04:49:51,057 - TradingBot - INFO - Application starting from main entry point
+2025-10-01 04:49:51,057 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-01 04:49:51,296 - TradingBot - INFO - Start time: 2025-10-01 09:19:51
+2025-10-01 04:49:51,296 - TradingBot - INFO - Attempting broker login...
+2025-10-01 04:49:51,296 - TradingBot - INFO - Starting broker login process
+2025-10-01 04:49:51,297 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-01 04:49:51,331 - TradingBot - INFO - Generating 2FA token
+2025-10-01 04:49:51,333 - TradingBot - INFO - Attempting broker login...
+2025-10-01 04:49:52,532 - TradingBot - INFO - Broker login successful
+2025-10-01 04:49:52,573 - TradingBot - INFO - Starting alert processor thread...
+2025-10-01 04:49:52,645 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-01 04:49:52,645 - TradingBot - INFO - Alert processor thread started
+2025-10-01 04:49:52,646 - TradingBot - INFO - Starting position monitor thread...
+2025-10-01 04:49:52,647 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-01 04:49:52,647 - TradingBot - INFO - Position monitor thread started
+2025-10-01 04:49:52,648 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:49:52,648 - TradingBot - INFO - Starting Flask web server...
+2025-10-01 04:49:52,792 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.244:5000
+2025-10-01 04:49:52,793 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-01 04:50:02,650 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:50:12,652 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:50:22,653 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:50:32,655 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:50:42,655 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:50:52,656 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:51:02,657 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:51:12,661 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:51:22,661 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:51:32,662 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:51:42,664 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:51:52,664 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:52:02,665 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:52:12,667 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:52:22,668 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:52:32,669 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:52:42,670 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:52:52,671 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:53:02,672 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:53:12,673 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:53:22,674 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:53:32,675 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:53:42,676 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:53:52,677 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:54:02,678 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:54:12,679 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:54:22,679 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:54:32,702 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:54:42,706 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:54:52,733 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:55:02,741 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:55:12,742 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:55:22,744 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:55:32,745 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:55:42,746 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:55:52,748 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:56:02,749 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:56:12,753 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:56:22,754 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:56:32,755 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:56:42,756 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:56:52,758 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:57:02,759 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:57:12,761 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:57:22,762 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:57:32,763 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:57:42,769 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:57:52,773 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:58:02,938 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:58:13,167 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:58:23,270 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:58:33,289 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:58:43,320 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:58:53,353 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:59:03,408 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:59:13,489 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:59:23,491 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:59:33,518 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:59:43,523 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 04:59:53,589 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 05:00:03,687 - TradingBot - WARNING - Positions file not found: app/2025-10-01_positions_state.csv
+2025-10-01 05:00:14,898 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-01 05:00:14,902 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-01 05:00:14,947 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-01 05:00:17,169 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-01 05:00:17,171 - TradingBot - INFO - Application starting from main entry point
+2025-10-01 05:00:17,171 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-01 05:00:17,393 - TradingBot - INFO - Start time: 2025-10-01 09:30:17
+2025-10-01 05:00:17,409 - TradingBot - INFO - Starting broker login process
+2025-10-01 05:00:17,409 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-01 05:00:17,413 - TradingBot - INFO - Generating 2FA token
+2025-10-01 05:00:17,414 - TradingBot - INFO - Attempting broker login...
+2025-10-01 05:00:17,860 - TradingBot - INFO - Broker login successful
+2025-10-01 05:00:17,860 - TradingBot - INFO - Created new positions file: app/2025-10-01_positions_state.csv
+2025-10-01 05:00:17,860 - TradingBot - INFO - Starting alert processor thread...
+2025-10-01 05:00:17,860 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-01 05:00:17,860 - TradingBot - INFO - Alert processor thread started
+2025-10-01 05:00:17,860 - TradingBot - INFO - Starting position monitor thread...
+2025-10-01 05:00:17,876 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-01 05:00:17,876 - TradingBot - INFO - Position monitor thread started
+2025-10-01 05:00:17,877 - TradingBot - INFO - Starting Flask web server...
+2025-10-01 05:00:17,951 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.244:5000
+2025-10-01 05:00:17,952 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-01 05:00:20,281 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 05:00:20] "GET /health HTTP/1.1" 200 -
+2025-10-01 05:10:09,577 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 05:10:09] "[33mPOST /chartink-webhook HTTP/1.1[0m" 404 -
+2025-10-01 05:14:17,621 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-01 05:14:17,621 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-01 05:14:17,643 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-01 05:14:18,466 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-01 05:14:18,466 - TradingBot - INFO - Application starting from main entry point
+2025-10-01 05:14:18,466 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-01 05:14:18,635 - TradingBot - INFO - Start time: 2025-10-01 09:44:18
+2025-10-01 05:14:18,635 - TradingBot - INFO - Starting broker login process
+2025-10-01 05:14:18,635 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-01 05:14:18,635 - TradingBot - INFO - Generating 2FA token
+2025-10-01 05:14:18,635 - TradingBot - INFO - Attempting broker login...
+2025-10-01 05:14:19,099 - TradingBot - INFO - Broker login successful
+2025-10-01 05:14:19,100 - TradingBot - INFO - Starting alert processor thread...
+2025-10-01 05:14:19,100 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-01 05:14:19,100 - TradingBot - INFO - Alert processor thread started
+2025-10-01 05:14:19,101 - TradingBot - INFO - Starting position monitor thread...
+2025-10-01 05:14:19,102 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-01 05:14:19,102 - TradingBot - INFO - Position monitor thread started
+2025-10-01 05:14:19,102 - TradingBot - INFO - Starting Flask web server...
+2025-10-01 05:14:19,130 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.244:5000
+2025-10-01 05:14:19,131 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-01 05:14:25,286 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 05:14:25] "GET /health HTTP/1.1" 200 -
+2025-10-01 05:17:08,465 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-01 05:17:08,475 - TradingBot - INFO - Webhook JSON data: {'stocks': 'ATHERENERG', 'trigger_prices': '580.5', 'triggered_at': '9:47 am', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-01 05:17:08,481 - TradingBot - INFO - Parsed webhook - Symbol: , Trigger Price: 
+2025-10-01 05:17:08,484 - TradingBot - ERROR - No symbol in webhook data
+2025-10-01 05:17:08,487 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 05:17:08] "[31m[1mPOST /chartink-webhook HTTP/1.1[0m" 400 -
+2025-10-01 05:20:19,958 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-01 05:20:19,958 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-01 05:20:19,984 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-01 05:20:20,654 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-01 05:20:20,656 - TradingBot - INFO - Application starting from main entry point
+2025-10-01 05:20:20,657 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-01 05:20:20,802 - TradingBot - INFO - Start time: 2025-10-01 09:50:20
+2025-10-01 05:20:20,802 - TradingBot - INFO - Starting broker login process
+2025-10-01 05:20:20,802 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-01 05:20:20,802 - TradingBot - INFO - Generating 2FA token
+2025-10-01 05:20:20,802 - TradingBot - INFO - Attempting broker login...
+2025-10-01 05:20:21,281 - TradingBot - INFO - Broker login successful
+2025-10-01 05:20:21,287 - TradingBot - INFO - Starting alert processor thread...
+2025-10-01 05:20:21,287 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-01 05:20:21,291 - TradingBot - INFO - Alert processor thread started
+2025-10-01 05:20:21,291 - TradingBot - INFO - Starting position monitor thread...
+2025-10-01 05:20:21,303 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-01 05:20:21,303 - TradingBot - INFO - Position monitor thread started
+2025-10-01 05:20:21,303 - TradingBot - INFO - Starting Flask web server...
+2025-10-01 05:20:21,483 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.244:5000
+2025-10-01 05:20:21,497 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-01 05:20:26,307 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 05:20:26] "GET /health HTTP/1.1" 200 -
+2025-10-01 05:28:08,138 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-01 05:28:08,139 - TradingBot - INFO - Webhook payload: {'stocks': 'MRPL', 'trigger_prices': '135.66', 'triggered_at': '9:58 am', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-01 05:28:08,139 - TradingBot - ERROR - No symbol in webhook data
+2025-10-01 05:28:08,140 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 05:28:08] "[31m[1mPOST /chartink-webhook HTTP/1.1[0m" 400 -
+2025-10-01 05:41:10,353 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-01 05:41:10,353 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-01 05:41:10,372 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-01 05:41:11,003 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-01 05:41:11,012 - TradingBot - INFO - Application starting from main entry point
+2025-10-01 05:41:11,012 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-01 05:41:11,174 - TradingBot - INFO - Start time: 2025-10-01 10:11:11
+2025-10-01 05:41:11,174 - TradingBot - INFO - Starting broker login process
+2025-10-01 05:41:11,174 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-01 05:41:11,174 - TradingBot - INFO - Generating 2FA token
+2025-10-01 05:41:11,174 - TradingBot - INFO - Attempting broker login...
+2025-10-01 05:41:11,750 - TradingBot - INFO - Broker login successful
+2025-10-01 05:41:11,758 - TradingBot - INFO - Starting alert processor thread...
+2025-10-01 05:41:11,759 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-01 05:41:11,759 - TradingBot - INFO - Alert processor thread started
+2025-10-01 05:41:11,759 - TradingBot - INFO - Starting position monitor thread...
+2025-10-01 05:41:11,759 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-01 05:41:11,759 - TradingBot - INFO - Position monitor thread started
+2025-10-01 05:41:11,759 - TradingBot - INFO - Starting Flask web server...
+2025-10-01 05:41:11,786 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.244:5000
+2025-10-01 05:41:11,786 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-01 05:41:17,214 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 05:41:17] "GET /health HTTP/1.1" 200 -
+2025-10-01 05:41:52,313 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 05:41:52] "GET /health HTTP/1.1" 200 -
+2025-10-01 05:42:44,603 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-01 05:42:44,603 - TradingBot - WARNING - Empty webhook data received
+2025-10-01 05:42:44,603 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 05:42:44] "[31m[1mPOST /webhook HTTP/1.1[0m" 400 -
+2025-10-01 05:43:04,790 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-01 05:43:04,790 - TradingBot - INFO - Webhook payload: {'symbol': 'INFY', 'trigger_price': '1470.50'}
+2025-10-01 05:43:04,794 - TradingBot - INFO - Trigger price parsed: 1470.5
+2025-10-01 05:43:04,796 - TradingBot - INFO - Alert queued: INFY @ 1470.5
+2025-10-01 05:43:04,796 - TradingBot - INFO - Processing alert from queue: {'symbol': 'INFY', 'trigger_price': 1470.5}
+2025-10-01 05:43:04,797 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 05:43:04] "POST /webhook HTTP/1.1" 200 -
+2025-10-01 05:43:04,797 - TradingBot - INFO - Alert details - Symbol: INFY, Trigger Price: 1470.5
+2025-10-01 05:43:04,807 - TradingBot - INFO - Attempting BUY order for: INFY
+2025-10-01 05:43:04,808 - TradingBot - INFO - PLACE BUY ORDER - Stock: INFY, Trigger Price: 1470.5
+2025-10-01 05:43:04,810 - TradingBot - INFO - Placing BUY order: INFY-EQ @ 1470.5, Qty: 10
+2025-10-01 05:43:05,277 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: INFY-EQ - ID: 25100100130568
+2025-10-01 05:43:05,277 - TradingBot - INFO - BUY ORDER SUCCESS: INFY
+2025-10-01 05:43:05,277 - TradingBot - INFO - Starting position setup for INFY-EQ
+2025-10-01 05:43:05,277 - TradingBot - INFO - Position setup attempt 1/3 for INFY-EQ
+2025-10-01 05:43:05,277 - TradingBot - INFO - Fetching trade book...
+2025-10-01 05:43:05,746 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100100130568', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '202003321', 'fltm': '01-10-2025 10:13:04', 'trantype': 'B', 'tsym': 'INFY-EQ', 'qty': '10', 'token': '1594', 'fillshares': '10', 'flqty': '10', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.10', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '1430.60', 'norentm': '10:13:04 01-10-2025', 'avgprc': '1430.60', 'exch_tm': '01-10-2025 10:13:04', 'remarks': 'Chartink_INFY', 'exchordid': '1100000020400996'}
+2025-10-01 05:43:05,747 - TradingBot - INFO - Extracted buy price from trade: 1430.6
+2025-10-01 05:43:05,749 - TradingBot - INFO - Trade fill time: 01-10-2025 10:13:04
+2025-10-01 05:43:05,751 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-01 10:13:04+05:53
+2025-10-01 05:43:05,752 - TradingBot - INFO - Fetching previous candle for: INFY-EQ
+2025-10-01 05:43:05,752 - TradingBot - INFO - Found token for INFY: 1594
+2025-10-01 05:43:05,753 - TradingBot - INFO - Candle time range: 10:11:00 to 10:12:00
+2025-10-01 05:43:05,754 - TradingBot - INFO - Candle time range (UTC epoch): 1759292280 to 1759292340
+2025-10-01 05:43:05,754 - TradingBot - INFO - Calling broker API for time price series: token=1594, interval=1
+2025-10-01 05:43:06,208 - TradingBot - INFO - Candle found: INFY-EQ - High: 1437.8, Low: 1436.9, Open: 1436.9, Close: 1437.2
+2025-10-01 05:43:06,208 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-01 05:43:06,210 - TradingBot - INFO - Starting SL/Target calculation for INFY-EQ, Buy Price: 1430.6
+2025-10-01 05:43:06,210 - TradingBot - INFO - Previous candle data - High: 1437.8, Low: 1436.9
+2025-10-01 05:43:06,211 - TradingBot - INFO - SL/Target calculation for INFY-EQ:
+2025-10-01 05:43:06,212 - TradingBot - INFO - Buy Price: 1430.6, Prev Low: 1436.9, Prev High: 1437.8
+2025-10-01 05:43:06,213 - TradingBot - INFO - Candle Range: 0.90, SL: 1436.85, Target: 1433.3
+2025-10-01 05:43:06,215 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-01 05:43:06,216 - TradingBot - WARNING - Adjusted SL above buy price for INFY-EQ. New SL: 1423.45
+2025-10-01 05:43:06,217 - TradingBot - INFO - Final levels for INFY-EQ: Buy=1430.6, SL=1423.45, Target=1433.3
+2025-10-01 05:43:06,217 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-01 05:43:06,219 - TradingBot - INFO - Creating new candle analysis file: app/2025-10-01_candle_analysis.csv
+2025-10-01 05:43:06,220 - TradingBot - INFO - Candle analysis logged to CSV: INFY-EQ - SL: 1423.45, Target: 1433.3, Type: PREV_CANDLE_LOW
+2025-10-01 05:43:06,221 - TradingBot - INFO - Writing position to state file: app/2025-10-01_positions_state.csv
+2025-10-01 05:43:06,223 - TradingBot - INFO - POSITION SETUP COMPLETE: INFY-EQ
+2025-10-01 05:43:06,224 - TradingBot - INFO - Final Position - Buy: 1430.6, SL: 1423.45, Target: 1433.3
+2025-10-01 05:43:06,224 - TradingBot - INFO - POSITION SETUP COMPLETE: INFY
+2025-10-01 05:43:06,226 - TradingBot - INFO - Alert processing completed for: INFY
+2025-10-01 05:47:23,868 - TradingBot - INFO - User manually exited position: INFY-EQ, NetQty: 0
+2025-10-01 05:47:24,337 - TradingBot - INFO - USER EXIT recorded: INFY-EQ @ 1429.5 (NetQty=0)
+2025-10-01 05:47:24,338 - TradingBot - INFO - Saving updated positions to file
+2025-10-01 05:47:24,346 - TradingBot - INFO - Position book updated successfully
+2025-10-01 05:58:07,941 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-01 05:58:07,941 - TradingBot - INFO - Webhook payload: {'stocks': 'CSLFINANCE,VIPIND', 'trigger_prices': '291.8,421.45', 'triggered_at': '10:28 am', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-01 05:58:07,944 - TradingBot - ERROR - No symbol in webhook data
+2025-10-01 05:58:07,947 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 05:58:07] "[31m[1mPOST /chartink-webhook HTTP/1.1[0m" 400 -
+2025-10-01 05:59:07,848 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-01 05:59:07,849 - TradingBot - INFO - Webhook payload: {'stocks': 'ATHERENERG,ADANIPOWER,HEG', 'trigger_prices': '580.55,148.28,511.05', 'triggered_at': '10:29 am', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-01 05:59:07,851 - TradingBot - ERROR - No symbol in webhook data
+2025-10-01 05:59:07,852 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 05:59:07] "[31m[1mPOST /chartink-webhook HTTP/1.1[0m" 400 -
+2025-10-01 06:00:06,210 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-01 06:00:06,210 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-01 06:00:06,237 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-01 06:00:06,912 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-01 06:00:06,914 - TradingBot - INFO - Application starting from main entry point
+2025-10-01 06:00:06,915 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-01 06:00:07,067 - TradingBot - INFO - Start time: 2025-10-01 10:30:07
+2025-10-01 06:00:07,067 - TradingBot - INFO - Starting broker login process
+2025-10-01 06:00:07,067 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-01 06:00:07,067 - TradingBot - INFO - Generating 2FA token
+2025-10-01 06:00:07,067 - TradingBot - INFO - Attempting broker login...
+2025-10-01 06:00:07,545 - TradingBot - INFO - Broker login successful
+2025-10-01 06:00:07,545 - TradingBot - INFO - Starting alert processor thread...
+2025-10-01 06:00:07,546 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-01 06:00:07,546 - TradingBot - INFO - Alert processor thread started
+2025-10-01 06:00:07,547 - TradingBot - INFO - Starting position monitor thread...
+2025-10-01 06:00:07,547 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-01 06:00:07,547 - TradingBot - INFO - Position monitor thread started
+2025-10-01 06:00:07,547 - TradingBot - INFO - Starting Flask web server...
+2025-10-01 06:00:07,572 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.244:5000
+2025-10-01 06:00:07,572 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-01 06:00:09,910 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-01 06:00:09,911 - TradingBot - INFO - Webhook payload: {'stocks': 'ICICIB22,ADANIENSOL,DBCORP,IOC', 'trigger_prices': '111.04,876.8,271.5,151.33', 'triggered_at': '10:30 am', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-01 06:00:09,912 - TradingBot - INFO - Alert queued: ICICIB22 @ 111.04
+2025-10-01 06:00:09,912 - TradingBot - INFO - Processing alert from queue: {'symbol': 'ICICIB22', 'trigger_price': 111.04}
+2025-10-01 06:00:09,913 - TradingBot - INFO - Alert queued: ADANIENSOL @ 876.8
+2025-10-01 06:00:09,913 - TradingBot - INFO - Alert details - Symbol: ICICIB22, Trigger Price: 111.04
+2025-10-01 06:00:09,913 - TradingBot - INFO - Alert queued: DBCORP @ 271.5
+2025-10-01 06:00:09,915 - TradingBot - INFO - Alert queued: IOC @ 151.33
+2025-10-01 06:00:09,917 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 06:00:09] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-01 06:00:09,921 - TradingBot - INFO - Attempting BUY order for: ICICIB22
+2025-10-01 06:00:09,924 - TradingBot - INFO - PLACE BUY ORDER - Stock: ICICIB22, Trigger Price: 111.04
+2025-10-01 06:00:09,925 - TradingBot - INFO - Placing BUY order: ICICIB22-EQ @ 111.04, Qty: 10
+2025-10-01 06:00:10,376 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: ICICIB22-EQ - ID: 25100100155288
+2025-10-01 06:00:10,376 - TradingBot - INFO - BUY ORDER SUCCESS: ICICIB22
+2025-10-01 06:00:10,385 - TradingBot - INFO - Starting position setup for ICICIB22-EQ
+2025-10-01 06:00:10,386 - TradingBot - INFO - Position setup attempt 1/3 for ICICIB22-EQ
+2025-10-01 06:00:10,386 - TradingBot - INFO - Fetching trade book...
+2025-10-01 06:00:10,831 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100100155288', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '202379743', 'fltm': '01-10-2025 10:30:09', 'trantype': 'B', 'tsym': 'ICICIB22-EQ', 'qty': '10', 'token': '522', 'fillshares': '10', 'flqty': '10', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.01', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '111.04', 'norentm': '10:30:09 01-10-2025', 'avgprc': '111.04', 'exch_tm': '01-10-2025 10:30:09', 'remarks': 'Chartink_ICICIB22', 'exchordid': '1100000024636294'}
+2025-10-01 06:00:10,831 - TradingBot - INFO - Extracted buy price from trade: 111.04
+2025-10-01 06:00:10,831 - TradingBot - INFO - Trade fill time: 01-10-2025 10:30:09
+2025-10-01 06:00:10,831 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-01 10:30:09+05:53
+2025-10-01 06:00:10,831 - TradingBot - INFO - Fetching previous candle for: ICICIB22-EQ
+2025-10-01 06:00:10,831 - TradingBot - INFO - Found token for ICICIB22: 522
+2025-10-01 06:00:10,841 - TradingBot - INFO - Candle time range: 10:28:00 to 10:29:00
+2025-10-01 06:00:10,841 - TradingBot - INFO - Candle time range (UTC epoch): 1759293300 to 1759293360
+2025-10-01 06:00:10,841 - TradingBot - INFO - Calling broker API for time price series: token=522, interval=1
+2025-10-01 06:00:11,293 - TradingBot - INFO - Candle found: ICICIB22-EQ - High: 110.92, Low: 110.78, Open: 110.92, Close: 110.78
+2025-10-01 06:00:11,293 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-01 06:00:11,301 - TradingBot - INFO - Starting SL/Target calculation for ICICIB22-EQ, Buy Price: 111.04
+2025-10-01 06:00:11,301 - TradingBot - INFO - Previous candle data - High: 110.92, Low: 110.78
+2025-10-01 06:00:11,301 - TradingBot - INFO - SL/Target calculation for ICICIB22-EQ:
+2025-10-01 06:00:11,301 - TradingBot - INFO - Buy Price: 111.04, Prev Low: 110.78, Prev High: 110.92
+2025-10-01 06:00:11,301 - TradingBot - INFO - Candle Range: 0.14, SL: 110.73, Target: 111.46
+2025-10-01 06:00:11,301 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-01 06:00:11,301 - TradingBot - INFO - Final levels for ICICIB22-EQ: Buy=111.04, SL=110.73, Target=111.46
+2025-10-01 06:00:11,301 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-01 06:00:11,301 - TradingBot - INFO - Candle analysis logged to CSV: ICICIB22-EQ - SL: 110.73, Target: 111.46, Type: PREV_CANDLE_LOW
+2025-10-01 06:00:11,301 - TradingBot - INFO - Writing position to state file: app/2025-10-01_positions_state.csv
+2025-10-01 06:00:11,311 - TradingBot - INFO - POSITION SETUP COMPLETE: ICICIB22-EQ
+2025-10-01 06:00:11,313 - TradingBot - INFO - Final Position - Buy: 111.04, SL: 110.73, Target: 111.46
+2025-10-01 06:00:11,317 - TradingBot - INFO - POSITION SETUP COMPLETE: ICICIB22
+2025-10-01 06:00:11,319 - TradingBot - INFO - Alert processing completed for: ICICIB22
+2025-10-01 06:00:11,319 - TradingBot - INFO - Processing alert from queue: {'symbol': 'ADANIENSOL', 'trigger_price': 876.8}
+2025-10-01 06:00:11,320 - TradingBot - INFO - Alert details - Symbol: ADANIENSOL, Trigger Price: 876.8
+2025-10-01 06:00:11,335 - TradingBot - INFO - Attempting BUY order for: ADANIENSOL
+2025-10-01 06:00:11,335 - TradingBot - INFO - PLACE BUY ORDER - Stock: ADANIENSOL, Trigger Price: 876.8
+2025-10-01 06:00:11,335 - TradingBot - INFO - Placing BUY order: ADANIENSOL-EQ @ 876.8, Qty: 10
+2025-10-01 06:00:11,823 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: ADANIENSOL-EQ - ID: 25100100155316
+2025-10-01 06:00:11,823 - TradingBot - INFO - BUY ORDER SUCCESS: ADANIENSOL
+2025-10-01 06:00:11,826 - TradingBot - INFO - Starting position setup for ADANIENSOL-EQ
+2025-10-01 06:00:11,826 - TradingBot - INFO - Position setup attempt 1/3 for ADANIENSOL-EQ
+2025-10-01 06:00:11,826 - TradingBot - INFO - Fetching trade book...
+2025-10-01 06:00:12,343 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100100155316', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '1729113', 'fltm': '01-10-2025 10:30:10', 'trantype': 'B', 'tsym': 'ADANIENSOL-EQ', 'qty': '10', 'token': '10217', 'fillshares': '10', 'flqty': '10', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.05', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '876.90', 'norentm': '10:30:10 01-10-2025', 'avgprc': '876.90', 'exch_tm': '01-10-2025 10:30:10', 'remarks': 'Chartink_ADANIENSOL', 'exchordid': '1000000020742948'}
+2025-10-01 06:00:12,344 - TradingBot - INFO - Extracted buy price from trade: 876.9
+2025-10-01 06:00:12,344 - TradingBot - INFO - Trade fill time: 01-10-2025 10:30:10
+2025-10-01 06:00:12,344 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-01 10:30:10+05:53
+2025-10-01 06:00:12,344 - TradingBot - INFO - Fetching previous candle for: ADANIENSOL-EQ
+2025-10-01 06:00:12,344 - TradingBot - INFO - Found token for ADANIENSOL: 10217
+2025-10-01 06:00:12,350 - TradingBot - INFO - Candle time range: 10:28:00 to 10:29:00
+2025-10-01 06:00:12,351 - TradingBot - INFO - Candle time range (UTC epoch): 1759293300 to 1759293360
+2025-10-01 06:00:12,351 - TradingBot - INFO - Calling broker API for time price series: token=10217, interval=1
+2025-10-01 06:00:12,982 - TradingBot - INFO - Candle found: ADANIENSOL-EQ - High: 874.25, Low: 873.55, Open: 874.15, Close: 873.75
+2025-10-01 06:00:12,982 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-01 06:00:12,985 - TradingBot - INFO - Starting SL/Target calculation for ADANIENSOL-EQ, Buy Price: 876.9
+2025-10-01 06:00:12,985 - TradingBot - INFO - Previous candle data - High: 874.25, Low: 873.55
+2025-10-01 06:00:12,985 - TradingBot - INFO - SL/Target calculation for ADANIENSOL-EQ:
+2025-10-01 06:00:12,985 - TradingBot - INFO - Buy Price: 876.9, Prev Low: 873.55, Prev High: 874.25
+2025-10-01 06:00:12,985 - TradingBot - INFO - Candle Range: 0.70, SL: 873.5, Target: 879.0
+2025-10-01 06:00:12,991 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-01 06:00:12,991 - TradingBot - INFO - Final levels for ADANIENSOL-EQ: Buy=876.9, SL=873.5, Target=879.0
+2025-10-01 06:00:12,991 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-01 06:00:12,991 - TradingBot - INFO - Candle analysis logged to CSV: ADANIENSOL-EQ - SL: 873.5, Target: 879.0, Type: PREV_CANDLE_LOW
+2025-10-01 06:00:12,995 - TradingBot - INFO - Writing position to state file: app/2025-10-01_positions_state.csv
+2025-10-01 06:00:12,995 - TradingBot - INFO - POSITION SETUP COMPLETE: ADANIENSOL-EQ
+2025-10-01 06:00:12,995 - TradingBot - INFO - Final Position - Buy: 876.9, SL: 873.5, Target: 879.0
+2025-10-01 06:00:12,995 - TradingBot - INFO - POSITION SETUP COMPLETE: ADANIENSOL
+2025-10-01 06:00:12,995 - TradingBot - INFO - Alert processing completed for: ADANIENSOL
+2025-10-01 06:00:13,001 - TradingBot - INFO - Processing alert from queue: {'symbol': 'DBCORP', 'trigger_price': 271.5}
+2025-10-01 06:00:13,001 - TradingBot - INFO - Alert details - Symbol: DBCORP, Trigger Price: 271.5
+2025-10-01 06:00:13,022 - TradingBot - INFO - Attempting BUY order for: DBCORP
+2025-10-01 06:00:13,022 - TradingBot - INFO - PLACE BUY ORDER - Stock: DBCORP, Trigger Price: 271.5
+2025-10-01 06:00:13,022 - TradingBot - INFO - Placing BUY order: DBCORP-EQ @ 271.5, Qty: 10
+2025-10-01 06:00:13,254 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 06:00:13] "GET /health HTTP/1.1" 200 -
+2025-10-01 06:00:13,487 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: DBCORP-EQ - ID: 25100100155359
+2025-10-01 06:00:13,489 - TradingBot - INFO - BUY ORDER SUCCESS: DBCORP
+2025-10-01 06:00:13,490 - TradingBot - INFO - Starting position setup for DBCORP-EQ
+2025-10-01 06:00:13,492 - TradingBot - INFO - Position setup attempt 1/3 for DBCORP-EQ
+2025-10-01 06:00:13,492 - TradingBot - INFO - Fetching trade book...
+2025-10-01 06:00:13,951 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100100155359', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '202381063', 'fltm': '01-10-2025 10:30:12', 'trantype': 'B', 'tsym': 'DBCORP-EQ', 'qty': '10', 'token': '17881', 'fillshares': '10', 'flqty': '8', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.05', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '271.40', 'norentm': '10:30:12 01-10-2025', 'avgprc': '271.40', 'exch_tm': '01-10-2025 10:30:12', 'remarks': 'Chartink_DBCORP', 'exchordid': '1100000024649578'}
+2025-10-01 06:00:13,951 - TradingBot - INFO - Extracted buy price from trade: 271.4
+2025-10-01 06:00:13,960 - TradingBot - INFO - Trade fill time: 01-10-2025 10:30:12
+2025-10-01 06:00:13,963 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-01 10:30:12+05:53
+2025-10-01 06:00:13,964 - TradingBot - INFO - Fetching previous candle for: DBCORP-EQ
+2025-10-01 06:00:13,964 - TradingBot - INFO - Found token for DBCORP: 17881
+2025-10-01 06:00:13,964 - TradingBot - INFO - Candle time range: 10:28:00 to 10:29:00
+2025-10-01 06:00:13,964 - TradingBot - INFO - Candle time range (UTC epoch): 1759293300 to 1759293360
+2025-10-01 06:00:13,964 - TradingBot - INFO - Calling broker API for time price series: token=17881, interval=1
+2025-10-01 06:00:14,411 - TradingBot - INFO - Candle found: DBCORP-EQ - High: 270.25, Low: 270.25, Open: 270.25, Close: 270.25
+2025-10-01 06:00:14,411 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-01 06:00:14,411 - TradingBot - INFO - Starting SL/Target calculation for DBCORP-EQ, Buy Price: 271.4
+2025-10-01 06:00:14,411 - TradingBot - INFO - Previous candle data - High: 270.25, Low: 270.25
+2025-10-01 06:00:14,411 - TradingBot - INFO - SL/Target calculation for DBCORP-EQ:
+2025-10-01 06:00:14,411 - TradingBot - INFO - Buy Price: 271.4, Prev Low: 270.25, Prev High: 270.25
+2025-10-01 06:00:14,411 - TradingBot - INFO - Candle Range: 0.00, SL: 270.2, Target: 271.4
+2025-10-01 06:00:14,411 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-01 06:00:14,411 - TradingBot - WARNING - Adjusted target below buy price for DBCORP-EQ. New Target: 274.11
+2025-10-01 06:00:14,421 - TradingBot - INFO - Final levels for DBCORP-EQ: Buy=271.4, SL=270.2, Target=274.11
+2025-10-01 06:00:14,421 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-01 06:00:14,421 - TradingBot - INFO - Candle analysis logged to CSV: DBCORP-EQ - SL: 270.2, Target: 274.11, Type: PREV_CANDLE_LOW
+2025-10-01 06:00:14,442 - TradingBot - INFO - Writing position to state file: app/2025-10-01_positions_state.csv
+2025-10-01 06:00:14,444 - TradingBot - INFO - POSITION SETUP COMPLETE: DBCORP-EQ
+2025-10-01 06:00:14,446 - TradingBot - INFO - Final Position - Buy: 271.4, SL: 270.2, Target: 274.11
+2025-10-01 06:00:14,447 - TradingBot - INFO - POSITION SETUP COMPLETE: DBCORP
+2025-10-01 06:00:14,451 - TradingBot - INFO - Alert processing completed for: DBCORP
+2025-10-01 06:00:14,452 - TradingBot - INFO - Processing alert from queue: {'symbol': 'IOC', 'trigger_price': 151.33}
+2025-10-01 06:00:14,452 - TradingBot - INFO - Alert details - Symbol: IOC, Trigger Price: 151.33
+2025-10-01 06:00:14,476 - TradingBot - INFO - Attempting BUY order for: IOC
+2025-10-01 06:00:14,481 - TradingBot - INFO - PLACE BUY ORDER - Stock: IOC, Trigger Price: 151.33
+2025-10-01 06:00:14,481 - TradingBot - INFO - Placing BUY order: IOC-EQ @ 151.33, Qty: 10
+2025-10-01 06:00:14,935 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: IOC-EQ - ID: 25100100155393
+2025-10-01 06:00:14,935 - TradingBot - INFO - BUY ORDER SUCCESS: IOC
+2025-10-01 06:00:14,939 - TradingBot - INFO - Starting position setup for IOC-EQ
+2025-10-01 06:00:14,942 - TradingBot - INFO - Position setup attempt 1/3 for IOC-EQ
+2025-10-01 06:00:14,942 - TradingBot - INFO - Fetching trade book...
+2025-10-01 06:00:15,399 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100100155393', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '202381494', 'fltm': '01-10-2025 10:30:13', 'trantype': 'B', 'tsym': 'IOC-EQ', 'qty': '10', 'token': '1624', 'fillshares': '10', 'flqty': '10', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.01', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '151.28', 'norentm': '10:30:13 01-10-2025', 'avgprc': '151.28', 'exch_tm': '01-10-2025 10:30:13', 'remarks': 'Chartink_IOC', 'exchordid': '1100000024655441'}
+2025-10-01 06:00:15,399 - TradingBot - INFO - Extracted buy price from trade: 151.28
+2025-10-01 06:00:15,402 - TradingBot - INFO - Trade fill time: 01-10-2025 10:30:13
+2025-10-01 06:00:15,402 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-01 10:30:13+05:53
+2025-10-01 06:00:15,402 - TradingBot - INFO - Fetching previous candle for: IOC-EQ
+2025-10-01 06:00:15,402 - TradingBot - INFO - Found token for IOC: 1624
+2025-10-01 06:00:15,402 - TradingBot - INFO - Candle time range: 10:28:00 to 10:29:00
+2025-10-01 06:00:15,402 - TradingBot - INFO - Candle time range (UTC epoch): 1759293300 to 1759293360
+2025-10-01 06:00:15,402 - TradingBot - INFO - Calling broker API for time price series: token=1624, interval=1
+2025-10-01 06:00:15,867 - TradingBot - INFO - Candle found: IOC-EQ - High: 151.12, Low: 151.0, Open: 151.05, Close: 151.0
+2025-10-01 06:00:15,870 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-01 06:00:15,874 - TradingBot - INFO - Starting SL/Target calculation for IOC-EQ, Buy Price: 151.28
+2025-10-01 06:00:15,877 - TradingBot - INFO - Previous candle data - High: 151.12, Low: 151.0
+2025-10-01 06:00:15,886 - TradingBot - INFO - SL/Target calculation for IOC-EQ:
+2025-10-01 06:00:15,891 - TradingBot - INFO - Buy Price: 151.28, Prev Low: 151.0, Prev High: 151.12
+2025-10-01 06:00:15,903 - TradingBot - INFO - Candle Range: 0.12, SL: 150.95, Target: 151.64
+2025-10-01 06:00:15,904 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-01 06:00:15,906 - TradingBot - INFO - Final levels for IOC-EQ: Buy=151.28, SL=150.95, Target=151.64
+2025-10-01 06:00:15,909 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-01 06:00:15,918 - TradingBot - INFO - Candle analysis logged to CSV: IOC-EQ - SL: 150.95, Target: 151.64, Type: PREV_CANDLE_LOW
+2025-10-01 06:00:15,920 - TradingBot - INFO - Writing position to state file: app/2025-10-01_positions_state.csv
+2025-10-01 06:00:15,924 - TradingBot - INFO - POSITION SETUP COMPLETE: IOC-EQ
+2025-10-01 06:00:15,933 - TradingBot - INFO - Final Position - Buy: 151.28, SL: 150.95, Target: 151.64
+2025-10-01 06:00:15,936 - TradingBot - INFO - POSITION SETUP COMPLETE: IOC
+2025-10-01 06:00:15,938 - TradingBot - INFO - Alert processing completed for: IOC
+2025-10-01 06:02:54,291 - TradingBot - WARNING - !!! SL HIT !!!: IOC-EQ @ 150.92 (SL: 150.95)
+2025-10-01 06:02:54,292 - TradingBot - INFO - Placing exit order for SL: IOC-EQ, Qty: 10
+2025-10-01 06:02:54,293 - TradingBot - INFO - PLACE SELL ORDER - Symbol: IOC-EQ, Quantity: 10
+2025-10-01 06:02:54,293 - TradingBot - INFO - Placing SELL order: IOC-EQ, Qty: 10
+2025-10-01 06:02:54,743 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: IOC-EQ - ID: 25100100161889
+2025-10-01 06:02:54,752 - TradingBot - INFO - SL EXIT SUCCESS: IOC-EQ @ 150.92, Order: 25100100161889
+2025-10-01 06:02:54,752 - TradingBot - INFO - Saving updated positions to file
+2025-10-01 06:02:54,762 - TradingBot - INFO - Position book updated successfully
+2025-10-01 06:09:48,517 - TradingBot - WARNING - !!! SL HIT !!!: ADANIENSOL-EQ @ 873.4 (SL: 873.5)
+2025-10-01 06:09:48,517 - TradingBot - INFO - Placing exit order for SL: ADANIENSOL-EQ, Qty: 10
+2025-10-01 06:09:48,519 - TradingBot - INFO - PLACE SELL ORDER - Symbol: ADANIENSOL-EQ, Quantity: 10
+2025-10-01 06:09:48,520 - TradingBot - INFO - Placing SELL order: ADANIENSOL-EQ, Qty: 10
+2025-10-01 06:09:48,982 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: ADANIENSOL-EQ - ID: 25100100174095
+2025-10-01 06:09:48,985 - TradingBot - INFO - SL EXIT SUCCESS: ADANIENSOL-EQ @ 873.4, Order: 25100100174095
+2025-10-01 06:09:49,904 - TradingBot - WARNING - !!! SL HIT !!!: DBCORP-EQ @ 270.2 (SL: 270.2)
+2025-10-01 06:09:49,905 - TradingBot - INFO - Placing exit order for SL: DBCORP-EQ, Qty: 10
+2025-10-01 06:09:49,913 - TradingBot - INFO - PLACE SELL ORDER - Symbol: DBCORP-EQ, Quantity: 10
+2025-10-01 06:09:49,913 - TradingBot - INFO - Placing SELL order: DBCORP-EQ, Qty: 10
+2025-10-01 06:09:50,383 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: DBCORP-EQ - ID: 25100100174151
+2025-10-01 06:09:50,390 - TradingBot - INFO - SL EXIT SUCCESS: DBCORP-EQ @ 270.2, Order: 25100100174151
+2025-10-01 06:09:50,391 - TradingBot - INFO - Saving updated positions to file
+2025-10-01 06:09:50,403 - TradingBot - INFO - Position book updated successfully
+2025-10-01 06:14:13,619 - TradingBot - WARNING - !!! SL HIT !!!: ICICIB22-EQ @ 110.68 (SL: 110.73)
+2025-10-01 06:14:13,620 - TradingBot - INFO - Placing exit order for SL: ICICIB22-EQ, Qty: 10
+2025-10-01 06:14:13,622 - TradingBot - INFO - PLACE SELL ORDER - Symbol: ICICIB22-EQ, Quantity: 10
+2025-10-01 06:14:13,623 - TradingBot - INFO - Placing SELL order: ICICIB22-EQ, Qty: 10
+2025-10-01 06:14:14,070 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: ICICIB22-EQ - ID: 25100100180340
+2025-10-01 06:14:14,073 - TradingBot - INFO - SL EXIT SUCCESS: ICICIB22-EQ @ 110.68, Order: 25100100180340
+2025-10-01 06:14:14,073 - TradingBot - INFO - Saving updated positions to file
+2025-10-01 06:14:14,081 - TradingBot - INFO - Position book updated successfully
+2025-10-01 09:52:00,006 - TradingBot - INFO - Saving position book...
+2025-10-01 09:52:00,438 - TradingBot - INFO - Found 8 positions to save
+2025-10-01 09:52:00,438 - TradingBot - INFO - Position book saved with 8 records to app/2025-10-01_position.csv
+2025-10-01 09:53:00,472 - TradingBot - INFO - Saving position book...
+2025-10-01 09:53:00,923 - TradingBot - INFO - Found 8 positions to save
+2025-10-01 09:53:00,923 - TradingBot - INFO - Position book saved with 8 records to app/2025-10-01_position.csv
+2025-10-01 09:54:00,966 - TradingBot - INFO - Saving position book...
+2025-10-01 09:54:01,407 - TradingBot - INFO - Found 8 positions to save
+2025-10-01 09:54:01,407 - TradingBot - INFO - Position book saved with 8 records to app/2025-10-01_position.csv
+2025-10-01 14:56:41,865 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-01 14:56:41,865 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-01 14:56:41,894 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-01 14:56:42,491 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-01 14:56:42,507 - TradingBot - INFO - Application starting from main entry point
+2025-10-01 14:56:42,508 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-01 14:56:42,508 - TradingBot - INFO - Start time: 2025-10-01 14:56:42
+2025-10-01 14:56:42,509 - TradingBot - INFO - Starting broker login process
+2025-10-01 14:56:42,509 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-01 14:56:42,511 - TradingBot - INFO - Generating 2FA token
+2025-10-01 14:56:42,512 - TradingBot - INFO - Attempting broker login...
+2025-10-01 14:56:42,958 - TradingBot - INFO - Broker login successful
+2025-10-01 14:56:42,958 - TradingBot - INFO - Starting alert processor thread...
+2025-10-01 14:56:42,958 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-01 14:56:42,958 - TradingBot - INFO - Alert processor thread started
+2025-10-01 14:56:42,958 - TradingBot - INFO - Starting position monitor thread...
+2025-10-01 14:56:42,958 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-01 14:56:42,958 - TradingBot - INFO - Position monitor thread started
+2025-10-01 14:56:42,958 - TradingBot - INFO - Starting Flask web server...
+2025-10-01 14:56:42,990 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.229:5000
+2025-10-01 14:56:42,990 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-01 14:56:49,228 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 10:26:49] "GET /health HTTP/1.1" 200 -
+2025-10-01 15:11:18,287 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-01 15:11:18,303 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-01 15:11:18,325 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-01 15:11:18,954 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-01 15:11:18,954 - TradingBot - INFO - Application starting from main entry point
+2025-10-01 15:11:18,954 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-01 15:11:18,954 - TradingBot - INFO - Start time: 2025-10-01 15:11:18
+2025-10-01 15:11:18,954 - TradingBot - INFO - Starting broker login process
+2025-10-01 15:11:18,954 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-01 15:11:18,954 - TradingBot - INFO - Generating 2FA token
+2025-10-01 15:11:18,954 - TradingBot - INFO - Attempting broker login...
+2025-10-01 15:11:19,454 - TradingBot - INFO - Broker login successful
+2025-10-01 15:11:19,455 - TradingBot - INFO - Starting alert processor thread...
+2025-10-01 15:11:19,456 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-01 15:11:19,456 - TradingBot - INFO - Alert processor thread started
+2025-10-01 15:11:19,457 - TradingBot - INFO - Starting position monitor thread...
+2025-10-01 15:11:19,457 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-01 15:11:19,457 - TradingBot - INFO - Position monitor thread started
+2025-10-01 15:11:19,458 - TradingBot - INFO - Starting Flask web server...
+2025-10-01 15:11:19,491 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.229:5000
+2025-10-01 15:11:19,491 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-01 15:11:24,896 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 10:41:24] "GET /health HTTP/1.1" 200 -
+2025-10-01 15:15:09,552 - TradingBot - INFO - Market closing time detected: 15:15:09
+2025-10-01 15:15:09,552 - TradingBot - INFO - 3:15 PM detected - initiating market close procedure
+2025-10-01 15:15:09,552 - TradingBot - INFO - === STARTING MARKET CLOSE PROCEDURE ===
+2025-10-01 15:15:09,552 - TradingBot - INFO - Current time: 2025-10-01 15:15:09
+2025-10-01 15:15:09,552 - TradingBot - INFO - STEP 1: Cancelling all open orders
+2025-10-01 15:15:09,552 - TradingBot - INFO - Starting cancel all open orders procedure
+2025-10-01 15:15:09,552 - TradingBot - INFO - Fetching order book...
+2025-10-01 15:15:10,001 - TradingBot - INFO - Found 16 orders in order book
+2025-10-01 15:15:10,001 - TradingBot - INFO - Order cancellation completed: 0 orders cancelled
+2025-10-01 15:15:12,009 - TradingBot - INFO - STEP 2: Closing all positions
+2025-10-01 15:15:12,010 - TradingBot - INFO - Starting close all positions procedure
+2025-10-01 15:15:12,451 - TradingBot - INFO - Found 8 positions to check
+2025-10-01 15:15:12,451 - TradingBot - INFO - Checking position: ONGC-EQ, NetQty: 0
+2025-10-01 15:15:12,467 - TradingBot - INFO - Checking position: MRPL-EQ, NetQty: 0
+2025-10-01 15:15:12,467 - TradingBot - INFO - Checking position: INFY-EQ, NetQty: 0
+2025-10-01 15:15:12,467 - TradingBot - INFO - Checking position: ICICIB22-EQ, NetQty: 0
+2025-10-01 15:15:12,467 - TradingBot - INFO - Checking position: ADANIENSOL-EQ, NetQty: 0
+2025-10-01 15:15:12,467 - TradingBot - INFO - Checking position: DBCORP-EQ, NetQty: 0
+2025-10-01 15:15:12,467 - TradingBot - INFO - Checking position: IOC-EQ, NetQty: 0
+2025-10-01 15:15:12,467 - TradingBot - INFO - Checking position: CIEINDIA-EQ, NetQty: -20
+2025-10-01 15:15:12,467 - TradingBot - INFO - Closing short position: CIEINDIA-EQ, Qty: 20
+2025-10-01 15:15:12,927 - TradingBot - INFO - SUCCESS: Closed short position: CIEINDIA-EQ - Qty: 20
+2025-10-01 15:15:12,927 - TradingBot - INFO - Position closing completed: 1 positions closed
+2025-10-01 15:15:12,927 - TradingBot - INFO - STEP 3: Waiting for positions to close
+2025-10-01 15:15:12,927 - TradingBot - INFO - Position close check attempt 1/30
+2025-10-01 15:15:12,927 - TradingBot - INFO - Checking if all positions are closed
+2025-10-01 15:15:13,462 - TradingBot - INFO - Checking 8 positions
+2025-10-01 15:15:13,462 - TradingBot - INFO - SUCCESS: All positions are closed
+2025-10-01 15:15:13,464 - TradingBot - INFO - SUCCESS: All positions closed
+2025-10-01 15:15:13,465 - TradingBot - INFO - STEP 4: Saving final position book
+2025-10-01 15:15:13,466 - TradingBot - INFO - Saving position book...
+2025-10-01 15:15:13,909 - TradingBot - INFO - Found 8 positions to save
+2025-10-01 15:15:13,909 - TradingBot - INFO - Position book saved with 8 records to app/2025-10-01_position.csv
+2025-10-01 15:15:13,919 - TradingBot - INFO - Shutdown flag set to True
+2025-10-01 15:15:13,919 - TradingBot - INFO - === MARKET CLOSE PROCEDURE COMPLETED ===
+2025-10-01 15:15:13,919 - TradingBot - INFO - Shutting down Flask application...

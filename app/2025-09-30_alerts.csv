@@ -1,0 +1,4 @@
+Timestamp,AlertName,Stock,TriggerPrice,Status,Message
+2025-09-30 10:22:09,Alert for RSI Cross With Yesterday High Break One Min,IGL,208.4,SUCCESS,Order placed: IGL-EQ
+2025-09-30 13:35:08,Alert for RSI Cross With Yesterday High Break One Min,RUCHIRA,144.8,SUCCESS,Order placed: RUCHIRA-EQ
+2025-09-30 13:36:07,Alert for RSI Cross With Yesterday High Break One Min,BSLGOLDETF,103.28,SUCCESS,Order placed: BSLGOLDETF-EQ
