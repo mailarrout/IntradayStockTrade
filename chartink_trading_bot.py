@@ -579,48 +579,41 @@ def cancel_all_open_orders():
         return False
 
 def close_all_positions():
-    """Close all open positions at 3:15 PM"""
     logger.info("Starting close all positions procedure")
     try:
         positions = broker_client.get_positions() or []
         logger.info(f"Found {len(positions)} positions to check")
-        
+
         closed_count = 0
-        
         for pos in positions:
             symbol = pos.get("tsym", "")
             netqty = int(pos.get("netqty", 0))
-            logger.info(f"Checking position: {symbol}, NetQty: {netqty}")
-            
+
             if netqty > 0:
                 logger.info(f"Closing long position: {symbol}, Qty: {netqty}")
-                success, order_id = place_sell_order(symbol, netqty)
-                if success:
-                    logger.info(f"SUCCESS: Closed long position: {symbol} - Qty: {netqty}")
-                    closed_count += 1
-                else:
-                    logger.error(f"FAILED to close long position: {symbol}")
-            
-            elif netqty < 0:
-                logger.info(f"Closing short position: {symbol}, Qty: {abs(netqty)}")
-                trading_symbol = symbol if symbol.endswith('-EQ') else f"{symbol}-EQ"
-                result = broker_client.place_order(
-                    buy_or_sell="B", product_type="I", exchange="NSE",
-                    tradingsymbol=trading_symbol, quantity=abs(netqty),discloseqty=0, price_type="MKT",
-                    price=0, trigger_price=0, retention="DAY", remarks=f"EOD_Close_{symbol}"
-                )
-                if result and result.get("stat") == "Ok":
-                    logger.info(f"SUCCESS: Closed short position: {symbol} - Qty: {abs(netqty)}")
-                    closed_count += 1
-                else:
-                    logger.error(f"FAILED to close short position: {symbol}")
-        
-        logger.info(f"Position closing completed: {closed_count} positions closed")
-        return True
-        
+                while netqty > 0:  # keep retrying until flat
+                    success, order_id = place_sell_order(symbol, netqty)
+                    if success:
+                        logger.info(f"EXIT ORDER PLACED for {symbol}, waiting broker update...")
+                        time.sleep(2)
+                        # refresh broker positions
+                        positions = broker_client.get_positions() or []
+                        for p in positions:
+                            if p.get("tsym") == symbol:
+                                netqty = int(p.get("netqty", 0))
+                        if netqty == 0:
+                            logger.info(f"SUCCESS: {symbol} position closed fully")
+                            closed_count += 1
+                            break
+                    else:
+                        logger.error(f"Failed to close {symbol}, retrying...")
+                        time.sleep(2)
+
+        return closed_count > 0
     except Exception as e:
         logger.error(f"Error closing positions: {e}")
         return False
+
 
 def check_all_positions_closed():
     """Check if all positions are closed (netqty = 0 for all stocks)"""
@@ -686,6 +679,36 @@ def market_close_procedure():
     import signal
     logger.info("Shutting down Flask application...")
     os.kill(os.getpid(), signal.SIGINT)  # This sends KeyboardInterrupt to stop Flask
+
+
+def is_already_in_position(symbol: str) -> bool:
+    """Check if the symbol already has an active/open position"""
+    try:
+        # --- Step 1: Check positions file ---
+        if os.path.exists(positions_file):
+            df = pd.read_csv(positions_file)
+            existing = df[df["Symbol"].str.upper() == symbol.upper()]
+            if not existing.empty and any(existing["Status"] == "ACTIVE"):
+                logger.info(f"{symbol} already ACTIVE in positions file, skipping new entry")
+                return True
+
+        # --- Step 2: Cross-check with broker positions ---
+        positions = broker_client.get_positions() or []
+        for pos in positions:
+            tsym = pos.get("tsym", "").strip().upper()
+            netqty = int(pos.get("netqty", 0))
+            if tsym == f"{symbol.upper()}-EQ" or tsym == symbol.upper():
+                if netqty > 0:  # long position already exists
+                    logger.info(f"{symbol} already open at broker (NetQty={netqty}), skipping new entry")
+                    return True
+
+        return False
+
+    except Exception as e:
+        logger.error(f"Error checking existing position for {symbol}: {e}")
+        return False
+
+
 
 # ================== POSITION MONITORING ==================
 def monitor_positions():
@@ -860,14 +883,10 @@ def process_alerts():
                 continue
             
             # Check if position already exists
-            if os.path.exists(positions_file):
-                logger.debug("Checking if position already exists")
-                df = pd.read_csv(positions_file)
-                existing = df[df["Symbol"].str.upper() == symbol.upper()]
-                if not existing.empty and any(existing["Status"] == "ACTIVE"):
-                    logger.warning(f"Active position already exists for {symbol}, skipping")
-                    continue
-            
+            if is_already_in_position(symbol):
+                logger.warning(f"Skipping {symbol}, already in position")
+                continue
+                        
             # Place buy order
             logger.info(f"Attempting BUY order for: {symbol}")
             success, result = place_buy_order(symbol, trigger_price)
@@ -909,20 +928,29 @@ def webhook():
     logger.info("=== WEBHOOK REQUEST RECEIVED ===")
 
     try:
-        # Try JSON first
+        # --- Step 1: Log raw body and headers ---
+        logger.info(f"Raw request headers: {dict(request.headers)}")
+        logger.info(f"Raw request data: {request.data.decode('utf-8', errors='ignore')}")
+
+        # --- Step 2: Try JSON first ---
         data = request.get_json(silent=True)
+        if data:
+            logger.info(f"Parsed JSON payload: {data}")
+        else:
+            logger.warning("Could not parse JSON from request")
 
-        # If no JSON, try form data
+        # --- Step 3: If no JSON, try form data ---
         if not data:
-            data = request.form.to_dict()
+            form_data = request.form.to_dict()
+            logger.info(f"Form data parsed: {form_data}")
+            data = form_data
 
+        # --- Step 4: If still empty, stop here ---
         if not data:
-            logger.warning("Empty webhook data received")
+            logger.error("Empty webhook data received after all parsing attempts")
             return jsonify({"status": "error", "message": "No data received"}), 400
 
-        logger.info(f"Webhook payload: {data}")
-
-        # Handle both formats: single or multiple
+        # --- Step 5: Extract symbols & prices ---
         symbols_raw = (
             data.get("symbol", "").strip()
             or data.get("stocks", "").strip()
@@ -932,6 +960,9 @@ def webhook():
             or data.get("trigger_prices", "").strip()
         )
 
+        logger.info(f"Raw symbols string: {symbols_raw}")
+        logger.info(f"Raw prices string: {prices_raw}")
+
         if not symbols_raw:
             logger.error("No symbol in webhook data")
             return jsonify({"status": "error", "message": "No symbol provided"}), 400
@@ -940,7 +971,10 @@ def webhook():
         symbols = [s.strip() for s in symbols_raw.split(",") if s.strip()]
         prices = [p.strip() for p in prices_raw.split(",") if p.strip()] if prices_raw else []
 
-        # If number of prices doesn't match, just reuse the first or fallback
+        logger.info(f"Symbols list parsed: {symbols}")
+        logger.info(f"Prices list parsed: {prices}")
+
+        # --- Step 6: Handle mismatch count between symbols and prices ---
         if prices and len(prices) != len(symbols):
             logger.warning(f"Mismatch symbols vs prices count: {symbols_raw} | {prices_raw}")
             if len(prices) == 1:
@@ -950,30 +984,33 @@ def webhook():
                 while len(prices) < len(symbols):
                     prices.append("0")
 
+        # --- Step 7: Transform into alerts and queue them ---
         alerts = []
         for i, sym in enumerate(symbols):
             try:
                 trig_price = float(prices[i]) if i < len(prices) else 0.0
             except ValueError:
                 trig_price = 0.0
+
             if trig_price <= 0:
                 logger.warning(f"Invalid or missing trigger price for {sym}, skipping")
                 continue
 
-            alert_queue.put({"symbol": sym, "trigger_price": trig_price})
-            alerts.append({"symbol": sym, "trigger_price": trig_price})
-            logger.info(f"Alert queued: {sym} @ {trig_price}")
+            alert_data = {"symbol": sym, "trigger_price": trig_price}
+            alert_queue.put(alert_data)
+            alerts.append(alert_data)
+            logger.info(f"Alert queued: {alert_data}")
 
         if not alerts:
+            logger.error("No valid alerts queued from payload")
             return jsonify({"status": "error", "message": "No valid alerts queued"}), 400
 
+        logger.info(f"Final alerts queued: {alerts}")
         return jsonify({"status": "success", "alerts": alerts}), 200
 
     except Exception as e:
         logger.error(f"Webhook processing error: {e}", exc_info=True)
         return jsonify({"status": "error", "message": str(e)}), 500
-
-
 
 # Alias endpoint so both /webhook and /chartink-webhook work
 @app.route('/chartink-webhook', methods=['POST'])

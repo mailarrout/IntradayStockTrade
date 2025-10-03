@@ -1,0 +1,552 @@
+2025-10-03 09:02:51,683 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-03 09:02:51,683 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-03 09:02:51,783 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-03 09:02:52,368 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-03 09:02:52,368 - TradingBot - INFO - Application starting from main entry point
+2025-10-03 09:02:52,368 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-03 09:02:52,368 - TradingBot - INFO - Start time: 2025-10-03 09:02:52
+2025-10-03 09:02:52,368 - TradingBot - INFO - Starting broker login process
+2025-10-03 09:02:52,368 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-03 09:02:52,383 - TradingBot - INFO - Generating 2FA token
+2025-10-03 09:02:52,383 - TradingBot - INFO - Attempting broker login...
+2025-10-03 09:02:52,898 - TradingBot - INFO - Broker login successful
+2025-10-03 09:02:52,914 - TradingBot - INFO - Created new positions file: app/2025-10-03_positions_state.csv
+2025-10-03 09:02:52,914 - TradingBot - INFO - Starting alert processor thread...
+2025-10-03 09:02:52,914 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-03 09:02:52,914 - TradingBot - INFO - Alert processor thread started
+2025-10-03 09:02:52,917 - TradingBot - INFO - Starting position monitor thread...
+2025-10-03 09:02:52,917 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-03 09:02:52,917 - TradingBot - INFO - Position monitor thread started
+2025-10-03 09:02:52,917 - TradingBot - INFO - Starting Flask web server...
+2025-10-03 09:02:52,999 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.229:5000
+2025-10-03 09:02:52,999 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-03 09:02:53,239 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 04:32:53] "GET /health HTTP/1.1" 200 -
+2025-10-03 09:16:13,475 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 09:25:08,650 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 09:48:08,234 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 09:51:09,100 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 09:53:08,655 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 09:58:08,309 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 10:00:07,748 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 10:01:08,606 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 10:05:07,410 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 10:05:09,567 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 10:11:08,592 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 10:12:08,270 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 10:15:08,194 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 12:00:50,402 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-03 12:00:50,402 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-03 12:00:50,417 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-03 12:00:51,058 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-03 12:00:51,058 - TradingBot - INFO - Application starting from main entry point
+2025-10-03 12:00:51,058 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-03 12:00:51,058 - TradingBot - INFO - Start time: 2025-10-03 12:00:51
+2025-10-03 12:00:51,058 - TradingBot - INFO - Starting broker login process
+2025-10-03 12:00:51,058 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-03 12:00:51,074 - TradingBot - INFO - Generating 2FA token
+2025-10-03 12:00:51,074 - TradingBot - INFO - Attempting broker login...
+2025-10-03 12:00:51,540 - TradingBot - INFO - Broker login successful
+2025-10-03 12:00:51,540 - TradingBot - INFO - Starting alert processor thread...
+2025-10-03 12:00:51,540 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-03 12:00:51,556 - TradingBot - INFO - Alert processor thread started
+2025-10-03 12:00:51,556 - TradingBot - INFO - Starting position monitor thread...
+2025-10-03 12:00:51,556 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-03 12:00:51,556 - TradingBot - INFO - Position monitor thread started
+2025-10-03 12:00:51,556 - TradingBot - INFO - Starting Flask web server...
+2025-10-03 12:00:51,587 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.229:5000
+2025-10-03 12:00:51,587 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-03 12:00:57,336 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 07:30:57] "GET /health HTTP/1.1" 200 -
+2025-10-03 12:06:08,528 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 12:06:08,528 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '347', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiIyN2I4YzQ1NTIxODg3NDA0IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwZWQxZGNiNTg2YjBlMmUxMCIsInR4IjoiN2M0NTBiMjU1YmI3OGFkOCIsInByIjoxLjYwMjc5LCJzYSI6dHJ1ZSwidGkiOjE3NTk0NzMzNjc0ODV9fQ==', 'Traceparent': '00-0000000000000000ed1dcb586b0e2e10-27b8c45521887404-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-27b8c45521887404-7c450b255bb78ad8-1-1.602794-1759473367485', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-03 12:06:08,530 - TradingBot - INFO - Raw request data: {"stocks":"UNIONBANK","trigger_prices":"140.32","triggered_at":"12:06 pm","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-03 12:06:08,530 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'UNIONBANK', 'trigger_prices': '140.32', 'triggered_at': '12:06 pm', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-03 12:06:08,530 - TradingBot - INFO - Raw symbols string: UNIONBANK
+2025-10-03 12:06:08,530 - TradingBot - INFO - Raw prices string: 140.32
+2025-10-03 12:06:08,530 - TradingBot - INFO - Symbols list parsed: ['UNIONBANK']
+2025-10-03 12:06:08,530 - TradingBot - INFO - Prices list parsed: ['140.32']
+2025-10-03 12:06:08,530 - TradingBot - INFO - Alert queued: {'symbol': 'UNIONBANK', 'trigger_price': 140.32}
+2025-10-03 12:06:08,530 - TradingBot - INFO - Processing alert from queue: {'symbol': 'UNIONBANK', 'trigger_price': 140.32}
+2025-10-03 12:06:08,530 - TradingBot - INFO - Final alerts queued: [{'symbol': 'UNIONBANK', 'trigger_price': 140.32}]
+2025-10-03 12:06:08,530 - TradingBot - INFO - Alert details - Symbol: UNIONBANK, Trigger Price: 140.32
+2025-10-03 12:06:08,530 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 07:36:08] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-03 12:06:08,543 - TradingBot - INFO - Attempting BUY order for: UNIONBANK
+2025-10-03 12:06:08,549 - TradingBot - INFO - PLACE BUY ORDER - Stock: UNIONBANK, Trigger Price: 140.32
+2025-10-03 12:06:08,551 - TradingBot - INFO - Placing BUY order: UNIONBANK-EQ @ 140.32, Qty: 10
+2025-10-03 12:06:09,022 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: UNIONBANK-EQ - ID: 25100300243436
+2025-10-03 12:06:09,030 - TradingBot - INFO - BUY ORDER SUCCESS: UNIONBANK
+2025-10-03 12:06:09,031 - TradingBot - INFO - Starting position setup for UNIONBANK-EQ
+2025-10-03 12:06:09,031 - TradingBot - INFO - Position setup attempt 1/3 for UNIONBANK-EQ
+2025-10-03 12:06:09,031 - TradingBot - INFO - Fetching trade book...
+2025-10-03 12:06:09,513 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100300243436', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '604755367', 'fltm': '03-10-2025 12:06:08', 'trantype': 'B', 'tsym': 'UNIONBANK-EQ', 'qty': '10', 'token': '10753', 'fillshares': '10', 'flqty': '10', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.01', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '140.31', 'norentm': '12:06:08 03-10-2025', 'avgprc': '140.31', 'exch_tm': '03-10-2025 12:06:08', 'remarks': 'Chartink_UNIONBANK', 'exchordid': '1300000043765191'}
+2025-10-03 12:06:09,513 - TradingBot - INFO - Extracted buy price from trade: 140.31
+2025-10-03 12:06:09,517 - TradingBot - INFO - Trade fill time: 03-10-2025 12:06:08
+2025-10-03 12:06:09,520 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-03 12:06:08+05:53
+2025-10-03 12:06:09,520 - TradingBot - INFO - Fetching previous candle for: UNIONBANK-EQ
+2025-10-03 12:06:09,521 - TradingBot - INFO - Found token for UNIONBANK: 10753
+2025-10-03 12:06:09,522 - TradingBot - INFO - Candle time range: 12:04:00 to 12:05:00
+2025-10-03 12:06:09,522 - TradingBot - INFO - Candle time range (UTC epoch): 1759471860 to 1759471920
+2025-10-03 12:06:09,523 - TradingBot - INFO - Calling broker API for time price series: token=10753, interval=1
+2025-10-03 12:06:10,361 - TradingBot - INFO - Candle found: UNIONBANK-EQ - High: 138.64, Low: 138.56, Open: 138.6, Close: 138.57
+2025-10-03 12:06:10,361 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-03 12:06:10,361 - TradingBot - INFO - Starting SL/Target calculation for UNIONBANK-EQ, Buy Price: 140.31
+2025-10-03 12:06:10,361 - TradingBot - INFO - Previous candle data - High: 138.64, Low: 138.56
+2025-10-03 12:06:10,361 - TradingBot - INFO - SL/Target calculation for UNIONBANK-EQ:
+2025-10-03 12:06:10,361 - TradingBot - INFO - Buy Price: 140.31, Prev Low: 138.56, Prev High: 138.64
+2025-10-03 12:06:10,361 - TradingBot - INFO - Candle Range: 0.08, SL: 138.51, Target: 140.55
+2025-10-03 12:06:10,361 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-03 12:06:10,361 - TradingBot - INFO - Final levels for UNIONBANK-EQ: Buy=140.31, SL=138.51, Target=140.55
+2025-10-03 12:06:10,361 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-03 12:06:10,372 - TradingBot - INFO - Creating new candle analysis file: app/2025-10-03_candle_analysis.csv
+2025-10-03 12:06:10,373 - TradingBot - INFO - Candle analysis logged to CSV: UNIONBANK-EQ - SL: 138.51, Target: 140.55, Type: PREV_CANDLE_LOW
+2025-10-03 12:06:10,374 - TradingBot - INFO - Writing position to state file: app/2025-10-03_positions_state.csv
+2025-10-03 12:06:10,375 - TradingBot - INFO - POSITION SETUP COMPLETE: UNIONBANK-EQ
+2025-10-03 12:06:10,376 - TradingBot - INFO - Final Position - Buy: 140.31, SL: 138.51, Target: 140.55
+2025-10-03 12:06:10,376 - TradingBot - INFO - POSITION SETUP COMPLETE: UNIONBANK
+2025-10-03 12:06:10,379 - TradingBot - INFO - Alert processing completed for: UNIONBANK
+2025-10-03 12:25:00,521 - TradingBot - INFO - Saving position book...
+2025-10-03 12:25:00,974 - TradingBot - INFO - Found 4 positions to save
+2025-10-03 12:25:00,977 - TradingBot - INFO - Position book saved with 4 records to app/2025-10-03_position.csv
+2025-10-03 12:27:00,899 - TradingBot - INFO - Saving position book...
+2025-10-03 12:27:01,338 - TradingBot - INFO - Found 4 positions to save
+2025-10-03 12:27:01,338 - TradingBot - INFO - Position book saved with 4 records to app/2025-10-03_position.csv
+2025-10-03 12:38:00,588 - TradingBot - INFO - Saving position book...
+2025-10-03 12:38:01,488 - TradingBot - INFO - Found 4 positions to save
+2025-10-03 12:38:01,488 - TradingBot - INFO - Position book saved with 4 records to app/2025-10-03_position.csv
+2025-10-03 12:43:42,884 - TradingBot - WARNING - !!! SL HIT !!!: UNIONBANK-EQ @ 138.32 (SL: 138.51)
+2025-10-03 12:43:42,885 - TradingBot - INFO - Placing exit order for SL: UNIONBANK-EQ, Qty: 10
+2025-10-03 12:43:42,887 - TradingBot - INFO - PLACE SELL ORDER - Symbol: UNIONBANK-EQ, Quantity: 10
+2025-10-03 12:43:42,888 - TradingBot - INFO - Placing SELL order: UNIONBANK-EQ, Qty: 10
+2025-10-03 12:43:43,311 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: UNIONBANK-EQ - ID: 25100300287571
+2025-10-03 12:43:43,320 - TradingBot - INFO - SL EXIT SUCCESS: UNIONBANK-EQ @ 138.32, Order: 25100300287571
+2025-10-03 12:43:43,320 - TradingBot - INFO - Saving updated positions to file
+2025-10-03 12:43:43,329 - TradingBot - INFO - Position book updated successfully
+2025-10-03 13:02:08,673 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 13:02:08,673 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '341', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiJjYTQwZGQzNzI1YWVkNTQ3IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwZWQxZGNiNTg2YjBlMmUxMCIsInR4IjoiMWRhOWM2MTFkMDJlNDRkZSIsInByIjoxLjYwMjc5LCJzYSI6dHJ1ZSwidGkiOjE3NTk0NzY3Mjc1MTB9fQ==', 'Traceparent': '00-0000000000000000ed1dcb586b0e2e10-ca40dd3725aed547-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-ca40dd3725aed547-1da9c611d02e44de-1-1.602794-1759476727511', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-03 13:02:08,673 - TradingBot - INFO - Raw request data: {"stocks":"MRPL","trigger_prices":"136.32","triggered_at":"1:02 pm","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-03 13:02:08,687 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'MRPL', 'trigger_prices': '136.32', 'triggered_at': '1:02 pm', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-03 13:02:08,687 - TradingBot - INFO - Raw symbols string: MRPL
+2025-10-03 13:02:08,689 - TradingBot - INFO - Raw prices string: 136.32
+2025-10-03 13:02:08,691 - TradingBot - INFO - Symbols list parsed: ['MRPL']
+2025-10-03 13:02:08,691 - TradingBot - INFO - Prices list parsed: ['136.32']
+2025-10-03 13:02:08,692 - TradingBot - INFO - Alert queued: {'symbol': 'MRPL', 'trigger_price': 136.32}
+2025-10-03 13:02:08,692 - TradingBot - INFO - Processing alert from queue: {'symbol': 'MRPL', 'trigger_price': 136.32}
+2025-10-03 13:02:08,693 - TradingBot - INFO - Final alerts queued: [{'symbol': 'MRPL', 'trigger_price': 136.32}]
+2025-10-03 13:02:08,694 - TradingBot - INFO - Alert details - Symbol: MRPL, Trigger Price: 136.32
+2025-10-03 13:02:08,699 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 08:32:08] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-03 13:02:08,724 - TradingBot - INFO - Attempting BUY order for: MRPL
+2025-10-03 13:02:08,725 - TradingBot - INFO - PLACE BUY ORDER - Stock: MRPL, Trigger Price: 136.32
+2025-10-03 13:02:08,726 - TradingBot - INFO - Placing BUY order: MRPL-EQ @ 136.32, Qty: 10
+2025-10-03 13:02:09,172 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: MRPL-EQ - ID: 25100300302798
+2025-10-03 13:02:09,172 - TradingBot - INFO - BUY ORDER SUCCESS: MRPL
+2025-10-03 13:02:09,184 - TradingBot - INFO - Starting position setup for MRPL-EQ
+2025-10-03 13:02:09,185 - TradingBot - INFO - Position setup attempt 1/3 for MRPL-EQ
+2025-10-03 13:02:09,186 - TradingBot - INFO - Fetching trade book...
+2025-10-03 13:02:09,603 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100300302798', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '405038746', 'fltm': '03-10-2025 13:02:08', 'trantype': 'B', 'tsym': 'MRPL-EQ', 'qty': '10', 'token': '2283', 'fillshares': '10', 'flqty': '10', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.01', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '136.30', 'norentm': '13:02:08 03-10-2025', 'avgprc': '136.30', 'exch_tm': '03-10-2025 13:02:08', 'remarks': 'Chartink_MRPL', 'exchordid': '1200000053309557'}
+2025-10-03 13:02:09,612 - TradingBot - INFO - Extracted buy price from trade: 136.3
+2025-10-03 13:02:09,616 - TradingBot - INFO - Trade fill time: 03-10-2025 13:02:08
+2025-10-03 13:02:09,619 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-03 13:02:08+05:53
+2025-10-03 13:02:09,620 - TradingBot - INFO - Fetching previous candle for: MRPL-EQ
+2025-10-03 13:02:09,621 - TradingBot - INFO - Found token for MRPL: 2283
+2025-10-03 13:02:09,622 - TradingBot - INFO - Candle time range: 13:00:00 to 13:01:00
+2025-10-03 13:02:09,623 - TradingBot - INFO - Candle time range (UTC epoch): 1759475220 to 1759475280
+2025-10-03 13:02:09,623 - TradingBot - INFO - Calling broker API for time price series: token=2283, interval=1
+2025-10-03 13:02:10,292 - TradingBot - INFO - Candle found: MRPL-EQ - High: 133.75, Low: 133.75, Open: 133.75, Close: 133.75
+2025-10-03 13:02:10,292 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-03 13:02:10,292 - TradingBot - INFO - Starting SL/Target calculation for MRPL-EQ, Buy Price: 136.3
+2025-10-03 13:02:10,292 - TradingBot - INFO - Previous candle data - High: 133.75, Low: 133.75
+2025-10-03 13:02:10,292 - TradingBot - INFO - SL/Target calculation for MRPL-EQ:
+2025-10-03 13:02:10,292 - TradingBot - INFO - Buy Price: 136.3, Prev Low: 133.75, Prev High: 133.75
+2025-10-03 13:02:10,292 - TradingBot - INFO - Candle Range: 0.00, SL: 133.7, Target: 136.3
+2025-10-03 13:02:10,302 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-03 13:02:10,302 - TradingBot - WARNING - Adjusted target below buy price for MRPL-EQ. New Target: 137.66
+2025-10-03 13:02:10,302 - TradingBot - INFO - Final levels for MRPL-EQ: Buy=136.3, SL=133.7, Target=137.66
+2025-10-03 13:02:10,302 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-03 13:02:10,302 - TradingBot - INFO - Candle analysis logged to CSV: MRPL-EQ - SL: 133.7, Target: 137.66, Type: PREV_CANDLE_LOW
+2025-10-03 13:02:10,302 - TradingBot - INFO - Writing position to state file: app/2025-10-03_positions_state.csv
+2025-10-03 13:02:10,302 - TradingBot - INFO - POSITION SETUP COMPLETE: MRPL-EQ
+2025-10-03 13:02:10,302 - TradingBot - INFO - Final Position - Buy: 136.3, SL: 133.7, Target: 137.66
+2025-10-03 13:02:10,302 - TradingBot - INFO - POSITION SETUP COMPLETE: MRPL
+2025-10-03 13:02:10,312 - TradingBot - INFO - Alert processing completed for: MRPL
+2025-10-03 13:05:07,430 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 13:05:07,432 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '316', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiIzNTk3YzEyM2FhMWQ2ZTVkIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwZWQxZGNiNTg2YjBlMmUxMCIsInR4IjoiOTJhNTcyZDY5ZTQ4MGQ0ZSIsInByIjoxLjYwMjc5LCJzYSI6dHJ1ZSwidGkiOjE3NTk0NzY5MDYzMjR9fQ==', 'Traceparent': '00-0000000000000000ed1dcb586b0e2e10-3597c123aa1d6e5d-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-3597c123aa1d6e5d-92a572d69e480d4e-1-1.602794-1759476906325', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-03 13:05:07,432 - TradingBot - INFO - Raw request data: {"stocks":"MRPL","trigger_prices":"136.4","triggered_at":"1:05 pm","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-03 13:05:07,432 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'MRPL', 'trigger_prices': '136.4', 'triggered_at': '1:05 pm', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-03 13:05:07,432 - TradingBot - INFO - Raw symbols string: MRPL
+2025-10-03 13:05:07,432 - TradingBot - INFO - Raw prices string: 136.4
+2025-10-03 13:05:07,432 - TradingBot - INFO - Symbols list parsed: ['MRPL']
+2025-10-03 13:05:07,432 - TradingBot - INFO - Prices list parsed: ['136.4']
+2025-10-03 13:05:07,432 - TradingBot - INFO - Alert queued: {'symbol': 'MRPL', 'trigger_price': 136.4}
+2025-10-03 13:05:07,432 - TradingBot - INFO - Processing alert from queue: {'symbol': 'MRPL', 'trigger_price': 136.4}
+2025-10-03 13:05:07,432 - TradingBot - INFO - Final alerts queued: [{'symbol': 'MRPL', 'trigger_price': 136.4}]
+2025-10-03 13:05:07,432 - TradingBot - INFO - Alert details - Symbol: MRPL, Trigger Price: 136.4
+2025-10-03 13:05:07,432 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 08:35:07] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-03 13:05:07,445 - TradingBot - INFO - Attempting BUY order for: MRPL
+2025-10-03 13:05:07,445 - TradingBot - INFO - PLACE BUY ORDER - Stock: MRPL, Trigger Price: 136.4
+2025-10-03 13:05:07,447 - TradingBot - INFO - Placing BUY order: MRPL-EQ @ 136.4, Qty: 10
+2025-10-03 13:05:07,873 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: MRPL-EQ - ID: 25100300305006
+2025-10-03 13:05:07,873 - TradingBot - INFO - BUY ORDER SUCCESS: MRPL
+2025-10-03 13:05:07,873 - TradingBot - INFO - Starting position setup for MRPL-EQ
+2025-10-03 13:05:07,873 - TradingBot - INFO - Position setup attempt 1/3 for MRPL-EQ
+2025-10-03 13:05:07,873 - TradingBot - INFO - Fetching trade book...
+2025-10-03 13:05:08,314 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100300305006', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '405086642', 'fltm': '03-10-2025 13:05:06', 'trantype': 'B', 'tsym': 'MRPL-EQ', 'qty': '10', 'token': '2283', 'fillshares': '10', 'flqty': '10', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.01', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '136.58', 'norentm': '13:05:06 03-10-2025', 'avgprc': '136.58', 'exch_tm': '03-10-2025 13:05:06', 'remarks': 'Chartink_MRPL', 'exchordid': '1200000053942208'}
+2025-10-03 13:05:08,314 - TradingBot - INFO - Extracted buy price from trade: 136.58
+2025-10-03 13:05:08,320 - TradingBot - INFO - Trade fill time: 03-10-2025 13:05:06
+2025-10-03 13:05:08,322 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-03 13:05:06+05:53
+2025-10-03 13:05:08,322 - TradingBot - INFO - Fetching previous candle for: MRPL-EQ
+2025-10-03 13:05:08,322 - TradingBot - INFO - Found token for MRPL: 2283
+2025-10-03 13:05:08,322 - TradingBot - INFO - Candle time range: 13:03:00 to 13:04:00
+2025-10-03 13:05:08,322 - TradingBot - INFO - Candle time range (UTC epoch): 1759475400 to 1759475460
+2025-10-03 13:05:08,325 - TradingBot - INFO - Calling broker API for time price series: token=2283, interval=1
+2025-10-03 13:05:09,204 - TradingBot - INFO - Candle found: MRPL-EQ - High: 134.2, Low: 134.05, Open: 134.09, Close: 134.15
+2025-10-03 13:05:09,204 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-03 13:05:09,204 - TradingBot - INFO - Starting SL/Target calculation for MRPL-EQ, Buy Price: 136.58
+2025-10-03 13:05:09,216 - TradingBot - INFO - Previous candle data - High: 134.2, Low: 134.05
+2025-10-03 13:05:09,216 - TradingBot - INFO - SL/Target calculation for MRPL-EQ:
+2025-10-03 13:05:09,216 - TradingBot - INFO - Buy Price: 136.58, Prev Low: 134.05, Prev High: 134.2
+2025-10-03 13:05:09,216 - TradingBot - INFO - Candle Range: 0.15, SL: 134.0, Target: 137.03
+2025-10-03 13:05:09,216 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-03 13:05:09,216 - TradingBot - INFO - Final levels for MRPL-EQ: Buy=136.58, SL=134.0, Target=137.03
+2025-10-03 13:05:09,216 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-03 13:05:09,222 - TradingBot - INFO - Candle analysis logged to CSV: MRPL-EQ - SL: 134.0, Target: 137.03, Type: PREV_CANDLE_LOW
+2025-10-03 13:05:09,222 - TradingBot - INFO - Writing position to state file: app/2025-10-03_positions_state.csv
+2025-10-03 13:05:09,224 - TradingBot - INFO - POSITION SETUP COMPLETE: MRPL-EQ
+2025-10-03 13:05:09,224 - TradingBot - INFO - Final Position - Buy: 136.58, SL: 134.0, Target: 137.03
+2025-10-03 13:05:09,226 - TradingBot - INFO - POSITION SETUP COMPLETE: MRPL
+2025-10-03 13:05:09,226 - TradingBot - INFO - Alert processing completed for: MRPL
+2025-10-03 13:05:09,676 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 13:05:09,676 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '340', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI3YWFlZDQzMjJhNTkyNTEwIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwZWQxZGNiNTg2YjBlMmUxMCIsInR4IjoiMWVlYjg4YjU3MDYyNTk0MCIsInByIjoxLjYwMjc5LCJzYSI6dHJ1ZSwidGkiOjE3NTk0NzY5MDg1NzR9fQ==', 'Traceparent': '00-0000000000000000ed1dcb586b0e2e10-7aaed4322a592510-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-7aaed4322a592510-1eeb88b570625940-1-1.602794-1759476908574', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-03 13:05:09,677 - TradingBot - INFO - Raw request data: {"stocks":"MRPL","trigger_prices":"136.4","triggered_at":"1:05 pm","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-03 13:05:09,677 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'MRPL', 'trigger_prices': '136.4', 'triggered_at': '1:05 pm', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-03 13:05:09,677 - TradingBot - INFO - Raw symbols string: MRPL
+2025-10-03 13:05:09,677 - TradingBot - INFO - Raw prices string: 136.4
+2025-10-03 13:05:09,677 - TradingBot - INFO - Symbols list parsed: ['MRPL']
+2025-10-03 13:05:09,677 - TradingBot - INFO - Prices list parsed: ['136.4']
+2025-10-03 13:05:09,677 - TradingBot - INFO - Alert queued: {'symbol': 'MRPL', 'trigger_price': 136.4}
+2025-10-03 13:05:09,685 - TradingBot - INFO - Processing alert from queue: {'symbol': 'MRPL', 'trigger_price': 136.4}
+2025-10-03 13:05:09,685 - TradingBot - INFO - Final alerts queued: [{'symbol': 'MRPL', 'trigger_price': 136.4}]
+2025-10-03 13:05:09,685 - TradingBot - INFO - Alert details - Symbol: MRPL, Trigger Price: 136.4
+2025-10-03 13:05:09,685 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 08:35:09] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-03 13:05:09,719 - TradingBot - INFO - Attempting BUY order for: MRPL
+2025-10-03 13:05:09,719 - TradingBot - INFO - PLACE BUY ORDER - Stock: MRPL, Trigger Price: 136.4
+2025-10-03 13:05:09,722 - TradingBot - INFO - Placing BUY order: MRPL-EQ @ 136.4, Qty: 10
+2025-10-03 13:05:10,144 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: MRPL-EQ - ID: 25100300305051
+2025-10-03 13:05:10,144 - TradingBot - INFO - BUY ORDER SUCCESS: MRPL
+2025-10-03 13:05:10,144 - TradingBot - INFO - Starting position setup for MRPL-EQ
+2025-10-03 13:05:10,144 - TradingBot - INFO - Position setup attempt 1/3 for MRPL-EQ
+2025-10-03 13:05:10,144 - TradingBot - INFO - Fetching trade book...
+2025-10-03 13:05:10,580 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100300305051', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '405087142', 'fltm': '03-10-2025 13:05:09', 'trantype': 'B', 'tsym': 'MRPL-EQ', 'qty': '10', 'token': '2283', 'fillshares': '10', 'flqty': '10', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.01', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '136.60', 'norentm': '13:05:09 03-10-2025', 'avgprc': '136.60', 'exch_tm': '03-10-2025 13:05:09', 'remarks': 'Chartink_MRPL', 'exchordid': '1200000053948658'}
+2025-10-03 13:05:10,580 - TradingBot - INFO - Extracted buy price from trade: 136.6
+2025-10-03 13:05:10,585 - TradingBot - INFO - Trade fill time: 03-10-2025 13:05:09
+2025-10-03 13:05:10,585 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-03 13:05:09+05:53
+2025-10-03 13:05:10,585 - TradingBot - INFO - Fetching previous candle for: MRPL-EQ
+2025-10-03 13:05:10,585 - TradingBot - INFO - Found token for MRPL: 2283
+2025-10-03 13:05:10,590 - TradingBot - INFO - Candle time range: 13:03:00 to 13:04:00
+2025-10-03 13:05:10,590 - TradingBot - INFO - Candle time range (UTC epoch): 1759475400 to 1759475460
+2025-10-03 13:05:10,590 - TradingBot - INFO - Calling broker API for time price series: token=2283, interval=1
+2025-10-03 13:05:11,102 - TradingBot - INFO - Candle found: MRPL-EQ - High: 134.2, Low: 134.05, Open: 134.09, Close: 134.15
+2025-10-03 13:05:11,102 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-03 13:05:11,104 - TradingBot - INFO - Starting SL/Target calculation for MRPL-EQ, Buy Price: 136.6
+2025-10-03 13:05:11,105 - TradingBot - INFO - Previous candle data - High: 134.2, Low: 134.05
+2025-10-03 13:05:11,105 - TradingBot - INFO - SL/Target calculation for MRPL-EQ:
+2025-10-03 13:05:11,105 - TradingBot - INFO - Buy Price: 136.6, Prev Low: 134.05, Prev High: 134.2
+2025-10-03 13:05:11,105 - TradingBot - INFO - Candle Range: 0.15, SL: 134.0, Target: 137.05
+2025-10-03 13:05:11,105 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-03 13:05:11,105 - TradingBot - INFO - Final levels for MRPL-EQ: Buy=136.6, SL=134.0, Target=137.05
+2025-10-03 13:05:11,105 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-03 13:05:11,105 - TradingBot - INFO - Candle analysis logged to CSV: MRPL-EQ - SL: 134.0, Target: 137.05, Type: PREV_CANDLE_LOW
+2025-10-03 13:05:11,105 - TradingBot - INFO - Writing position to state file: app/2025-10-03_positions_state.csv
+2025-10-03 13:05:11,105 - TradingBot - INFO - POSITION SETUP COMPLETE: MRPL-EQ
+2025-10-03 13:05:11,114 - TradingBot - INFO - Final Position - Buy: 136.6, SL: 134.0, Target: 137.05
+2025-10-03 13:05:11,114 - TradingBot - INFO - POSITION SETUP COMPLETE: MRPL
+2025-10-03 13:05:11,119 - TradingBot - INFO - Alert processing completed for: MRPL
+2025-10-03 13:14:08,210 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 13:14:08,211 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '340', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI0ZWU2NGIxNTBkMjM5NzA2IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwZWQxZGNiNTg2YjBlMmUxMCIsInR4IjoiMzkyMmFjM2I2MTk0ZTA1MCIsInByIjoxLjYwMjc5LCJzYSI6dHJ1ZSwidGkiOjE3NTk0Nzc0NDcwNTN9fQ==', 'Traceparent': '00-0000000000000000ed1dcb586b0e2e10-4ee64b150d239706-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-4ee64b150d239706-3922ac3b6194e050-1-1.602794-1759477447053', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-03 13:14:08,217 - TradingBot - INFO - Raw request data: {"stocks":"MRPL","trigger_prices":"136.5","triggered_at":"1:14 pm","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-03 13:14:08,218 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'MRPL', 'trigger_prices': '136.5', 'triggered_at': '1:14 pm', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-03 13:14:08,219 - TradingBot - INFO - Raw symbols string: MRPL
+2025-10-03 13:14:08,220 - TradingBot - INFO - Raw prices string: 136.5
+2025-10-03 13:14:08,221 - TradingBot - INFO - Symbols list parsed: ['MRPL']
+2025-10-03 13:14:08,222 - TradingBot - INFO - Prices list parsed: ['136.5']
+2025-10-03 13:14:08,222 - TradingBot - INFO - Alert queued: {'symbol': 'MRPL', 'trigger_price': 136.5}
+2025-10-03 13:14:08,222 - TradingBot - INFO - Processing alert from queue: {'symbol': 'MRPL', 'trigger_price': 136.5}
+2025-10-03 13:14:08,223 - TradingBot - INFO - Final alerts queued: [{'symbol': 'MRPL', 'trigger_price': 136.5}]
+2025-10-03 13:14:08,224 - TradingBot - INFO - Alert details - Symbol: MRPL, Trigger Price: 136.5
+2025-10-03 13:14:08,225 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 08:44:08] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-03 13:14:08,235 - TradingBot - INFO - Attempting BUY order for: MRPL
+2025-10-03 13:14:08,238 - TradingBot - INFO - PLACE BUY ORDER - Stock: MRPL, Trigger Price: 136.5
+2025-10-03 13:14:08,239 - TradingBot - INFO - Placing BUY order: MRPL-EQ @ 136.5, Qty: 10
+2025-10-03 13:14:08,669 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: MRPL-EQ - ID: 25100300313748
+2025-10-03 13:14:08,676 - TradingBot - INFO - BUY ORDER SUCCESS: MRPL
+2025-10-03 13:14:08,677 - TradingBot - INFO - Starting position setup for MRPL-EQ
+2025-10-03 13:14:08,681 - TradingBot - INFO - Position setup attempt 1/3 for MRPL-EQ
+2025-10-03 13:14:08,683 - TradingBot - INFO - Fetching trade book...
+2025-10-03 13:14:09,124 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100300313748', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '405215640', 'fltm': '03-10-2025 13:14:07', 'trantype': 'B', 'tsym': 'MRPL-EQ', 'qty': '10', 'token': '2283', 'fillshares': '10', 'flqty': '10', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.01', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '136.53', 'norentm': '13:14:07 03-10-2025', 'avgprc': '136.53', 'exch_tm': '03-10-2025 13:14:07', 'remarks': 'Chartink_MRPL', 'exchordid': '1200000055514548'}
+2025-10-03 13:14:09,125 - TradingBot - INFO - Extracted buy price from trade: 136.53
+2025-10-03 13:14:09,127 - TradingBot - INFO - Trade fill time: 03-10-2025 13:14:07
+2025-10-03 13:14:09,129 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-03 13:14:07+05:53
+2025-10-03 13:14:09,132 - TradingBot - INFO - Fetching previous candle for: MRPL-EQ
+2025-10-03 13:14:09,133 - TradingBot - INFO - Found token for MRPL: 2283
+2025-10-03 13:14:09,134 - TradingBot - INFO - Candle time range: 13:12:00 to 13:13:00
+2025-10-03 13:14:09,136 - TradingBot - INFO - Candle time range (UTC epoch): 1759475940 to 1759476000
+2025-10-03 13:14:09,137 - TradingBot - INFO - Calling broker API for time price series: token=2283, interval=1
+2025-10-03 13:14:09,583 - TradingBot - INFO - Candle found: MRPL-EQ - High: 135.2, Low: 134.78, Open: 134.9, Close: 134.86
+2025-10-03 13:14:09,584 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-03 13:14:09,586 - TradingBot - INFO - Starting SL/Target calculation for MRPL-EQ, Buy Price: 136.53
+2025-10-03 13:14:09,587 - TradingBot - INFO - Previous candle data - High: 135.2, Low: 134.78
+2025-10-03 13:14:09,588 - TradingBot - INFO - SL/Target calculation for MRPL-EQ:
+2025-10-03 13:14:09,589 - TradingBot - INFO - Buy Price: 136.53, Prev Low: 134.78, Prev High: 135.2
+2025-10-03 13:14:09,589 - TradingBot - INFO - Candle Range: 0.42, SL: 134.73, Target: 137.79
+2025-10-03 13:14:09,590 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-03 13:14:09,591 - TradingBot - INFO - Final levels for MRPL-EQ: Buy=136.53, SL=134.73, Target=137.79
+2025-10-03 13:14:09,591 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-03 13:14:09,593 - TradingBot - INFO - Candle analysis logged to CSV: MRPL-EQ - SL: 134.73, Target: 137.79, Type: PREV_CANDLE_LOW
+2025-10-03 13:14:09,594 - TradingBot - INFO - Writing position to state file: app/2025-10-03_positions_state.csv
+2025-10-03 13:14:09,596 - TradingBot - INFO - POSITION SETUP COMPLETE: MRPL-EQ
+2025-10-03 13:14:09,599 - TradingBot - INFO - Final Position - Buy: 136.53, SL: 134.73, Target: 137.79
+2025-10-03 13:14:09,601 - TradingBot - INFO - POSITION SETUP COMPLETE: MRPL
+2025-10-03 13:14:09,603 - TradingBot - INFO - Alert processing completed for: MRPL
+2025-10-03 13:18:00,334 - TradingBot - INFO - Saving position book...
+2025-10-03 13:18:00,757 - TradingBot - INFO - Found 5 positions to save
+2025-10-03 13:18:00,759 - TradingBot - INFO - Position book saved with 5 records to app/2025-10-03_position.csv
+2025-10-03 13:18:26,100 - TradingBot - INFO - !!! TARGET HIT !!!: MRPL-EQ @ 137.14 (Target: 137.03)
+2025-10-03 13:18:26,101 - TradingBot - INFO - Placing exit order for target: MRPL-EQ, Qty: 40
+2025-10-03 13:18:26,103 - TradingBot - INFO - PLACE SELL ORDER - Symbol: MRPL-EQ, Quantity: 40
+2025-10-03 13:18:26,104 - TradingBot - INFO - Placing SELL order: MRPL-EQ, Qty: 40
+2025-10-03 13:18:27,301 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: MRPL-EQ - ID: 25100300317648
+2025-10-03 13:18:27,301 - TradingBot - INFO - TARGET EXIT SUCCESS: MRPL-EQ @ 137.14, Order: 25100300317648
+2025-10-03 13:18:28,204 - TradingBot - INFO - User manually exited position: MRPL-EQ, NetQty: 0
+2025-10-03 13:18:29,136 - TradingBot - INFO - USER EXIT recorded: MRPL-EQ @ 137.14 (NetQty=0)
+2025-10-03 13:18:29,925 - TradingBot - INFO - User manually exited position: MRPL-EQ, NetQty: 0
+2025-10-03 13:18:30,365 - TradingBot - INFO - USER EXIT recorded: MRPL-EQ @ 137.14 (NetQty=0)
+2025-10-03 13:18:30,400 - TradingBot - INFO - Saving updated positions to file
+2025-10-03 13:18:30,483 - TradingBot - INFO - Position book updated successfully
+2025-10-03 13:18:41,068 - TradingBot - INFO - User manually exited position: MRPL-EQ, NetQty: 0
+2025-10-03 13:18:41,603 - TradingBot - INFO - USER EXIT recorded: MRPL-EQ @ 137.11 (NetQty=0)
+2025-10-03 13:18:41,605 - TradingBot - INFO - Saving updated positions to file
+2025-10-03 13:18:41,609 - TradingBot - INFO - Position book updated successfully
+2025-10-03 13:31:12,022 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-03 13:31:12,022 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-03 13:31:12,047 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-03 13:31:12,703 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-03 13:31:12,703 - TradingBot - INFO - Application starting from main entry point
+2025-10-03 13:31:12,703 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-03 13:31:12,703 - TradingBot - INFO - Start time: 2025-10-03 13:31:12
+2025-10-03 13:31:12,703 - TradingBot - INFO - Starting broker login process
+2025-10-03 13:31:12,703 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-03 13:31:12,719 - TradingBot - INFO - Generating 2FA token
+2025-10-03 13:31:12,719 - TradingBot - INFO - Attempting broker login...
+2025-10-03 13:31:13,166 - TradingBot - INFO - Broker login successful
+2025-10-03 13:31:13,167 - TradingBot - INFO - Starting alert processor thread...
+2025-10-03 13:31:13,168 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-03 13:31:13,168 - TradingBot - INFO - Alert processor thread started
+2025-10-03 13:31:13,168 - TradingBot - INFO - Starting position monitor thread...
+2025-10-03 13:31:13,169 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-03 13:31:13,169 - TradingBot - INFO - Position monitor thread started
+2025-10-03 13:31:13,170 - TradingBot - INFO - Starting Flask web server...
+2025-10-03 13:31:13,211 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.229:5000
+2025-10-03 13:31:13,211 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-03 13:31:19,344 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 09:01:19] "GET /health HTTP/1.1" 200 -
+2025-10-03 14:35:07,785 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 14:35:07,785 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '315', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI0OTgzMzk2ZGQ3NGU5NDAyIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwZWQxZGNiNTg2YjBlMmUxMCIsInR4IjoiNGMyNTQyZTc3NTJhODc3ZCIsInByIjoxLjYwMjc5LCJzYSI6dHJ1ZSwidGkiOjE3NTk0ODIzMDY1NjJ9fQ==', 'Traceparent': '00-0000000000000000ed1dcb586b0e2e10-4983396dd74e9402-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-4983396dd74e9402-4c2542e7752a877d-1-1.602794-1759482306562', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-03 14:35:07,785 - TradingBot - INFO - Raw request data: {"stocks":"CUB","trigger_prices":"216.1","triggered_at":"2:35 pm","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-03 14:35:07,787 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'CUB', 'trigger_prices': '216.1', 'triggered_at': '2:35 pm', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-03 14:35:07,787 - TradingBot - INFO - Raw symbols string: CUB
+2025-10-03 14:35:07,787 - TradingBot - INFO - Raw prices string: 216.1
+2025-10-03 14:35:07,787 - TradingBot - INFO - Symbols list parsed: ['CUB']
+2025-10-03 14:35:07,788 - TradingBot - INFO - Prices list parsed: ['216.1']
+2025-10-03 14:35:07,788 - TradingBot - INFO - Alert queued: {'symbol': 'CUB', 'trigger_price': 216.1}
+2025-10-03 14:35:07,788 - TradingBot - INFO - Processing alert from queue: {'symbol': 'CUB', 'trigger_price': 216.1}
+2025-10-03 14:35:07,788 - TradingBot - INFO - Final alerts queued: [{'symbol': 'CUB', 'trigger_price': 216.1}]
+2025-10-03 14:35:07,789 - TradingBot - INFO - Alert details - Symbol: CUB, Trigger Price: 216.1
+2025-10-03 14:35:07,789 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 10:05:07] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-03 14:35:08,245 - TradingBot - INFO - Attempting BUY order for: CUB
+2025-10-03 14:35:08,256 - TradingBot - INFO - PLACE BUY ORDER - Stock: CUB, Trigger Price: 216.1
+2025-10-03 14:35:08,258 - TradingBot - INFO - Placing BUY order: CUB-EQ @ 216.1, Qty: 10
+2025-10-03 14:35:08,714 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: CUB-EQ - ID: 25100300382431
+2025-10-03 14:35:08,715 - TradingBot - INFO - BUY ORDER SUCCESS: CUB
+2025-10-03 14:35:08,717 - TradingBot - INFO - Starting position setup for CUB-EQ
+2025-10-03 14:35:08,718 - TradingBot - INFO - Position setup attempt 1/3 for CUB-EQ
+2025-10-03 14:35:08,719 - TradingBot - INFO - Fetching trade book...
+2025-10-03 14:35:09,176 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100300382431', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '5624981', 'fltm': '03-10-2025 14:35:07', 'trantype': 'B', 'tsym': 'CUB-EQ', 'qty': '10', 'token': '5701', 'fillshares': '10', 'flqty': '9', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.01', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '215.55', 'norentm': '14:35:07 03-10-2025', 'avgprc': '215.54', 'exch_tm': '03-10-2025 14:35:07', 'remarks': 'Chartink_CUB', 'exchordid': '1000000056330699'}
+2025-10-03 14:35:09,183 - TradingBot - INFO - Extracted buy price from trade: 215.55
+2025-10-03 14:35:09,185 - TradingBot - INFO - Trade fill time: 03-10-2025 14:35:07
+2025-10-03 14:35:09,187 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-03 14:35:07+05:53
+2025-10-03 14:35:09,187 - TradingBot - INFO - Fetching previous candle for: CUB-EQ
+2025-10-03 14:35:09,189 - TradingBot - INFO - Found token for CUB: 5701
+2025-10-03 14:35:09,190 - TradingBot - INFO - Candle time range: 14:33:00 to 14:34:00
+2025-10-03 14:35:09,192 - TradingBot - INFO - Candle time range (UTC epoch): 1759480800 to 1759480860
+2025-10-03 14:35:09,193 - TradingBot - INFO - Calling broker API for time price series: token=5701, interval=1
+2025-10-03 14:35:09,648 - TradingBot - INFO - Candle found: CUB-EQ - High: 213.25, Low: 213.25, Open: 213.25, Close: 213.25
+2025-10-03 14:35:09,651 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-03 14:35:09,654 - TradingBot - INFO - Starting SL/Target calculation for CUB-EQ, Buy Price: 215.55
+2025-10-03 14:35:09,654 - TradingBot - INFO - Previous candle data - High: 213.25, Low: 213.25
+2025-10-03 14:35:09,655 - TradingBot - INFO - SL/Target calculation for CUB-EQ:
+2025-10-03 14:35:09,656 - TradingBot - INFO - Buy Price: 215.55, Prev Low: 213.25, Prev High: 213.25
+2025-10-03 14:35:09,657 - TradingBot - INFO - Candle Range: 0.00, SL: 213.2, Target: 215.55
+2025-10-03 14:35:09,657 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-03 14:35:09,658 - TradingBot - WARNING - Adjusted target below buy price for CUB-EQ. New Target: 217.71
+2025-10-03 14:35:09,659 - TradingBot - INFO - Final levels for CUB-EQ: Buy=215.55, SL=213.2, Target=217.71
+2025-10-03 14:35:09,659 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-03 14:35:09,663 - TradingBot - INFO - Candle analysis logged to CSV: CUB-EQ - SL: 213.2, Target: 217.71, Type: PREV_CANDLE_LOW
+2025-10-03 14:35:09,665 - TradingBot - INFO - Writing position to state file: app/2025-10-03_positions_state.csv
+2025-10-03 14:35:09,667 - TradingBot - INFO - POSITION SETUP COMPLETE: CUB-EQ
+2025-10-03 14:35:09,668 - TradingBot - INFO - Final Position - Buy: 215.55, SL: 213.2, Target: 217.71
+2025-10-03 14:35:09,668 - TradingBot - INFO - POSITION SETUP COMPLETE: CUB
+2025-10-03 14:35:09,670 - TradingBot - INFO - Alert processing completed for: CUB
+2025-10-03 14:49:00,268 - TradingBot - INFO - Saving position book...
+2025-10-03 14:49:00,720 - TradingBot - INFO - Found 6 positions to save
+2025-10-03 14:49:00,725 - TradingBot - INFO - Position book saved with 6 records to app/2025-10-03_position.csv
+2025-10-03 14:51:00,797 - TradingBot - INFO - Saving position book...
+2025-10-03 14:51:01,248 - TradingBot - INFO - Found 6 positions to save
+2025-10-03 14:51:01,248 - TradingBot - INFO - Position book saved with 6 records to app/2025-10-03_position.csv
+2025-10-03 15:14:00,658 - TradingBot - INFO - Saving position book...
+2025-10-03 15:14:01,115 - TradingBot - INFO - Found 6 positions to save
+2025-10-03 15:14:01,118 - TradingBot - INFO - Position book saved with 6 records to app/2025-10-03_position.csv
+2025-10-03 15:15:05,738 - TradingBot - INFO - Market closing time detected: 15:15:05
+2025-10-03 15:15:05,738 - TradingBot - INFO - 3:15 PM detected - initiating market close procedure
+2025-10-03 15:15:05,739 - TradingBot - INFO - === STARTING MARKET CLOSE PROCEDURE ===
+2025-10-03 15:15:05,739 - TradingBot - INFO - Current time: 2025-10-03 15:15:05
+2025-10-03 15:15:05,740 - TradingBot - INFO - STEP 1: Cancelling all open orders
+2025-10-03 15:15:05,740 - TradingBot - INFO - Starting cancel all open orders procedure
+2025-10-03 15:15:05,741 - TradingBot - INFO - Fetching order book...
+2025-10-03 15:15:06,230 - TradingBot - INFO - Found 14 orders in order book
+2025-10-03 15:15:06,232 - TradingBot - INFO - Order cancellation completed: 0 orders cancelled
+2025-10-03 15:15:08,234 - TradingBot - INFO - STEP 2: Closing all positions
+2025-10-03 15:15:08,235 - TradingBot - INFO - Starting close all positions procedure
+2025-10-03 15:15:08,708 - TradingBot - INFO - Found 6 positions to check
+2025-10-03 15:15:08,708 - TradingBot - INFO - Checking position: TATASTEEL-EQ, NetQty: 10
+2025-10-03 15:15:08,711 - TradingBot - INFO - Closing long position: TATASTEEL-EQ, Qty: 10
+2025-10-03 15:15:08,713 - TradingBot - INFO - PLACE SELL ORDER - Symbol: TATASTEEL-EQ, Quantity: 10
+2025-10-03 15:15:08,714 - TradingBot - INFO - Placing SELL order: TATASTEEL-EQ, Qty: 10
+2025-10-03 15:15:08,824 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-03 15:15:08,825 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '319', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI0ODA4OGViZDZkNTZhNDIxIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwZWQxZGNiNTg2YjBlMmUxMCIsInR4IjoiN2RjYzQ1N2NiMzM1ODg4NCIsInByIjoxLjYwMjc5LCJzYSI6dHJ1ZSwidGkiOjE3NTk0ODQ3MDc2MDF9fQ==', 'Traceparent': '00-0000000000000000ed1dcb586b0e2e10-48088ebd6d56a421-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-48088ebd6d56a421-7dcc457cb3358884-1-1.602794-1759484707601', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-03 15:15:08,830 - TradingBot - INFO - Raw request data: {"stocks":"ARCHIDPLY","trigger_prices":"108","triggered_at":"3:15 pm","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-03 15:15:08,831 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'ARCHIDPLY', 'trigger_prices': '108', 'triggered_at': '3:15 pm', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-03 15:15:08,831 - TradingBot - INFO - Raw symbols string: ARCHIDPLY
+2025-10-03 15:15:08,832 - TradingBot - INFO - Raw prices string: 108
+2025-10-03 15:15:08,833 - TradingBot - INFO - Symbols list parsed: ['ARCHIDPLY']
+2025-10-03 15:15:08,834 - TradingBot - INFO - Prices list parsed: ['108']
+2025-10-03 15:15:08,834 - TradingBot - INFO - Alert queued: {'symbol': 'ARCHIDPLY', 'trigger_price': 108.0}
+2025-10-03 15:15:08,835 - TradingBot - INFO - Processing alert from queue: {'symbol': 'ARCHIDPLY', 'trigger_price': 108.0}
+2025-10-03 15:15:08,835 - TradingBot - INFO - Final alerts queued: [{'symbol': 'ARCHIDPLY', 'trigger_price': 108.0}]
+2025-10-03 15:15:08,836 - TradingBot - INFO - Alert details - Symbol: ARCHIDPLY, Trigger Price: 108.0
+2025-10-03 15:15:08,839 - werkzeug - INFO - 127.0.0.1 - - [03/Oct/2025 10:45:08] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-03 15:15:09,167 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: TATASTEEL-EQ - ID: 25100300438106
+2025-10-03 15:15:09,168 - TradingBot - INFO - SUCCESS: Closed long position: TATASTEEL-EQ - Qty: 10
+2025-10-03 15:15:09,170 - TradingBot - INFO - Checking position: DENTA-EQ, NetQty: 0
+2025-10-03 15:15:09,171 - TradingBot - INFO - Checking position: VEDL-EQ, NetQty: 0
+2025-10-03 15:15:09,172 - TradingBot - INFO - Checking position: UNIONBANK-EQ, NetQty: 0
+2025-10-03 15:15:09,173 - TradingBot - INFO - Checking position: MRPL-EQ, NetQty: 0
+2025-10-03 15:15:09,174 - TradingBot - INFO - Checking position: CUB-EQ, NetQty: 10
+2025-10-03 15:15:09,175 - TradingBot - INFO - Closing long position: CUB-EQ, Qty: 10
+2025-10-03 15:15:09,175 - TradingBot - INFO - PLACE SELL ORDER - Symbol: CUB-EQ, Quantity: 10
+2025-10-03 15:15:09,178 - TradingBot - INFO - Placing SELL order: CUB-EQ, Qty: 10
+2025-10-03 15:15:09,320 - TradingBot - INFO - Attempting BUY order for: ARCHIDPLY
+2025-10-03 15:15:09,324 - TradingBot - INFO - PLACE BUY ORDER - Stock: ARCHIDPLY, Trigger Price: 108.0
+2025-10-03 15:15:09,326 - TradingBot - INFO - Placing BUY order: ARCHIDPLY-EQ @ 108.0, Qty: 10
+2025-10-03 15:15:09,704 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: CUB-EQ - ID: 25100300438119
+2025-10-03 15:15:09,705 - TradingBot - INFO - SUCCESS: Closed long position: CUB-EQ - Qty: 10
+2025-10-03 15:15:09,707 - TradingBot - INFO - Position closing completed: 2 positions closed
+2025-10-03 15:15:09,709 - TradingBot - INFO - STEP 3: Waiting for positions to close
+2025-10-03 15:15:09,710 - TradingBot - INFO - Position close check attempt 1/30
+2025-10-03 15:15:09,711 - TradingBot - INFO - Checking if all positions are closed
+2025-10-03 15:15:09,850 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: ARCHIDPLY-EQ - ID: 25100300438125
+2025-10-03 15:15:09,850 - TradingBot - INFO - BUY ORDER SUCCESS: ARCHIDPLY
+2025-10-03 15:15:09,850 - TradingBot - INFO - Starting position setup for ARCHIDPLY-EQ
+2025-10-03 15:15:09,858 - TradingBot - INFO - Position setup attempt 1/3 for ARCHIDPLY-EQ
+2025-10-03 15:15:09,858 - TradingBot - INFO - Fetching trade book...
+2025-10-03 15:15:10,211 - TradingBot - INFO - Checking 7 positions
+2025-10-03 15:15:10,213 - TradingBot - INFO - Position still open: ARCHIDPLY-EQ - NetQty: 10
+2025-10-03 15:15:10,215 - TradingBot - INFO - Waiting for positions to close... (1/30)
+2025-10-03 15:15:10,360 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100300438125', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '6548800', 'fltm': '03-10-2025 15:15:08', 'trantype': 'B', 'tsym': 'ARCHIDPLY-EQ', 'qty': '10', 'token': '16795', 'fillshares': '10', 'flqty': '10', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.01', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '107.82', 'norentm': '15:15:08 03-10-2025', 'avgprc': '107.82', 'exch_tm': '03-10-2025 15:15:08', 'remarks': 'Chartink_ARCHIDPLY', 'exchordid': '1000000062703220'}
+2025-10-03 15:15:10,360 - TradingBot - INFO - Extracted buy price from trade: 107.82
+2025-10-03 15:15:10,372 - TradingBot - INFO - Trade fill time: 03-10-2025 15:15:08
+2025-10-03 15:15:10,374 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-03 15:15:08+05:53
+2025-10-03 15:15:10,374 - TradingBot - INFO - Fetching previous candle for: ARCHIDPLY-EQ
+2025-10-03 15:15:10,374 - TradingBot - INFO - Found token for ARCHIDPLY: 16795
+2025-10-03 15:15:10,374 - TradingBot - INFO - Candle time range: 15:13:00 to 15:14:00
+2025-10-03 15:15:10,380 - TradingBot - INFO - Candle time range (UTC epoch): 1759483200 to 1759483260
+2025-10-03 15:15:10,382 - TradingBot - INFO - Calling broker API for time price series: token=16795, interval=1
+2025-10-03 15:15:10,857 - TradingBot - INFO - Candle found: ARCHIDPLY-EQ - High: 105.14, Low: 105.14, Open: 105.14, Close: 105.14
+2025-10-03 15:15:10,857 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-03 15:15:10,862 - TradingBot - INFO - Starting SL/Target calculation for ARCHIDPLY-EQ, Buy Price: 107.82
+2025-10-03 15:15:10,864 - TradingBot - INFO - Previous candle data - High: 105.14, Low: 105.14
+2025-10-03 15:15:10,867 - TradingBot - INFO - SL/Target calculation for ARCHIDPLY-EQ:
+2025-10-03 15:15:10,869 - TradingBot - INFO - Buy Price: 107.82, Prev Low: 105.14, Prev High: 105.14
+2025-10-03 15:15:10,870 - TradingBot - INFO - Candle Range: 0.00, SL: 105.09, Target: 107.82
+2025-10-03 15:15:10,871 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-03 15:15:10,872 - TradingBot - WARNING - Adjusted target below buy price for ARCHIDPLY-EQ. New Target: 108.9
+2025-10-03 15:15:10,873 - TradingBot - INFO - Final levels for ARCHIDPLY-EQ: Buy=107.82, SL=105.09, Target=108.9
+2025-10-03 15:15:10,874 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-03 15:15:10,877 - TradingBot - INFO - Candle analysis logged to CSV: ARCHIDPLY-EQ - SL: 105.09, Target: 108.9, Type: PREV_CANDLE_LOW
+2025-10-03 15:15:10,879 - TradingBot - INFO - Writing position to state file: app/2025-10-03_positions_state.csv
+2025-10-03 15:15:10,882 - TradingBot - INFO - POSITION SETUP COMPLETE: ARCHIDPLY-EQ
+2025-10-03 15:15:10,885 - TradingBot - INFO - Final Position - Buy: 107.82, SL: 105.09, Target: 108.9
+2025-10-03 15:15:10,886 - TradingBot - INFO - POSITION SETUP COMPLETE: ARCHIDPLY
+2025-10-03 15:15:10,888 - TradingBot - INFO - Alert processing completed for: ARCHIDPLY
+2025-10-03 15:15:20,217 - TradingBot - INFO - Position close check attempt 2/30
+2025-10-03 15:15:20,217 - TradingBot - INFO - Checking if all positions are closed
+2025-10-03 15:15:20,676 - TradingBot - INFO - Checking 7 positions
+2025-10-03 15:15:20,676 - TradingBot - INFO - Position still open: ARCHIDPLY-EQ - NetQty: 10
+2025-10-03 15:15:20,680 - TradingBot - INFO - Waiting for positions to close... (2/30)
+2025-10-03 15:15:30,681 - TradingBot - INFO - Position close check attempt 3/30
+2025-10-03 15:15:30,681 - TradingBot - INFO - Checking if all positions are closed
+2025-10-03 15:15:31,141 - TradingBot - INFO - Checking 7 positions
+2025-10-03 15:15:31,141 - TradingBot - INFO - Position still open: ARCHIDPLY-EQ - NetQty: 10
+2025-10-03 15:15:31,141 - TradingBot - INFO - Waiting for positions to close... (3/30)
+2025-10-03 15:15:41,149 - TradingBot - INFO - Position close check attempt 4/30
+2025-10-03 15:15:41,149 - TradingBot - INFO - Checking if all positions are closed
+2025-10-03 15:15:41,632 - TradingBot - INFO - Checking 7 positions
+2025-10-03 15:15:41,635 - TradingBot - INFO - Position still open: ARCHIDPLY-EQ - NetQty: 10
+2025-10-03 15:15:41,637 - TradingBot - INFO - Waiting for positions to close... (4/30)
+2025-10-03 15:15:51,638 - TradingBot - INFO - Position close check attempt 5/30
+2025-10-03 15:15:51,638 - TradingBot - INFO - Checking if all positions are closed
+2025-10-03 15:15:52,107 - TradingBot - INFO - Checking 7 positions
+2025-10-03 15:15:52,107 - TradingBot - INFO - Position still open: ARCHIDPLY-EQ - NetQty: 10
+2025-10-03 15:15:52,111 - TradingBot - INFO - Waiting for positions to close... (5/30)
+2025-10-03 15:16:02,112 - TradingBot - INFO - Position close check attempt 6/30
+2025-10-03 15:16:02,112 - TradingBot - INFO - Checking if all positions are closed
+2025-10-03 15:16:02,577 - TradingBot - INFO - Checking 7 positions
+2025-10-03 15:16:02,578 - TradingBot - INFO - Position still open: ARCHIDPLY-EQ - NetQty: 10
+2025-10-03 15:16:02,580 - TradingBot - INFO - Waiting for positions to close... (6/30)
+2025-10-03 15:16:12,582 - TradingBot - INFO - Position close check attempt 7/30
+2025-10-03 15:16:12,584 - TradingBot - INFO - Checking if all positions are closed
+2025-10-03 15:16:13,112 - TradingBot - INFO - Checking 7 positions
+2025-10-03 15:16:13,113 - TradingBot - INFO - Position still open: ARCHIDPLY-EQ - NetQty: 10
+2025-10-03 15:16:13,116 - TradingBot - INFO - Waiting for positions to close... (7/30)
+2025-10-03 15:16:23,118 - TradingBot - INFO - Position close check attempt 8/30
+2025-10-03 15:16:23,118 - TradingBot - INFO - Checking if all positions are closed
+2025-10-03 15:16:23,592 - TradingBot - INFO - Checking 7 positions
+2025-10-03 15:16:23,593 - TradingBot - INFO - Position still open: ARCHIDPLY-EQ - NetQty: 10
+2025-10-03 15:16:23,597 - TradingBot - INFO - Waiting for positions to close... (8/30)
+2025-10-03 15:16:33,599 - TradingBot - INFO - Position close check attempt 9/30
+2025-10-03 15:16:33,599 - TradingBot - INFO - Checking if all positions are closed
+2025-10-03 15:16:34,059 - TradingBot - INFO - Checking 7 positions
+2025-10-03 15:16:34,059 - TradingBot - INFO - Position still open: ARCHIDPLY-EQ - NetQty: 10
+2025-10-03 15:16:34,063 - TradingBot - INFO - Waiting for positions to close... (9/30)
+2025-10-03 15:16:44,065 - TradingBot - INFO - Position close check attempt 10/30
+2025-10-03 15:16:44,065 - TradingBot - INFO - Checking if all positions are closed
+2025-10-03 15:16:44,532 - TradingBot - INFO - Checking 7 positions
+2025-10-03 15:16:44,533 - TradingBot - INFO - Position still open: ARCHIDPLY-EQ - NetQty: 10
+2025-10-03 15:16:44,535 - TradingBot - INFO - Waiting for positions to close... (10/30)
+2025-10-03 15:16:54,538 - TradingBot - INFO - Position close check attempt 11/30
+2025-10-03 15:16:54,538 - TradingBot - INFO - Checking if all positions are closed
+2025-10-03 15:16:54,990 - TradingBot - INFO - Checking 7 positions
+2025-10-03 15:16:54,990 - TradingBot - INFO - SUCCESS: All positions are closed
+2025-10-03 15:16:54,992 - TradingBot - INFO - SUCCESS: All positions closed
+2025-10-03 15:16:54,995 - TradingBot - INFO - STEP 4: Saving final position book
+2025-10-03 15:16:54,995 - TradingBot - INFO - Saving position book...
+2025-10-03 15:16:55,478 - TradingBot - INFO - Found 7 positions to save
+2025-10-03 15:16:55,480 - TradingBot - INFO - Position book saved with 7 records to app/2025-10-03_position.csv
+2025-10-03 15:16:55,481 - TradingBot - INFO - Shutdown flag set to True
+2025-10-03 15:16:55,481 - TradingBot - INFO - === MARKET CLOSE PROCEDURE COMPLETED ===
+2025-10-03 15:16:55,482 - TradingBot - INFO - Shutting down Flask application...

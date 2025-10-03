@@ -1,0 +1,51 @@
+2025-10-02 13:55:34,063 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-02 13:55:34,063 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-02 13:55:34,131 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-02 13:55:34,831 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-02 13:55:34,831 - TradingBot - INFO - Application starting from main entry point
+2025-10-02 13:55:34,831 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-02 13:55:34,831 - TradingBot - INFO - Start time: 2025-10-02 13:55:34
+2025-10-02 13:55:34,831 - TradingBot - INFO - Starting broker login process
+2025-10-02 13:55:34,831 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-02 13:55:34,847 - TradingBot - INFO - Generating 2FA token
+2025-10-02 13:55:34,847 - TradingBot - INFO - Attempting broker login...
+2025-10-02 13:55:35,331 - TradingBot - INFO - Broker login successful
+2025-10-02 13:55:35,331 - TradingBot - INFO - Created new positions file: app/2025-10-02_positions_state.csv
+2025-10-02 13:55:35,331 - TradingBot - INFO - Starting alert processor thread...
+2025-10-02 13:55:35,331 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-02 13:55:35,331 - TradingBot - INFO - Alert processor thread started
+2025-10-02 13:55:35,331 - TradingBot - INFO - Starting position monitor thread...
+2025-10-02 13:55:35,331 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-02 13:55:35,331 - TradingBot - INFO - Position monitor thread started
+2025-10-02 13:55:35,331 - TradingBot - INFO - Starting Flask web server...
+2025-10-02 13:55:35,463 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.229:5000
+2025-10-02 13:55:35,463 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 13:55:37,194 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 09:25:37] "GET /health HTTP/1.1" 200 -
+2025-10-03 02:17:47,627 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-03 02:17:47,627 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-03 02:17:47,674 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-03 02:17:48,299 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-03 02:17:48,299 - TradingBot - INFO - Application starting from main entry point
+2025-10-03 02:17:48,299 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-03 02:17:48,299 - TradingBot - INFO - Start time: 2025-10-03 02:17:48
+2025-10-03 02:17:48,299 - TradingBot - INFO - Starting broker login process
+2025-10-03 02:17:48,299 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-03 02:17:48,315 - TradingBot - INFO - Generating 2FA token
+2025-10-03 02:17:48,315 - TradingBot - INFO - Attempting broker login...
+2025-10-03 02:17:48,784 - TradingBot - INFO - Broker login successful
+2025-10-03 02:17:48,784 - TradingBot - INFO - Starting alert processor thread...
+2025-10-03 02:17:48,784 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-03 02:17:48,784 - TradingBot - INFO - Alert processor thread started
+2025-10-03 02:17:48,784 - TradingBot - INFO - Starting position monitor thread...
+2025-10-03 02:17:48,784 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-03 02:17:48,784 - TradingBot - INFO - Position monitor thread started
+2025-10-03 02:17:48,784 - TradingBot - INFO - Starting Flask web server...
+2025-10-03 02:17:48,830 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.229:5000
+2025-10-03 02:17:48,830 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-03 02:17:54,188 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 21:47:54] "GET /health HTTP/1.1" 200 -
