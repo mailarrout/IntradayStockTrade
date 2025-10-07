@@ -79,14 +79,14 @@ def is_market_closing_time():
 def initialize_positions_file():
     """Create today's positions file with headers if it doesn't exist"""
     if not os.path.exists(positions_file):
-        with open(positions_file, "w", newline="") as f:
-            writer = csv.writer(f)
-            writer.writerow([
-                "Symbol", "BuyPrice", "EntryTime",
-                "StopLoss", "Target", "Status",
-                "ExitPrice", "ExitTime", "ExitOrderId"
-            ])
+        append_csv(
+            positions_file,
+            ["Symbol", "BuyPrice", "EntryTime", "StopLoss", "Target", "Status",
+             "ExitPrice", "ExitTime", "ExitOrderId"],
+            []  # just create header
+        )
         logger.info(f"Created new positions file: {positions_file}")
+
 
 
 # ================== SYMBOL TOKEN MAPPING ==================
@@ -250,51 +250,40 @@ def calculate_sl_target_from_previous_candle(buy_price, previous_candle, symbol)
 def log_candle_analysis_to_csv(symbol, buy_price, previous_candle, sl, target):
     """Log candle analysis details to CSV for backtesting and analysis"""
     try:
-        file_exists = os.path.exists(candle_analysis_file)
-        logger.debug(f"Logging candle analysis to CSV. File exists: {file_exists}")
-        
-        with open(candle_analysis_file, "a", newline="") as f:
-            writer = csv.writer(f)
-            
-            if not file_exists:
-                logger.info(f"Creating new candle analysis file: {candle_analysis_file}")
-                writer.writerow([
-                    "Timestamp", "Symbol", "Candle_Time", "Open", "High", "Low", "Close", 
-                    "Buy_Price", "Stop_Loss", "Target", "Candle_Range", "SL_Type", "Calculation_Time"
-                ])
-            
-            if previous_candle:
-                candle_range = previous_candle['high'] - previous_candle['low']
-                sl_type = "PREV_CANDLE_LOW"
-                logger.debug(f"Using previous candle data for {symbol}, range: {candle_range}")
-            else:
-                candle_range = 0
-                sl_type = "FALLBACK"
-                logger.debug(f"No previous candle for {symbol}, using fallback")
-            
-            row_data = [
-                get_ist_timestamp(),
-                symbol,
-                previous_candle['date_time'] if previous_candle else "N/A",
-                previous_candle['open'] if previous_candle else 0,
-                previous_candle['high'] if previous_candle else 0,
-                previous_candle['low'] if previous_candle else 0,
-                previous_candle['close'] if previous_candle else 0,
-                buy_price,
-                sl,
-                target,
-                round(candle_range, 2),
-                sl_type,
-                get_ist_timestamp()
-            ]
-            
-            writer.writerow(row_data)
-            logger.info(f"Candle analysis logged to CSV: {symbol} - SL: {sl}, Target: {target}, Type: {sl_type}")
-        
-        logger.debug(f"Candle analysis successfully written to: {candle_analysis_file}")
-        
+        if previous_candle:
+            candle_range = previous_candle['high'] - previous_candle['low']
+            sl_type = "PREV_CANDLE_LOW"
+        else:
+            candle_range = 0
+            sl_type = "FALLBACK"
+
+        row_data = [
+            get_ist_timestamp(),
+            symbol,
+            previous_candle['date_time'] if previous_candle else "N/A",
+            previous_candle['open'] if previous_candle else 0,
+            previous_candle['high'] if previous_candle else 0,
+            previous_candle['low'] if previous_candle else 0,
+            previous_candle['close'] if previous_candle else 0,
+            buy_price,
+            sl,
+            target,
+            round(candle_range, 2),
+            sl_type,
+            get_ist_timestamp()
+        ]
+
+        append_csv(
+            candle_analysis_file,
+            ["Timestamp", "Symbol", "Candle_Time", "Open", "High", "Low", "Close",
+             "Buy_Price", "Stop_Loss", "Target", "Candle_Range", "SL_Type", "Calculation_Time"],
+            row_data
+        )
+
+        logger.info(f"Candle analysis logged: {symbol} - SL: {sl}, Target: {target}, Type: {sl_type}")
     except Exception as e:
         logger.error(f"Error logging candle analysis to CSV: {e}")
+
 
 # ================== BROKER LOGIN ==================
 def login_broker():
@@ -331,60 +320,38 @@ def login_broker():
         return False
 
 # ================== ORDER MANAGEMENT ==================
-def place_buy_order(stock, trigger_price):
-    logger.info(f"PLACE BUY ORDER - Stock: {stock}, Trigger Price: {trigger_price}")
+def place_order(symbol, quantity=ORDER_QUANTITY, order_type="SELL"):
+    """Place buy or sell order (order_type: 'BUY' or 'SELL')"""
+    logger.info(f"PLACE ORDER - Symbol: {symbol}, Quantity: {quantity}, Type: {order_type}")
     if not broker_client:
-        logger.error("No broker client available for placing buy order")
+        logger.error("No broker client available for placing order")
         return False, "NO_CLIENT"
     
     try:
-        trading_symbol = f"{stock}-EQ" if not stock.endswith('-EQ') else stock
-        logger.info(f"Placing BUY order: {trading_symbol} @ {trigger_price}, Qty: {ORDER_QUANTITY}")
-        
-        result = broker_client.place_order(
-            buy_or_sell="B", product_type="I", exchange="NSE",
-            tradingsymbol=trading_symbol, quantity=ORDER_QUANTITY, discloseqty=0, price_type="MKT",
-            price=0, trigger_price=0, retention="DAY", remarks=f"Chartink_{stock}"
-        )
-        
-        logger.debug(f"Buy order API response: {result}")
-        
-        if result and result.get("stat") == "Ok":
-            order_id = result.get("norenordno", "UNKNOWN")
-            logger.info(f"BUY ORDER PLACED SUCCESS: {trading_symbol} - ID: {order_id}")
-            return True, trading_symbol
-        else:
-            error_msg = result.get("emsg", "FAILED")
-            logger.error(f"BUY ORDER FAILED: {trading_symbol} - {error_msg}")
-            return False, error_msg
-    except Exception as e:
-        logger.error(f"BUY ORDER EXCEPTION: {e}")
-        return False, "ERROR"
-
-def place_sell_order(symbol, quantity=ORDER_QUANTITY):
-    logger.info(f"PLACE SELL ORDER - Symbol: {symbol}, Quantity: {quantity}")
-    try:
         trading_symbol = symbol if symbol.endswith('-EQ') else f"{symbol}-EQ"
-        logger.info(f"Placing SELL order: {trading_symbol}, Qty: {quantity}")
+        buy_or_sell = "B" if order_type.upper() == "BUY" else "S"
+        remarks = f"BuyCover_{symbol}" if order_type.upper() == "BUY" else f"Exit_{symbol}"
+        
+        logger.info(f"Placing {order_type} order: {trading_symbol} @ MKT, Qty: {quantity}")
         
         result = broker_client.place_order(
-            buy_or_sell="S", product_type="I", exchange="NSE",
+            buy_or_sell=buy_or_sell, product_type="I", exchange="NSE",
             tradingsymbol=trading_symbol, quantity=quantity, discloseqty=0, price_type="MKT",
-            price=0, trigger_price=0, retention="DAY", remarks=f"Exit_{symbol}"
+            price=0, trigger_price=0, retention="DAY", remarks=remarks
         )
         
-        logger.debug(f"Sell order API response: {result}")
+        logger.debug(f"{order_type} order API response: {result}")
         
         if result and result.get("stat") == "Ok":
             order_id = result.get("norenordno", "UNKNOWN")
-            logger.info(f"SELL ORDER PLACED SUCCESS: {trading_symbol} - ID: {order_id}")
+            logger.info(f"{order_type} ORDER PLACED SUCCESS: {trading_symbol} - ID: {order_id}")
             return True, order_id
         else:
             error_msg = result.get("emsg", "FAILED")
-            logger.error(f"SELL ORDER FAILED: {trading_symbol} - {error_msg}")
+            logger.error(f"{order_type} ORDER FAILED: {trading_symbol} - {error_msg}")
             return False, error_msg
     except Exception as e:
-        logger.error(f"SELL ORDER EXCEPTION: {e}")
+        logger.error(f"{order_type} ORDER EXCEPTION: {e}")
         return False, "ERROR"
 
 # ================== POSITION MANAGEMENT ==================
@@ -393,64 +360,34 @@ def confirm_and_setup_position(trading_symbol, trigger_price):
     logger.info(f"Starting position setup for {trading_symbol}")
 
     for attempt in range(3):
-        logger.info(f"Position setup attempt {attempt + 1}/3 for {trading_symbol}")
         try:
-            # --- Step 1: Get trade book ---
-            logger.info("Fetching trade book...")
             trade_book = broker_client.get_trade_book() or []
-            logger.debug(f"Trade book entries: {len(trade_book)}")
-
-            matched_trade = None
-            for trade in trade_book:
-                tsym = trade.get("tsym", "").strip().upper()
-                logger.debug(f"Checking trade: {tsym} vs {trading_symbol.upper()}")
-                if tsym == trading_symbol.upper():
-                    matched_trade = trade
-                    logger.info(f"Found matching trade: {trade}")
-                    break
-
+            matched_trade = next(
+                (t for t in trade_book if t.get("tsym", "").strip().upper() == trading_symbol.upper()), None
+            )
             if not matched_trade:
-                logger.warning(f"Attempt {attempt+1}: Trade not found for {trading_symbol}")
                 time.sleep(2)
                 continue
 
-            # --- Step 2: Extract buy price & fill time ---
             buy_price = float(matched_trade.get("flprc", 0) or matched_trade.get("avgprc", 0))
             if buy_price == 0:
                 buy_price = trigger_price
-                logger.warning(f"Using trigger price as fallback buy price for {trading_symbol}")
-            else:
-                logger.info(f"Extracted buy price from trade: {buy_price}")
 
             fill_time_str = matched_trade.get("fltm")
-            logger.info(f"Trade fill time: {fill_time_str}")
             ist = pytz.timezone("Asia/Kolkata")
             fill_time = datetime.strptime(fill_time_str, "%d-%m-%Y %H:%M:%S").replace(tzinfo=ist)
 
-            # --- Step 3: Get previous candle based on fill time ---
-            logger.info(f"Fetching previous candle for fill time: {fill_time}")
             previous_candle = get_previous_candle_hloc(trading_symbol, reference_time=fill_time)
-
-            # --- Step 4: Calculate SL/Target ---
-            logger.info("Calculating SL and Target levels")
-            stop_loss, target = calculate_sl_target_from_previous_candle(
-                buy_price, previous_candle, trading_symbol
-            )
-
-            # --- Step 5: Log analysis ---
-            logger.info("Logging candle analysis to CSV")
+            stop_loss, target = calculate_sl_target_from_previous_candle(buy_price, previous_candle, trading_symbol)
             log_candle_analysis_to_csv(trading_symbol, buy_price, previous_candle, stop_loss, target)
 
-            logger.info(f"Writing position to state file: {positions_file}")
-            with open(positions_file, "a", newline="") as f:
-                writer = csv.writer(f)
-                writer.writerow([
-                    trading_symbol, buy_price, get_ist_timestamp(),
-                    stop_loss, target, "ACTIVE"
-                ])
+            append_csv(
+                positions_file,
+                ["Symbol", "BuyPrice", "EntryTime", "StopLoss", "Target", "Status"],
+                [trading_symbol, buy_price, get_ist_timestamp(), stop_loss, target, "ACTIVE"]
+            )
 
             logger.info(f"POSITION SETUP COMPLETE: {trading_symbol}")
-            logger.info(f"Final Position - Buy: {buy_price}, SL: {stop_loss}, Target: {target}")
             return True
 
         except Exception as e:
@@ -459,6 +396,7 @@ def confirm_and_setup_position(trading_symbol, trigger_price):
 
     logger.error(f"FAILED to setup position after 3 attempts: {trading_symbol}")
     return False
+
 
 def get_ltp(symbol):
     """Get LTP for a symbol"""
@@ -497,53 +435,39 @@ def save_position_book():
     try:
         positions = broker_client.get_positions() or []
         logger.info(f"Found {len(positions)} positions to save")
-        
-        with open(position_book_file, "a", newline="") as f:
-            writer = csv.writer(f)
-            
-            for pos in positions:
-                symbol = pos.get("tsym", "")
-                token = pos.get("token", "")
-                netqty = int(pos.get("netqty", 0))
-                buyqty = int(pos.get("daybuyqty", 0))
-                sellqty = int(pos.get("daysellqty", 0))
-                buyavg = float(pos.get("daybuyavgprc", 0))
-                sellavg = float(pos.get("daysellavgprc", 0))
-                ltp = float(pos.get("lp", 0))
-                mtm = float(pos.get("urmtom", 0))
-                pnl = float(pos.get("rpnl", 0))
-                
-                logger.debug(f"Processing position: {symbol}, NetQty: {netqty}, LTP: {ltp}")
-                
-                if buyqty > 0 and sellqty > 0:
-                    raw_mtm = sellqty * (sellavg - buyavg)
-                else:
-                    raw_mtm = 0
-                
-                is_non_zero = "Yes" if netqty != 0 else "No"
-                
-                writer.writerow([
-                    get_ist_timestamp(),
-                    symbol,
-                    token,
-                    is_non_zero,
-                    netqty,
-                    buyqty,
-                    sellqty,
-                    buyavg,
-                    sellavg,
-                    "I",
-                    "",
-                    ltp,
-                    mtm,
-                    pnl,
-                    raw_mtm
-                ])
-        
+
+        for pos in positions:
+            symbol = pos.get("tsym", "")
+            token = pos.get("token", "")
+            netqty = int(pos.get("netqty", 0))
+            buyqty = int(pos.get("daybuyqty", 0))
+            sellqty = int(pos.get("daysellqty", 0))
+            buyavg = float(pos.get("daybuyavgprc", 0))
+            sellavg = float(pos.get("daysellavgprc", 0))
+            ltp = float(pos.get("lp", 0))
+            mtm = float(pos.get("urmtom", 0))
+            pnl = float(pos.get("rpnl", 0))
+
+            if buyqty > 0 and sellqty > 0:
+                raw_mtm = sellqty * (sellavg - buyavg)
+            else:
+                raw_mtm = 0
+
+            is_non_zero = "Yes" if netqty != 0 else "No"
+
+            append_csv(
+                position_book_file,
+                ["Timestamp", "Symbol", "Token", "NonZeroPosition",
+                 "NetQty", "BuyQty", "SellQty", "BuyAvg", "SellAvg",
+                 "ProductType", "Remarks", "LTP", "MTM", "PnL", "RawMTM"],
+                [get_ist_timestamp(), symbol, token, is_non_zero, netqty,
+                 buyqty, sellqty, buyavg, sellavg, "I", "", ltp, mtm, pnl, raw_mtm]
+            )
+
         logger.info(f"Position book saved with {len(positions)} records to {position_book_file}")
-        
     except Exception as e:
         logger.error(f"Error saving position book: {e}")
+
 
 # ================== MARKET CLOSE FUNCTIONS ==================
 def cancel_all_open_orders():
@@ -589,12 +513,13 @@ def close_all_positions():
             symbol = pos.get("tsym", "")
             netqty = int(pos.get("netqty", 0))
 
+            # Handle LONG positions (netqty > 0) - SELL to close
             if netqty > 0:
                 logger.info(f"Closing long position: {symbol}, Qty: {netqty}")
-                while netqty > 0:  # keep retrying until flat
-                    success, order_id = place_sell_order(symbol, netqty)
+                while netqty > 0:
+                    success, order_id = place_order(symbol, netqty, "SELL")
                     if success:
-                        logger.info(f"EXIT ORDER PLACED for {symbol}, waiting broker update...")
+                        logger.info(f"SELL ORDER PLACED for {symbol}, waiting broker update...")
                         time.sleep(2)
                         # refresh broker positions
                         positions = broker_client.get_positions() or []
@@ -602,11 +527,33 @@ def close_all_positions():
                             if p.get("tsym") == symbol:
                                 netqty = int(p.get("netqty", 0))
                         if netqty == 0:
-                            logger.info(f"SUCCESS: {symbol} position closed fully")
+                            logger.info(f"SUCCESS: {symbol} long position closed fully")
                             closed_count += 1
                             break
                     else:
-                        logger.error(f"Failed to close {symbol}, retrying...")
+                        logger.error(f"Failed to close {symbol} long, retrying...")
+                        time.sleep(2)
+            
+            # Handle SHORT positions (netqty < 0) - BUY to cover
+            elif netqty < 0:
+                logger.info(f"Closing short position: {symbol}, Qty: {abs(netqty)}")
+                buy_qty = abs(netqty)
+                while buy_qty > 0:
+                    success, order_id = place_order(symbol, buy_qty, "BUY")
+                    if success:
+                        logger.info(f"BUY COVER ORDER PLACED for {symbol}, waiting broker update...")
+                        time.sleep(2)
+                        # refresh broker positions
+                        positions = broker_client.get_positions() or []
+                        for p in positions:
+                            if p.get("tsym") == symbol:
+                                netqty = int(p.get("netqty", 0))
+                        if netqty == 0:
+                            logger.info(f"SUCCESS: {symbol} short position closed fully")
+                            closed_count += 1
+                            break
+                    else:
+                        logger.error(f"Failed to close {symbol} short, retrying...")
                         time.sleep(2)
 
         return closed_count > 0
@@ -660,7 +607,7 @@ def market_close_procedure():
         if check_all_positions_closed():
             logger.info("SUCCESS: All positions closed")
             break
-        
+        close_all_positions()  
         logger.info(f"Waiting for positions to close... ({attempt + 1}/{max_attempts})")
         time.sleep(10)
     
@@ -708,6 +655,13 @@ def is_already_in_position(symbol: str) -> bool:
         logger.error(f"Error checking existing position for {symbol}: {e}")
         return False
 
+def append_csv(file_path, header, row):
+    file_exists = os.path.exists(file_path)
+    with open(file_path, "a", newline="") as f:
+        writer = csv.writer(f)
+        if not file_exists or os.stat(file_path).st_size == 0:
+            writer.writerow(header)
+        writer.writerow(row)
 
 
 # ================== POSITION MONITORING ==================
@@ -771,8 +725,8 @@ def monitor_positions():
                     logger.warning(f"No matching broker position found for {symbol}, skipping exit check")
                     continue
                 
-                # Check if user manually exited
-                if current_qty <= 0:
+                # Check if user manually exited (both long and short positions)
+                if current_qty == 0:  # Changed from current_qty <= 0 to current_qty == 0
                     logger.info(f"User manually exited position: {symbol}, NetQty: {current_qty}")
                     # Try LTP first, fallback to broker data
                     exit_price = get_ltp(symbol)
@@ -803,11 +757,11 @@ def monitor_positions():
                 
                 logger.debug(f"Position {symbol}: LTP={ltp}, Buy={buy_price}, SL={stop_loss}, Target={target}")
                 
-                # Check for SL hit
-                if ltp <= stop_loss:
+                # Check for SL hit (for LONG positions - current_qty > 0)
+                if current_qty > 0 and ltp <= stop_loss:
                     logger.warning(f"!!! SL HIT !!!: {symbol} @ {ltp} (SL: {stop_loss})")
                     logger.info(f"Placing exit order for SL: {symbol}, Qty: {current_qty}")
-                    success, order_id = place_sell_order(symbol, current_qty)
+                    success, order_id = place_order(symbol, current_qty, "SELL")  # Updated to use place_order
                     if success:
                         df.at[idx, "Status"] = "SL_HIT"
                         df.at[idx, "ExitPrice"] = ltp
@@ -820,11 +774,11 @@ def monitor_positions():
                     updated = True
                     processed_exits.add(position_id)
                     
-                # Check for target hit
-                elif ltp >= target:
+                # Check for target hit (for LONG positions - current_qty > 0)
+                elif current_qty > 0 and ltp >= target:
                     logger.info(f"!!! TARGET HIT !!!: {symbol} @ {ltp} (Target: {target})")
                     logger.info(f"Placing exit order for target: {symbol}, Qty: {current_qty}")
-                    success, order_id = place_sell_order(symbol, current_qty)
+                    success, order_id = place_order(symbol, current_qty, "SELL")  # Updated to use place_order
                     if success:
                         df.at[idx, "Status"] = "TARGET_HIT"
                         df.at[idx, "ExitPrice"] = ltp
@@ -862,65 +816,44 @@ def monitor_positions():
 def process_alerts():
     """Process Chartink alerts from queue"""
     logger.info("=== STARTING ALERT PROCESSOR ===")
-    
     while not shutdown_flag:
-        logger.debug("Alert processor checking queue...")
         try:
             alert = alert_queue.get(timeout=10)
-            logger.info(f"Processing alert from queue: {alert}")
-            
             if alert is None:
-                logger.info("Received None alert, continuing...")
                 continue
-            
+
             symbol = alert.get("symbol", "").strip()
             trigger_price = float(alert.get("trigger_price", 0))
-            
-            logger.info(f"Alert details - Symbol: {symbol}, Trigger Price: {trigger_price}")
-            
+
             if not symbol or trigger_price <= 0:
                 logger.warning(f"Invalid alert data: {alert}")
                 continue
-            
-            # Check if position already exists
+
             if is_already_in_position(symbol):
                 logger.warning(f"Skipping {symbol}, already in position")
                 continue
-                        
-            # Place buy order
-            logger.info(f"Attempting BUY order for: {symbol}")
-            success, result = place_buy_order(symbol, trigger_price)
-            
+
+            success, result = place_order(symbol, ORDER_QUANTITY, "BUY")
+
             if success:
-                logger.info(f"BUY ORDER SUCCESS: {symbol}")
-                # Setup position with SL/Target
-                setup_success = confirm_and_setup_position(result, trigger_price)
-                if setup_success:
-                    logger.info(f"POSITION SETUP COMPLETE: {symbol}")
-                else:
-                    logger.error(f"POSITION SETUP FAILED: {symbol}")
-            else:
-                logger.error(f"BUY ORDER FAILED: {symbol} - {result}")
-            
-            # Log alert to CSV
-            logger.debug("Logging alert to CSV file")
-            with open(alerts_file, "a", newline="") as f:
-                writer = csv.writer(f)
-                writer.writerow([
-                    get_ist_timestamp(), symbol, trigger_price, 
-                    "SUCCESS" if success else "FAILED", result
-                ])
-            
+                confirm_and_setup_position(result, trigger_price)
+
+            append_csv(
+                alerts_file,
+                ["Timestamp", "Symbol", "TriggerPrice", "Status", "OrderId"],
+                [get_ist_timestamp(), symbol, trigger_price,
+                 "SUCCESS" if success else "FAILED", result]
+            )
+
             logger.info(f"Alert processing completed for: {symbol}")
-            
+
         except queue.Empty:
-            logger.debug("Alert queue empty, continuing...")
             continue
         except Exception as e:
             logger.error(f"Alert processing error: {e}")
 
 
-# ================== FLASK ENDPOINTS ==================
+
 # ================== FLASK ENDPOINTS ==================
 @app.route('/webhook', methods=['POST'])
 def webhook():

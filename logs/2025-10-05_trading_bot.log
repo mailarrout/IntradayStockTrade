@@ -1,0 +1,50 @@
+2025-10-05 15:15:00,292 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-05 15:15:00,292 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-05 15:15:00,323 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-05 15:15:00,948 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-05 15:15:00,948 - TradingBot - INFO - Application starting from main entry point
+2025-10-05 15:15:00,948 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-05 15:15:00,948 - TradingBot - INFO - Start time: 2025-10-05 15:15:00
+2025-10-05 15:15:00,948 - TradingBot - INFO - Starting broker login process
+2025-10-05 15:15:00,948 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-05 15:15:00,964 - TradingBot - INFO - Generating 2FA token
+2025-10-05 15:15:00,964 - TradingBot - INFO - Attempting broker login...
+2025-10-05 15:15:01,417 - TradingBot - INFO - Broker login successful
+2025-10-05 15:15:01,417 - TradingBot - INFO - Created new positions file: app/2025-10-05_positions_state.csv
+2025-10-05 15:15:01,417 - TradingBot - INFO - Starting alert processor thread...
+2025-10-05 15:15:01,417 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-05 15:15:01,417 - TradingBot - INFO - Alert processor thread started
+2025-10-05 15:15:01,417 - TradingBot - INFO - Starting position monitor thread...
+2025-10-05 15:15:01,417 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-05 15:15:01,417 - TradingBot - INFO - Position monitor thread started
+2025-10-05 15:15:01,417 - TradingBot - INFO - Market closing time detected: 15:15:01
+2025-10-05 15:15:01,417 - TradingBot - INFO - Starting Flask web server...
+2025-10-05 15:15:01,417 - TradingBot - INFO - 3:15 PM detected - initiating market close procedure
+2025-10-05 15:15:01,432 - TradingBot - INFO - === STARTING MARKET CLOSE PROCEDURE ===
+2025-10-05 15:15:01,432 - TradingBot - INFO - Current time: 2025-10-05 15:15:01
+2025-10-05 15:15:01,432 - TradingBot - INFO - STEP 1: Cancelling all open orders
+2025-10-05 15:15:01,432 - TradingBot - INFO - Starting cancel all open orders procedure
+2025-10-05 15:15:01,432 - TradingBot - INFO - Fetching order book...
+2025-10-05 15:15:01,479 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.229:5000
+2025-10-05 15:15:01,479 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-05 15:15:01,870 - TradingBot - INFO - Found 0 orders in order book
+2025-10-05 15:15:01,870 - TradingBot - INFO - Order cancellation completed: 0 orders cancelled
+2025-10-05 15:15:03,886 - TradingBot - INFO - STEP 2: Closing all positions
+2025-10-05 15:15:03,886 - TradingBot - INFO - Starting close all positions procedure
+2025-10-05 15:15:04,357 - TradingBot - INFO - Found 0 positions to check
+2025-10-05 15:15:04,357 - TradingBot - INFO - STEP 3: Waiting for positions to close
+2025-10-05 15:15:04,357 - TradingBot - INFO - Position close check attempt 1/30
+2025-10-05 15:15:04,357 - TradingBot - INFO - Checking if all positions are closed
+2025-10-05 15:15:04,839 - TradingBot - INFO - Checking 0 positions
+2025-10-05 15:15:04,839 - TradingBot - INFO - SUCCESS: All positions are closed
+2025-10-05 15:15:04,839 - TradingBot - INFO - SUCCESS: All positions closed
+2025-10-05 15:15:04,839 - TradingBot - INFO - STEP 4: Saving final position book
+2025-10-05 15:15:04,839 - TradingBot - INFO - Saving position book...
+2025-10-05 15:15:05,288 - TradingBot - INFO - Found 0 positions to save
+2025-10-05 15:15:05,288 - TradingBot - INFO - Position book saved with 0 records to app/2025-10-05_position.csv
+2025-10-05 15:15:05,288 - TradingBot - INFO - Shutdown flag set to True
+2025-10-05 15:15:05,288 - TradingBot - INFO - === MARKET CLOSE PROCEDURE COMPLETED ===
+2025-10-05 15:15:05,288 - TradingBot - INFO - Shutting down Flask application...

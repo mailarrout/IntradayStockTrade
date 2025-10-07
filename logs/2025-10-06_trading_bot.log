@@ -1,0 +1,742 @@
+2025-10-06 09:16:50,884 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-06 09:16:50,884 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-06 09:16:50,934 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-06 09:16:51,734 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-06 09:16:51,734 - TradingBot - INFO - Application starting from main entry point
+2025-10-06 09:16:51,734 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-06 09:16:51,734 - TradingBot - INFO - Start time: 2025-10-06 09:16:51
+2025-10-06 09:16:51,754 - TradingBot - INFO - Starting broker login process
+2025-10-06 09:16:51,754 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-06 09:16:51,770 - TradingBot - INFO - Generating 2FA token
+2025-10-06 09:16:51,770 - TradingBot - INFO - Attempting broker login...
+2025-10-06 09:16:52,221 - TradingBot - INFO - Broker login successful
+2025-10-06 09:16:52,237 - TradingBot - INFO - Created new positions file: app/2025-10-06_positions_state.csv
+2025-10-06 09:16:52,241 - TradingBot - INFO - Starting alert processor thread...
+2025-10-06 09:16:52,243 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-06 09:16:52,243 - TradingBot - INFO - Alert processor thread started
+2025-10-06 09:16:52,244 - TradingBot - INFO - Starting position monitor thread...
+2025-10-06 09:16:52,247 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-06 09:16:52,247 - TradingBot - INFO - Position monitor thread started
+2025-10-06 09:16:52,254 - TradingBot - INFO - Starting Flask web server...
+2025-10-06 09:16:52,401 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.229:5000
+2025-10-06 09:16:52,401 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-06 09:16:54,299 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 04:46:54] "GET /health HTTP/1.1" 200 -
+2025-10-06 09:45:11,454 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 09:45:11,455 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '314', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI5NjY1MzczMDM4ODNlNTE3IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiY2U2N2M1YTc2Njk1MTU1NiIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3MjQxMDg4NzJ9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-966537303883e517-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-966537303883e517-ce67c5a766951556-1-1.151479-1759724108872', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 09:45:11,458 - TradingBot - INFO - Raw request data: {"stocks":"GPPL","trigger_prices":"163","triggered_at":"9:45 am","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 09:45:11,459 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'GPPL', 'trigger_prices': '163', 'triggered_at': '9:45 am', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 09:45:11,459 - TradingBot - INFO - Raw symbols string: GPPL
+2025-10-06 09:45:11,460 - TradingBot - INFO - Raw prices string: 163
+2025-10-06 09:45:11,461 - TradingBot - INFO - Symbols list parsed: ['GPPL']
+2025-10-06 09:45:11,461 - TradingBot - INFO - Prices list parsed: ['163']
+2025-10-06 09:45:11,462 - TradingBot - INFO - Alert queued: {'symbol': 'GPPL', 'trigger_price': 163.0}
+2025-10-06 09:45:11,462 - TradingBot - INFO - Processing alert from queue: {'symbol': 'GPPL', 'trigger_price': 163.0}
+2025-10-06 09:45:11,464 - TradingBot - INFO - Final alerts queued: [{'symbol': 'GPPL', 'trigger_price': 163.0}]
+2025-10-06 09:45:11,467 - TradingBot - INFO - Alert details - Symbol: GPPL, Trigger Price: 163.0
+2025-10-06 09:45:11,468 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 05:15:11] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 09:45:11,928 - TradingBot - INFO - Attempting BUY order for: GPPL
+2025-10-06 09:45:11,928 - TradingBot - INFO - PLACE BUY ORDER - Stock: GPPL, Trigger Price: 163.0
+2025-10-06 09:45:11,930 - TradingBot - INFO - Placing BUY order: GPPL-EQ @ 163.0, Qty: 10
+2025-10-06 09:45:12,383 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: GPPL-EQ - ID: 25100600063316
+2025-10-06 09:45:12,383 - TradingBot - INFO - BUY ORDER SUCCESS: GPPL
+2025-10-06 09:45:12,385 - TradingBot - INFO - Starting position setup for GPPL-EQ
+2025-10-06 09:45:12,386 - TradingBot - INFO - Position setup attempt 1/3 for GPPL-EQ
+2025-10-06 09:45:12,387 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:45:12,834 - TradingBot - WARNING - Attempt 1: Trade not found for GPPL-EQ
+2025-10-06 09:45:14,835 - TradingBot - INFO - Position setup attempt 2/3 for GPPL-EQ
+2025-10-06 09:45:14,836 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:45:15,287 - TradingBot - WARNING - Attempt 2: Trade not found for GPPL-EQ
+2025-10-06 09:45:17,288 - TradingBot - INFO - Position setup attempt 3/3 for GPPL-EQ
+2025-10-06 09:45:17,289 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:45:18,411 - TradingBot - WARNING - Attempt 3: Trade not found for GPPL-EQ
+2025-10-06 09:45:20,413 - TradingBot - ERROR - FAILED to setup position after 3 attempts: GPPL-EQ
+2025-10-06 09:45:20,413 - TradingBot - ERROR - POSITION SETUP FAILED: GPPL
+2025-10-06 09:45:20,416 - TradingBot - INFO - Alert processing completed for: GPPL
+2025-10-06 09:50:10,673 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 09:50:10,675 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '332', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiJkNDFjMTZiOTMzNTJiMGFiIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiMWU4NDczZWEyMWMxN2RiYSIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3MjQ0MDgwNjR9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-d41c16b93352b0ab-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-d41c16b93352b0ab-1e8473ea21c17dba-1-1.151479-1759724408064', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 09:50:10,684 - TradingBot - INFO - Raw request data: {"stocks":"AVL,PNBHOUSING","trigger_prices":"569.8,899.2","triggered_at":"9:50 am","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 09:50:10,686 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'AVL,PNBHOUSING', 'trigger_prices': '569.8,899.2', 'triggered_at': '9:50 am', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 09:50:10,686 - TradingBot - INFO - Raw symbols string: AVL,PNBHOUSING
+2025-10-06 09:50:10,687 - TradingBot - INFO - Raw prices string: 569.8,899.2
+2025-10-06 09:50:10,688 - TradingBot - INFO - Symbols list parsed: ['AVL', 'PNBHOUSING']
+2025-10-06 09:50:10,689 - TradingBot - INFO - Prices list parsed: ['569.8', '899.2']
+2025-10-06 09:50:10,695 - TradingBot - INFO - Alert queued: {'symbol': 'AVL', 'trigger_price': 569.8}
+2025-10-06 09:50:10,695 - TradingBot - INFO - Processing alert from queue: {'symbol': 'AVL', 'trigger_price': 569.8}
+2025-10-06 09:50:10,700 - TradingBot - INFO - Alert queued: {'symbol': 'PNBHOUSING', 'trigger_price': 899.2}
+2025-10-06 09:50:10,701 - TradingBot - INFO - Alert details - Symbol: AVL, Trigger Price: 569.8
+2025-10-06 09:50:10,742 - TradingBot - INFO - Final alerts queued: [{'symbol': 'AVL', 'trigger_price': 569.8}, {'symbol': 'PNBHOUSING', 'trigger_price': 899.2}]
+2025-10-06 09:50:10,752 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 05:20:10] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 09:50:11,220 - TradingBot - INFO - Attempting BUY order for: AVL
+2025-10-06 09:50:11,221 - TradingBot - INFO - PLACE BUY ORDER - Stock: AVL, Trigger Price: 569.8
+2025-10-06 09:50:11,224 - TradingBot - INFO - Placing BUY order: AVL-EQ @ 569.8, Qty: 10
+2025-10-06 09:50:11,674 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: AVL-EQ - ID: 25100600070661
+2025-10-06 09:50:11,684 - TradingBot - INFO - BUY ORDER SUCCESS: AVL
+2025-10-06 09:50:11,686 - TradingBot - INFO - Starting position setup for AVL-EQ
+2025-10-06 09:50:11,686 - TradingBot - INFO - Position setup attempt 1/3 for AVL-EQ
+2025-10-06 09:50:11,687 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:50:12,138 - TradingBot - WARNING - Attempt 1: Trade not found for AVL-EQ
+2025-10-06 09:50:14,143 - TradingBot - INFO - Position setup attempt 2/3 for AVL-EQ
+2025-10-06 09:50:14,143 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:50:14,611 - TradingBot - WARNING - Attempt 2: Trade not found for AVL-EQ
+2025-10-06 09:50:16,612 - TradingBot - INFO - Position setup attempt 3/3 for AVL-EQ
+2025-10-06 09:50:16,627 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:50:17,084 - TradingBot - WARNING - Attempt 3: Trade not found for AVL-EQ
+2025-10-06 09:50:19,092 - TradingBot - ERROR - FAILED to setup position after 3 attempts: AVL-EQ
+2025-10-06 09:50:19,094 - TradingBot - ERROR - POSITION SETUP FAILED: AVL
+2025-10-06 09:50:19,101 - TradingBot - INFO - Alert processing completed for: AVL
+2025-10-06 09:50:19,104 - TradingBot - INFO - Processing alert from queue: {'symbol': 'PNBHOUSING', 'trigger_price': 899.2}
+2025-10-06 09:50:19,105 - TradingBot - INFO - Alert details - Symbol: PNBHOUSING, Trigger Price: 899.2
+2025-10-06 09:50:19,578 - TradingBot - INFO - Attempting BUY order for: PNBHOUSING
+2025-10-06 09:50:19,701 - TradingBot - INFO - PLACE BUY ORDER - Stock: PNBHOUSING, Trigger Price: 899.2
+2025-10-06 09:50:19,703 - TradingBot - INFO - Placing BUY order: PNBHOUSING-EQ @ 899.2, Qty: 10
+2025-10-06 09:50:20,362 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: PNBHOUSING-EQ - ID: 25100600071115
+2025-10-06 09:50:20,368 - TradingBot - INFO - BUY ORDER SUCCESS: PNBHOUSING
+2025-10-06 09:50:20,370 - TradingBot - INFO - Starting position setup for PNBHOUSING-EQ
+2025-10-06 09:50:20,371 - TradingBot - INFO - Position setup attempt 1/3 for PNBHOUSING-EQ
+2025-10-06 09:50:20,372 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:50:20,825 - TradingBot - WARNING - Attempt 1: Trade not found for PNBHOUSING-EQ
+2025-10-06 09:50:22,843 - TradingBot - INFO - Position setup attempt 2/3 for PNBHOUSING-EQ
+2025-10-06 09:50:22,844 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:50:23,313 - TradingBot - WARNING - Attempt 2: Trade not found for PNBHOUSING-EQ
+2025-10-06 09:50:25,328 - TradingBot - INFO - Position setup attempt 3/3 for PNBHOUSING-EQ
+2025-10-06 09:50:25,341 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:50:25,808 - TradingBot - WARNING - Attempt 3: Trade not found for PNBHOUSING-EQ
+2025-10-06 09:50:27,810 - TradingBot - ERROR - FAILED to setup position after 3 attempts: PNBHOUSING-EQ
+2025-10-06 09:50:27,990 - TradingBot - ERROR - POSITION SETUP FAILED: PNBHOUSING
+2025-10-06 09:50:28,028 - TradingBot - INFO - Alert processing completed for: PNBHOUSING
+2025-10-06 09:52:10,217 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 09:52:10,218 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '341', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiIxMzBlMDE0YTc5ZTM0OTAxIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiN2FiN2E4MjExOGRkYTA4MSIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3MjQ1Mjc2Mzd9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-130e014a79e34901-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-130e014a79e34901-7ab7a82118dda081-1-1.151479-1759724527637', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 09:52:10,218 - TradingBot - INFO - Raw request data: {"stocks":"GPPL","trigger_prices":"162.78","triggered_at":"9:52 am","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 09:52:10,218 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'GPPL', 'trigger_prices': '162.78', 'triggered_at': '9:52 am', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 09:52:10,218 - TradingBot - INFO - Raw symbols string: GPPL
+2025-10-06 09:52:10,218 - TradingBot - INFO - Raw prices string: 162.78
+2025-10-06 09:52:10,218 - TradingBot - INFO - Symbols list parsed: ['GPPL']
+2025-10-06 09:52:10,218 - TradingBot - INFO - Prices list parsed: ['162.78']
+2025-10-06 09:52:10,218 - TradingBot - INFO - Alert queued: {'symbol': 'GPPL', 'trigger_price': 162.78}
+2025-10-06 09:52:10,218 - TradingBot - INFO - Processing alert from queue: {'symbol': 'GPPL', 'trigger_price': 162.78}
+2025-10-06 09:52:10,218 - TradingBot - INFO - Final alerts queued: [{'symbol': 'GPPL', 'trigger_price': 162.78}]
+2025-10-06 09:52:10,218 - TradingBot - INFO - Alert details - Symbol: GPPL, Trigger Price: 162.78
+2025-10-06 09:52:10,218 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 05:22:10] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 09:52:10,731 - TradingBot - INFO - Attempting BUY order for: GPPL
+2025-10-06 09:52:10,731 - TradingBot - INFO - PLACE BUY ORDER - Stock: GPPL, Trigger Price: 162.78
+2025-10-06 09:52:10,731 - TradingBot - INFO - Placing BUY order: GPPL-EQ @ 162.78, Qty: 10
+2025-10-06 09:52:11,183 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: GPPL-EQ - ID: 25100600073618
+2025-10-06 09:52:11,183 - TradingBot - INFO - BUY ORDER SUCCESS: GPPL
+2025-10-06 09:52:11,186 - TradingBot - INFO - Starting position setup for GPPL-EQ
+2025-10-06 09:52:11,187 - TradingBot - INFO - Position setup attempt 1/3 for GPPL-EQ
+2025-10-06 09:52:11,188 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:52:11,687 - TradingBot - WARNING - Attempt 1: Trade not found for GPPL-EQ
+2025-10-06 09:52:13,692 - TradingBot - INFO - Position setup attempt 2/3 for GPPL-EQ
+2025-10-06 09:52:13,725 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:52:14,222 - TradingBot - WARNING - Attempt 2: Trade not found for GPPL-EQ
+2025-10-06 09:52:16,435 - TradingBot - INFO - Position setup attempt 3/3 for GPPL-EQ
+2025-10-06 09:52:16,439 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:52:16,886 - TradingBot - WARNING - Attempt 3: Trade not found for GPPL-EQ
+2025-10-06 09:52:19,061 - TradingBot - ERROR - FAILED to setup position after 3 attempts: GPPL-EQ
+2025-10-06 09:52:19,088 - TradingBot - ERROR - POSITION SETUP FAILED: GPPL
+2025-10-06 09:52:19,110 - TradingBot - INFO - Alert processing completed for: GPPL
+2025-10-06 09:53:11,151 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 09:53:11,427 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '341', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiIwOGExN2M4ZDU4Njc4NTY1IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiYzA4YWQyY2EyNTUzNTg4NCIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3MjQ1ODc5NjV9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-08a17c8d58678565-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-08a17c8d58678565-c08ad2ca25535884-1-1.151479-1759724587965', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 09:53:11,582 - TradingBot - INFO - Raw request data: {"stocks":"GPPL","trigger_prices":"162.93","triggered_at":"9:53 am","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 09:53:11,805 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'GPPL', 'trigger_prices': '162.93', 'triggered_at': '9:53 am', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 09:53:11,902 - TradingBot - INFO - Raw symbols string: GPPL
+2025-10-06 09:53:12,036 - TradingBot - INFO - Raw prices string: 162.93
+2025-10-06 09:53:12,110 - TradingBot - INFO - Symbols list parsed: ['GPPL']
+2025-10-06 09:53:12,145 - TradingBot - INFO - Prices list parsed: ['162.93']
+2025-10-06 09:53:12,177 - TradingBot - INFO - Alert queued: {'symbol': 'GPPL', 'trigger_price': 162.93}
+2025-10-06 09:53:12,177 - TradingBot - INFO - Processing alert from queue: {'symbol': 'GPPL', 'trigger_price': 162.93}
+2025-10-06 09:53:12,278 - TradingBot - INFO - Final alerts queued: [{'symbol': 'GPPL', 'trigger_price': 162.93}]
+2025-10-06 09:53:12,375 - TradingBot - INFO - Alert details - Symbol: GPPL, Trigger Price: 162.93
+2025-10-06 09:53:12,393 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 05:23:12] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 09:53:12,857 - TradingBot - INFO - Attempting BUY order for: GPPL
+2025-10-06 09:53:12,945 - TradingBot - INFO - PLACE BUY ORDER - Stock: GPPL, Trigger Price: 162.93
+2025-10-06 09:53:12,959 - TradingBot - INFO - Placing BUY order: GPPL-EQ @ 162.93, Qty: 10
+2025-10-06 09:53:13,417 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: GPPL-EQ - ID: 25100600074738
+2025-10-06 09:53:13,471 - TradingBot - INFO - BUY ORDER SUCCESS: GPPL
+2025-10-06 09:53:13,475 - TradingBot - INFO - Starting position setup for GPPL-EQ
+2025-10-06 09:53:13,477 - TradingBot - INFO - Position setup attempt 1/3 for GPPL-EQ
+2025-10-06 09:53:13,478 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:53:13,938 - TradingBot - WARNING - Attempt 1: Trade not found for GPPL-EQ
+2025-10-06 09:53:15,953 - TradingBot - INFO - Position setup attempt 2/3 for GPPL-EQ
+2025-10-06 09:53:16,140 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:53:16,731 - TradingBot - WARNING - Attempt 2: Trade not found for GPPL-EQ
+2025-10-06 09:53:18,752 - TradingBot - INFO - Position setup attempt 3/3 for GPPL-EQ
+2025-10-06 09:53:18,753 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:53:19,224 - TradingBot - WARNING - Attempt 3: Trade not found for GPPL-EQ
+2025-10-06 09:53:21,226 - TradingBot - ERROR - FAILED to setup position after 3 attempts: GPPL-EQ
+2025-10-06 09:53:21,241 - TradingBot - ERROR - POSITION SETUP FAILED: GPPL
+2025-10-06 09:53:21,245 - TradingBot - INFO - Alert processing completed for: GPPL
+2025-10-06 09:55:11,288 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 09:55:11,289 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '329', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI0ODAzMDczMmI2NTIyNjkyIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiMDZhNGExNDQzYTM1OGUzYiIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3MjQ3MDg3MDJ9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-48030732b6522692-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-48030732b6522692-06a4a1443a358e3b-1-1.151479-1759724708702', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 09:55:11,291 - TradingBot - INFO - Raw request data: {"stocks":"SIRCA,GPPL","trigger_prices":"494.7,162.81","triggered_at":"9:55 am","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 09:55:11,292 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'SIRCA,GPPL', 'trigger_prices': '494.7,162.81', 'triggered_at': '9:55 am', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 09:55:11,293 - TradingBot - INFO - Raw symbols string: SIRCA,GPPL
+2025-10-06 09:55:11,293 - TradingBot - INFO - Raw prices string: 494.7,162.81
+2025-10-06 09:55:11,294 - TradingBot - INFO - Symbols list parsed: ['SIRCA', 'GPPL']
+2025-10-06 09:55:11,294 - TradingBot - INFO - Prices list parsed: ['494.7', '162.81']
+2025-10-06 09:55:11,295 - TradingBot - INFO - Alert queued: {'symbol': 'SIRCA', 'trigger_price': 494.7}
+2025-10-06 09:55:11,295 - TradingBot - INFO - Processing alert from queue: {'symbol': 'SIRCA', 'trigger_price': 494.7}
+2025-10-06 09:55:11,296 - TradingBot - INFO - Alert queued: {'symbol': 'GPPL', 'trigger_price': 162.81}
+2025-10-06 09:55:11,297 - TradingBot - INFO - Alert details - Symbol: SIRCA, Trigger Price: 494.7
+2025-10-06 09:55:11,297 - TradingBot - INFO - Final alerts queued: [{'symbol': 'SIRCA', 'trigger_price': 494.7}, {'symbol': 'GPPL', 'trigger_price': 162.81}]
+2025-10-06 09:55:11,299 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 05:25:11] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 09:55:11,770 - TradingBot - INFO - Attempting BUY order for: SIRCA
+2025-10-06 09:55:11,771 - TradingBot - INFO - PLACE BUY ORDER - Stock: SIRCA, Trigger Price: 494.7
+2025-10-06 09:55:11,773 - TradingBot - INFO - Placing BUY order: SIRCA-EQ @ 494.7, Qty: 10
+2025-10-06 09:55:12,218 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: SIRCA-EQ - ID: 25100600077077
+2025-10-06 09:55:12,219 - TradingBot - INFO - BUY ORDER SUCCESS: SIRCA
+2025-10-06 09:55:12,222 - TradingBot - INFO - Starting position setup for SIRCA-EQ
+2025-10-06 09:55:12,224 - TradingBot - INFO - Position setup attempt 1/3 for SIRCA-EQ
+2025-10-06 09:55:12,225 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:55:12,673 - TradingBot - WARNING - Attempt 1: Trade not found for SIRCA-EQ
+2025-10-06 09:55:14,675 - TradingBot - INFO - Position setup attempt 2/3 for SIRCA-EQ
+2025-10-06 09:55:14,676 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:55:15,120 - TradingBot - WARNING - Attempt 2: Trade not found for SIRCA-EQ
+2025-10-06 09:55:17,121 - TradingBot - INFO - Position setup attempt 3/3 for SIRCA-EQ
+2025-10-06 09:55:17,121 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:55:17,567 - TradingBot - WARNING - Attempt 3: Trade not found for SIRCA-EQ
+2025-10-06 09:55:19,569 - TradingBot - ERROR - FAILED to setup position after 3 attempts: SIRCA-EQ
+2025-10-06 09:55:19,569 - TradingBot - ERROR - POSITION SETUP FAILED: SIRCA
+2025-10-06 09:55:19,573 - TradingBot - INFO - Alert processing completed for: SIRCA
+2025-10-06 09:55:19,574 - TradingBot - INFO - Processing alert from queue: {'symbol': 'GPPL', 'trigger_price': 162.81}
+2025-10-06 09:55:19,574 - TradingBot - INFO - Alert details - Symbol: GPPL, Trigger Price: 162.81
+2025-10-06 09:55:20,028 - TradingBot - INFO - Attempting BUY order for: GPPL
+2025-10-06 09:55:20,029 - TradingBot - INFO - PLACE BUY ORDER - Stock: GPPL, Trigger Price: 162.81
+2025-10-06 09:55:20,032 - TradingBot - INFO - Placing BUY order: GPPL-EQ @ 162.81, Qty: 10
+2025-10-06 09:55:20,497 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: GPPL-EQ - ID: 25100600077268
+2025-10-06 09:55:20,498 - TradingBot - INFO - BUY ORDER SUCCESS: GPPL
+2025-10-06 09:55:20,498 - TradingBot - INFO - Starting position setup for GPPL-EQ
+2025-10-06 09:55:20,505 - TradingBot - INFO - Position setup attempt 1/3 for GPPL-EQ
+2025-10-06 09:55:20,505 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:55:20,989 - TradingBot - WARNING - Attempt 1: Trade not found for GPPL-EQ
+2025-10-06 09:55:22,990 - TradingBot - INFO - Position setup attempt 2/3 for GPPL-EQ
+2025-10-06 09:55:22,990 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:55:23,438 - TradingBot - WARNING - Attempt 2: Trade not found for GPPL-EQ
+2025-10-06 09:55:25,440 - TradingBot - INFO - Position setup attempt 3/3 for GPPL-EQ
+2025-10-06 09:55:25,440 - TradingBot - INFO - Fetching trade book...
+2025-10-06 09:55:25,917 - TradingBot - WARNING - Attempt 3: Trade not found for GPPL-EQ
+2025-10-06 09:55:27,919 - TradingBot - ERROR - FAILED to setup position after 3 attempts: GPPL-EQ
+2025-10-06 09:55:27,920 - TradingBot - ERROR - POSITION SETUP FAILED: GPPL
+2025-10-06 09:55:27,923 - TradingBot - INFO - Alert processing completed for: GPPL
+2025-10-06 10:10:09,491 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 10:10:09,492 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '316', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI3ZDNlODBkNWFjZTQyZDQ4IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiNzM3N2IzYmRkNThkNjA2YiIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3MjU2MDY4ODd9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-7d3e80d5ace42d48-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-7d3e80d5ace42d48-7377b3bdd58d606b-1-1.151479-1759725606887', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 10:10:09,492 - TradingBot - INFO - Raw request data: {"stocks":"AVL","trigger_prices":"570.5","triggered_at":"10:10 am","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 10:10:09,492 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'AVL', 'trigger_prices': '570.5', 'triggered_at': '10:10 am', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 10:10:09,492 - TradingBot - INFO - Raw symbols string: AVL
+2025-10-06 10:10:09,492 - TradingBot - INFO - Raw prices string: 570.5
+2025-10-06 10:10:09,492 - TradingBot - INFO - Symbols list parsed: ['AVL']
+2025-10-06 10:10:09,492 - TradingBot - INFO - Prices list parsed: ['570.5']
+2025-10-06 10:10:09,492 - TradingBot - INFO - Alert queued: {'symbol': 'AVL', 'trigger_price': 570.5}
+2025-10-06 10:10:09,492 - TradingBot - INFO - Processing alert from queue: {'symbol': 'AVL', 'trigger_price': 570.5}
+2025-10-06 10:10:09,492 - TradingBot - INFO - Final alerts queued: [{'symbol': 'AVL', 'trigger_price': 570.5}]
+2025-10-06 10:10:09,492 - TradingBot - INFO - Alert details - Symbol: AVL, Trigger Price: 570.5
+2025-10-06 10:10:09,492 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 05:40:09] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 10:10:09,976 - TradingBot - INFO - Attempting BUY order for: AVL
+2025-10-06 10:10:09,976 - TradingBot - INFO - PLACE BUY ORDER - Stock: AVL, Trigger Price: 570.5
+2025-10-06 10:10:09,977 - TradingBot - INFO - Placing BUY order: AVL-EQ @ 570.5, Qty: 10
+2025-10-06 10:10:10,423 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: AVL-EQ - ID: 25100600091264
+2025-10-06 10:10:10,424 - TradingBot - INFO - BUY ORDER SUCCESS: AVL
+2025-10-06 10:10:10,426 - TradingBot - INFO - Starting position setup for AVL-EQ
+2025-10-06 10:10:10,427 - TradingBot - INFO - Position setup attempt 1/3 for AVL-EQ
+2025-10-06 10:10:10,429 - TradingBot - INFO - Fetching trade book...
+2025-10-06 10:10:10,875 - TradingBot - WARNING - Attempt 1: Trade not found for AVL-EQ
+2025-10-06 10:10:12,887 - TradingBot - INFO - Position setup attempt 2/3 for AVL-EQ
+2025-10-06 10:10:12,887 - TradingBot - INFO - Fetching trade book...
+2025-10-06 10:10:13,333 - TradingBot - WARNING - Attempt 2: Trade not found for AVL-EQ
+2025-10-06 10:10:15,333 - TradingBot - INFO - Position setup attempt 3/3 for AVL-EQ
+2025-10-06 10:10:15,333 - TradingBot - INFO - Fetching trade book...
+2025-10-06 10:10:16,229 - TradingBot - WARNING - Attempt 3: Trade not found for AVL-EQ
+2025-10-06 10:10:18,231 - TradingBot - ERROR - FAILED to setup position after 3 attempts: AVL-EQ
+2025-10-06 10:10:18,231 - TradingBot - ERROR - POSITION SETUP FAILED: AVL
+2025-10-06 10:10:18,234 - TradingBot - INFO - Alert processing completed for: AVL
+2025-10-06 12:24:10,711 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 12:24:10,806 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '347', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiIwZTgzNzFkNTVkNTE0YTY0IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiNjk3YTdlNWQ4YmU3ZTk4MCIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3MzM2NDc5NTh9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-0e8371d55d514a64-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-0e8371d55d514a64-697a7e5d8be7e980-1-1.151479-1759733647958', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 12:24:10,893 - TradingBot - INFO - Raw request data: {"stocks":"PNBHOUSING","trigger_prices":"896.9","triggered_at":"12:24 pm","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 12:24:10,894 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'PNBHOUSING', 'trigger_prices': '896.9', 'triggered_at': '12:24 pm', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 12:24:10,898 - TradingBot - INFO - Raw symbols string: PNBHOUSING
+2025-10-06 12:24:10,899 - TradingBot - INFO - Raw prices string: 896.9
+2025-10-06 12:24:10,901 - TradingBot - INFO - Symbols list parsed: ['PNBHOUSING']
+2025-10-06 12:24:10,905 - TradingBot - INFO - Prices list parsed: ['896.9']
+2025-10-06 12:24:10,928 - TradingBot - INFO - Alert queued: {'symbol': 'PNBHOUSING', 'trigger_price': 896.9}
+2025-10-06 12:24:10,929 - TradingBot - INFO - Processing alert from queue: {'symbol': 'PNBHOUSING', 'trigger_price': 896.9}
+2025-10-06 12:24:10,929 - TradingBot - INFO - Final alerts queued: [{'symbol': 'PNBHOUSING', 'trigger_price': 896.9}]
+2025-10-06 12:24:10,932 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 07:54:10] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 12:24:10,951 - TradingBot - INFO - Alert details - Symbol: PNBHOUSING, Trigger Price: 896.9
+2025-10-06 12:24:11,451 - TradingBot - INFO - Attempting BUY order for: PNBHOUSING
+2025-10-06 12:24:11,459 - TradingBot - INFO - PLACE BUY ORDER - Stock: PNBHOUSING, Trigger Price: 896.9
+2025-10-06 12:24:11,460 - TradingBot - INFO - Placing BUY order: PNBHOUSING-EQ @ 896.9, Qty: 10
+2025-10-06 12:24:11,908 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: PNBHOUSING-EQ - ID: 25100600223022
+2025-10-06 12:24:11,909 - TradingBot - INFO - BUY ORDER SUCCESS: PNBHOUSING
+2025-10-06 12:24:11,911 - TradingBot - INFO - Starting position setup for PNBHOUSING-EQ
+2025-10-06 12:24:11,912 - TradingBot - INFO - Position setup attempt 1/3 for PNBHOUSING-EQ
+2025-10-06 12:24:11,912 - TradingBot - INFO - Fetching trade book...
+2025-10-06 12:24:12,355 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100600223022', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '404568217', 'fltm': '06-10-2025 12:24:09', 'trantype': 'B', 'tsym': 'PNBHOUSING-EQ', 'qty': '10', 'token': '18908', 'fillshares': '10', 'flqty': '8', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.05', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '897.70', 'norentm': '12:24:09 06-10-2025', 'avgprc': '897.63', 'exch_tm': '06-10-2025 12:24:09', 'remarks': 'Chartink_PNBHOUSING', 'exchordid': '1200000051705292'}
+2025-10-06 12:24:12,368 - TradingBot - INFO - Extracted buy price from trade: 897.7
+2025-10-06 12:24:12,372 - TradingBot - INFO - Trade fill time: 06-10-2025 12:24:09
+2025-10-06 12:24:12,375 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-06 12:24:09+05:53
+2025-10-06 12:24:12,375 - TradingBot - INFO - Fetching previous candle for: PNBHOUSING-EQ
+2025-10-06 12:24:12,376 - TradingBot - INFO - Found token for PNBHOUSING: 18908
+2025-10-06 12:24:12,377 - TradingBot - INFO - Candle time range: 12:22:00 to 12:23:00
+2025-10-06 12:24:12,377 - TradingBot - INFO - Candle time range (UTC epoch): 1759732140 to 1759732200
+2025-10-06 12:24:12,378 - TradingBot - INFO - Calling broker API for time price series: token=18908, interval=1
+2025-10-06 12:24:12,988 - TradingBot - INFO - Candle found: PNBHOUSING-EQ - High: 895.45, Low: 893.7, Open: 894.05, Close: 894.55
+2025-10-06 12:24:12,989 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-06 12:24:12,992 - TradingBot - INFO - Starting SL/Target calculation for PNBHOUSING-EQ, Buy Price: 897.7
+2025-10-06 12:24:12,993 - TradingBot - INFO - Previous candle data - High: 895.45, Low: 893.7
+2025-10-06 12:24:12,994 - TradingBot - INFO - SL/Target calculation for PNBHOUSING-EQ:
+2025-10-06 12:24:12,995 - TradingBot - INFO - Buy Price: 897.7, Prev Low: 893.7, Prev High: 895.45
+2025-10-06 12:24:12,996 - TradingBot - INFO - Candle Range: 1.75, SL: 893.65, Target: 902.95
+2025-10-06 12:24:12,996 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-06 12:24:12,998 - TradingBot - INFO - Final levels for PNBHOUSING-EQ: Buy=897.7, SL=893.65, Target=902.95
+2025-10-06 12:24:12,999 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-06 12:24:13,006 - TradingBot - INFO - Creating new candle analysis file: app/2025-10-06_candle_analysis.csv
+2025-10-06 12:24:13,008 - TradingBot - INFO - Candle analysis logged to CSV: PNBHOUSING-EQ - SL: 893.65, Target: 902.95, Type: PREV_CANDLE_LOW
+2025-10-06 12:24:13,009 - TradingBot - INFO - Writing position to state file: app/2025-10-06_positions_state.csv
+2025-10-06 12:24:13,011 - TradingBot - INFO - POSITION SETUP COMPLETE: PNBHOUSING-EQ
+2025-10-06 12:24:13,012 - TradingBot - INFO - Final Position - Buy: 897.7, SL: 893.65, Target: 902.95
+2025-10-06 12:24:13,013 - TradingBot - INFO - POSITION SETUP COMPLETE: PNBHOUSING
+2025-10-06 12:24:13,015 - TradingBot - INFO - Alert processing completed for: PNBHOUSING
+2025-10-06 12:25:11,108 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 12:25:11,110 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '334', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiIxYjNkNDJhODRiNTU0YzgyIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiZDcwNzZlODc2ZGE0Yjc3YSIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3MzM3MDgzODF9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-1b3d42a84b554c82-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-1b3d42a84b554c82-d7076e876da4b77a-1-1.151479-1759733708381', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 12:25:11,112 - TradingBot - INFO - Raw request data: {"stocks":"PNBHOUSING,SRGHFL","trigger_prices":"897.9,319","triggered_at":"12:25 pm","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 12:25:11,113 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'PNBHOUSING,SRGHFL', 'trigger_prices': '897.9,319', 'triggered_at': '12:25 pm', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 12:25:11,114 - TradingBot - INFO - Raw symbols string: PNBHOUSING,SRGHFL
+2025-10-06 12:25:11,115 - TradingBot - INFO - Raw prices string: 897.9,319
+2025-10-06 12:25:11,116 - TradingBot - INFO - Symbols list parsed: ['PNBHOUSING', 'SRGHFL']
+2025-10-06 12:25:11,117 - TradingBot - INFO - Prices list parsed: ['897.9', '319']
+2025-10-06 12:25:11,118 - TradingBot - INFO - Alert queued: {'symbol': 'PNBHOUSING', 'trigger_price': 897.9}
+2025-10-06 12:25:11,121 - TradingBot - INFO - Processing alert from queue: {'symbol': 'PNBHOUSING', 'trigger_price': 897.9}
+2025-10-06 12:25:11,122 - TradingBot - INFO - Alert queued: {'symbol': 'SRGHFL', 'trigger_price': 319.0}
+2025-10-06 12:25:11,122 - TradingBot - INFO - Alert details - Symbol: PNBHOUSING, Trigger Price: 897.9
+2025-10-06 12:25:11,125 - TradingBot - INFO - Final alerts queued: [{'symbol': 'PNBHOUSING', 'trigger_price': 897.9}, {'symbol': 'SRGHFL', 'trigger_price': 319.0}]
+2025-10-06 12:25:11,137 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 07:55:11] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 12:25:11,596 - TradingBot - INFO - PNBHOUSING already open at broker (NetQty=10), skipping new entry
+2025-10-06 12:25:11,596 - TradingBot - WARNING - Skipping PNBHOUSING, already in position
+2025-10-06 12:25:11,598 - TradingBot - INFO - Processing alert from queue: {'symbol': 'SRGHFL', 'trigger_price': 319.0}
+2025-10-06 12:25:11,599 - TradingBot - INFO - Alert details - Symbol: SRGHFL, Trigger Price: 319.0
+2025-10-06 12:25:12,051 - TradingBot - INFO - Attempting BUY order for: SRGHFL
+2025-10-06 12:25:12,056 - TradingBot - INFO - PLACE BUY ORDER - Stock: SRGHFL, Trigger Price: 319.0
+2025-10-06 12:25:12,058 - TradingBot - INFO - Placing BUY order: SRGHFL-EQ @ 319.0, Qty: 10
+2025-10-06 12:25:12,513 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: SRGHFL-EQ - ID: 25100600223657
+2025-10-06 12:25:12,514 - TradingBot - INFO - BUY ORDER SUCCESS: SRGHFL
+2025-10-06 12:25:12,516 - TradingBot - INFO - Starting position setup for SRGHFL-EQ
+2025-10-06 12:25:12,517 - TradingBot - INFO - Position setup attempt 1/3 for SRGHFL-EQ
+2025-10-06 12:25:12,521 - TradingBot - INFO - Fetching trade book...
+2025-10-06 12:25:12,976 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100600223657', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '604494890', 'fltm': '06-10-2025 12:25:10', 'trantype': 'B', 'tsym': 'SRGHFL-EQ', 'qty': '10', 'token': '18119', 'fillshares': '10', 'flqty': '9', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.05', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '319.00', 'norentm': '12:25:10 06-10-2025', 'avgprc': '318.99', 'exch_tm': '06-10-2025 12:25:10', 'remarks': 'Chartink_SRGHFL', 'exchordid': '1300000043646263'}
+2025-10-06 12:25:12,980 - TradingBot - INFO - Extracted buy price from trade: 319.0
+2025-10-06 12:25:12,982 - TradingBot - INFO - Trade fill time: 06-10-2025 12:25:10
+2025-10-06 12:25:12,983 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-06 12:25:10+05:53
+2025-10-06 12:25:12,983 - TradingBot - INFO - Fetching previous candle for: SRGHFL-EQ
+2025-10-06 12:25:12,984 - TradingBot - INFO - Found token for SRGHFL: 18119
+2025-10-06 12:25:12,989 - TradingBot - INFO - Candle time range: 12:23:00 to 12:24:00
+2025-10-06 12:25:12,990 - TradingBot - INFO - Candle time range (UTC epoch): 1759732200 to 1759732260
+2025-10-06 12:25:12,992 - TradingBot - INFO - Calling broker API for time price series: token=18119, interval=1
+2025-10-06 12:25:13,456 - TradingBot - INFO - Candle found: SRGHFL-EQ - High: 315.5, Low: 315.5, Open: 315.5, Close: 315.5
+2025-10-06 12:25:13,460 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-06 12:25:13,464 - TradingBot - INFO - Starting SL/Target calculation for SRGHFL-EQ, Buy Price: 319.0
+2025-10-06 12:25:13,467 - TradingBot - INFO - Previous candle data - High: 315.5, Low: 315.5
+2025-10-06 12:25:13,472 - TradingBot - INFO - SL/Target calculation for SRGHFL-EQ:
+2025-10-06 12:25:13,473 - TradingBot - INFO - Buy Price: 319.0, Prev Low: 315.5, Prev High: 315.5
+2025-10-06 12:25:13,474 - TradingBot - INFO - Candle Range: 0.00, SL: 315.45, Target: 319.0
+2025-10-06 12:25:13,474 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-06 12:25:13,475 - TradingBot - WARNING - Adjusted target below buy price for SRGHFL-EQ. New Target: 322.19
+2025-10-06 12:25:13,476 - TradingBot - INFO - Final levels for SRGHFL-EQ: Buy=319.0, SL=315.45, Target=322.19
+2025-10-06 12:25:13,477 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-06 12:25:13,479 - TradingBot - INFO - Candle analysis logged to CSV: SRGHFL-EQ - SL: 315.45, Target: 322.19, Type: PREV_CANDLE_LOW
+2025-10-06 12:25:13,480 - TradingBot - INFO - Writing position to state file: app/2025-10-06_positions_state.csv
+2025-10-06 12:25:13,482 - TradingBot - INFO - POSITION SETUP COMPLETE: SRGHFL-EQ
+2025-10-06 12:25:13,482 - TradingBot - INFO - Final Position - Buy: 319.0, SL: 315.45, Target: 322.19
+2025-10-06 12:25:13,483 - TradingBot - INFO - POSITION SETUP COMPLETE: SRGHFL
+2025-10-06 12:25:13,486 - TradingBot - INFO - Alert processing completed for: SRGHFL
+2025-10-06 12:30:00,650 - TradingBot - INFO - Saving position book...
+2025-10-06 12:30:01,113 - TradingBot - INFO - Found 2 positions to save
+2025-10-06 12:30:01,164 - TradingBot - INFO - Position book saved with 2 records to app/2025-10-06_position.csv
+2025-10-06 12:31:00,304 - TradingBot - INFO - Saving position book...
+2025-10-06 12:31:00,737 - TradingBot - INFO - Found 2 positions to save
+2025-10-06 12:31:00,737 - TradingBot - INFO - Position book saved with 2 records to app/2025-10-06_position.csv
+2025-10-06 12:32:00,070 - TradingBot - WARNING - !!! SL HIT !!!: SRGHFL-EQ @ 313.6 (SL: 315.45)
+2025-10-06 12:32:00,070 - TradingBot - INFO - Placing exit order for SL: SRGHFL-EQ, Qty: 10
+2025-10-06 12:32:00,070 - TradingBot - INFO - PLACE SELL ORDER - Symbol: SRGHFL-EQ, Quantity: 10
+2025-10-06 12:32:00,070 - TradingBot - INFO - Placing SELL order: SRGHFL-EQ, Qty: 10
+2025-10-06 12:32:00,521 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: SRGHFL-EQ - ID: 25100600228103
+2025-10-06 12:32:00,521 - TradingBot - INFO - SL EXIT SUCCESS: SRGHFL-EQ @ 313.6, Order: 25100600228103
+2025-10-06 12:32:00,521 - TradingBot - INFO - Saving updated positions to file
+2025-10-06 12:32:00,536 - TradingBot - INFO - Position book updated successfully
+2025-10-06 12:32:00,536 - TradingBot - INFO - Saving position book...
+2025-10-06 12:32:00,984 - TradingBot - INFO - Found 2 positions to save
+2025-10-06 12:32:00,984 - TradingBot - INFO - Position book saved with 2 records to app/2025-10-06_position.csv
+2025-10-06 12:34:00,869 - TradingBot - INFO - Saving position book...
+2025-10-06 12:34:01,316 - TradingBot - INFO - Found 2 positions to save
+2025-10-06 12:34:01,319 - TradingBot - INFO - Position book saved with 2 records to app/2025-10-06_position.csv
+2025-10-06 12:49:00,668 - TradingBot - INFO - Saving position book...
+2025-10-06 12:49:01,132 - TradingBot - INFO - Found 2 positions to save
+2025-10-06 12:49:01,134 - TradingBot - INFO - Position book saved with 2 records to app/2025-10-06_position.csv
+2025-10-06 12:55:56,456 - TradingBot - WARNING - !!! SL HIT !!!: PNBHOUSING-EQ @ 893.55 (SL: 893.65)
+2025-10-06 12:55:56,457 - TradingBot - INFO - Placing exit order for SL: PNBHOUSING-EQ, Qty: 10
+2025-10-06 12:55:56,459 - TradingBot - INFO - PLACE SELL ORDER - Symbol: PNBHOUSING-EQ, Quantity: 10
+2025-10-06 12:55:56,460 - TradingBot - INFO - Placing SELL order: PNBHOUSING-EQ, Qty: 10
+2025-10-06 12:55:56,907 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: PNBHOUSING-EQ - ID: 25100600246724
+2025-10-06 12:55:56,910 - TradingBot - INFO - SL EXIT SUCCESS: PNBHOUSING-EQ @ 893.55, Order: 25100600246724
+2025-10-06 12:55:56,911 - TradingBot - INFO - Saving updated positions to file
+2025-10-06 12:55:56,914 - TradingBot - INFO - Position book updated successfully
+2025-10-06 13:02:11,508 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 13:02:11,509 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '347', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiJjZWIyMjEyMDJiNzMzOGM1IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiYTE4ODVkMWI2ODNhYzE2YiIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3MzU5Mjg1NDV9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-ceb221202b7338c5-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-ceb221202b7338c5-a1885d1b683ac16b-1-1.151479-1759735928546', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 13:02:11,511 - TradingBot - INFO - Raw request data: {"stocks":"PNBHOUSING","trigger_prices":"898.55","triggered_at":"1:02 pm","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 13:02:11,513 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'PNBHOUSING', 'trigger_prices': '898.55', 'triggered_at': '1:02 pm', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 13:02:11,514 - TradingBot - INFO - Raw symbols string: PNBHOUSING
+2025-10-06 13:02:11,515 - TradingBot - INFO - Raw prices string: 898.55
+2025-10-06 13:02:11,518 - TradingBot - INFO - Symbols list parsed: ['PNBHOUSING']
+2025-10-06 13:02:11,521 - TradingBot - INFO - Prices list parsed: ['898.55']
+2025-10-06 13:02:11,522 - TradingBot - INFO - Alert queued: {'symbol': 'PNBHOUSING', 'trigger_price': 898.55}
+2025-10-06 13:02:11,522 - TradingBot - INFO - Processing alert from queue: {'symbol': 'PNBHOUSING', 'trigger_price': 898.55}
+2025-10-06 13:02:11,523 - TradingBot - INFO - Final alerts queued: [{'symbol': 'PNBHOUSING', 'trigger_price': 898.55}]
+2025-10-06 13:02:11,524 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 08:32:11] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 13:02:11,526 - TradingBot - INFO - Alert details - Symbol: PNBHOUSING, Trigger Price: 898.55
+2025-10-06 13:02:11,990 - TradingBot - INFO - Attempting BUY order for: PNBHOUSING
+2025-10-06 13:02:11,994 - TradingBot - INFO - PLACE BUY ORDER - Stock: PNBHOUSING, Trigger Price: 898.55
+2025-10-06 13:02:11,995 - TradingBot - INFO - Placing BUY order: PNBHOUSING-EQ @ 898.55, Qty: 10
+2025-10-06 13:02:12,454 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: PNBHOUSING-EQ - ID: 25100600254000
+2025-10-06 13:02:12,523 - TradingBot - INFO - BUY ORDER SUCCESS: PNBHOUSING
+2025-10-06 13:02:12,530 - TradingBot - INFO - Starting position setup for PNBHOUSING-EQ
+2025-10-06 13:02:12,530 - TradingBot - INFO - Position setup attempt 1/3 for PNBHOUSING-EQ
+2025-10-06 13:02:12,534 - TradingBot - INFO - Fetching trade book...
+2025-10-06 13:02:12,994 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100600254000', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '405129875', 'fltm': '06-10-2025 13:02:09', 'trantype': 'B', 'tsym': 'PNBHOUSING-EQ', 'qty': '10', 'token': '18908', 'fillshares': '10', 'flqty': '5', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.05', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '898.45', 'norentm': '13:02:09 06-10-2025', 'avgprc': '898.45', 'exch_tm': '06-10-2025 13:02:09', 'remarks': 'Chartink_PNBHOUSING', 'exchordid': '1200000059276263'}
+2025-10-06 13:02:13,999 - TradingBot - INFO - Extracted buy price from trade: 898.45
+2025-10-06 13:02:13,013 - TradingBot - INFO - Trade fill time: 06-10-2025 13:02:09
+2025-10-06 13:02:13,014 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-06 13:02:09+05:53
+2025-10-06 13:02:13,015 - TradingBot - INFO - Fetching previous candle for: PNBHOUSING-EQ
+2025-10-06 13:02:13,018 - TradingBot - INFO - Found token for PNBHOUSING: 18908
+2025-10-06 13:02:13,023 - TradingBot - INFO - Candle time range: 13:00:00 to 13:01:00
+2025-10-06 13:02:13,024 - TradingBot - INFO - Candle time range (UTC epoch): 1759734420 to 1759734480
+2025-10-06 13:02:13,025 - TradingBot - INFO - Calling broker API for time price series: token=18908, interval=1
+2025-10-06 13:02:13,471 - TradingBot - INFO - Candle found: PNBHOUSING-EQ - High: 897.65, Low: 897.2, Open: 897.3, Close: 897.6
+2025-10-06 13:02:13,488 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-06 13:02:13,496 - TradingBot - INFO - Starting SL/Target calculation for PNBHOUSING-EQ, Buy Price: 898.45
+2025-10-06 13:02:13,497 - TradingBot - INFO - Previous candle data - High: 897.65, Low: 897.2
+2025-10-06 13:02:13,498 - TradingBot - INFO - SL/Target calculation for PNBHOUSING-EQ:
+2025-10-06 13:02:13,505 - TradingBot - INFO - Buy Price: 898.45, Prev Low: 897.2, Prev High: 897.65
+2025-10-06 13:02:13,506 - TradingBot - INFO - Candle Range: 0.45, SL: 897.15, Target: 899.8
+2025-10-06 13:02:13,507 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-06 13:02:13,509 - TradingBot - INFO - Final levels for PNBHOUSING-EQ: Buy=898.45, SL=897.15, Target=899.8
+2025-10-06 13:02:13,510 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-06 13:02:13,513 - TradingBot - INFO - Candle analysis logged to CSV: PNBHOUSING-EQ - SL: 897.15, Target: 899.8, Type: PREV_CANDLE_LOW
+2025-10-06 13:02:13,514 - TradingBot - INFO - Writing position to state file: app/2025-10-06_positions_state.csv
+2025-10-06 13:02:13,520 - TradingBot - INFO - POSITION SETUP COMPLETE: PNBHOUSING-EQ
+2025-10-06 13:02:13,521 - TradingBot - INFO - Final Position - Buy: 898.45, SL: 897.15, Target: 899.8
+2025-10-06 13:02:13,522 - TradingBot - INFO - POSITION SETUP COMPLETE: PNBHOUSING
+2025-10-06 13:02:13,526 - TradingBot - INFO - Alert processing completed for: PNBHOUSING
+2025-10-06 13:05:10,453 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 13:05:10,454 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '322', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiIxMmI3MTQxNGQ4MzU3NDQxIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiYTMzNTIxNDc3ODk0MjRlNiIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3MzYxMDc3MTl9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-12b71414d8357441-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-12b71414d8357441-a3352147789424e6-1-1.151479-1759736107719', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 13:05:10,456 - TradingBot - INFO - Raw request data: {"stocks":"PNBHOUSING","trigger_prices":"898.2","triggered_at":"1:05 pm","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 13:05:10,456 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'PNBHOUSING', 'trigger_prices': '898.2', 'triggered_at': '1:05 pm', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 13:05:10,456 - TradingBot - INFO - Raw symbols string: PNBHOUSING
+2025-10-06 13:05:10,456 - TradingBot - INFO - Raw prices string: 898.2
+2025-10-06 13:05:10,456 - TradingBot - INFO - Symbols list parsed: ['PNBHOUSING']
+2025-10-06 13:05:10,456 - TradingBot - INFO - Prices list parsed: ['898.2']
+2025-10-06 13:05:10,456 - TradingBot - INFO - Alert queued: {'symbol': 'PNBHOUSING', 'trigger_price': 898.2}
+2025-10-06 13:05:10,456 - TradingBot - INFO - Processing alert from queue: {'symbol': 'PNBHOUSING', 'trigger_price': 898.2}
+2025-10-06 13:05:10,456 - TradingBot - INFO - Final alerts queued: [{'symbol': 'PNBHOUSING', 'trigger_price': 898.2}]
+2025-10-06 13:05:10,456 - TradingBot - INFO - Alert details - Symbol: PNBHOUSING, Trigger Price: 898.2
+2025-10-06 13:05:10,456 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 08:35:10] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 13:05:10,921 - TradingBot - INFO - PNBHOUSING already open at broker (NetQty=10), skipping new entry
+2025-10-06 13:05:10,922 - TradingBot - WARNING - Skipping PNBHOUSING, already in position
+2025-10-06 13:06:08,300 - TradingBot - WARNING - !!! SL HIT !!!: PNBHOUSING-EQ @ 896.55 (SL: 897.15)
+2025-10-06 13:06:08,327 - TradingBot - INFO - Placing exit order for SL: PNBHOUSING-EQ, Qty: 10
+2025-10-06 13:06:08,330 - TradingBot - INFO - PLACE SELL ORDER - Symbol: PNBHOUSING-EQ, Quantity: 10
+2025-10-06 13:06:08,334 - TradingBot - INFO - Placing SELL order: PNBHOUSING-EQ, Qty: 10
+2025-10-06 13:06:08,786 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: PNBHOUSING-EQ - ID: 25100600258736
+2025-10-06 13:06:08,789 - TradingBot - INFO - SL EXIT SUCCESS: PNBHOUSING-EQ @ 896.55, Order: 25100600258736
+2025-10-06 13:06:08,790 - TradingBot - INFO - Saving updated positions to file
+2025-10-06 13:06:08,793 - TradingBot - INFO - Position book updated successfully
+2025-10-06 13:40:00,004 - TradingBot - INFO - Saving position book...
+2025-10-06 13:40:01,120 - TradingBot - INFO - Found 2 positions to save
+2025-10-06 13:40:01,120 - TradingBot - INFO - Position book saved with 2 records to app/2025-10-06_position.csv
+2025-10-06 14:20:12,660 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 14:20:12,660 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '316', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI3ODAyMDAxNDllMDk4NzQwIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiYjAzM2FjNDY3NTg3YWJiOSIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3NDA2MDk4NzJ9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-780200149e098740-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-780200149e098740-b033ac467587abb9-1-1.151479-1759740609872', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 14:20:12,660 - TradingBot - INFO - Raw request data: {"stocks":"DVL","trigger_prices":"372.25","triggered_at":"2:20 pm","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 14:20:12,660 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'DVL', 'trigger_prices': '372.25', 'triggered_at': '2:20 pm', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 14:20:12,660 - TradingBot - INFO - Raw symbols string: DVL
+2025-10-06 14:20:12,660 - TradingBot - INFO - Raw prices string: 372.25
+2025-10-06 14:20:12,660 - TradingBot - INFO - Symbols list parsed: ['DVL']
+2025-10-06 14:20:12,660 - TradingBot - INFO - Prices list parsed: ['372.25']
+2025-10-06 14:20:12,660 - TradingBot - INFO - Alert queued: {'symbol': 'DVL', 'trigger_price': 372.25}
+2025-10-06 14:20:12,660 - TradingBot - INFO - Processing alert from queue: {'symbol': 'DVL', 'trigger_price': 372.25}
+2025-10-06 14:20:12,660 - TradingBot - INFO - Final alerts queued: [{'symbol': 'DVL', 'trigger_price': 372.25}]
+2025-10-06 14:20:12,660 - TradingBot - INFO - Alert details - Symbol: DVL, Trigger Price: 372.25
+2025-10-06 14:20:12,660 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 09:50:12] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 14:20:13,131 - TradingBot - INFO - Attempting BUY order for: DVL
+2025-10-06 14:20:13,132 - TradingBot - INFO - PLACE BUY ORDER - Stock: DVL, Trigger Price: 372.25
+2025-10-06 14:20:13,134 - TradingBot - INFO - Placing BUY order: DVL-EQ @ 372.25, Qty: 10
+2025-10-06 14:20:13,654 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: DVL-EQ - ID: 25100600338068
+2025-10-06 14:20:13,654 - TradingBot - INFO - BUY ORDER SUCCESS: DVL
+2025-10-06 14:20:13,654 - TradingBot - INFO - Starting position setup for DVL-EQ
+2025-10-06 14:20:13,670 - TradingBot - INFO - Position setup attempt 1/3 for DVL-EQ
+2025-10-06 14:20:13,671 - TradingBot - INFO - Fetching trade book...
+2025-10-06 14:20:14,188 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100600338068', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '206804199', 'fltm': '06-10-2025 14:20:11', 'trantype': 'B', 'tsym': 'DVL-EQ', 'qty': '10', 'token': '15214', 'fillshares': '10', 'flqty': '8', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.05', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '373.40', 'norentm': '14:20:11 06-10-2025', 'avgprc': '373.39', 'exch_tm': '06-10-2025 14:20:11', 'remarks': 'Chartink_DVL', 'exchordid': '1100000067749594'}
+2025-10-06 14:20:14,189 - TradingBot - INFO - Extracted buy price from trade: 373.4
+2025-10-06 14:20:14,191 - TradingBot - INFO - Trade fill time: 06-10-2025 14:20:11
+2025-10-06 14:20:14,193 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-06 14:20:11+05:53
+2025-10-06 14:20:14,194 - TradingBot - INFO - Fetching previous candle for: DVL-EQ
+2025-10-06 14:20:14,195 - TradingBot - INFO - Found token for DVL: 15214
+2025-10-06 14:20:14,195 - TradingBot - INFO - Candle time range: 14:18:00 to 14:19:00
+2025-10-06 14:20:14,196 - TradingBot - INFO - Candle time range (UTC epoch): 1759739100 to 1759739160
+2025-10-06 14:20:14,197 - TradingBot - INFO - Calling broker API for time price series: token=15214, interval=1
+2025-10-06 14:20:14,656 - TradingBot - INFO - Candle found: DVL-EQ - High: 362.95, Low: 362.5, Open: 362.5, Close: 362.8
+2025-10-06 14:20:14,656 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-06 14:20:14,656 - TradingBot - INFO - Starting SL/Target calculation for DVL-EQ, Buy Price: 373.4
+2025-10-06 14:20:14,656 - TradingBot - INFO - Previous candle data - High: 362.95, Low: 362.5
+2025-10-06 14:20:14,656 - TradingBot - INFO - SL/Target calculation for DVL-EQ:
+2025-10-06 14:20:14,656 - TradingBot - INFO - Buy Price: 373.4, Prev Low: 362.5, Prev High: 362.95
+2025-10-06 14:20:14,656 - TradingBot - INFO - Candle Range: 0.45, SL: 362.45, Target: 374.75
+2025-10-06 14:20:14,666 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-06 14:20:14,667 - TradingBot - INFO - Final levels for DVL-EQ: Buy=373.4, SL=362.45, Target=374.75
+2025-10-06 14:20:14,668 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-06 14:20:14,668 - TradingBot - INFO - Candle analysis logged to CSV: DVL-EQ - SL: 362.45, Target: 374.75, Type: PREV_CANDLE_LOW
+2025-10-06 14:20:15,096 - TradingBot - INFO - Writing position to state file: app/2025-10-06_positions_state.csv
+2025-10-06 14:20:15,104 - TradingBot - INFO - POSITION SETUP COMPLETE: DVL-EQ
+2025-10-06 14:20:15,106 - TradingBot - INFO - Final Position - Buy: 373.4, SL: 362.45, Target: 374.75
+2025-10-06 14:20:15,106 - TradingBot - INFO - POSITION SETUP COMPLETE: DVL
+2025-10-06 14:20:15,111 - TradingBot - INFO - Alert processing completed for: DVL
+2025-10-06 14:28:03,504 - TradingBot - INFO - !!! TARGET HIT !!!: DVL-EQ @ 375.0 (Target: 374.75)
+2025-10-06 14:28:03,504 - TradingBot - INFO - Placing exit order for target: DVL-EQ, Qty: 10
+2025-10-06 14:28:03,504 - TradingBot - INFO - PLACE SELL ORDER - Symbol: DVL-EQ, Quantity: 10
+2025-10-06 14:28:03,504 - TradingBot - INFO - Placing SELL order: DVL-EQ, Qty: 10
+2025-10-06 14:28:03,954 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: DVL-EQ - ID: 25100600345383
+2025-10-06 14:28:03,954 - TradingBot - INFO - TARGET EXIT SUCCESS: DVL-EQ @ 375.0, Order: 25100600345383
+2025-10-06 14:28:03,954 - TradingBot - INFO - Saving updated positions to file
+2025-10-06 14:28:03,954 - TradingBot - INFO - Position book updated successfully
+2025-10-06 14:55:08,295 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 14:55:08,295 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '322', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI5ZTUwZTg3OTE3YjY1YTk1IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiNjExNWM5MzI5MDQ1YjFlYyIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3NDI3MDgwMDN9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-9e50e87917b65a95-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-9e50e87917b65a95-6115c9329045b1ec-1-1.151479-1759742708003', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 14:55:08,296 - TradingBot - INFO - Raw request data: {"stocks":"PRIMESECU","trigger_prices":"286.55","triggered_at":"2:55 pm","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 14:55:08,296 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'PRIMESECU', 'trigger_prices': '286.55', 'triggered_at': '2:55 pm', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 14:55:08,296 - TradingBot - INFO - Raw symbols string: PRIMESECU
+2025-10-06 14:55:08,300 - TradingBot - INFO - Raw prices string: 286.55
+2025-10-06 14:55:08,301 - TradingBot - INFO - Symbols list parsed: ['PRIMESECU']
+2025-10-06 14:55:08,301 - TradingBot - INFO - Prices list parsed: ['286.55']
+2025-10-06 14:55:08,303 - TradingBot - INFO - Alert queued: {'symbol': 'PRIMESECU', 'trigger_price': 286.55}
+2025-10-06 14:55:08,303 - TradingBot - INFO - Processing alert from queue: {'symbol': 'PRIMESECU', 'trigger_price': 286.55}
+2025-10-06 14:55:08,303 - TradingBot - INFO - Final alerts queued: [{'symbol': 'PRIMESECU', 'trigger_price': 286.55}]
+2025-10-06 14:55:08,303 - TradingBot - INFO - Alert details - Symbol: PRIMESECU, Trigger Price: 286.55
+2025-10-06 14:55:08,303 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 10:25:08] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 14:55:08,823 - TradingBot - INFO - Attempting BUY order for: PRIMESECU
+2025-10-06 14:55:08,823 - TradingBot - INFO - PLACE BUY ORDER - Stock: PRIMESECU, Trigger Price: 286.55
+2025-10-06 14:55:08,825 - TradingBot - INFO - Placing BUY order: PRIMESECU-EQ @ 286.55, Qty: 10
+2025-10-06 14:55:09,266 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: PRIMESECU-EQ - ID: 25100600373310
+2025-10-06 14:55:09,266 - TradingBot - INFO - BUY ORDER SUCCESS: PRIMESECU
+2025-10-06 14:55:09,266 - TradingBot - INFO - Starting position setup for PRIMESECU-EQ
+2025-10-06 14:55:09,266 - TradingBot - INFO - Position setup attempt 1/3 for PRIMESECU-EQ
+2025-10-06 14:55:09,282 - TradingBot - INFO - Fetching trade book...
+2025-10-06 14:55:09,735 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100600373310', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '406852534', 'fltm': '06-10-2025 14:55:09', 'trantype': 'B', 'tsym': 'PRIMESECU-EQ', 'qty': '10', 'token': '11864', 'fillshares': '10', 'flqty': '10', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.05', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '288.90', 'norentm': '14:55:09 06-10-2025', 'avgprc': '288.90', 'exch_tm': '06-10-2025 14:55:09', 'remarks': 'Chartink_PRIMESECU', 'exchordid': '1200000080581611'}
+2025-10-06 14:55:09,736 - TradingBot - INFO - Extracted buy price from trade: 288.9
+2025-10-06 14:55:09,739 - TradingBot - INFO - Trade fill time: 06-10-2025 14:55:09
+2025-10-06 14:55:09,739 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-06 14:55:09+05:53
+2025-10-06 14:55:09,741 - TradingBot - INFO - Fetching previous candle for: PRIMESECU-EQ
+2025-10-06 14:55:09,742 - TradingBot - INFO - Found token for PRIMESECU: 11864
+2025-10-06 14:55:09,742 - TradingBot - INFO - Candle time range: 14:53:00 to 14:54:00
+2025-10-06 14:55:09,743 - TradingBot - INFO - Candle time range (UTC epoch): 1759741200 to 1759741260
+2025-10-06 14:55:09,744 - TradingBot - INFO - Calling broker API for time price series: token=11864, interval=1
+2025-10-06 14:55:10,205 - TradingBot - INFO - Candle found: PRIMESECU-EQ - High: 275.2, Low: 275.2, Open: 275.2, Close: 275.2
+2025-10-06 14:55:10,207 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-06 14:55:10,208 - TradingBot - INFO - Starting SL/Target calculation for PRIMESECU-EQ, Buy Price: 288.9
+2025-10-06 14:55:10,209 - TradingBot - INFO - Previous candle data - High: 275.2, Low: 275.2
+2025-10-06 14:55:10,210 - TradingBot - INFO - SL/Target calculation for PRIMESECU-EQ:
+2025-10-06 14:55:10,210 - TradingBot - INFO - Buy Price: 288.9, Prev Low: 275.2, Prev High: 275.2
+2025-10-06 14:55:10,211 - TradingBot - INFO - Candle Range: 0.00, SL: 275.15, Target: 288.9
+2025-10-06 14:55:10,211 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-06 14:55:10,212 - TradingBot - WARNING - Adjusted target below buy price for PRIMESECU-EQ. New Target: 291.79
+2025-10-06 14:55:10,213 - TradingBot - INFO - Final levels for PRIMESECU-EQ: Buy=288.9, SL=275.15, Target=291.79
+2025-10-06 14:55:10,213 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-06 14:55:10,213 - TradingBot - INFO - Candle analysis logged to CSV: PRIMESECU-EQ - SL: 275.15, Target: 291.79, Type: PREV_CANDLE_LOW
+2025-10-06 14:55:10,213 - TradingBot - INFO - Writing position to state file: app/2025-10-06_positions_state.csv
+2025-10-06 14:55:10,213 - TradingBot - INFO - POSITION SETUP COMPLETE: PRIMESECU-EQ
+2025-10-06 14:55:10,213 - TradingBot - INFO - Final Position - Buy: 288.9, SL: 275.15, Target: 291.79
+2025-10-06 14:55:10,213 - TradingBot - INFO - POSITION SETUP COMPLETE: PRIMESECU
+2025-10-06 14:55:10,220 - TradingBot - INFO - Alert processing completed for: PRIMESECU
+2025-10-06 15:00:00,644 - TradingBot - INFO - Saving position book...
+2025-10-06 15:00:01,147 - TradingBot - INFO - Found 4 positions to save
+2025-10-06 15:00:01,150 - TradingBot - INFO - Position book saved with 4 records to app/2025-10-06_position.csv
+2025-10-06 15:00:08,908 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 15:00:08,909 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '313', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiIxZWRkYjYxNGM1OTMzZDc5IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiYzQ3OTk0MzU0YzkwNDE2MCIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3NDMwMDg1NTR9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-1eddb614c5933d79-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-1eddb614c5933d79-c47994354c904160-1-1.151479-1759743008554', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 15:00:08,912 - TradingBot - INFO - Raw request data: {"stocks":"DVL","trigger_prices":"369","triggered_at":"3:00 pm","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 15:00:08,912 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'DVL', 'trigger_prices': '369', 'triggered_at': '3:00 pm', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 15:00:08,914 - TradingBot - INFO - Raw symbols string: DVL
+2025-10-06 15:00:08,915 - TradingBot - INFO - Raw prices string: 369
+2025-10-06 15:00:08,915 - TradingBot - INFO - Symbols list parsed: ['DVL']
+2025-10-06 15:00:08,916 - TradingBot - INFO - Prices list parsed: ['369']
+2025-10-06 15:00:08,917 - TradingBot - INFO - Alert queued: {'symbol': 'DVL', 'trigger_price': 369.0}
+2025-10-06 15:00:08,917 - TradingBot - INFO - Processing alert from queue: {'symbol': 'DVL', 'trigger_price': 369.0}
+2025-10-06 15:00:08,917 - TradingBot - INFO - Final alerts queued: [{'symbol': 'DVL', 'trigger_price': 369.0}]
+2025-10-06 15:00:08,921 - TradingBot - INFO - Alert details - Symbol: DVL, Trigger Price: 369.0
+2025-10-06 15:00:08,922 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 10:30:08] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 15:00:09,420 - TradingBot - INFO - DVL already open at broker (NetQty=20), skipping new entry
+2025-10-06 15:00:09,420 - TradingBot - WARNING - Skipping DVL, already in position
+2025-10-06 15:09:00,532 - TradingBot - INFO - Saving position book...
+2025-10-06 15:09:01,022 - TradingBot - INFO - Found 4 positions to save
+2025-10-06 15:09:01,024 - TradingBot - INFO - Position book saved with 4 records to app/2025-10-06_position.csv
+2025-10-06 15:15:02,089 - TradingBot - INFO - Market closing time detected: 15:15:02
+2025-10-06 15:15:02,090 - TradingBot - INFO - 3:15 PM detected - initiating market close procedure
+2025-10-06 15:15:02,090 - TradingBot - INFO - === STARTING MARKET CLOSE PROCEDURE ===
+2025-10-06 15:15:02,091 - TradingBot - INFO - Current time: 2025-10-06 15:15:02
+2025-10-06 15:15:02,093 - TradingBot - INFO - STEP 1: Cancelling all open orders
+2025-10-06 15:15:02,096 - TradingBot - INFO - Starting cancel all open orders procedure
+2025-10-06 15:15:02,108 - TradingBot - INFO - Fetching order book...
+2025-10-06 15:15:02,823 - TradingBot - INFO - Found 18 orders in order book
+2025-10-06 15:15:02,824 - TradingBot - INFO - Order cancellation completed: 0 orders cancelled
+2025-10-06 15:15:04,825 - TradingBot - INFO - STEP 2: Closing all positions
+2025-10-06 15:15:04,825 - TradingBot - INFO - Starting close all positions procedure
+2025-10-06 15:15:05,295 - TradingBot - INFO - Found 4 positions to check
+2025-10-06 15:15:05,296 - TradingBot - INFO - Closing long position: DVL-EQ, Qty: 20
+2025-10-06 15:15:05,296 - TradingBot - INFO - PLACE SELL ORDER - Symbol: DVL-EQ, Quantity: 20
+2025-10-06 15:15:05,296 - TradingBot - INFO - Placing SELL order: DVL-EQ, Qty: 20
+2025-10-06 15:15:05,771 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: DVL-EQ - ID: 25100600392453
+2025-10-06 15:15:05,772 - TradingBot - INFO - EXIT ORDER PLACED for DVL-EQ, waiting broker update...
+2025-10-06 15:15:08,241 - TradingBot - INFO - SUCCESS: DVL-EQ position closed fully
+2025-10-06 15:15:08,241 - TradingBot - INFO - Closing long position: PRIMESECU-EQ, Qty: 10
+2025-10-06 15:15:08,241 - TradingBot - INFO - PLACE SELL ORDER - Symbol: PRIMESECU-EQ, Quantity: 10
+2025-10-06 15:15:08,241 - TradingBot - INFO - Placing SELL order: PRIMESECU-EQ, Qty: 10
+2025-10-06 15:15:08,713 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: PRIMESECU-EQ - ID: 25100600392527
+2025-10-06 15:15:08,713 - TradingBot - INFO - EXIT ORDER PLACED for PRIMESECU-EQ, waiting broker update...
+2025-10-06 15:15:08,863 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-06 15:15:08,864 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '316', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiIwZTAzNmUxNTBjYzQzNzVkIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMjMzNDE4OWU4ODlkN2JkNCIsInR4IjoiYjU5ZDQzMmVjNjk5NTAyZCIsInByIjoxLjE1MTQ4LCJzYSI6dHJ1ZSwidGkiOjE3NTk3NDM5MDg1NTB9fQ==', 'Traceparent': '00-00000000000000002334189e889d7bd4-0e036e150cc4375d-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-0e036e150cc4375d-b59d432ec699502d-1-1.151479-1759743908550', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-06 15:15:08,865 - TradingBot - INFO - Raw request data: {"stocks":"BORANA","trigger_prices":"227","triggered_at":"3:15 pm","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-06 15:15:08,872 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'BORANA', 'trigger_prices': '227', 'triggered_at': '3:15 pm', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-06 15:15:08,875 - TradingBot - INFO - Raw symbols string: BORANA
+2025-10-06 15:15:08,881 - TradingBot - INFO - Raw prices string: 227
+2025-10-06 15:15:08,885 - TradingBot - INFO - Symbols list parsed: ['BORANA']
+2025-10-06 15:15:08,888 - TradingBot - INFO - Prices list parsed: ['227']
+2025-10-06 15:15:08,889 - TradingBot - INFO - Alert queued: {'symbol': 'BORANA', 'trigger_price': 227.0}
+2025-10-06 15:15:08,891 - TradingBot - INFO - Processing alert from queue: {'symbol': 'BORANA', 'trigger_price': 227.0}
+2025-10-06 15:15:08,892 - TradingBot - INFO - Final alerts queued: [{'symbol': 'BORANA', 'trigger_price': 227.0}]
+2025-10-06 15:15:08,893 - TradingBot - INFO - Alert details - Symbol: BORANA, Trigger Price: 227.0
+2025-10-06 15:15:08,894 - werkzeug - INFO - 127.0.0.1 - - [06/Oct/2025 10:45:08] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-06 15:15:09,351 - TradingBot - INFO - Attempting BUY order for: BORANA
+2025-10-06 15:15:09,351 - TradingBot - INFO - PLACE BUY ORDER - Stock: BORANA, Trigger Price: 227.0
+2025-10-06 15:15:09,361 - TradingBot - INFO - Placing BUY order: BORANA-EQ @ 227.0, Qty: 10
+2025-10-06 15:15:09,811 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: BORANA-EQ - ID: 25100600392543
+2025-10-06 15:15:09,811 - TradingBot - INFO - BUY ORDER SUCCESS: BORANA
+2025-10-06 15:15:09,811 - TradingBot - INFO - Starting position setup for BORANA-EQ
+2025-10-06 15:15:09,811 - TradingBot - INFO - Position setup attempt 1/3 for BORANA-EQ
+2025-10-06 15:15:09,821 - TradingBot - INFO - Fetching trade book...
+2025-10-06 15:15:10,472 - TradingBot - INFO - Found matching trade: {'stat': 'Ok', 'norenordno': '25100600392543', 'uid': 'FA123166', 'actid': 'FA123166', 'exch': 'NSE', 'prctyp': 'MKT', 'ret': 'DAY', 's_prdt_ali': 'MIS', 'prd': 'I', 'flid': '6108353', 'fltm': '06-10-2025 15:15:09', 'trantype': 'B', 'tsym': 'BORANA-EQ', 'qty': '10', 'token': '757919', 'fillshares': '10', 'flqty': '10', 'mult': '1', 'pp': '2', 'ls': '1', 'ti': '0.01', 'prc': '0.00', 'prcftr': '1.000000', 'flprc': '228.00', 'norentm': '15:15:09 06-10-2025', 'avgprc': '228.00', 'exch_tm': '06-10-2025 15:15:09', 'remarks': 'Chartink_BORANA', 'exchordid': '1000000064191285'}
+2025-10-06 15:15:10,476 - TradingBot - INFO - Extracted buy price from trade: 228.0
+2025-10-06 15:15:10,483 - TradingBot - INFO - Trade fill time: 06-10-2025 15:15:09
+2025-10-06 15:15:10,489 - TradingBot - INFO - Fetching previous candle for fill time: 2025-10-06 15:15:09+05:53
+2025-10-06 15:15:10,490 - TradingBot - INFO - Fetching previous candle for: BORANA-EQ
+2025-10-06 15:15:10,495 - TradingBot - INFO - Found token for BORANA: 757919
+2025-10-06 15:15:10,496 - TradingBot - INFO - Candle time range: 15:13:00 to 15:14:00
+2025-10-06 15:15:10,498 - TradingBot - INFO - Candle time range (UTC epoch): 1759742400 to 1759742460
+2025-10-06 15:15:10,500 - TradingBot - INFO - Calling broker API for time price series: token=757919, interval=1
+2025-10-06 15:15:10,965 - TradingBot - INFO - Candle found: BORANA-EQ - High: 220.58, Low: 220.58, Open: 220.58, Close: 220.58
+2025-10-06 15:15:10,966 - TradingBot - INFO - Calculating SL and Target levels
+2025-10-06 15:15:10,974 - TradingBot - INFO - Starting SL/Target calculation for BORANA-EQ, Buy Price: 228.0
+2025-10-06 15:15:10,974 - TradingBot - INFO - Previous candle data - High: 220.58, Low: 220.58
+2025-10-06 15:15:10,975 - TradingBot - INFO - SL/Target calculation for BORANA-EQ:
+2025-10-06 15:15:10,976 - TradingBot - INFO - Buy Price: 228.0, Prev Low: 220.58, Prev High: 220.58
+2025-10-06 15:15:10,976 - TradingBot - INFO - Candle Range: 0.00, SL: 220.53, Target: 228.0
+2025-10-06 15:15:10,977 - TradingBot - INFO - Using REWARD_RATIO: 3, SL_BUFFER: 0.05
+2025-10-06 15:15:10,978 - TradingBot - WARNING - Adjusted target below buy price for BORANA-EQ. New Target: 230.28
+2025-10-06 15:15:10,979 - TradingBot - INFO - Final levels for BORANA-EQ: Buy=228.0, SL=220.53, Target=230.28
+2025-10-06 15:15:10,980 - TradingBot - INFO - Logging candle analysis to CSV
+2025-10-06 15:15:10,983 - TradingBot - INFO - Candle analysis logged to CSV: BORANA-EQ - SL: 220.53, Target: 230.28, Type: PREV_CANDLE_LOW
+2025-10-06 15:15:10,990 - TradingBot - INFO - Writing position to state file: app/2025-10-06_positions_state.csv
+2025-10-06 15:15:10,995 - TradingBot - INFO - POSITION SETUP COMPLETE: BORANA-EQ
+2025-10-06 15:15:10,995 - TradingBot - INFO - Final Position - Buy: 228.0, SL: 220.53, Target: 230.28
+2025-10-06 15:15:10,997 - TradingBot - INFO - POSITION SETUP COMPLETE: BORANA
+2025-10-06 15:15:10,999 - TradingBot - INFO - Alert processing completed for: BORANA
+2025-10-06 15:15:11,191 - TradingBot - INFO - SUCCESS: PRIMESECU-EQ position closed fully
+2025-10-06 15:15:11,192 - TradingBot - INFO - STEP 3: Waiting for positions to close
+2025-10-06 15:15:11,194 - TradingBot - INFO - Position close check attempt 1/30
+2025-10-06 15:15:11,200 - TradingBot - INFO - Checking if all positions are closed
+2025-10-06 15:15:11,665 - TradingBot - INFO - Checking 5 positions
+2025-10-06 15:15:11,665 - TradingBot - INFO - Position still open: BORANA-EQ - NetQty: 10
+2025-10-06 15:15:11,674 - TradingBot - INFO - Waiting for positions to close... (1/30)
+2025-10-06 15:15:21,676 - TradingBot - INFO - Position close check attempt 2/30
+2025-10-06 15:15:21,676 - TradingBot - INFO - Checking if all positions are closed
+2025-10-06 15:15:22,179 - TradingBot - INFO - Checking 5 positions
+2025-10-06 15:15:22,179 - TradingBot - INFO - Position still open: BORANA-EQ - NetQty: 10
+2025-10-06 15:15:22,182 - TradingBot - INFO - Waiting for positions to close... (2/30)
+2025-10-06 15:15:32,191 - TradingBot - INFO - Position close check attempt 3/30
+2025-10-06 15:15:32,191 - TradingBot - INFO - Checking if all positions are closed
+2025-10-06 15:15:32,642 - TradingBot - INFO - Checking 5 positions
+2025-10-06 15:15:32,642 - TradingBot - INFO - Position still open: BORANA-EQ - NetQty: 10
+2025-10-06 15:15:32,650 - TradingBot - INFO - Waiting for positions to close... (3/30)
+2025-10-06 15:15:42,656 - TradingBot - INFO - Position close check attempt 4/30
+2025-10-06 15:15:42,656 - TradingBot - INFO - Checking if all positions are closed
+2025-10-06 15:15:43,150 - TradingBot - INFO - Checking 5 positions
+2025-10-06 15:15:43,150 - TradingBot - INFO - Position still open: BORANA-EQ - NetQty: 10
+2025-10-06 15:15:43,150 - TradingBot - INFO - Waiting for positions to close... (4/30)
+2025-10-06 15:15:53,161 - TradingBot - INFO - Position close check attempt 5/30
+2025-10-06 15:15:53,162 - TradingBot - INFO - Checking if all positions are closed
+2025-10-06 15:15:53,800 - TradingBot - INFO - Checking 5 positions
+2025-10-06 15:15:53,800 - TradingBot - INFO - Position still open: BORANA-EQ - NetQty: 10
+2025-10-06 15:15:53,816 - TradingBot - INFO - Waiting for positions to close... (5/30)
+2025-10-06 15:16:03,820 - TradingBot - INFO - Position close check attempt 6/30
+2025-10-06 15:16:03,820 - TradingBot - INFO - Checking if all positions are closed
+2025-10-06 15:16:04,299 - TradingBot - INFO - Checking 5 positions
+2025-10-06 15:16:04,300 - TradingBot - INFO - Position still open: BORANA-EQ - NetQty: 10
+2025-10-06 15:16:04,313 - TradingBot - INFO - Waiting for positions to close... (6/30)
+2025-10-06 15:16:14,315 - TradingBot - INFO - Position close check attempt 7/30
+2025-10-06 15:16:14,315 - TradingBot - INFO - Checking if all positions are closed
+2025-10-06 15:16:14,845 - TradingBot - INFO - Checking 5 positions
+2025-10-06 15:16:14,847 - TradingBot - INFO - Position still open: BORANA-EQ - NetQty: 10
+2025-10-06 15:16:14,849 - TradingBot - INFO - Waiting for positions to close... (7/30)
+2025-10-06 15:16:24,855 - TradingBot - INFO - Position close check attempt 8/30
+2025-10-06 15:16:24,855 - TradingBot - INFO - Checking if all positions are closed
+2025-10-06 15:16:25,378 - TradingBot - INFO - Checking 5 positions
+2025-10-06 15:16:25,429 - TradingBot - INFO - Position still open: BORANA-EQ - NetQty: 10
+2025-10-06 15:16:25,440 - TradingBot - INFO - Waiting for positions to close... (8/30)
+2025-10-06 15:16:35,443 - TradingBot - INFO - Position close check attempt 9/30
+2025-10-06 15:16:35,443 - TradingBot - INFO - Checking if all positions are closed
+2025-10-06 15:16:35,980 - TradingBot - INFO - Checking 5 positions
+2025-10-06 15:16:35,982 - TradingBot - INFO - Position still open: BORANA-EQ - NetQty: 10
+2025-10-06 15:16:35,990 - TradingBot - INFO - Waiting for positions to close... (9/30)
+2025-10-06 15:16:45,991 - TradingBot - INFO - Position close check attempt 10/30
+2025-10-06 15:16:45,991 - TradingBot - INFO - Checking if all positions are closed
+2025-10-06 15:16:46,458 - TradingBot - INFO - Checking 5 positions
+2025-10-06 15:16:46,458 - TradingBot - INFO - Position still open: BORANA-EQ - NetQty: 10
+2025-10-06 15:16:46,461 - TradingBot - INFO - Waiting for positions to close... (10/30)
+2025-10-06 15:16:56,466 - TradingBot - INFO - Position close check attempt 11/30
+2025-10-06 15:16:56,466 - TradingBot - INFO - Checking if all positions are closed
+2025-10-06 15:16:56,990 - TradingBot - INFO - Checking 5 positions
+2025-10-06 15:16:56,991 - TradingBot - INFO - SUCCESS: All positions are closed
+2025-10-06 15:16:56,994 - TradingBot - INFO - SUCCESS: All positions closed
+2025-10-06 15:16:56,999 - TradingBot - INFO - STEP 4: Saving final position book
+2025-10-06 15:16:57,999 - TradingBot - INFO - Saving position book...
+2025-10-06 15:16:57,462 - TradingBot - INFO - Found 5 positions to save
+2025-10-06 15:16:57,464 - TradingBot - INFO - Position book saved with 5 records to app/2025-10-06_position.csv
+2025-10-06 15:16:57,465 - TradingBot - INFO - Shutdown flag set to True
+2025-10-06 15:16:57,466 - TradingBot - INFO - === MARKET CLOSE PROCEDURE COMPLETED ===
+2025-10-06 15:16:57,471 - TradingBot - INFO - Shutting down Flask application...
+2025-10-06 22:30:27,480 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-06 22:30:27,496 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-06 22:30:27,546 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-06 22:30:28,130 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-06 22:30:28,146 - TradingBot - INFO - Application starting from main entry point
+2025-10-06 22:30:28,146 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-06 22:30:28,146 - TradingBot - INFO - Start time: 2025-10-06 22:30:28
+2025-10-06 22:30:28,146 - TradingBot - INFO - Starting broker login process
+2025-10-06 22:30:28,146 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-06 22:30:28,146 - TradingBot - INFO - Generating 2FA token
+2025-10-06 22:30:28,146 - TradingBot - INFO - Attempting broker login...
+2025-10-06 22:30:50,915 - TradingBot - INFO - Broker login successful
+2025-10-06 22:30:50,915 - TradingBot - INFO - Starting alert processor thread...
+2025-10-06 22:30:50,915 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-06 22:30:50,915 - TradingBot - INFO - Alert processor thread started
+2025-10-06 22:30:50,915 - TradingBot - INFO - Starting position monitor thread...
+2025-10-06 22:30:50,915 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-06 22:30:50,915 - TradingBot - INFO - Position monitor thread started
+2025-10-06 22:30:50,930 - TradingBot - INFO - Starting Flask web server...
+2025-10-06 22:30:51,106 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.229:5000
+2025-10-06 22:30:51,106 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-06 22:30:51,680 - TradingBot - INFO - User manually exited position: PRIMESECU-EQ, NetQty: 0
+2025-10-06 22:30:52,280 - TradingBot - INFO - USER EXIT recorded: PRIMESECU-EQ @ 286.55 (NetQty=0)
+2025-10-06 22:30:52,812 - TradingBot - INFO - User manually exited position: BORANA-EQ, NetQty: 0
+2025-10-06 22:30:53,346 - TradingBot - INFO - USER EXIT recorded: BORANA-EQ @ 229.99 (NetQty=0)
+2025-10-06 22:30:53,346 - TradingBot - INFO - Saving updated positions to file
+2025-10-06 22:30:53,362 - TradingBot - INFO - Position book updated successfully

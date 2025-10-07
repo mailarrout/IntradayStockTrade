@@ -1,0 +1,364 @@
+2025-10-07 09:14:54,293 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-07 09:14:54,294 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-07 09:14:54,357 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-07 09:14:55,020 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-07 09:14:55,029 - TradingBot - INFO - Application starting from main entry point
+2025-10-07 09:14:55,029 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-07 09:14:55,029 - TradingBot - INFO - Start time: 2025-10-07 09:14:55
+2025-10-07 09:14:55,079 - TradingBot - INFO - Starting broker login process
+2025-10-07 09:14:55,079 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-07 09:14:55,095 - TradingBot - INFO - Generating 2FA token
+2025-10-07 09:14:55,095 - TradingBot - INFO - Attempting broker login...
+2025-10-07 09:14:55,561 - TradingBot - INFO - Broker login successful
+2025-10-07 09:14:55,561 - TradingBot - INFO - Created new positions file: app/2025-10-07_positions_state.csv
+2025-10-07 09:14:55,561 - TradingBot - INFO - Starting alert processor thread...
+2025-10-07 09:14:55,561 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-07 09:14:55,561 - TradingBot - INFO - Alert processor thread started
+2025-10-07 09:14:55,561 - TradingBot - INFO - Starting position monitor thread...
+2025-10-07 09:14:55,561 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-07 09:14:55,561 - TradingBot - INFO - Position monitor thread started
+2025-10-07 09:14:55,561 - TradingBot - INFO - Starting Flask web server...
+2025-10-07 09:14:55,729 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.230:5000
+2025-10-07 09:14:55,729 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-07 09:14:55,745 - werkzeug - INFO - 127.0.0.1 - - [07/Oct/2025 04:44:55] "GET /health HTTP/1.1" 200 -
+2025-10-07 09:25:09,907 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-07 09:25:09,908 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '337', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI0ZThjYmRkMGQzNWMyOWNkIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwNDA5ZTM1MzlkMDcwNGUwYiIsInR4IjoiMTk4OTMwZTQyYmVkY2RhOSIsInByIjoxLjI2NjkzLCJzYSI6dHJ1ZSwidGkiOjE3NTk4MDkzMDg3OTF9fQ==', 'Traceparent': '00-0000000000000000409e3539d0704e0b-4e8cbdd0d35c29cd-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-4e8cbdd0d35c29cd-198930e42bedcda9-1-1.266931-1759809308792', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-07 09:25:09,909 - TradingBot - INFO - Raw request data: {"stocks":"IDFNIFTYET,MANGLMCEM","trigger_prices":"279.38,765","triggered_at":"9:25 am","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-07 09:25:09,909 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'IDFNIFTYET,MANGLMCEM', 'trigger_prices': '279.38,765', 'triggered_at': '9:25 am', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-07 09:25:09,909 - TradingBot - INFO - Raw symbols string: IDFNIFTYET,MANGLMCEM
+2025-10-07 09:25:09,909 - TradingBot - INFO - Raw prices string: 279.38,765
+2025-10-07 09:25:09,909 - TradingBot - INFO - Symbols list parsed: ['IDFNIFTYET', 'MANGLMCEM']
+2025-10-07 09:25:09,909 - TradingBot - INFO - Prices list parsed: ['279.38', '765']
+2025-10-07 09:25:09,909 - TradingBot - INFO - Alert queued: {'symbol': 'IDFNIFTYET', 'trigger_price': 279.38}
+2025-10-07 09:25:09,909 - TradingBot - INFO - Processing alert from queue: {'symbol': 'IDFNIFTYET', 'trigger_price': 279.38}
+2025-10-07 09:25:09,912 - TradingBot - INFO - Alert queued: {'symbol': 'MANGLMCEM', 'trigger_price': 765.0}
+2025-10-07 09:25:09,913 - TradingBot - INFO - Alert details - Symbol: IDFNIFTYET, Trigger Price: 279.38
+2025-10-07 09:25:09,913 - TradingBot - INFO - Final alerts queued: [{'symbol': 'IDFNIFTYET', 'trigger_price': 279.38}, {'symbol': 'MANGLMCEM', 'trigger_price': 765.0}]
+2025-10-07 09:25:09,916 - werkzeug - INFO - 127.0.0.1 - - [07/Oct/2025 04:55:09] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-07 09:25:10,345 - TradingBot - INFO - Attempting BUY order for: IDFNIFTYET
+2025-10-07 09:25:10,345 - TradingBot - INFO - PLACE ORDER - Symbol: IDFNIFTYET, Quantity: 10, Type: BUY
+2025-10-07 09:25:10,361 - TradingBot - INFO - Placing BUY order: IDFNIFTYET-EQ @ MKT, Qty: 10
+2025-10-07 09:25:10,797 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: IDFNIFTYET-EQ - ID: 25100700048096
+2025-10-07 09:25:10,797 - TradingBot - INFO - BUY ORDER SUCCESS: IDFNIFTYET
+2025-10-07 09:25:10,797 - TradingBot - INFO - Starting position setup for 25100700048096
+2025-10-07 09:25:10,797 - TradingBot - INFO - Position setup attempt 1/3 for 25100700048096
+2025-10-07 09:25:10,797 - TradingBot - INFO - Fetching trade book...
+2025-10-07 09:25:11,248 - TradingBot - WARNING - Attempt 1: Trade not found for 25100700048096
+2025-10-07 09:25:13,254 - TradingBot - INFO - Position setup attempt 2/3 for 25100700048096
+2025-10-07 09:25:13,254 - TradingBot - INFO - Fetching trade book...
+2025-10-07 09:25:13,714 - TradingBot - WARNING - Attempt 2: Trade not found for 25100700048096
+2025-10-07 09:25:15,716 - TradingBot - INFO - Position setup attempt 3/3 for 25100700048096
+2025-10-07 09:25:15,716 - TradingBot - INFO - Fetching trade book...
+2025-10-07 09:25:16,157 - TradingBot - WARNING - Attempt 3: Trade not found for 25100700048096
+2025-10-07 09:25:18,158 - TradingBot - ERROR - FAILED to setup position after 3 attempts: 25100700048096
+2025-10-07 09:25:18,158 - TradingBot - ERROR - POSITION SETUP FAILED: IDFNIFTYET
+2025-10-07 09:25:18,164 - TradingBot - INFO - Alert processing completed for: IDFNIFTYET
+2025-10-07 09:25:18,165 - TradingBot - INFO - Processing alert from queue: {'symbol': 'MANGLMCEM', 'trigger_price': 765.0}
+2025-10-07 09:25:18,166 - TradingBot - INFO - Alert details - Symbol: MANGLMCEM, Trigger Price: 765.0
+2025-10-07 09:25:18,627 - TradingBot - INFO - Attempting BUY order for: MANGLMCEM
+2025-10-07 09:25:18,627 - TradingBot - INFO - PLACE ORDER - Symbol: MANGLMCEM, Quantity: 10, Type: BUY
+2025-10-07 09:25:18,629 - TradingBot - INFO - Placing BUY order: MANGLMCEM-EQ @ MKT, Qty: 10
+2025-10-07 09:25:19,080 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: MANGLMCEM-EQ - ID: 25100700048458
+2025-10-07 09:25:19,080 - TradingBot - INFO - BUY ORDER SUCCESS: MANGLMCEM
+2025-10-07 09:25:19,082 - TradingBot - INFO - Starting position setup for 25100700048458
+2025-10-07 09:25:19,083 - TradingBot - INFO - Position setup attempt 1/3 for 25100700048458
+2025-10-07 09:25:19,084 - TradingBot - INFO - Fetching trade book...
+2025-10-07 09:25:19,546 - TradingBot - WARNING - Attempt 1: Trade not found for 25100700048458
+2025-10-07 09:25:21,548 - TradingBot - INFO - Position setup attempt 2/3 for 25100700048458
+2025-10-07 09:25:21,548 - TradingBot - INFO - Fetching trade book...
+2025-10-07 09:25:22,013 - TradingBot - WARNING - Attempt 2: Trade not found for 25100700048458
+2025-10-07 09:25:24,015 - TradingBot - INFO - Position setup attempt 3/3 for 25100700048458
+2025-10-07 09:25:24,015 - TradingBot - INFO - Fetching trade book...
+2025-10-07 09:25:24,450 - TradingBot - WARNING - Attempt 3: Trade not found for 25100700048458
+2025-10-07 09:25:26,454 - TradingBot - ERROR - FAILED to setup position after 3 attempts: 25100700048458
+2025-10-07 09:25:26,454 - TradingBot - ERROR - POSITION SETUP FAILED: MANGLMCEM
+2025-10-07 09:25:26,454 - TradingBot - INFO - Alert processing completed for: MANGLMCEM
+2025-10-07 09:35:46,936 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-07 09:35:46,936 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-07 09:35:46,952 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-07 09:35:47,567 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-07 09:35:47,567 - TradingBot - INFO - Application starting from main entry point
+2025-10-07 09:35:47,567 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-07 09:35:47,567 - TradingBot - INFO - Start time: 2025-10-07 09:35:47
+2025-10-07 09:35:47,567 - TradingBot - INFO - Starting broker login process
+2025-10-07 09:35:47,567 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-07 09:35:47,583 - TradingBot - INFO - Generating 2FA token
+2025-10-07 09:35:47,583 - TradingBot - INFO - Attempting broker login...
+2025-10-07 09:35:48,023 - TradingBot - INFO - Broker login successful
+2025-10-07 09:35:48,023 - TradingBot - INFO - Starting alert processor thread...
+2025-10-07 09:35:48,023 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-07 09:35:48,023 - TradingBot - INFO - Alert processor thread started
+2025-10-07 09:35:48,023 - TradingBot - INFO - Starting position monitor thread...
+2025-10-07 09:35:48,023 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-07 09:35:48,023 - TradingBot - INFO - Position monitor thread started
+2025-10-07 09:35:48,023 - TradingBot - INFO - Starting Flask web server...
+2025-10-07 09:35:48,055 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.230:5000
+2025-10-07 09:35:48,055 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-07 09:35:54,224 - werkzeug - INFO - 127.0.0.1 - - [07/Oct/2025 05:05:54] "GET /health HTTP/1.1" 200 -
+2025-10-07 10:25:09,304 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-07 10:25:09,305 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '324', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiJhNmNhYTNjYjY2NmVhMDI5IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwNDA5ZTM1MzlkMDcwNGUwYiIsInR4IjoiYTMzNjkzNjY4YjMxMmI1NSIsInByIjoxLjI2NjkzLCJzYSI6dHJ1ZSwidGkiOjE3NTk4MTI5MDgwNjh9fQ==', 'Traceparent': '00-0000000000000000409e3539d0704e0b-a6caa3cb666ea029-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-a6caa3cb666ea029-a33693668b312b55-1-1.266931-1759812908068', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-07 10:25:09,305 - TradingBot - INFO - Raw request data: {"stocks":"STARHEALTH","trigger_prices":"460.55","triggered_at":"10:25 am","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-07 10:25:09,305 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'STARHEALTH', 'trigger_prices': '460.55', 'triggered_at': '10:25 am', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-07 10:25:09,305 - TradingBot - INFO - Raw symbols string: STARHEALTH
+2025-10-07 10:25:09,308 - TradingBot - INFO - Raw prices string: 460.55
+2025-10-07 10:25:09,309 - TradingBot - INFO - Symbols list parsed: ['STARHEALTH']
+2025-10-07 10:25:09,309 - TradingBot - INFO - Prices list parsed: ['460.55']
+2025-10-07 10:25:09,309 - TradingBot - INFO - Alert queued: {'symbol': 'STARHEALTH', 'trigger_price': 460.55}
+2025-10-07 10:25:09,309 - TradingBot - INFO - Processing alert from queue: {'symbol': 'STARHEALTH', 'trigger_price': 460.55}
+2025-10-07 10:25:09,309 - TradingBot - INFO - Final alerts queued: [{'symbol': 'STARHEALTH', 'trigger_price': 460.55}]
+2025-10-07 10:25:09,309 - TradingBot - INFO - Alert details - Symbol: STARHEALTH, Trigger Price: 460.55
+2025-10-07 10:25:09,309 - werkzeug - INFO - 127.0.0.1 - - [07/Oct/2025 05:55:09] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-07 10:25:09,783 - TradingBot - INFO - Attempting BUY order for: STARHEALTH
+2025-10-07 10:25:09,783 - TradingBot - INFO - PLACE ORDER - Symbol: STARHEALTH, Quantity: 10, Type: BUY
+2025-10-07 10:25:09,785 - TradingBot - INFO - Placing BUY order: STARHEALTH-EQ @ MKT, Qty: 10
+2025-10-07 10:25:10,226 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: STARHEALTH-EQ - ID: 25100700169840
+2025-10-07 10:25:10,226 - TradingBot - INFO - BUY ORDER SUCCESS: STARHEALTH
+2025-10-07 10:25:10,226 - TradingBot - INFO - Starting position setup for 25100700169840
+2025-10-07 10:25:10,226 - TradingBot - INFO - Position setup attempt 1/3 for 25100700169840
+2025-10-07 10:25:10,226 - TradingBot - INFO - Fetching trade book...
+2025-10-07 10:25:10,678 - TradingBot - WARNING - Attempt 1: Trade not found for 25100700169840
+2025-10-07 10:25:12,682 - TradingBot - INFO - Position setup attempt 2/3 for 25100700169840
+2025-10-07 10:25:12,682 - TradingBot - INFO - Fetching trade book...
+2025-10-07 10:25:13,127 - TradingBot - WARNING - Attempt 2: Trade not found for 25100700169840
+2025-10-07 10:25:15,132 - TradingBot - INFO - Position setup attempt 3/3 for 25100700169840
+2025-10-07 10:25:15,132 - TradingBot - INFO - Fetching trade book...
+2025-10-07 10:25:15,572 - TradingBot - WARNING - Attempt 3: Trade not found for 25100700169840
+2025-10-07 10:25:17,580 - TradingBot - ERROR - FAILED to setup position after 3 attempts: 25100700169840
+2025-10-07 10:25:17,580 - TradingBot - ERROR - POSITION SETUP FAILED: STARHEALTH
+2025-10-07 10:25:17,582 - TradingBot - INFO - Alert processing completed for: STARHEALTH
+2025-10-07 10:30:09,939 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-07 10:30:09,939 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '320', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiJjNzQ3MmE5YmNlMTUxYmJlIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwNDA5ZTM1MzlkMDcwNGUwYiIsInR4IjoiZTQzMmExYTM4OTAwMDM4MCIsInByIjoxLjI2NjkzLCJzYSI6dHJ1ZSwidGkiOjE3NTk4MTMyMDg2NTl9fQ==', 'Traceparent': '00-0000000000000000409e3539d0704e0b-c7472a9bce151bbe-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-c7472a9bce151bbe-e432a1a389000380-1-1.266931-1759813208659', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-07 10:30:09,939 - TradingBot - INFO - Raw request data: {"stocks":"MAHLOG","trigger_prices":"356.25","triggered_at":"10:30 am","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-07 10:30:09,939 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'MAHLOG', 'trigger_prices': '356.25', 'triggered_at': '10:30 am', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-07 10:30:09,939 - TradingBot - INFO - Raw symbols string: MAHLOG
+2025-10-07 10:30:09,939 - TradingBot - INFO - Raw prices string: 356.25
+2025-10-07 10:30:09,939 - TradingBot - INFO - Symbols list parsed: ['MAHLOG']
+2025-10-07 10:30:09,939 - TradingBot - INFO - Prices list parsed: ['356.25']
+2025-10-07 10:30:09,939 - TradingBot - INFO - Alert queued: {'symbol': 'MAHLOG', 'trigger_price': 356.25}
+2025-10-07 10:30:09,939 - TradingBot - INFO - Processing alert from queue: {'symbol': 'MAHLOG', 'trigger_price': 356.25}
+2025-10-07 10:30:09,947 - TradingBot - INFO - Final alerts queued: [{'symbol': 'MAHLOG', 'trigger_price': 356.25}]
+2025-10-07 10:30:09,947 - TradingBot - INFO - Alert details - Symbol: MAHLOG, Trigger Price: 356.25
+2025-10-07 10:30:09,947 - werkzeug - INFO - 127.0.0.1 - - [07/Oct/2025 06:00:09] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-07 10:30:10,409 - TradingBot - INFO - Attempting BUY order for: MAHLOG
+2025-10-07 10:30:10,409 - TradingBot - INFO - PLACE ORDER - Symbol: MAHLOG, Quantity: 10, Type: BUY
+2025-10-07 10:30:10,409 - TradingBot - INFO - Placing BUY order: MAHLOG-EQ @ MKT, Qty: 10
+2025-10-07 10:30:10,859 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: MAHLOG-EQ - ID: 25100700176973
+2025-10-07 10:30:10,859 - TradingBot - INFO - BUY ORDER SUCCESS: MAHLOG
+2025-10-07 10:30:10,859 - TradingBot - INFO - Starting position setup for 25100700176973
+2025-10-07 10:30:10,859 - TradingBot - INFO - Position setup attempt 1/3 for 25100700176973
+2025-10-07 10:30:10,859 - TradingBot - INFO - Fetching trade book...
+2025-10-07 10:30:11,299 - TradingBot - WARNING - Attempt 1: Trade not found for 25100700176973
+2025-10-07 10:30:13,305 - TradingBot - INFO - Position setup attempt 2/3 for 25100700176973
+2025-10-07 10:30:13,305 - TradingBot - INFO - Fetching trade book...
+2025-10-07 10:30:13,755 - TradingBot - WARNING - Attempt 2: Trade not found for 25100700176973
+2025-10-07 10:30:15,760 - TradingBot - INFO - Position setup attempt 3/3 for 25100700176973
+2025-10-07 10:30:15,760 - TradingBot - INFO - Fetching trade book...
+2025-10-07 10:30:16,201 - TradingBot - WARNING - Attempt 3: Trade not found for 25100700176973
+2025-10-07 10:30:18,209 - TradingBot - ERROR - FAILED to setup position after 3 attempts: 25100700176973
+2025-10-07 10:30:18,209 - TradingBot - ERROR - POSITION SETUP FAILED: MAHLOG
+2025-10-07 10:30:18,211 - TradingBot - INFO - Alert processing completed for: MAHLOG
+2025-10-07 10:45:00,023 - TradingBot - INFO - Saving position book...
+2025-10-07 10:45:00,486 - TradingBot - INFO - Found 4 positions to save
+2025-10-07 10:45:00,486 - TradingBot - INFO - Position book saved with 4 records to app/2025-10-07_position.csv
+2025-10-07 10:46:00,515 - TradingBot - INFO - Saving position book...
+2025-10-07 10:46:00,978 - TradingBot - INFO - Found 4 positions to save
+2025-10-07 10:46:00,986 - TradingBot - INFO - Position book saved with 4 records to app/2025-10-07_position.csv
+2025-10-07 11:30:09,572 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-07 11:30:09,573 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '318', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI5OGU4NjU5NDVjMzdlYzUzIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwNDA5ZTM1MzlkMDcwNGUwYiIsInR4IjoiOGI1ZWNkM2NjNjY1ODg1YiIsInByIjoxLjI2NjkzLCJzYSI6dHJ1ZSwidGkiOjE3NTk4MTY4MDgzNzJ9fQ==', 'Traceparent': '00-0000000000000000409e3539d0704e0b-98e865945c37ec53-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-98e865945c37ec53-8b5ecd3cc665885b-1-1.266931-1759816808372', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-07 11:30:09,573 - TradingBot - INFO - Raw request data: {"stocks":"SBFC","trigger_prices":"112.76","triggered_at":"11:30 am","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-07 11:30:09,573 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'SBFC', 'trigger_prices': '112.76', 'triggered_at': '11:30 am', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-07 11:30:09,573 - TradingBot - INFO - Raw symbols string: SBFC
+2025-10-07 11:30:09,580 - TradingBot - INFO - Raw prices string: 112.76
+2025-10-07 11:30:09,581 - TradingBot - INFO - Symbols list parsed: ['SBFC']
+2025-10-07 11:30:09,585 - TradingBot - INFO - Prices list parsed: ['112.76']
+2025-10-07 11:30:09,590 - TradingBot - INFO - Alert queued: {'symbol': 'SBFC', 'trigger_price': 112.76}
+2025-10-07 11:30:09,591 - TradingBot - INFO - Processing alert from queue: {'symbol': 'SBFC', 'trigger_price': 112.76}
+2025-10-07 11:30:09,591 - TradingBot - INFO - Final alerts queued: [{'symbol': 'SBFC', 'trigger_price': 112.76}]
+2025-10-07 11:30:09,597 - werkzeug - INFO - 127.0.0.1 - - [07/Oct/2025 07:00:09] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-07 11:30:09,598 - TradingBot - INFO - Alert details - Symbol: SBFC, Trigger Price: 112.76
+2025-10-07 11:30:10,133 - TradingBot - INFO - Attempting BUY order for: SBFC
+2025-10-07 11:30:10,133 - TradingBot - INFO - PLACE ORDER - Symbol: SBFC, Quantity: 10, Type: BUY
+2025-10-07 11:30:10,133 - TradingBot - INFO - Placing BUY order: SBFC-EQ @ MKT, Qty: 10
+2025-10-07 11:30:10,577 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: SBFC-EQ - ID: 25100700281580
+2025-10-07 11:30:10,577 - TradingBot - INFO - BUY ORDER SUCCESS: SBFC
+2025-10-07 11:30:10,579 - TradingBot - INFO - Starting position setup for 25100700281580
+2025-10-07 11:30:10,582 - TradingBot - INFO - Position setup attempt 1/3 for 25100700281580
+2025-10-07 11:30:10,583 - TradingBot - INFO - Fetching trade book...
+2025-10-07 11:30:11,041 - TradingBot - WARNING - Attempt 1: Trade not found for 25100700281580
+2025-10-07 11:30:12,400 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-07 11:30:12,401 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '342', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI5OTQyMmM0MmNiNmExNGIzIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwNDA5ZTM1MzlkMDcwNGUwYiIsInR4IjoiYjlkY2UyZGJjZDhkZDE5OSIsInByIjoxLjI2NjkzLCJzYSI6dHJ1ZSwidGkiOjE3NTk4MTY4MTEyMDl9fQ==', 'Traceparent': '00-0000000000000000409e3539d0704e0b-99422c42cb6a14b3-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-99422c42cb6a14b3-b9dce2dbcd8dd199-1-1.266931-1759816811209', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-07 11:30:12,402 - TradingBot - INFO - Raw request data: {"stocks":"SBFC","trigger_prices":"112.76","triggered_at":"11:30 am","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-07 11:30:12,403 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'SBFC', 'trigger_prices': '112.76', 'triggered_at': '11:30 am', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-07 11:30:12,404 - TradingBot - INFO - Raw symbols string: SBFC
+2025-10-07 11:30:12,405 - TradingBot - INFO - Raw prices string: 112.76
+2025-10-07 11:30:12,406 - TradingBot - INFO - Symbols list parsed: ['SBFC']
+2025-10-07 11:30:12,407 - TradingBot - INFO - Prices list parsed: ['112.76']
+2025-10-07 11:30:12,408 - TradingBot - INFO - Alert queued: {'symbol': 'SBFC', 'trigger_price': 112.76}
+2025-10-07 11:30:12,409 - TradingBot - INFO - Final alerts queued: [{'symbol': 'SBFC', 'trigger_price': 112.76}]
+2025-10-07 11:30:12,414 - werkzeug - INFO - 127.0.0.1 - - [07/Oct/2025 07:00:12] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-07 11:30:13,046 - TradingBot - INFO - Position setup attempt 2/3 for 25100700281580
+2025-10-07 11:30:13,049 - TradingBot - INFO - Fetching trade book...
+2025-10-07 11:30:13,502 - TradingBot - WARNING - Attempt 2: Trade not found for 25100700281580
+2025-10-07 11:30:15,510 - TradingBot - INFO - Position setup attempt 3/3 for 25100700281580
+2025-10-07 11:30:15,513 - TradingBot - INFO - Fetching trade book...
+2025-10-07 11:30:15,976 - TradingBot - WARNING - Attempt 3: Trade not found for 25100700281580
+2025-10-07 11:30:17,984 - TradingBot - ERROR - FAILED to setup position after 3 attempts: 25100700281580
+2025-10-07 11:30:17,985 - TradingBot - ERROR - POSITION SETUP FAILED: SBFC
+2025-10-07 11:30:17,989 - TradingBot - INFO - Alert processing completed for: SBFC
+2025-10-07 11:30:17,991 - TradingBot - INFO - Processing alert from queue: {'symbol': 'SBFC', 'trigger_price': 112.76}
+2025-10-07 11:30:17,991 - TradingBot - INFO - Alert details - Symbol: SBFC, Trigger Price: 112.76
+2025-10-07 11:30:18,452 - TradingBot - INFO - SBFC already open at broker (NetQty=10), skipping new entry
+2025-10-07 11:30:18,452 - TradingBot - WARNING - Skipping SBFC, already in position
+2025-10-07 11:36:09,379 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-07 11:36:09,380 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '341', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiIwOTViZDJjNTI1NDlhNDAyIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwNDA5ZTM1MzlkMDcwNGUwYiIsInR4IjoiZTA1NTQ2MTk1MDMxYjViMSIsInByIjoxLjI2NjkzLCJzYSI6dHJ1ZSwidGkiOjE3NTk4MTcxNjgxNzd9fQ==', 'Traceparent': '00-0000000000000000409e3539d0704e0b-095bd2c52549a402-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-095bd2c52549a402-e05546195031b5b1-1-1.266931-1759817168177', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-07 11:36:09,380 - TradingBot - INFO - Raw request data: {"stocks":"SBFC","trigger_prices":"113.2","triggered_at":"11:36 am","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-07 11:36:09,380 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'SBFC', 'trigger_prices': '113.2', 'triggered_at': '11:36 am', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-07 11:36:09,380 - TradingBot - INFO - Raw symbols string: SBFC
+2025-10-07 11:36:09,380 - TradingBot - INFO - Raw prices string: 113.2
+2025-10-07 11:36:09,380 - TradingBot - INFO - Symbols list parsed: ['SBFC']
+2025-10-07 11:36:09,387 - TradingBot - INFO - Prices list parsed: ['113.2']
+2025-10-07 11:36:09,387 - TradingBot - INFO - Alert queued: {'symbol': 'SBFC', 'trigger_price': 113.2}
+2025-10-07 11:36:09,387 - TradingBot - INFO - Processing alert from queue: {'symbol': 'SBFC', 'trigger_price': 113.2}
+2025-10-07 11:36:09,387 - TradingBot - INFO - Final alerts queued: [{'symbol': 'SBFC', 'trigger_price': 113.2}]
+2025-10-07 11:36:09,387 - TradingBot - INFO - Alert details - Symbol: SBFC, Trigger Price: 113.2
+2025-10-07 11:36:09,387 - werkzeug - INFO - 127.0.0.1 - - [07/Oct/2025 07:06:09] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-07 11:36:09,843 - TradingBot - INFO - SBFC already open at broker (NetQty=10), skipping new entry
+2025-10-07 11:36:09,843 - TradingBot - WARNING - Skipping SBFC, already in position
+2025-10-07 12:03:09,783 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-07 12:03:09,783 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '342', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI3YmQ4ODZlODA3NzU0MGJkIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwNDA5ZTM1MzlkMDcwNGUwYiIsInR4IjoiMzYyYzExMDBkMGM0ZGM5NiIsInByIjoxLjI2NjkzLCJzYSI6dHJ1ZSwidGkiOjE3NTk4MTg3ODg1NTR9fQ==', 'Traceparent': '00-0000000000000000409e3539d0704e0b-7bd886e8077540bd-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-7bd886e8077540bd-362c1100d0c4dc96-1-1.266931-1759818788554', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-07 12:03:09,784 - TradingBot - INFO - Raw request data: {"stocks":"SBFC","trigger_prices":"112.55","triggered_at":"12:03 pm","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-07 12:03:09,784 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'SBFC', 'trigger_prices': '112.55', 'triggered_at': '12:03 pm', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-07 12:03:09,784 - TradingBot - INFO - Raw symbols string: SBFC
+2025-10-07 12:03:09,784 - TradingBot - INFO - Raw prices string: 112.55
+2025-10-07 12:03:09,784 - TradingBot - INFO - Symbols list parsed: ['SBFC']
+2025-10-07 12:03:09,784 - TradingBot - INFO - Prices list parsed: ['112.55']
+2025-10-07 12:03:09,792 - TradingBot - INFO - Alert queued: {'symbol': 'SBFC', 'trigger_price': 112.55}
+2025-10-07 12:03:09,792 - TradingBot - INFO - Processing alert from queue: {'symbol': 'SBFC', 'trigger_price': 112.55}
+2025-10-07 12:03:09,792 - TradingBot - INFO - Final alerts queued: [{'symbol': 'SBFC', 'trigger_price': 112.55}]
+2025-10-07 12:03:09,793 - TradingBot - INFO - Alert details - Symbol: SBFC, Trigger Price: 112.55
+2025-10-07 12:03:09,794 - werkzeug - INFO - 127.0.0.1 - - [07/Oct/2025 07:33:09] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-07 12:03:10,256 - TradingBot - INFO - SBFC already open at broker (NetQty=10), skipping new entry
+2025-10-07 12:03:10,258 - TradingBot - WARNING - Skipping SBFC, already in position
+2025-10-07 12:08:09,715 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-07 12:08:09,716 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '338', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiIwNjgxYTllODQ4YzNkY2VjIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwNDA5ZTM1MzlkMDcwNGUwYiIsInR4IjoiNWI2OTM2ZGQxNzkwMzliMSIsInByIjoxLjI2NjkzLCJzYSI6dHJ1ZSwidGkiOjE3NTk4MTkwODg0ODd9fQ==', 'Traceparent': '00-0000000000000000409e3539d0704e0b-0681a9e848c3dcec-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-0681a9e848c3dcec-5b6936dd179039b1-1-1.266931-1759819088487', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-07 12:08:09,716 - TradingBot - INFO - Raw request data: {"stocks":"OIL","trigger_prices":"423","triggered_at":"12:08 pm","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-07 12:08:09,716 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'OIL', 'trigger_prices': '423', 'triggered_at': '12:08 pm', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-07 12:08:09,716 - TradingBot - INFO - Raw symbols string: OIL
+2025-10-07 12:08:09,716 - TradingBot - INFO - Raw prices string: 423
+2025-10-07 12:08:09,716 - TradingBot - INFO - Symbols list parsed: ['OIL']
+2025-10-07 12:08:09,716 - TradingBot - INFO - Prices list parsed: ['423']
+2025-10-07 12:08:09,716 - TradingBot - INFO - Alert queued: {'symbol': 'OIL', 'trigger_price': 423.0}
+2025-10-07 12:08:09,716 - TradingBot - INFO - Processing alert from queue: {'symbol': 'OIL', 'trigger_price': 423.0}
+2025-10-07 12:08:09,716 - TradingBot - INFO - Final alerts queued: [{'symbol': 'OIL', 'trigger_price': 423.0}]
+2025-10-07 12:08:09,716 - TradingBot - INFO - Alert details - Symbol: OIL, Trigger Price: 423.0
+2025-10-07 12:08:09,716 - werkzeug - INFO - 127.0.0.1 - - [07/Oct/2025 07:38:09] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-07 12:08:10,189 - TradingBot - INFO - Attempting BUY order for: OIL
+2025-10-07 12:08:10,189 - TradingBot - INFO - PLACE ORDER - Symbol: OIL, Quantity: 10, Type: BUY
+2025-10-07 12:08:10,189 - TradingBot - INFO - Placing BUY order: OIL-EQ @ MKT, Qty: 10
+2025-10-07 12:08:10,629 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: OIL-EQ - ID: 25100700347068
+2025-10-07 12:08:10,629 - TradingBot - INFO - BUY ORDER SUCCESS: OIL
+2025-10-07 12:08:10,629 - TradingBot - INFO - Starting position setup for 25100700347068
+2025-10-07 12:08:10,629 - TradingBot - INFO - Position setup attempt 1/3 for 25100700347068
+2025-10-07 12:08:10,641 - TradingBot - INFO - Fetching trade book...
+2025-10-07 12:08:11,095 - TradingBot - WARNING - Attempt 1: Trade not found for 25100700347068
+2025-10-07 12:08:13,100 - TradingBot - INFO - Position setup attempt 2/3 for 25100700347068
+2025-10-07 12:08:13,100 - TradingBot - INFO - Fetching trade book...
+2025-10-07 12:08:13,554 - TradingBot - WARNING - Attempt 2: Trade not found for 25100700347068
+2025-10-07 12:08:15,560 - TradingBot - INFO - Position setup attempt 3/3 for 25100700347068
+2025-10-07 12:08:15,560 - TradingBot - INFO - Fetching trade book...
+2025-10-07 12:08:16,006 - TradingBot - WARNING - Attempt 3: Trade not found for 25100700347068
+2025-10-07 12:08:18,013 - TradingBot - ERROR - FAILED to setup position after 3 attempts: 25100700347068
+2025-10-07 12:08:18,013 - TradingBot - ERROR - POSITION SETUP FAILED: OIL
+2025-10-07 12:08:18,013 - TradingBot - INFO - Alert processing completed for: OIL
+2025-10-07 12:11:09,280 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-07 12:11:09,281 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '342', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI1ODgxNjQ1MTBiNTJjMGU1IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwNDA5ZTM1MzlkMDcwNGUwYiIsInR4IjoiNDk4YzViYmExMzVkZDYyNSIsInByIjoxLjI2NjkzLCJzYSI6dHJ1ZSwidGkiOjE3NTk4MTkyNjc5NDF9fQ==', 'Traceparent': '00-0000000000000000409e3539d0704e0b-588164510b52c0e5-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-588164510b52c0e5-498c5bba135dd625-1-1.266931-1759819267941', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-07 12:11:09,281 - TradingBot - INFO - Raw request data: {"stocks":"SBFC","trigger_prices":"112.56","triggered_at":"12:11 pm","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-07 12:11:09,281 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'SBFC', 'trigger_prices': '112.56', 'triggered_at': '12:11 pm', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-07 12:11:09,281 - TradingBot - INFO - Raw symbols string: SBFC
+2025-10-07 12:11:09,281 - TradingBot - INFO - Raw prices string: 112.56
+2025-10-07 12:11:09,281 - TradingBot - INFO - Symbols list parsed: ['SBFC']
+2025-10-07 12:11:09,281 - TradingBot - INFO - Prices list parsed: ['112.56']
+2025-10-07 12:11:09,281 - TradingBot - INFO - Alert queued: {'symbol': 'SBFC', 'trigger_price': 112.56}
+2025-10-07 12:11:09,281 - TradingBot - INFO - Processing alert from queue: {'symbol': 'SBFC', 'trigger_price': 112.56}
+2025-10-07 12:11:09,281 - TradingBot - INFO - Final alerts queued: [{'symbol': 'SBFC', 'trigger_price': 112.56}]
+2025-10-07 12:11:09,281 - TradingBot - INFO - Alert details - Symbol: SBFC, Trigger Price: 112.56
+2025-10-07 12:11:09,281 - werkzeug - INFO - 127.0.0.1 - - [07/Oct/2025 07:41:09] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-07 12:11:10,374 - TradingBot - INFO - SBFC already open at broker (NetQty=10), skipping new entry
+2025-10-07 12:11:10,374 - TradingBot - WARNING - Skipping SBFC, already in position
+2025-10-07 12:15:09,184 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-07 12:15:09,185 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '318', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiJkNGM1MjMxNWNjNjAzMDc4IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwNDA5ZTM1MzlkMDcwNGUwYiIsInR4IjoiYjUxMzA4OTY2OTkxODQyMSIsInByIjoxLjI2NjkzLCJzYSI6dHJ1ZSwidGkiOjE3NTk4MTk1MDc5NTB9fQ==', 'Traceparent': '00-0000000000000000409e3539d0704e0b-d4c52315cc603078-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-d4c52315cc603078-b513089669918421-1-1.266931-1759819507950', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-07 12:15:09,187 - TradingBot - INFO - Raw request data: {"stocks":"SBFC","trigger_prices":"112.66","triggered_at":"12:15 pm","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-07 12:15:09,187 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'SBFC', 'trigger_prices': '112.66', 'triggered_at': '12:15 pm', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-07 12:15:09,190 - TradingBot - INFO - Raw symbols string: SBFC
+2025-10-07 12:15:09,191 - TradingBot - INFO - Raw prices string: 112.66
+2025-10-07 12:15:09,191 - TradingBot - INFO - Symbols list parsed: ['SBFC']
+2025-10-07 12:15:09,191 - TradingBot - INFO - Prices list parsed: ['112.66']
+2025-10-07 12:15:09,191 - TradingBot - INFO - Alert queued: {'symbol': 'SBFC', 'trigger_price': 112.66}
+2025-10-07 12:15:09,191 - TradingBot - INFO - Processing alert from queue: {'symbol': 'SBFC', 'trigger_price': 112.66}
+2025-10-07 12:15:09,191 - TradingBot - INFO - Final alerts queued: [{'symbol': 'SBFC', 'trigger_price': 112.66}]
+2025-10-07 12:15:09,191 - TradingBot - INFO - Alert details - Symbol: SBFC, Trigger Price: 112.66
+2025-10-07 12:15:09,191 - werkzeug - INFO - 127.0.0.1 - - [07/Oct/2025 07:45:09] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-07 12:15:09,655 - TradingBot - INFO - SBFC already open at broker (NetQty=10), skipping new entry
+2025-10-07 12:15:09,655 - TradingBot - WARNING - Skipping SBFC, already in position
+2025-10-07 12:48:15,367 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-07 12:48:15,367 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-07 12:48:15,398 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-07 12:48:16,169 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-07 12:48:16,169 - TradingBot - INFO - Application starting from main entry point
+2025-10-07 12:48:16,169 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-07 12:48:16,169 - TradingBot - INFO - Start time: 2025-10-07 12:48:16
+2025-10-07 12:48:16,169 - TradingBot - INFO - Starting broker login process
+2025-10-07 12:48:16,169 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-07 12:48:16,169 - TradingBot - INFO - Generating 2FA token
+2025-10-07 12:48:16,169 - TradingBot - INFO - Attempting broker login...
+2025-10-07 12:48:16,636 - TradingBot - INFO - Broker login successful
+2025-10-07 12:48:16,636 - TradingBot - INFO - Starting alert processor thread...
+2025-10-07 12:48:16,636 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-07 12:48:16,636 - TradingBot - INFO - Alert processor thread started
+2025-10-07 12:48:16,636 - TradingBot - INFO - Starting position monitor thread...
+2025-10-07 12:48:16,636 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-07 12:48:16,636 - TradingBot - INFO - Position monitor thread started
+2025-10-07 12:48:16,636 - TradingBot - INFO - Starting Flask web server...
+2025-10-07 12:48:16,668 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.230:5000
+2025-10-07 12:48:16,668 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-07 12:48:22,239 - werkzeug - INFO - 127.0.0.1 - - [07/Oct/2025 08:18:22] "GET /health HTTP/1.1" 200 -
+2025-10-07 14:27:00,014 - TradingBot - INFO - Saving position book...
+2025-10-07 14:27:00,970 - TradingBot - INFO - Found 6 positions to save
+2025-10-07 14:27:00,970 - TradingBot - INFO - Position book saved with 6 records to app/2025-10-07_position.csv
+2025-10-07 14:28:00,999 - TradingBot - INFO - Saving position book...
+2025-10-07 14:28:01,705 - TradingBot - INFO - Found 6 positions to save
+2025-10-07 14:28:01,706 - TradingBot - INFO - Position book saved with 6 records to app/2025-10-07_position.csv
+2025-10-07 15:15:03,295 - TradingBot - INFO - Market closing time detected: 15:15:03
+2025-10-07 15:15:03,295 - TradingBot - INFO - 3:15 PM detected - initiating market close procedure
+2025-10-07 15:15:03,296 - TradingBot - INFO - === STARTING MARKET CLOSE PROCEDURE ===
+2025-10-07 15:15:03,298 - TradingBot - INFO - Current time: 2025-10-07 15:15:03
+2025-10-07 15:15:03,298 - TradingBot - INFO - STEP 1: Cancelling all open orders
+2025-10-07 15:15:03,298 - TradingBot - INFO - Starting cancel all open orders procedure
+2025-10-07 15:15:03,299 - TradingBot - INFO - Fetching order book...
+2025-10-07 15:15:04,530 - TradingBot - INFO - Found 12 orders in order book
+2025-10-07 15:15:04,546 - TradingBot - INFO - Order cancellation completed: 0 orders cancelled
+2025-10-07 15:15:06,550 - TradingBot - INFO - STEP 2: Closing all positions
+2025-10-07 15:15:06,550 - TradingBot - INFO - Starting close all positions procedure
+2025-10-07 15:15:07,347 - TradingBot - INFO - Found 6 positions to check
+2025-10-07 15:15:07,347 - TradingBot - INFO - STEP 3: Waiting for positions to close
+2025-10-07 15:15:07,347 - TradingBot - INFO - Position close check attempt 1/30
+2025-10-07 15:15:07,347 - TradingBot - INFO - Checking if all positions are closed
+2025-10-07 15:15:07,797 - TradingBot - INFO - Checking 6 positions
+2025-10-07 15:15:07,797 - TradingBot - INFO - SUCCESS: All positions are closed
+2025-10-07 15:15:07,797 - TradingBot - INFO - SUCCESS: All positions closed
+2025-10-07 15:15:07,797 - TradingBot - INFO - STEP 4: Saving final position book
+2025-10-07 15:15:07,797 - TradingBot - INFO - Saving position book...
+2025-10-07 15:15:08,416 - TradingBot - INFO - Found 6 positions to save
+2025-10-07 15:15:08,416 - TradingBot - INFO - Position book saved with 6 records to app/2025-10-07_position.csv
+2025-10-07 15:15:08,416 - TradingBot - INFO - Shutdown flag set to True
+2025-10-07 15:15:08,416 - TradingBot - INFO - === MARKET CLOSE PROCEDURE COMPLETED ===
+2025-10-07 15:15:08,416 - TradingBot - INFO - Shutting down Flask application...
