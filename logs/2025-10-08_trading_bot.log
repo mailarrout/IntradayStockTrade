@@ -1,0 +1,140 @@
+2025-10-08 08:57:27,349 - TradingBot - INFO - Starting symbol token mapping load
+2025-10-08 08:57:27,350 - TradingBot - INFO - NSE_symbols.txt file found, loading data
+2025-10-08 08:57:27,998 - TradingBot - INFO - Loaded 8460 rows from NSE_symbols.txt
+2025-10-08 08:57:29,538 - TradingBot - INFO - Successfully loaded 16894 symbol mappings from NSE_symbols.txt
+2025-10-08 08:57:29,706 - TradingBot - INFO - Application starting from main entry point
+2025-10-08 08:57:29,730 - TradingBot - INFO - === TRADING BOT STARTING ===
+2025-10-08 08:57:29,731 - TradingBot - INFO - Start time: 2025-10-08 08:57:29
+2025-10-08 08:57:30,014 - TradingBot - INFO - Starting broker login process
+2025-10-08 08:57:30,022 - TradingBot - INFO - Reading client info from ClientInfo.txt
+2025-10-08 08:57:30,054 - TradingBot - INFO - Generating 2FA token
+2025-10-08 08:57:30,054 - TradingBot - INFO - Attempting broker login...
+2025-10-08 08:57:30,933 - TradingBot - INFO - Broker login successful
+2025-10-08 08:57:31,151 - TradingBot - INFO - Created new positions file: app/2025-10-08_positions_state.csv
+2025-10-08 08:57:31,152 - TradingBot - INFO - Starting alert processor thread...
+2025-10-08 08:57:31,362 - TradingBot - INFO - === STARTING ALERT PROCESSOR ===
+2025-10-08 08:57:31,362 - TradingBot - INFO - Alert processor thread started
+2025-10-08 08:57:31,446 - TradingBot - INFO - Starting position monitor thread...
+2025-10-08 08:57:31,647 - TradingBot - INFO - === STARTING POSITION MONITORING ===
+2025-10-08 08:57:31,648 - TradingBot - INFO - Position monitor thread started
+2025-10-08 08:57:31,712 - TradingBot - INFO - Starting Flask web server...
+2025-10-08 08:57:35,010 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.219:5000
+2025-10-08 08:57:35,036 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-08 09:35:12,427 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-08 09:35:12,428 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '318', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiJiOGU5MjU4YTcxMjZkN2MxIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMmIwMWFkYzIzZGVjYjM1NCIsInR4IjoiNzM2Y2FjNDAxMDUyMGEwZSIsInByIjoxLjk4ODg1LCJzYSI6dHJ1ZSwidGkiOjE3NTk4OTYzMTAwMDB9fQ==', 'Traceparent': '00-00000000000000002b01adc23decb354-b8e9258a7126d7c1-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-b8e9258a7126d7c1-736cac4010520a0e-1-1.988851-1759896310000', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-08 09:35:12,429 - TradingBot - INFO - Raw request data: {"stocks":"COMSYN","trigger_prices":"156.3","triggered_at":"9:35 am","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-08 09:35:12,430 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'COMSYN', 'trigger_prices': '156.3', 'triggered_at': '9:35 am', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-08 09:35:12,431 - TradingBot - INFO - Raw symbols string: COMSYN
+2025-10-08 09:35:12,432 - TradingBot - INFO - Raw prices string: 156.3
+2025-10-08 09:35:12,432 - TradingBot - INFO - Symbols list parsed: ['COMSYN']
+2025-10-08 09:35:12,433 - TradingBot - INFO - Prices list parsed: ['156.3']
+2025-10-08 09:35:12,433 - TradingBot - INFO - Alert queued: {'symbol': 'COMSYN', 'trigger_price': 156.3}
+2025-10-08 09:35:12,434 - TradingBot - INFO - Final alerts queued: [{'symbol': 'COMSYN', 'trigger_price': 156.3}]
+2025-10-08 09:35:12,436 - werkzeug - INFO - 127.0.0.1 - - [08/Oct/2025 05:05:12] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-08 09:35:12,876 - TradingBot - INFO - PLACE ORDER - Symbol: COMSYN, Quantity: 10, Type: BUY
+2025-10-08 09:35:12,876 - TradingBot - INFO - Placing BUY order: COMSYN-EQ @ MKT, Qty: 10
+2025-10-08 09:35:13,312 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: COMSYN-EQ - ID: 25100800065270
+2025-10-08 09:35:13,312 - TradingBot - INFO - Starting position setup for 25100800065270
+2025-10-08 09:35:20,637 - TradingBot - ERROR - FAILED to setup position after 3 attempts: 25100800065270
+2025-10-08 09:35:20,638 - TradingBot - INFO - Alert processing completed for: COMSYN
+2025-10-08 11:25:00,006 - TradingBot - INFO - Saving position book...
+2025-10-08 11:25:00,430 - TradingBot - INFO - Found 1 positions to save
+2025-10-08 11:25:00,430 - TradingBot - INFO - Position book saved with 1 records to app/2025-10-08_position.csv
+2025-10-08 11:26:00,483 - TradingBot - INFO - Saving position book...
+2025-10-08 11:26:00,929 - TradingBot - INFO - Found 1 positions to save
+2025-10-08 11:26:00,931 - TradingBot - INFO - Position book saved with 1 records to app/2025-10-08_position.csv
+2025-10-08 11:27:00,988 - TradingBot - INFO - Saving position book...
+2025-10-08 11:27:01,450 - TradingBot - INFO - Found 1 positions to save
+2025-10-08 11:27:01,466 - TradingBot - INFO - Position book saved with 1 records to app/2025-10-08_position.csv
+2025-10-08 11:45:08,897 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-08 11:45:08,897 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '322', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI5OTI3Njc4NTE5ZWJkNjM3IiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMmIwMWFkYzIzZGVjYjM1NCIsInR4IjoiYjBhY2JiNDBkMjQzMjU1NyIsInByIjoxLjk4ODg1LCJzYSI6dHJ1ZSwidGkiOjE3NTk5MDQxMDg1MTZ9fQ==', 'Traceparent': '00-00000000000000002b01adc23decb354-9927678519ebd637-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-9927678519ebd637-b0acbb40d2432557-1-1.988851-1759904108516', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-08 11:45:08,897 - TradingBot - INFO - Raw request data: {"stocks":"PARAGMILK","trigger_prices":"290.4","triggered_at":"11:45 am","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-08 11:45:08,897 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'PARAGMILK', 'trigger_prices': '290.4', 'triggered_at': '11:45 am', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-08 11:45:08,897 - TradingBot - INFO - Raw symbols string: PARAGMILK
+2025-10-08 11:45:08,913 - TradingBot - INFO - Raw prices string: 290.4
+2025-10-08 11:45:08,913 - TradingBot - INFO - Symbols list parsed: ['PARAGMILK']
+2025-10-08 11:45:08,913 - TradingBot - INFO - Prices list parsed: ['290.4']
+2025-10-08 11:45:08,913 - TradingBot - INFO - Alert queued: {'symbol': 'PARAGMILK', 'trigger_price': 290.4}
+2025-10-08 11:45:08,913 - TradingBot - INFO - Final alerts queued: [{'symbol': 'PARAGMILK', 'trigger_price': 290.4}]
+2025-10-08 11:45:08,913 - werkzeug - INFO - 127.0.0.1 - - [08/Oct/2025 07:15:08] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-08 11:45:09,379 - TradingBot - INFO - PLACE ORDER - Symbol: PARAGMILK, Quantity: 10, Type: BUY
+2025-10-08 11:45:09,379 - TradingBot - INFO - Placing BUY order: PARAGMILK-EQ @ MKT, Qty: 10
+2025-10-08 11:45:09,810 - TradingBot - INFO - BUY ORDER PLACED SUCCESS: PARAGMILK-EQ - ID: 25100800265949
+2025-10-08 11:45:09,810 - TradingBot - INFO - Starting position setup for 25100800265949
+2025-10-08 11:45:17,155 - TradingBot - ERROR - FAILED to setup position after 3 attempts: 25100800265949
+2025-10-08 11:45:17,156 - TradingBot - INFO - Alert processing completed for: PARAGMILK
+2025-10-08 11:46:00,879 - TradingBot - INFO - Saving position book...
+2025-10-08 11:46:01,729 - TradingBot - INFO - Found 2 positions to save
+2025-10-08 11:46:01,779 - TradingBot - INFO - Position book saved with 2 records to app/2025-10-08_position.csv
+2025-10-08 12:15:09,693 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-08 12:15:09,694 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '320', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiJkNTBjOGQzNzQ4OTA4MjgxIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMmIwMWFkYzIzZGVjYjM1NCIsInR4IjoiNjQxNjljOGQ4YWNhYTEwOSIsInByIjoxLjk4ODg1LCJzYSI6dHJ1ZSwidGkiOjE3NTk5MDU5MDkyMDB9fQ==', 'Traceparent': '00-00000000000000002b01adc23decb354-d50c8d3748908281-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-d50c8d3748908281-64169c8d8acaa109-1-1.988851-1759905909200', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-08 12:15:09,699 - TradingBot - INFO - Raw request data: {"stocks":"PARAGMILK","trigger_prices":"287","triggered_at":"12:15 pm","scan_name":"RSI Cross With Yesterday High Break","scan_url":"rsi-cross-with-yesterday-high-break","alert_name":"Alert for RSI Cross With Yesterday High Break","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-08 12:15:09,700 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'PARAGMILK', 'trigger_prices': '287', 'triggered_at': '12:15 pm', 'scan_name': 'RSI Cross With Yesterday High Break', 'scan_url': 'rsi-cross-with-yesterday-high-break', 'alert_name': 'Alert for RSI Cross With Yesterday High Break', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-08 12:15:09,701 - TradingBot - INFO - Raw symbols string: PARAGMILK
+2025-10-08 12:15:09,706 - TradingBot - INFO - Raw prices string: 287
+2025-10-08 12:15:09,726 - TradingBot - INFO - Symbols list parsed: ['PARAGMILK']
+2025-10-08 12:15:09,730 - TradingBot - INFO - Prices list parsed: ['287']
+2025-10-08 12:15:09,731 - TradingBot - INFO - Alert queued: {'symbol': 'PARAGMILK', 'trigger_price': 287.0}
+2025-10-08 12:15:09,736 - TradingBot - INFO - Final alerts queued: [{'symbol': 'PARAGMILK', 'trigger_price': 287.0}]
+2025-10-08 12:15:09,740 - werkzeug - INFO - 127.0.0.1 - - [08/Oct/2025 07:45:09] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-08 12:15:10,187 - TradingBot - INFO - PARAGMILK already open at broker (NetQty=10), skipping new entry
+2025-10-08 12:15:10,187 - TradingBot - WARNING - Skipping PARAGMILK, already in position
+2025-10-08 12:15:10,610 - TradingBot - INFO - === WEBHOOK REQUEST RECEIVED ===
+2025-10-08 12:15:10,611 - TradingBot - INFO - Raw request headers: {'Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'User-Agent': 'GuzzleHttp/7', 'Content-Length': '344', 'Content-Type': 'application/json', 'Newrelic': 'eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkFwcCIsImFjIjoiMTU0MDgxOCIsImFwIjoiMzc1NzIzMzk1IiwiaWQiOiI4NjAyMWUzMzhjYzg4NGFiIiwidHIiOiIwMDAwMDAwMDAwMDAwMDAwMmIwMWFkYzIzZGVjYjM1NCIsInR4IjoiODk4OTRkNDE2OGE4ZDhlMSIsInByIjoxLjk4ODg1LCJzYSI6dHJ1ZSwidGkiOjE3NTk5MDU5MTAyMDd9fQ==', 'Traceparent': '00-00000000000000002b01adc23decb354-86021e338cc884ab-01', 'Tracestate': '1540818@nr=0-0-1540818-375723395-86021e338cc884ab-89894d4168a8d8e1-1-1.988851-1759905910207', 'X-Forwarded-For': '23.106.53.213', 'X-Forwarded-Host': 'etymologic-impoliticly-cooper.ngrok-free.dev', 'X-Forwarded-Proto': 'https', 'Accept-Encoding': 'gzip'}
+2025-10-08 12:15:10,612 - TradingBot - INFO - Raw request data: {"stocks":"PARAGMILK","trigger_prices":"287","triggered_at":"12:15 pm","scan_name":"RSI Cross With Yesterday High Break One Min","scan_url":"rsi-cross-with-yesterday-high-break-one-min","alert_name":"Alert for RSI Cross With Yesterday High Break One Min","webhook_url":"https:\/\/etymologic-impoliticly-cooper.ngrok-free.dev\/chartink-webhook"}
+2025-10-08 12:15:10,613 - TradingBot - INFO - Parsed JSON payload: {'stocks': 'PARAGMILK', 'trigger_prices': '287', 'triggered_at': '12:15 pm', 'scan_name': 'RSI Cross With Yesterday High Break One Min', 'scan_url': 'rsi-cross-with-yesterday-high-break-one-min', 'alert_name': 'Alert for RSI Cross With Yesterday High Break One Min', 'webhook_url': 'https://etymologic-impoliticly-cooper.ngrok-free.dev/chartink-webhook'}
+2025-10-08 12:15:10,614 - TradingBot - INFO - Raw symbols string: PARAGMILK
+2025-10-08 12:15:10,615 - TradingBot - INFO - Raw prices string: 287
+2025-10-08 12:15:10,615 - TradingBot - INFO - Symbols list parsed: ['PARAGMILK']
+2025-10-08 12:15:10,616 - TradingBot - INFO - Prices list parsed: ['287']
+2025-10-08 12:15:10,617 - TradingBot - INFO - Alert queued: {'symbol': 'PARAGMILK', 'trigger_price': 287.0}
+2025-10-08 12:15:10,619 - TradingBot - INFO - Final alerts queued: [{'symbol': 'PARAGMILK', 'trigger_price': 287.0}]
+2025-10-08 12:15:10,620 - werkzeug - INFO - 127.0.0.1 - - [08/Oct/2025 07:45:10] "POST /chartink-webhook HTTP/1.1" 200 -
+2025-10-08 12:15:11,070 - TradingBot - INFO - PARAGMILK already open at broker (NetQty=10), skipping new entry
+2025-10-08 12:15:11,070 - TradingBot - WARNING - Skipping PARAGMILK, already in position
+2025-10-08 14:31:00,016 - TradingBot - INFO - Saving position book...
+2025-10-08 14:31:00,478 - TradingBot - INFO - Found 2 positions to save
+2025-10-08 14:31:00,497 - TradingBot - INFO - Position book saved with 2 records to app/2025-10-08_position.csv
+2025-10-08 14:32:00,521 - TradingBot - INFO - Saving position book...
+2025-10-08 14:32:11,045 - TradingBot - INFO - Found 2 positions to save
+2025-10-08 14:32:11,045 - TradingBot - INFO - Position book saved with 2 records to app/2025-10-08_position.csv
+2025-10-08 15:15:02,357 - TradingBot - INFO - Market closing time detected: 15:15:02
+2025-10-08 15:15:02,357 - TradingBot - INFO - 3:15 PM detected - initiating market close procedure
+2025-10-08 15:15:02,359 - TradingBot - INFO - === STARTING MARKET CLOSE PROCEDURE ===
+2025-10-08 15:15:02,360 - TradingBot - INFO - Current time: 2025-10-08 15:15:02
+2025-10-08 15:15:02,360 - TradingBot - INFO - STEP 1: Cancelling all open orders
+2025-10-08 15:15:02,361 - TradingBot - INFO - Starting cancel all open orders procedure
+2025-10-08 15:15:02,362 - TradingBot - INFO - Fetching order book...
+2025-10-08 15:15:03,112 - TradingBot - INFO - Found 2 orders in order book
+2025-10-08 15:15:03,112 - TradingBot - INFO - Order cancellation completed: 0 orders cancelled
+2025-10-08 15:15:05,115 - TradingBot - INFO - STEP 2: Closing all positions
+2025-10-08 15:15:05,115 - TradingBot - INFO - Starting close all positions procedure
+2025-10-08 15:15:05,869 - TradingBot - INFO - Found 2 positions to check
+2025-10-08 15:15:05,870 - TradingBot - INFO - Closing long position: COMSYN-EQ, Qty: 10
+2025-10-08 15:15:05,871 - TradingBot - INFO - PLACE ORDER - Symbol: COMSYN-EQ, Quantity: 10, Type: SELL
+2025-10-08 15:15:05,872 - TradingBot - INFO - Placing SELL order: COMSYN-EQ @ MKT, Qty: 10
+2025-10-08 15:15:06,567 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: COMSYN-EQ - ID: 25100800555180
+2025-10-08 15:15:06,567 - TradingBot - INFO - SELL ORDER PLACED for COMSYN-EQ, waiting broker update...
+2025-10-08 15:15:10,061 - TradingBot - INFO - SUCCESS: COMSYN-EQ long position closed fully
+2025-10-08 15:15:10,062 - TradingBot - INFO - Closing long position: PARAGMILK-EQ, Qty: 10
+2025-10-08 15:15:10,064 - TradingBot - INFO - PLACE ORDER - Symbol: PARAGMILK-EQ, Quantity: 10, Type: SELL
+2025-10-08 15:15:10,064 - TradingBot - INFO - Placing SELL order: PARAGMILK-EQ @ MKT, Qty: 10
+2025-10-08 15:15:10,573 - TradingBot - INFO - SELL ORDER PLACED SUCCESS: PARAGMILK-EQ - ID: 25100800555302
+2025-10-08 15:15:10,573 - TradingBot - INFO - SELL ORDER PLACED for PARAGMILK-EQ, waiting broker update...
+2025-10-08 15:15:13,027 - TradingBot - INFO - SUCCESS: PARAGMILK-EQ long position closed fully
+2025-10-08 15:15:13,028 - TradingBot - INFO - STEP 3: Waiting for positions to close
+2025-10-08 15:15:13,029 - TradingBot - INFO - Position close check attempt 1/30
+2025-10-08 15:15:13,031 - TradingBot - INFO - Checking if all positions are closed
+2025-10-08 15:15:13,528 - TradingBot - INFO - Checking 2 positions
+2025-10-08 15:15:13,529 - TradingBot - INFO - SUCCESS: All positions are closed
+2025-10-08 15:15:13,531 - TradingBot - INFO - SUCCESS: All positions closed
+2025-10-08 15:15:13,532 - TradingBot - INFO - STEP 4: Saving final position book
+2025-10-08 15:15:13,533 - TradingBot - INFO - Saving position book...
+2025-10-08 15:15:14,349 - TradingBot - INFO - Found 2 positions to save
+2025-10-08 15:15:14,352 - TradingBot - INFO - Position book saved with 2 records to app/2025-10-08_position.csv
+2025-10-08 15:15:14,353 - TradingBot - INFO - Shutdown flag set to True
+2025-10-08 15:15:14,354 - TradingBot - INFO - === MARKET CLOSE PROCEDURE COMPLETED ===
+2025-10-08 15:15:14,357 - TradingBot - INFO - Shutting down Flask application...

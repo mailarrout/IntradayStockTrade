@@ -11,9 +11,7 @@ REWARD_RATIO = 3  # Target = Buy Price + (Candle Range * REWARD_RATIO)
 SL_BUFFER = 0.05  # SL = Previous Candle Low - SL_BUFFER
 FALLBACK_SL_PERCENT = 0.5  # 0.5% fallback SL if no candle data
 FALLBACK_TARGET_PERCENT = 1.0  # 1.0% fallback target if no candle data
-RISK_PER_TRADE = 20  # ₹20 risk per trade for quantity calculation
-MINIMUM_QUANTITY = 1  # Minimum shares to trade
-MAXIMUM_QUANTITY = 1000  # Maximum shares per trade for safety
+ORDER_QUANTITY = 10  # Default quantity for orders
 
 # ================== CONFIGURATION ==================
 app = Flask(__name__)
@@ -57,53 +55,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger("TradingBot")
 
-# ================== RISK-BASED QUANTITY CALCULATION ==================
-def calculate_quantity(buy_price, stop_loss):
-    """Calculate quantity based on risk per trade and stop loss"""
-    try:
-        if buy_price <= 0 or stop_loss <= 0:
-            logger.warning(f"Invalid prices for quantity calculation: Buy={buy_price}, SL={stop_loss}")
-            return MINIMUM_QUANTITY
-            
-        risk_per_share = abs(buy_price - stop_loss)
-        
-        if risk_per_share <= 0:
-            logger.warning(f"Zero or negative risk calculation: Buy={buy_price}, SL={stop_loss}")
-            return MINIMUM_QUANTITY
-            
-        # Calculate quantity based on risk
-        calculated_quantity = RISK_PER_TRADE / risk_per_share
-        quantity = int(calculated_quantity)
-        
-        # Apply limits
-        quantity = max(MINIMUM_QUANTITY, min(quantity, MAXIMUM_QUANTITY))
-        
-        logger.info(f"Quantity Calculation: Buy={buy_price}, SL={stop_loss}, "
-                   f"Risk/Share={risk_per_share:.2f}, Calculated={calculated_quantity:.1f}, Final={quantity}")
-        
-        return quantity
-        
-    except Exception as e:
-        logger.error(f"Error calculating quantity: {e}")
-        return MINIMUM_QUANTITY
-
-def get_current_position_quantity(symbol):
-    """Get current position quantity for a symbol"""
-    try:
-        positions = broker_client.get_positions() or []
-        search_symbol = symbol if symbol.endswith('-EQ') else f"{symbol}-EQ"
-        
-        for pos in positions:
-            if pos.get("tsym", "").strip().upper() == search_symbol.upper():
-                quantity = int(pos.get("netqty", 0))
-                logger.info(f"Current position quantity for {symbol}: {quantity}")
-                return quantity
-        
-        logger.warning(f"No position found for {symbol}")
-        return 0
-    except Exception as e:
-        logger.error(f"Error getting position quantity for {symbol}: {e}")
-        return 0
 
 # ================== TIME UTILITIES ==================
 def get_ist_time():
@@ -135,6 +86,8 @@ def initialize_positions_file():
             []  # just create header
         )
         logger.info(f"Created new positions file: {positions_file}")
+
+
 
 # ================== SYMBOL TOKEN MAPPING ==================
 def load_symbol_token_mapping():
@@ -253,7 +206,7 @@ def get_previous_candle_hloc(symbol, reference_time=None):
         return None
 
 def calculate_sl_target_from_previous_candle(buy_price, previous_candle, symbol):
-    """Calculate SL and Target based on previous candle's low with buffer and ACTUAL RISK"""
+    """Calculate SL and Target based on previous candle's low with buffer and reward ratio"""
     logger.info(f"Starting SL/Target calculation for {symbol}, Buy Price: {buy_price}")
     try:
         if not previous_candle:
@@ -267,16 +220,13 @@ def calculate_sl_target_from_previous_candle(buy_price, previous_candle, symbol)
             
             logger.info(f"Previous candle data - High: {prev_high}, Low: {prev_low}")
             
-            # Calculate stop loss
             stop_loss = round(prev_low - SL_BUFFER, 2)
-            
-            # FIX: Calculate target based on ACTUAL RISK (buy_price - stop_loss)
-            actual_risk = buy_price - stop_loss
-            target = round(buy_price + (actual_risk * REWARD_RATIO), 2)
+            candle_range = prev_high - prev_low
+            target = round(buy_price + (candle_range * REWARD_RATIO), 2)
             
             logger.info(f"SL/Target calculation for {symbol}:")
-            logger.info(f"Buy Price: {buy_price}, Prev Low: {prev_low}")
-            logger.info(f"Actual Risk: {actual_risk:.2f}, SL: {stop_loss}, Target: {target}")
+            logger.info(f"Buy Price: {buy_price}, Prev Low: {prev_low}, Prev High: {prev_high}")
+            logger.info(f"Candle Range: {candle_range:.2f}, SL: {stop_loss}, Target: {target}")
             logger.info(f"Using REWARD_RATIO: {REWARD_RATIO}, SL_BUFFER: {SL_BUFFER}")
             
             if stop_loss >= buy_price:
@@ -296,24 +246,15 @@ def calculate_sl_target_from_previous_candle(buy_price, previous_candle, symbol)
         fallback_target = round(buy_price * (1 + FALLBACK_TARGET_PERCENT/100), 2)
         logger.info(f"Using emergency fallback: SL={fallback_sl}, Target={fallback_target}")
         return fallback_sl, fallback_target
-        
-    except Exception as e:
-        logger.error(f"Error calculating SL/Target for {symbol}: {e}")
-        fallback_sl = round(buy_price * (1 - FALLBACK_SL_PERCENT/100), 2)
-        fallback_target = round(buy_price * (1 + FALLBACK_TARGET_PERCENT/100), 2)
-        logger.info(f"Using emergency fallback: SL={fallback_sl}, Target={fallback_target}")
-        return fallback_sl, fallback_target
 
 def log_candle_analysis_to_csv(symbol, buy_price, previous_candle, sl, target):
     """Log candle analysis details to CSV for backtesting and analysis"""
     try:
         if previous_candle:
             candle_range = previous_candle['high'] - previous_candle['low']
-            actual_risk = buy_price - sl
             sl_type = "PREV_CANDLE_LOW"
         else:
             candle_range = 0
-            actual_risk = 0
             sl_type = "FALLBACK"
 
         row_data = [
@@ -328,7 +269,6 @@ def log_candle_analysis_to_csv(symbol, buy_price, previous_candle, sl, target):
             sl,
             target,
             round(candle_range, 2),
-            round(actual_risk, 2),  # ADDED: Actual risk per share
             sl_type,
             get_ist_timestamp()
         ]
@@ -336,11 +276,11 @@ def log_candle_analysis_to_csv(symbol, buy_price, previous_candle, sl, target):
         append_csv(
             candle_analysis_file,
             ["Timestamp", "Symbol", "Candle_Time", "Open", "High", "Low", "Close",
-             "Buy_Price", "Stop_Loss", "Target", "Candle_Range", "Actual_Risk", "SL_Type", "Calculation_Time"],  # UPDATED header
+             "Buy_Price", "Stop_Loss", "Target", "Candle_Range", "SL_Type", "Calculation_Time"],
             row_data
         )
 
-        logger.info(f"Candle analysis logged: {symbol} - SL: {sl}, Target: {target}, Risk: {actual_risk:.2f}, Type: {sl_type}")
+        logger.info(f"Candle analysis logged: {symbol} - SL: {sl}, Target: {target}, Type: {sl_type}")
     except Exception as e:
         logger.error(f"Error logging candle analysis to CSV: {e}")
 
@@ -487,25 +427,14 @@ def login_broker():
         return False
 
 # ================== ORDER MANAGEMENT ==================
-def place_order(symbol, buy_price, stop_loss, order_type="SELL"):
-    """Place buy or sell order with risk-based quantity calculation"""
-    logger.info(f"PLACE ORDER - Symbol: {symbol}, Type: {order_type}")
-    
+def place_order(symbol, quantity=ORDER_QUANTITY, order_type="SELL"):
+    """Place buy or sell order (order_type: 'BUY' or 'SELL')"""
+    logger.info(f"PLACE ORDER - Symbol: {symbol}, Quantity: {quantity}, Type: {order_type}")
     if not broker_client:
         logger.error("No broker client available for placing order")
         return False, "NO_CLIENT"
     
     try:
-        # Calculate quantity based on risk for BUY orders, use current position for SELL orders
-        if order_type.upper() == "BUY":
-            quantity = calculate_quantity(buy_price, stop_loss)
-        else:
-            # For SELL orders, get current position quantity
-            quantity = get_current_position_quantity(symbol)
-            if quantity <= 0:
-                logger.error(f"No position found for {symbol} to sell")
-                return False, "NO_POSITION"
-        
         trading_symbol = symbol if symbol.endswith('-EQ') else f"{symbol}-EQ"
         buy_or_sell = "B" if order_type.upper() == "BUY" else "S"
         remarks = f"BuyCover_{symbol}" if order_type.upper() == "BUY" else f"Exit_{symbol}"
@@ -740,6 +669,7 @@ def save_position_book():
     except Exception as e:
         logger.error(f"Error saving position book: {e}")
 
+
 # ================== MARKET CLOSE FUNCTIONS ==================
 def cancel_all_open_orders():
     """Cancel all open orders at 3:15 PM"""
@@ -788,9 +718,7 @@ def close_all_positions():
             if netqty > 0:
                 logger.info(f"Closing long position: {symbol}, Qty: {netqty}")
                 while netqty > 0:
-                    # For closing, we use current LTP as price reference for quantity calculation
-                    current_ltp = get_ltp(symbol) or float(pos.get("lp", 0))
-                    success, order_id = place_order(symbol, current_ltp, current_ltp * 0.99, "SELL")
+                    success, order_id = place_order(symbol, netqty, "SELL")
                     if success:
                         logger.info(f"SELL ORDER PLACED for {symbol}, waiting broker update...")
                         time.sleep(2)
@@ -812,9 +740,7 @@ def close_all_positions():
                 logger.info(f"Closing short position: {symbol}, Qty: {abs(netqty)}")
                 buy_qty = abs(netqty)
                 while buy_qty > 0:
-                    # For covering, we use current LTP as price reference for quantity calculation
-                    current_ltp = get_ltp(symbol) or float(pos.get("lp", 0))
-                    success, order_id = place_order(symbol, current_ltp, current_ltp * 1.01, "BUY")
+                    success, order_id = place_order(symbol, buy_qty, "BUY")
                     if success:
                         logger.info(f"BUY COVER ORDER PLACED for {symbol}, waiting broker update...")
                         time.sleep(2)
@@ -835,6 +761,7 @@ def close_all_positions():
     except Exception as e:
         logger.error(f"Error closing positions: {e}")
         return False
+
 
 def check_all_positions_closed():
     """Check if all positions are closed (netqty = 0 for all stocks)"""
@@ -901,6 +828,7 @@ def market_close_procedure():
     logger.info("Shutting down Flask application...")
     os.kill(os.getpid(), signal.SIGINT)  # This sends KeyboardInterrupt to stop Flask
 
+
 def is_already_in_position(symbol: str) -> bool:
     """Check if the symbol already has an active/open position"""
     try:
@@ -935,6 +863,7 @@ def append_csv(file_path, header, row):
         if not file_exists or os.stat(file_path).st_size == 0:
             writer.writerow(header)
         writer.writerow(row)
+
 
 # ================== POSITION MONITORING ==================
 def monitor_positions():
@@ -1008,8 +937,7 @@ def monitor_positions():
                     
                     if current_qty > 0:
                         logger.info(f"Placing SELL order for SL: {symbol}, Qty: {current_qty}")
-                        # Use current LTP for price reference in quantity calculation
-                        success, order_id = place_order(symbol, ltp, ltp * 0.99, "SELL")
+                        success, order_id = place_order(symbol, current_qty, "SELL")
                         
                         if success:
                             df.at[idx, "Status"] = "SL_HIT"
@@ -1037,8 +965,7 @@ def monitor_positions():
                     
                     if current_qty > 0:
                         logger.info(f"Placing SELL order for target: {symbol}, Qty: {current_qty}")
-                        # Use current LTP for price reference in quantity calculation
-                        success, order_id = place_order(symbol, ltp, ltp * 0.99, "SELL")
+                        success, order_id = place_order(symbol, current_qty, "SELL")
                         
                         if success:
                             df.at[idx, "Status"] = "TARGET_HIT"
@@ -1082,15 +1009,6 @@ def process_alerts():
 
             logger.info(f"Processing alert: {symbol} at {trigger_price}")
 
-            if not should_trade_stock(symbol):
-                logger.warning(f"Stock filtered out: {symbol}")
-                append_csv(
-                    alerts_file,
-                    ["Timestamp", "Symbol", "TriggerPrice", "Status", "OrderId"],
-                    [get_ist_timestamp(), symbol, trigger_price, "FILTERED", "N/A"]
-                )
-                continue
-
             if not symbol or trigger_price <= 0:
                 logger.warning(f"Invalid alert data: {alert}")
                 continue
@@ -1099,20 +1017,11 @@ def process_alerts():
                 logger.warning(f"Skipping {symbol}, already in position")
                 continue
 
-            # Get previous candle for PRE-TRADE estimation
-            previous_candle = get_previous_candle_hloc(symbol)
-            
-            # Calculate ESTIMATED SL for quantity calculation
-            if previous_candle:
-                estimated_sl = round(previous_candle['low'] - SL_BUFFER, 2)
-            else:
-                estimated_sl = round(trigger_price * (1 - FALLBACK_SL_PERCENT/100), 2)
-            
-            # Place order with risk-based quantity calculation (using estimated values)
-            success, result = place_order(symbol, trigger_price, estimated_sl, "BUY")
+            success, result = place_order(symbol, ORDER_QUANTITY, "BUY")
 
             if success:
                 logger.info(f"Order successful, calling confirm_and_setup_position")
+                # WRAP IN TRY-CATCH TO PREVENT CRASH
                 try:
                     confirm_and_setup_position(symbol, trigger_price)
                 except Exception as e:
@@ -1132,33 +1041,6 @@ def process_alerts():
             continue
         except Exception as e:
             logger.error(f"Alert processing error (non-critical): {e}")
-
-def should_trade_stock(symbol):
-    """Filter out stocks with numbers and specific keywords"""
-    try:
-        symbol_upper = symbol.upper()
-        
-        # Check for numbers in symbol
-        if any(char.isdigit() for char in symbol_upper):
-            logger.info(f"Filtered {symbol}: Contains numbers")
-            return False
-        
-        # All excluded keywords in one check
-        excluded_keywords = ['BEE', 'ETF', 'GOLD', 'LIQUID', 'BEES', 'SILVER', 
-                           'NIFTY', 'BANKNIFTY', 'SENSEX', 'MIDCP', 'CPSE',
-                           'MF', 'MFS', 'FUND', 'GROWTH', 'DIVIDEND']
-        
-        if any(keyword in symbol_upper for keyword in excluded_keywords):
-            logger.info(f"Filtered {symbol}: Contains excluded keyword")
-            return False
-            
-        logger.info(f"Approved for trading: {symbol}")
-        return True
-        
-    except Exception as e:
-        logger.error(f"Error in stock filter for {symbol}: {e}")
-        return False
-
 
 # ================== FLASK ENDPOINTS ==================
 @app.route('/webhook', methods=['POST'])
@@ -1286,9 +1168,11 @@ def main():
     # Ensure positions file exists
     initialize_positions_file()
     
+    # ========== ADD THIS ==========
     # Convert existing broker positions to state file format
     positions_count = convert_broker_positions_to_state_file()
     logger.info(f"Started with {positions_count} existing positions")
+    # ========== END ADD ==========
     
     # Start alert processor thread
     logger.info("Starting alert processor thread...")
